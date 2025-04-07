@@ -67,7 +67,6 @@ coverage.xml
 # Local configuration
 .DS_Store
 .idea/
-.vscode/
 *.swp
 *.swo
 .python-version

@@ -1,12 +1,12 @@
 # Monokakido to Yomitan Dictionary Converter
 
-Convert Monokakido dictionary files to Yomitan format for use with the Yomitan browser extension.
+Convert Monokakido dictionary files to Yomitan format.
 
 ## Overview
 
 This project provides tools to convert dictionaries from the Monokakido format to the Yomitan format. Currently supports the following dictionaries:
 
-- 大辞泉 第二版
+- 大辞泉
 - 旺文社 全訳古語辞典
 - 研究社 新和英大辞典 (Index files are corrupted as of now :/)
 - 三省堂 全訳読解古語辞典

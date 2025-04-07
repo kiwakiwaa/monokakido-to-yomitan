@@ -1,0 +1,24 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["kanji_bank_*.json"],
+      "url": "https://github.com/yomidevs/yomitan/raw/master/ext/data/schemas/dictionary-kanji-bank-v3-schema.json"
+    },
+    {
+      "fileMatch": ["kanji_meta_bank_*.json"],
+      "url": "https://github.com/yomidevs/yomitan/raw/master/ext/data/schemas/dictionary-kanji-meta-bank-v3-schema.json"
+    },
+    {
+      "fileMatch": ["tag_bank_*.json"],
+      "url": "https://github.com/yomidevs/yomitan/raw/master/ext/data/schemas/dictionary-tag-bank-v3-schema.json"
+    },
+    {
+      "fileMatch": ["term_bank_*.json"],
+      "url": "https://github.com/yomidevs/yomitan/raw/master/ext/data/schemas/dictionary-term-bank-v3-schema.json"
+    },
+    {
+      "fileMatch": ["term_meta_bank_*.json"],
+      "url": "https://github.com/yomidevs/yomitan/raw/master/ext/data/schemas/dictionary-term-meta-bank-v3-schema.json"
+    }
+  ],
+  }
