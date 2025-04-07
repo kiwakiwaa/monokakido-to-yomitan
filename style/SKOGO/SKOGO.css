@@ -1,0 +1,836 @@
+@color red = #C00000;
+@color light-red = #DFA6A8;
+@color extra-light-red = #FFEEEE;
+@color hinshi-mark = #444;
+@color shubetsu-mark = #707070;
+@color gendai-mark = #888;
+
+body {
+	margin: 1em 44px 1em 1.5em;
+	line-height: 1.5em;
+	font-family: "Hiragino Mincho ProN";
+	font-size: 1.2em;
+	color: black;
+	writing-mode: vertical-rl;
+}
+
+entry-index {
+	display: none;
+}
+
+項目 {
+	display: block;
+}
+
+見出部 {
+	display: block;
+	font-size: 1.1em;
+	margin-left: 0.909em;
+	text-indent: -0.909em;
+}
+
+見出部SubG {
+	display: block;
+}
+
+見出G, 絵巻タイトル, Gendai見出 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+見出G.red {
+	color: red;
+}
+
+rank {
+	margin-left: -0.44em;
+	margin-right: 0.1em;
+}
+
+活用分節 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: normal;
+}
+
+語構成 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	vertical-align: 0.15em;
+	font-size: 0.95em;
+}
+
+FWHyphen {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+表記G, チャート表記G {
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+}
+
+見出歴史仮名, 見出現代仮名, 段落歴史仮名, 段落現代仮名 {
+	font-family: "Hiragino Mincho ProN";
+	font-weight: normal;
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+	font-size: 0.6em;
+	vertical-align: 0.5em;
+}
+
+生年, 没年, 開始, 終了 {
+	font-size: 0.8em;
+}
+
+同仮名部Dash {
+	glyph: 7481;
+}
+
+活用語尾G {
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+	font-size: 0.8em;
+}
+
+活用表 {
+	display: table;
+	text-indent: 0;
+	border-top: solid 0.05em red;
+	border-left: solid 0.05em red;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+活用表-行 {
+	display: table-row;
+}
+
+活用表-項 {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	border-bottom: solid 0.05em red;
+	border-right: solid 0.05em red;
+}
+
+活用表-項.label {
+	line-height: 0.65em;
+	padding: 0.05em 0.3em;
+}
+
+活用表-項.value {
+	line-height: 0.85em;
+	padding: 0.4em 0.3em;
+}
+
+活用表-項.normal {
+	border-right: solid 0.085em red;
+}
+
+活用表-項.first {
+	border-bottom-color: light-red;
+}
+
+活用表Label {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.55em;
+}
+
+活用表Value {
+	font-size: 0.8em;
+}
+
+活用表Empty {
+	font-size: 0.05em;
+}
+
+語義要説G {
+	display: block;
+	text-indent: 0;
+	margin-top: 0.6em;
+	margin-bottom: 0.6em;
+	padding: 0 0.3em;
+	border-left: solid 0.3em light-red;
+	border-right: solid 0.3em light-red;
+}
+
+要説 {
+	display: block;
+}
+
+要説.indent {
+	text-indent: 1em;
+}
+
+箇条書 {
+	display: block;
+	margin-left: 1.15em;
+	text-indent: -1.15em;
+}
+
+箇条書.noindent {
+	margin-left: 0;
+	text-indent: 0;
+}
+
+箇条書.indent {
+	text-indent: 0;
+}
+
+箇条書.findent {
+	margin-left: 0;
+	text-indent: 1.15em;
+}
+
+箇条書.連結語義 {
+	display: table;
+	margin-left: 0;
+	text-indent: 0;
+}
+
+箇条書H {
+	margin-right: 0.15em;
+}
+
+箇条書.連結語義 箇条書H {
+	display: table-cell;
+	vertical-align: top;
+	min-width: 3.6em;
+}
+
+箇条書C {
+}
+
+箇条書.連結語義 箇条書C {
+	display: table-cell;
+	vertical-align: top;
+}
+
+箇条書補足 {
+	font-size: 0.85em;
+}
+
+箇条書補足M {
+	color: red;
+}
+
+接続 {
+}
+
+接続.block {
+	display: block;
+}
+
+活用, 識別表参照, 読解参照 {
+	display: block;
+}
+
+解説部 {
+	display: block;
+	margin-left: 1em;
+}
+
+大語義 {
+	display: block;
+}
+
+語義 {
+	display: block;
+}
+
+語義番号 {
+}
+
+語義番号.small, 副義番号.small, alph語義.small {
+	font-size: 0.9em;
+}
+
+副義 {
+	display: block;
+}
+
+副義番号 {
+}
+
+括弧語義 {
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+}
+
+alph語義, 丸語義 {
+}
+
+中黒語義 {
+	font-family: "Hiragino Mincho ProN";
+	font-weight: bold;
+}
+
+語釈B {
+	display: block;
+	text-indent: 1em;
+}
+
+詩歌段落G {
+	display: block;
+}
+
+詩歌段落 {
+	display: block;
+	margin-left: 1em;
+}
+
+用例G {
+	display: block;
+	margin-left: 1em;
+}
+
+用例G.inline {
+	display: inline;
+	margin-left: 0;
+}
+
+用例 {
+}
+
+詩歌全形G {
+	display: block;
+}
+
+詩歌全形 {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+訳 {
+	display: block;
+}
+
+訳.inline {
+	display: inline;
+}
+
+訳相当部 {
+	color: red;
+}
+
+見出相当部 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+ダーシ {
+	font-size: 1.5em;
+}
+
+詩歌技法, 用例訳注 {
+	display: block;
+}
+
+詩歌技法ロゴ, 用例訳注ロゴ, 参考ロゴ, 注釈ロゴ {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.95em;
+}
+
+参考ロゴ.small {
+	font-size: 0.85em;
+}
+
+詩歌技法ロゴテキスト, 用例訳注ロゴテキスト, 参考ロゴテキスト, 注釈ロゴテキスト {
+	font-weight: bold;
+}
+
+出典G {
+	font-size: 0.85em;
+}
+
+平体 {
+}
+
+単位 {
+	font-size: 0.8em;
+}
+
+文法情報, 百人一首 {
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+}
+
+言換イコール {
+	glyph: 8979;
+	vertical-align: 0.13em;
+	margin-right: 0.1em;
+}
+
+季語ハイフン {
+	glyph: 12063;
+}
+
+品詞分解 {
+	display: block;
+}
+
+冒頭文, 作品例 {
+	display: block;
+}
+
+冒頭文ロゴ, 作品例ロゴ {
+	padding-left: 0.08em;
+	padding-right: 0.08em;
+	border-left: solid 0.2em red;
+	border-right: solid 0.2em red;
+}
+
+冒頭文ロゴテキスト, 作品例ロゴテキスト {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+項目参照G {
+}
+
+項目参照G.block {
+	display: block;
+}
+
+参照語義番号 {
+}
+
+em.bold {
+	font-weight: bold;
+}
+
+em.小書き, ルビ {
+	font-family: "Hiragino Mincho ProN";
+	font-size: 0.6em;
+	font-weight: normal;
+	vertical-align: 0.6em;
+}
+
+em.gothic {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+em.赤 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	color: red;
+}
+
+参考G {
+	display: block;
+}
+
+参考B {
+	display: block;
+}
+
+参考B.字下1_0 {
+	text-indent: 1em;
+}
+
+関連語G {
+	display: block;
+}
+
+関連語subB {
+	display: block;
+}
+
+関連語subB.Indent {
+	text-indent: 1em;
+}
+
+関連語 {
+	font-weight: bold;
+}
+
+補説G {
+	display: block;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	padding-left: 0.3em;
+	border-left: solid 0.3em light-gray;
+}
+
+補説小見出 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+読解G, 現代G, チャート項目, 絵巻項目 {
+	display: block;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	background-color: extra-light-red;
+}
+
+読解見出, 現代見出 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	color: red;
+}
+
+読解小見出, 現代小見出, チャート見出 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+段落 {
+	display: block;
+}
+
+段落.字下0_1 {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+段落.字下1_0 {
+	text-indent: 1em;
+}
+
+段落.字下1_1 {
+	margin-left: 1em;
+}
+
+段落.字下2_2 {
+	margin-left: 2em;
+}
+
+付録参照G {
+}
+
+付録参照G.block {
+	display: block;
+}
+
+付録参照ロゴ {
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+}
+
+付録参照ロゴ.red {
+	color: red;
+}
+
+図版G {
+}
+
+絵巻図版 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	color: red;
+	font-size: 0.9em;
+}
+
+カラー画像G {
+	display: block;
+}
+
+注釈 {
+	display: block;
+}
+
+表G {
+	display: table;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+表G.B {
+	border-top: solid 0.05em gray;
+	border-left: solid 0.05em gray;
+	max-width: 24em;
+}
+
+表G.C {
+	width: 100%;
+}
+
+行 {
+	display: table-row;
+}
+
+列 {
+	display: table-cell;
+	vertical-align: top;
+}
+
+列.B {
+	padding: 0.3em;
+	line-height: 1.1em;
+	border-bottom: solid 0.05em gray;
+	border-right: solid 0.05em gray;
+	width: 20%;
+}
+
+列.H {
+	text-align: center;
+}
+
+列.C1 {
+	min-width: 3.1em;
+}
+
+列.C2 {
+	min-width: 4.5em;
+}
+
+列.C3 {
+}
+
+列C {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+表画像G {
+	display: block;
+}
+
+チャート解説, 絵巻解説 {
+	display: block;
+}
+
+圏点 {
+	font-size: 0.9em;
+	vertical-align: -0.4em;
+}
+
+識別G {
+	display: table;
+	margin-left: 1;
+}
+
+識別見出行, 識別ヘッダ行, 識別行 {
+	display: table-row;
+}
+
+.識別LB {
+	border-left: solid 0.05em red;
+}
+
+.識別RB {
+	border-right: solid 0.05em red;
+}
+
+.識別BB {
+	border-bottom: solid 0.05em red;
+}
+
+識別見出項 {
+	display: table-cell;
+	background-color: red;
+	color: white;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	vertical-align: top;
+}
+
+識別見出 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+識別見出サブ {
+	font-size: 0.85em;
+	margin-left: 0.1em;
+}
+
+識別ヘッダ項 {
+	display: table-cell;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.85em;
+	line-height: 1.4em;
+	background-color: extra-light-red;
+	padding-left: 0.353em;
+	padding-right: 0.353em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	vertical-align: top;
+	min-width: 4em;
+}
+
+識別項 {
+	display: table-cell;
+	font-size: 0.85em;
+	line-height: 1.4em;
+	padding-left: 0.353em;
+	padding-right: 0.353em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	vertical-align: top;
+}
+
+識別説明 {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+識別識別 {
+}
+
+識別例文, 識別訳文 {
+	display: block;
+}
+
+GendaiRefG {
+	display: block;
+	margin-top: 0.4em;
+}
+
+GendaiRef {
+	display: block;
+}
+
+GendaiRef品詞, GendaiRefDesc {
+	font-family: "Hiragino Kaku Gothic ProN";
+	margin-left: 0.25em;
+}
+
+GendaiRefDesc {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.85em;
+	margin-left: 0.25em;
+}
+
+返り点 {
+	font-family: "Hiragino Mincho ProN";
+	font-size: 0.5em;
+	vertical-align: -0.9em;
+}
+
+縦中横 {
+	text-combine-horizontal: all;
+}
+
+縦中横.small {
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	font-size: 0.8em;
+}
+
+rectr {
+	padding: 0.1em 0.12em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: normal;
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	word-break: keep-all;
+	-webkit-border-radius: 0.15em;
+}
+
+rectr.fill {
+	color: white;
+	border-style: none;
+	background-color: black;
+}
+
+rectr.品詞 {
+	background-color: hinshi-mark;
+}
+
+rectr.種別 {
+	background-color: shubetsu-mark;
+}
+
+rectr.black {
+}
+
+rectr.red {
+	color: red;
+	border-color: red;
+}
+
+rectr.red-fill {
+	padding: 0.1em;
+	color: white;
+	border-style: none;
+	background-color: red;
+}
+
+rectr.red-frame {
+	border-color: red;
+}
+
+rectr.bold {
+	padding: 0.07em 0.08em 0.088em 0.08em;
+	font-weight: bold;
+}
+
+rectr.small {
+	font-size: 0.72em;
+}
+
+rectr.現代 {
+	background-color: gendai-mark;
+}
+
+inner-white {
+	color: white;
+}
+
+img.gaiji {
+	display: gaiji;
+	height: 1em;
+	text-combine-horizontal: all;
+}
+
+画像G, 絵巻画像G {
+	display: block;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+画像SubG {
+	display: block;
+}
+
+img.画像 {
+	max-width: 14em;
+}
+
+img.チャート {
+	max-width: 22em;
+}
+
+img.表画像 {
+	display: gaiji;
+	max-width: 20em;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a.blue {
+	color: blue;
+}
+
+a.blue rectr {
+	border-color: blue;
+}
+
+a.blue rectr.fill {
+	background-color: blue;
+}
+
+.FM {
+	margin-right: 0.15em;
+}
+
+.Logo-FM {
+	margin-right: 0.3em;
+}
+
+.BM {
+	margin-left: 0.15em;
+}
+
+.IM {
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+}

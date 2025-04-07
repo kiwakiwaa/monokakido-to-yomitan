@@ -1,0 +1,71 @@
+body {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 1.5em;
+	margin-right: 44px;
+	writing-mode: vertical-rl;
+}
+
+見出G {
+	margin-bottom: 0;
+}
+
+解説G {
+	margin-left: 1em;
+}
+
+SubItem {
+	margin-top: 0.5em;
+}
+
+SubItemC {
+	margin-left: 0;
+}
+
+HyokiS {
+	glyph: 435;
+	vertical-align: -0.1em;
+}
+
+MG.L1A {
+	margin-top: 0;
+}
+
+MG.L2A, MG.L3A {
+	margin-top: 0;
+}
+
+meaning.C {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+sub.kana {
+	vertical-align: 0.65em;
+}
+
+sub.DJSP_kana {
+	font-size: 0.65em;
+	vertical-align: 0.35em;
+}
+
+wari, Small {
+	vertical-align: 0.5em;
+}
+
+img.gaiji {
+	text-combine-horizontal: all;
+}
+
+rect.L3 {
+	padding: 0.1em 0.12em 0.1em 0.12em;
+	text-combine-horizontal: all;
+}
+
+K-h {
+	display: none;
+}
+
+K-v {
+	display: inline;
+}

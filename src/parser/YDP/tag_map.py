@@ -1,0 +1,17 @@
+
+
+TAG_MAPPING = {
+    "data.筆者名": "div",
+    "dic-item": "div",
+    "image": "div",
+    "image-caption": "div",
+    "image-note": "div",
+    "image-source": "div",
+    "image-img": "div",
+    "entryrefs": "div",
+    "head2": "div",
+    "meaning": "div",
+    "ref-group": "div",
+    "ref-group ref": "div",
+    "ref-items": "div"
+}

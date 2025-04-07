@@ -1,0 +1,848 @@
+@color red = #C00000;
+@color light-red = #D96666;
+@color gray = #888;
+@color hinshi-mark = #444;
+@color kakomi-border = #999;
+@color metadata-background = #999;
+@color example-katsuyou-mark = #666;
+@color mark-border = #660;
+@color gogi-panel-header = #F9E6E6;
+@color ruigo-panel-background = #444;
+@color ruigo-panel-border = #AAA;
+@color appendix-title-background = #633;
+@color gendai-mark = #888;
+
+.hidden_element {
+	display: none;
+}
+
+body {
+	margin: 1em 44px 1em 1.5em;
+	font-family: "Yu Mincho Pr6N";
+	font-size: 1.2em;
+	line-height: 1.5em;
+	writing-mode: vertical-rl;
+	color: black;
+}
+
+entry-index {
+	display: none;
+}
+
+HeadG {
+	display: block;
+}
+
+解説G {
+	display: block;
+	margin-left: 1em;
+}
+
+見出G {
+	display: block;
+}
+
+見出 {
+	font-size: 1.1em;
+}
+
+付録タイトルG {
+	display: block;
+}
+
+付録タイトル {
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-size: 0.7em;
+	padding: 0.15em 0.5em;
+	margin: 0 0 0.5em;
+	color: white;
+	background-color: red;
+	-webkit-border-radius: 0.2em;
+}
+
+rank {
+	margin-left: -0.44em;
+	margin-right: 0.1em;
+}
+
+主見出, 付録見出 {
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+}
+
+主見出.重要語 {
+	color: red;
+}
+
+見出表記 {
+}
+
+割 {
+	font-size: 0.6em;
+	vertical-align: 0.5em;
+	-webkit-user-select: nocopy;
+}
+
+小付 {
+	font-size: 0.8em;
+	vertical-align: 0.3em;
+}
+
+SpelloutDash {
+	glyph: 7481;
+}
+
+MG {
+	display: block;
+}
+
+用例囲みG, 和歌俳句囲みG, 冒頭文囲みG, 小倉囲みG {
+	display: block;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: kakomi-border;
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+
+用例G, 用例訳G {
+	display: block;
+	margin: 0.1em 0.3em;
+}
+
+用例 {
+}
+
+用例訳 {
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-size: 0.85em;
+}
+
+用例メタデータ {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-size: 0.7em;
+	text-align: right;
+	line-height: 1.4em;
+	padding: 0 0.3em;
+	color: white;
+	background-color: metadata-background;
+}
+
+用例引用 {
+	font-weight: bold;
+	color: red;
+}
+
+小倉参照 {
+	display: block;
+	margin-left: 0.3em;
+}
+
+小倉タイトル {
+	display: block;
+}
+
+小倉句G {
+	display: block;
+}
+
+文法テキスト {
+	display: block;
+}
+
+文法テキスト.文法インデント1 {
+	margin-left: 1.0em;
+}
+
+文法テキスト.文法インデント2 {
+	margin-left: 2.0em;
+}
+
+巻頭カラーテキストタイトル {
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+}
+
+巻頭カラーテキストタイトル 割 {
+	font-family: "Yu Mincho Pr6N";
+	font-weight: normal;
+}
+
+巻頭カラーテキスト {
+	display: block;
+}
+
+巻頭カラー参照G {
+	display: block;
+}
+
+巻頭カラー参照 {
+	display: block;
+}
+
+補足語義G {
+	display: block;
+}
+
+訳語G, 大語義インデックスG {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+訳語G.大語義TM {
+	margin-top: 0.5em;
+}
+
+hyoki {
+	font-family: "Yu Mincho Pr6N";
+}
+
+大語義インデックス {
+}
+
+大語義インデックス.LM {
+	margin-left: 0.2em;
+}
+
+参考G, 語法G, 注意G, 文法1G, 名文解説G, 接続G {
+	display: block;
+}
+
+table.FullWidth {
+	width: 100%;
+}
+
+活用インラインG {
+	display: block;
+	margin-left: 0.6em;
+	font-family: "Yu Mincho Pr6N";
+	font-size: 0.8em;
+}
+
+活用テーブル {
+	display: table;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+}
+
+活用タイトル項 {
+	display: table-cell;
+	text-align: center;
+	color: white;
+	background-color: red;
+}
+
+活用タイトル {
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-size: 0.6em;
+	color: white;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	text-combine-horizontal: all;
+}
+
+活用型項 {
+	display: table-cell;
+	color: red;
+	text-align: center;
+	border-top: solid 0.05em red;
+	border-right: solid 0.05em red;
+}
+
+活用型 {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-size: 0.6em;
+	line-height: 1.4em;
+}
+
+活用形項 {
+	display: table-cell;
+	padding: 0.2em 0.3em;
+	border-top: dashed 0.05em red;
+	border-right: solid 0.05em red;
+	border-bottom: solid 0.05em red;
+	min-width: 2em;
+}
+
+活用形項.C {
+	text-align: center;
+}
+
+活用形項.NoBB {
+	border-bottom-style: none;
+}
+
+活用形 {
+	display: block;
+	font-size: 0.9em;
+	line-height: 0.9em;
+}
+
+活用テキスト {
+	display: block;
+}
+
+活用テキスト.Small {
+	display: block;
+	margin-left: 1em;
+	font-size: 0.7em;
+}
+
+語義パネルG, ガイドG, 接続囲みG, 類語パネルG {
+	display: block;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+}
+
+パネルタイトル {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	color: white;
+	background-color: red;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+パネルタイトル.類語パネル {
+	background-color: ruigo-panel-background;
+}
+
+パネルタイトルテキスト {
+	color: white;
+}
+
+パネルC {
+	display: block;
+	border-left: solid 0.05em red;
+	border-right: solid 0.05em red;
+	border-bottom: solid 0.05em red;
+}
+
+パネルC.類語パネル {
+	border-color: ruigo-panel-background;
+}
+
+語義パネル解説G {
+	display: block;
+	padding: 0.2em 0.3em;
+	border-bottom: solid 0.05em red;
+}
+
+語義パネル重点義, 語義パネル解説 {
+	display: block;
+}
+
+重点義タイトル {
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+	color: red;
+}
+
+重点義M {
+	color: light-red;
+}
+
+語義パネル語義G {
+	display: block;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+}
+
+語義パネル語義T, 類語パネルT, 識別ガイドT {
+	display: table;
+	width: 100%;
+}
+
+語義パネル語義TC {
+	display: table-cell;
+	vertical-align: top;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+}
+
+語義パネル語義TC.Header {
+	border-right: solid 0.05em red;
+	background-color: gogi-panel-header;
+}
+
+語義パネル語義TC.TB {
+	border-top: solid 0.05em red;
+}
+
+語義パネル語義T.VP, 語義パネル語義G.VP, 語義パネル語義TC.VP, パネルC.VP {
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+
+語義パネル語義 {
+	display: block;
+}
+
+語義パネル語義.N {
+	margin-left: 1.15em;
+	text-indent: -1.15em;
+}
+
+ガイド大語義項 {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+	padding: 0 0.3em;
+}
+
+ガイド項 {
+	display: table;
+	padding: 0 0.3em;
+}
+
+ガイド項.LM {
+	margin-left: 2.15em;
+}
+
+ガイド項タイトル {
+	display: table-cell;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+	min-width: 2em;
+	vertical-align: top;
+}
+
+ガイド項テキスト {
+	display: table-cell;
+	margin-left: 0.3em;
+	vertical-align: top;
+}
+
+接続大語義項 {
+	display: block;
+	padding: 0 0.3em;
+	margin-left: 1.15em;
+	text-indent: -1.15em;
+}
+
+接続項 {
+	display: block;
+	padding: 0 0.3em;
+}
+
+囲みG {
+	display: block;
+	border: solid 0.05em gray;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+	padding: 0.2em 0.3em;
+}
+
+囲みG.発展, 囲みG.語の広がり, 囲みG.識別ボード {
+	border-color: red;
+}
+
+囲み2G {
+	display: block;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+	padding: 0 0.3em;
+	border-left: solid 0.2em gray;
+}
+
+囲み2G.敬語ガイド, 囲み2G.慣用表現 {
+	border-color: red;
+}
+
+発展タイトル, 語の広がりタイトル, 敬語ガイドタイトル, 図解学習タイトル, 慣用表現タイトル {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+}
+
+発展M, 語の広がりM {
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+	color: red;
+}
+
+発展テキスト, 語の広がりテキスト, 図解学習テキスト, 識別ボードテキスト, 慣用表現テキスト, 古語ライブラリーテキスト {
+	display: block;
+}
+
+名文解説テキスト {
+	display: block;
+}
+
+敬語ガイド分類 {
+	display: block;
+}
+
+敬語ガイドテキスト {
+	display: block;
+	margin-left: 1em;
+}
+
+類語パネル共通義 {
+	display: block;
+	border-bottom: solid 0.05em ruigo-panel-border;
+	padding: 0.2em 0.3em;
+}
+
+共通義タイトル {
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+}
+
+共通義M {
+	color: gray;
+}
+
+類語項 {
+	display: table-cell;
+	padding: 0.1em 0.3em;
+}
+
+類語項.TB {
+	border-top: solid 0.05em ruigo-panel-border;
+}
+
+類語項.語句 {
+	border-right: solid 0.05em ruigo-panel-border;
+	vertical-align: middle;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+	min-width: 5em;
+}
+
+識別ボードタイトル {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+	color: red;
+}
+
+識別ボードタイトルテキスト {
+	color: red;
+}
+
+識別ガイド見出項 {
+	display: table-cell;
+	vertical-align: top;
+	min-width: 7.5em;
+	padding: 0.15em 0 0.15em 0.3em;
+}
+
+識別ガイド説明項 {
+	display: table-cell;
+	vertical-align: top;
+	padding: 0.15em 0.3em 0.15em 0;
+}
+
+識別ガイド大語義 {
+	display: block;
+}
+
+識別ガイド大語義サブ {
+	display: block;
+	margin-left: 1em;
+}
+
+文法囲みタイトル {
+	display: block;
+}
+
+囲み用例メタデータ {
+	display: block;
+	text-align: right;
+	font-size: 0.8em;
+}
+
+古語ライブラリー用例G, 文法要語解説用例G, 修辞解説用例G {
+	display: block;
+	margin-bottom: 0.2em;
+}
+
+文法要語解説小見出 {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+	margin-top: 0.4em;
+}
+
+文法要語解説テキスト, 修辞解説テキスト {
+	display: block;
+}
+
+文法要語解説テキスト2 {
+	display: block;
+	margin-left: 1em;
+}
+
+文法要語解説ルビ {
+	font-size: 0.7em;
+	vertical-align: -0.5em;
+}
+
+文法要語Hbar {
+	glyph: 7481;
+}
+
+rect {
+	padding: 0.1em 0.12em;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: normal;
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	word-break: keep-all;
+}
+
+rect.fill {
+	color: white;
+	border-style: none;
+	background-color: black;
+}
+
+rectr {
+	padding: 0.1em 0.12em;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: normal;
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	word-break: keep-all;
+	-webkit-border-radius: 0.15em;
+}
+
+rectr.fill {
+	color: white;
+	border-style: none;
+	background-color: black;
+}
+
+rectr.品詞, rectr.文法 {
+	background-color: hinshi-mark;
+}
+
+rectr.用例, rectr.用例訳, rectr.冒頭文 {
+	background-color: red;
+}
+
+rectr.分類, rectr.季語 {
+	background-color: gray;
+}
+
+rectr.メタデータ作品 {
+	font-size: 0.9em;
+	color: white;
+	border-color: white;
+}
+
+rectr.作品 {
+}
+
+rectr.現代 {
+	background-color: gendai-mark;
+}
+
+rectr.Mark {
+	background-color: mark-border;
+}
+
+rectr.敬語ガイド, rectr.図解学習, rectr.慣用表現 {
+	background-color: red;
+}
+
+rectr.button {
+	color: white;
+	border-color: white;
+}
+
+circle {
+	padding: 0.095em;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: normal;
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	-webkit-border-radius: 0.67em;
+}
+
+circle.用例活用 {
+	color: example-katsuyou-mark;
+	border-color: example-katsuyou-mark;
+	-webkit-user-select: nocopy;
+}
+
+circle.敬語ガイド分類 {
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+語義M, 小語義M {
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+.FM {
+	margin-right: 0.15em;
+}
+
+.BM {
+	margin-left: 0.15em;
+}
+
+.IM {
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+}
+
+ハイフン {
+	vertical-align: 0.15em;
+	font-size: 0.95em;
+}
+
+HeadwordDot {
+	font-weight: normal;
+}
+
+HeadwordEqual {
+	glyph: 9770;
+}
+
+ヘッドライン括弧番号 {
+	margin-left: 0.2em;
+	font-size: 0.6em;
+	text-combine-horizontal: all;
+}
+
+括弧番号 {
+	text-combine-horizontal: all;
+	margin-right: 0.1em;
+}
+
+参照矢印 {
+	font-family: "Yu Mincho Pr6N";
+}
+
+縦中横 {
+	text-combine-horizontal: all;
+}
+
+bold {
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+}
+
+color {
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+	color: red;
+}
+
+red {
+	color: red;
+}
+
+strong {
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	font-weight: bold;
+}
+
+文法要語underline {
+	padding-top: 0.05em;
+	border-top: solid 0.05em black;
+}
+
+文法要語hasen {
+	padding-top: 0.05em;
+	border-top: dashed 0.05em black;
+}
+
+文法要語nijyusen {
+	padding-top: 0.024em;
+	border-top: solid 0.12em black;
+	margin-left: 0.05em;
+	margin-right: 0.05em;
+}
+
+画像G {
+	display: block;
+	padding: 0.5em 2em;
+}
+
+画像タイトル {
+	display: block;
+	font-size: 0.8em;
+}
+
+img.和歌・俳句, img.文法要語解説, img.修辞解説 {
+	max-width: 22em;
+}
+
+img.カラー, img.モノクロ, img.図解学習, img.発展, img.語の広がり {
+	width: 45%;
+}
+
+GendaiHeadG {
+	display: block;
+}
+
+Gendai見出 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+GendaiRefG {
+	display: block;
+	margin-top: 0.4em;
+}
+
+GendaiRef {
+	display: block;
+}
+
+GendaiRef 品詞M {
+	border-color: blue;
+	background-color: blue;
+}
+
+img.外字 {
+	display: gaiji;
+	height: 1em;
+	text-combine-horizontal: all;
+}
+
+img.audio {
+	padding: 0 0.5em;
+	height: 1em;
+}
+
+img.小倉番号 {
+	padding-left: 0.3em;
+	height: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a.blue {
+	color: blue;
+}
+
+a.blue rect, a.blue rectr {
+	border-color: blue;
+}
+
+a.blue rect.fill, a.blue rectr.fill {
+	background-color: blue;
+}
+
+a.blue 語義M, a.blue 小語義M {
+	color: blue;
+}

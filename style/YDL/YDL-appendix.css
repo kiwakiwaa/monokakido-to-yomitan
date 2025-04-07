@@ -1,0 +1,82 @@
+h1 {
+	font-size: 1.5em;
+	margin: 0;
+}
+
+h2 {
+	font-size: 1.2em;
+	margin: 0;
+}
+
+h3 {
+	font-size: 1em;
+	margin: 0;
+}
+
+div + div {
+	margin: 1em;
+}
+
+p {
+}
+
+.id1 {
+	margin-left: 1em;
+}
+
+.イロハ {
+	margin-left: 2em;
+	text-indent: -1em;
+}
+
+.ABC {
+	margin-left: 3em;
+	text-indent: -1em;
+}
+
+.id2-1 {
+	margin-left: 3em;
+	text-indent: -1em;
+}
+
+.id2 {
+	margin-left: 2em;
+}
+
+.id3 {
+	margin-left: 3em;
+}
+
+.id-3 {
+	margin-left: 3em;
+	text-indent: -3em;
+}
+
+.id4 {
+	margin-left: 4em;
+}
+
+.id5 {
+	margin-left: 5em;
+}
+
+.author {
+	margin-right: 1em;
+	text-align: right;
+}
+
+ゴシ {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+.索引見出 {
+	margin: 1em 0 1em 5em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+gaiji {
+	text-combine-horizontal: all;
+}

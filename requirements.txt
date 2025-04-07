@@ -1,0 +1,5 @@
+beautifulsoup4==4.13.3
+jaconv==0.3.4
+regex==2023.12.25
+sudachipy==0.6.10
+tqdm==4.66.2

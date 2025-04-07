@@ -1,0 +1,73 @@
+/* ----------------------------- */
+/* -- 大辞泉 Dark mode colours -- */
+/* ----------------------------- */
+:root[data-theme="dark"] {
+    .definition-item[data-dictionary='大辞泉'] {
+        --daijisen-black: #FFFFFF;
+        --daijisen-white: #000000;
+        --daijisen-blue: #00AAFF;
+        --daijisen-header-djs: #A0484F;
+        --daijisen-header-djsp: #7A7A7A;
+        --daijisen-header-text: #000000;
+        --daijisen-logo-color: #DDDDDD;
+        --daijisen-background-l3: #C0C0C0;
+        --daijisen-accent-mark: #FF6666;
+        --daijisen-accent-slash: #A0A0A0;
+    }
+}
+
+
+.definition-item[data-dictionary='大辞泉'] {
+    /* ----------- */
+    /* -- Fonts -- */
+    /* ----------- */
+    div[data-sc-headertitle],
+    div[data-sc-header-title],
+    span[data-sc-headword][data-sc見出],
+    span[data-sc-hhyphen],
+    span[data-sc-l4],
+    span[data-sc-rect],
+    span[data-sc-circle],
+    span[data-sc補足ロゴ-g],
+    span[data-sc季語-m],
+    span[data-sc-bold],
+    span[data-sc常外音訓-m],
+    span[data-sc常外-m],
+    span[data-sc付表有-m],
+    span[data-sc付表無-m] {
+        font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴシック";
+    }
+
+    div[data-sc-contents],
+    span[data-sc季語],
+    span[data-sc歌枕-m] {
+        font-family: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN";
+    }
+
+    span[data-sc-italic] {
+        font-family: Georgia;
+    }
+
+    span[data-sc-gaiji][data-sc-keigashira] {
+        font-family: "Heiti TC";
+    }
+
+    /* ----------------------- */
+    /* -- Optional settings -- */
+    /* ----------------------- */
+
+    /* Uncomment to show the 類語 section with links to other entries (Hidden by default)*/
+    /*
+    div[data-sc-meaning][data-sc-c][data-sc-class="C"]:has(span[data-sc-href="$c-ruigo"]),
+    div[data-sc-meaning][data-sc-c][data-sc-class="C"]:has(span[data-sc-href="$c-ssgo"]) {
+        display: block;
+    }
+    */
+
+    /* Uncomment to show the Pitch accent element (Hidden by default)*/
+    /*
+    div[data-sc-m-accent-audio-g] {
+        display: block;
+    }
+    */
+}

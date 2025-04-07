@@ -1,0 +1,768 @@
+/* -------------------------------------- */
+/* --- General styling (w light mode) --- */
+/* -------------------------------------- */
+
+body {
+    margin: 1em 44px 1em 1.5em;
+	/* font-family: "Yu Mincho Pr6N"; */
+	font-size: 1.2em;
+	line-height: 1.5em;
+	/* writing-mode: vertical-rl; */
+	color: var(--ozk5-black, black);
+}
+
+/* div[data-sc解説-g] {
+    margin-left: 1em;
+} */
+
+div[data-sc見出] {
+	font-size: 1.1em;
+}
+
+span[data-sc-rank] {
+    margin-left: -0.44em;
+	margin-right: 0.1em;
+}
+
+span[data-sc主見出] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+}
+
+span[data-sc主見出][data-sc重要語] {
+    color: var(--ozk5-red, #C00000);
+}
+
+span[data-sc割] {
+	font-size: 0.6em;
+	vertical-align: 0.5em;
+	-webkit-user-select: nocopy;
+    user-select: none;
+}
+
+span[data-sc小付] {
+	font-size: 0.8em;
+	vertical-align: 0.3em;
+}
+
+div[data-sc用例囲み-g],
+div[data-sc和歌俳句囲み-g],
+div[data-sc冒頭文囲み-g],
+div[data-sc小倉囲み-g] {
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--ozk5-kakomi-border, #999);
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+
+div[data-sc用例み-g],
+div[data-sc用例訳-g] {
+	margin: 0.1em 0.3em;
+}
+
+span[data-sc用例訳] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-size: 0.85em;
+}
+
+div[data-sc用例メタデータ] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-size: 0.7em;
+	text-align: right;
+	line-height: 1.4em;
+	padding: 0 0.3em;
+	color: var(--ozk5-white, white);
+	background-color: var(--ozk5-metadata-background, #999) !important;
+}
+
+span[data-sc用例引用] {
+	font-weight: bold;
+	color: var(--ozk5-red, #C00000);
+}
+
+div[data-sc小倉参照] {
+	margin-left: 0.3em;
+}
+
+/* span[data-sc文法テキスト][data-sc文法インデント1],
+span[data-sc文法テキスト][data-sc文法インデント-1] {
+	margin-left: 1.0em;
+} */
+
+span[data-sc文法テキスト][data-sc文法インデント2],
+span[data-sc文法テキスト][data-sc文法インデント-2] {
+    margin-left: 2.0em;
+}
+
+span[data-sc巻頭カラーテキストタイトル] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+}
+
+span[data-sc巻頭カラーテキストタイトル] span[data-sc割] {
+	/* font-family: "Yu Mincho Pr6N"; */
+	font-weight: normal;
+}
+
+div[data-sc訳語-g] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+}
+
+span[data-sc訳語-g][data-sc大語義-t-m] {
+	margin-top: 0.5em;
+}
+
+span[data-sc-hyoki] {
+	/* font-family: "Yu Mincho Pr6N"; */
+}
+
+span[data-sc大語義インデックス][data-sc-l-m] {
+	margin-left: 0.2em;
+}
+
+table[data-sc-full-width] {
+    width: 100%;
+}
+
+div[data-sc活用インライン-g] {
+	margin-left: 0.6em;
+	/* font-family: "Yu Mincho Pr6N"; */
+	font-size: 0.8em;
+}
+
+table[data-sc活用テーブル] {
+	display: table;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+}
+
+td[data-sc活用タイトル項] {
+	display: table-cell;
+	text-align: center;
+	color: var(--ozk5-white, white);
+	background-color: var(--ozk5-red, #C00000) !important;
+}
+
+span[data-sc活用タイトル] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-size: 0.6em;
+	color: var(--ozk5-white, white);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	text-combine-horizontal: all;
+}
+
+td[data-sc活用型項] {
+	display: table-cell;
+	color: var(--ozk5-red, #C00000);
+	text-align: center;
+	border-top: solid 0.05em var(--ozk5-red, #C00000);
+	border-right: solid 0.05em var(--ozk5-red, #C00000);
+}
+
+div[data-sc活用型] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-size: 0.6em;
+	line-height: 1.4em;
+}
+
+td[data-sc活用形項] {
+	display: table-cell;
+	padding: 0.2em 0.3em;
+	border-top: dashed 0.05em var(--ozk5-red, #C00000);
+	border-right: solid 0.05em var(--ozk5-red, #C00000);
+	border-bottom: solid 0.05em var(--ozk5-red, #C00000);
+	min-width: 2em;
+}
+
+span[data-sc活用形項][data-sc-c] {
+	text-align: center;
+}
+
+span[data-sc活用形項][data-sc-no-b-b] {
+	border-bottom-style: none;
+}
+
+div[data-sc活用形] {
+	font-size: 0.9em;
+	line-height: 0.9em;
+}
+
+/* div[data-sc活用テキスト][data-sc-small] {
+	margin-left: 1em;
+	font-size: 0.7em;
+} */
+
+div[data-sc語義パネル-g],
+div[data-scガイド-g],
+div[data-sc接続囲み-g],
+div[data-sc類語パネル-g] {
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+}
+
+div[data-scパネルタイトル] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-size: 0.8em;
+	line-height: 1.4em;
+	color: var(--ozk5-white, white);
+	background-color: var(--ozk5-red, #C00000) !important;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+div[data-scパネルタイトル][data-sc類語パネル] {
+	background-color: var(--ozk5-ruigo-panel-background #444) !important;
+}
+
+span[data-scパネルタイトルテキスト] {
+	color: var(--ozk5-white, white);
+}
+
+div[data-scパネル-c] {
+	border-left: solid 0.05em var(--ozk5-red, #C00000);
+	border-right: solid 0.05em var(--ozk5-red, #C00000);
+	border-bottom: solid 0.05em var(--ozk5-red, #C00000);
+}
+
+div[data-scパネル-c][data-sc類語パネル-c] {
+	background-color: var(--ozk5-ruigo-panel-background #444) !important;
+}
+
+div[data-sc語義パネル解説-g] {
+	padding: 0.2em 0.3em;
+	border-bottom: solid 0.05em var(--ozk5-red, #C00000);
+}
+
+span[data-sc重点義タイトル] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+	color: var(--ozk5-red, #C00000);
+}
+
+span[data-sc重点義-m] {
+	color: var(--ozk5-light-red, #D96666);
+}
+
+div[data-sc語義パネル語義-g] {
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+}
+
+table[data-sc語義パネル語義-t],
+table[data-sc類語パネル-t],
+table[data-sc識別ガイド-t] {
+	display: table;
+	width: 100%;
+}
+
+td[data-sc語義パネル語義-t-c] {
+	display: table-cell;
+	vertical-align: top;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+}
+
+td[data-sc語義パネル語義-t-c][data-sc-header] {
+	border-right: solid 0.05em var(--ozk5-red, #C00000);
+	background-color: var(--ozk5-gogi-panel-header, #F9E6E6) !important;
+}
+
+td[data-sc語義パネル語義-t-c][data-sc-t-b] {
+	border-top: solid 0.05em var(--ozk5-red, #C00000);
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+}
+
+span[data-sc語義パネル語義-t][data-sc-v-p],
+span[data-sc語義パネル語義-g][data-sc-v-p],
+span[data-sc語義パネル語義-t-c][data-sc-v-p],
+span[data-scパネル-c][data-sc-v-p] {
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+
+div[data-sc語義パネル語義][data-sc-n] {
+	margin-left: 1.15em;
+	text-indent: -1.15em;
+}
+
+div[data-scガイド大語義項] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+	padding: 0 0.3em;
+}
+
+table[data-scガイド項] {
+	display: table;
+	padding: 0 0.3em;
+}
+
+table[data-scガイド項][data-sc-l-m] {
+	margin-left: 2.15em;;
+}
+
+td[data-scガイド項タイトル] {
+	display: table-cell;
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+	border: none;
+	min-width: 2em;
+	vertical-align: top;
+}
+
+td[data-scガイド項テキスト] {
+	display: table-cell;
+	border: none;
+	margin-left: 0.3em;
+	vertical-align: top;
+}
+
+div[data-sc接続大語義項] {
+	padding: 0 0.3em;
+	margin-left: 1.15em;
+	text-indent: -1.15em;
+}
+
+div[data-sc接続項] {
+	padding: 0 0.3em;
+}
+
+div[data-sc囲み-g] {
+	border: solid 0.05em var(--ozk5-gray, #888);
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+	padding: 0.2em 0.3em;
+}
+
+div[data-sc囲み-g][data-sc発展],
+div[data-sc囲み-g][data-sc語の広がり],
+div[data-sc囲み-g][data-sc識別ボード] {
+	border-color: var(--ozk5-red, #C00000);
+}
+
+div[data-sc囲み2-g],
+div[data-sc囲み-2-g] {
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+	padding: 0 0.3em;
+	border-left: solid 0.2em var(--ozk5-gray, #888);
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+div[data-sc囲み2-g][data-sc敬語ガイド],
+div[data-sc囲み-2-g][data-sc敬語ガイド],
+div[data-sc囲み2-g][data-sc慣用表現],
+div[data-sc囲み-2-g][data-sc慣用表現] {
+    border-color: var(--ozk5-red, #C00000);
+}
+
+div[data-sc発展タイトル],
+div[data-sc語の広がりタイトル],
+div[data-sc敬語ガイドタイトル],
+div[data-sc図解学習タイトル],
+div[data-sc慣用表現タイトル] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+}
+
+span[data-sc発展-m],
+span[data-sc語の広がり-m] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+	color: var(--ozk5-red, #C00000);
+}
+
+/* div[data-sc敬語ガイドテキスト] {
+	margin-left: 1em;
+} */
+
+div[data-sc類語パネル共通義] {
+	border-bottom: solid 0.05em var(--ozk5-ruigo-panel-border, #AAA);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+	padding: 0.2em 0.3em;
+}
+
+span[data-sc共通義タイトル] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+}
+
+span[data-sc共通義-m] {
+    color: var(--ozk5-gray, #888);
+}
+
+td[data-sc類語項] {
+	display: table-cell;
+	padding: 0.1em 0.3em;
+}
+
+td[data-sc類語項][data-sc-t-b] {
+	border-top: solid 0.05em var(--ozk5-ruigo-panel-border, #AAA);
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+}
+
+td[data-sc類語項][data-sc語句] {
+	border-right: solid 0.05em var(--ozk5-ruigo-panel-border, #AAA);
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+	vertical-align: middle;
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+	min-width: 5em;
+}
+
+div[data-sc識別ボードタイトル] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+	color: var(--ozk5-red, #C00000);
+}
+
+div[data-sc識別ボードタイトルテキスト] {
+	color: var(--ozk5-red, #C00000);
+}
+
+td[data-sc識別ガイド見出項] {
+	display: table-cell;
+	vertical-align: top;
+	min-width: 7.5em;
+	padding: 0.15em 0 0.15em 0.3em;
+}
+
+td[data-sc識別ガイド説明項] {
+	display: table-cell;
+	vertical-align: top;
+	padding: 0.15em 0.3em 0.15em 0;
+}
+
+/* div[data-sc識別ガイド大語義サブ] {
+	margin-left: 1em;
+} */
+
+div[data-sc囲み用例メタデータ] {
+	text-align: right;
+	font-size: 0.8em;
+}
+
+div[data-sc囲み用例メタデータ],
+div[data-sc文法要語解説用例G],
+div[data-sc修辞解説用例G] {
+	margin-bottom: 0.2em;
+}
+
+div[data-sc文法要語解説小見出] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+	margin-top: 0.4em;
+}
+
+/* div[data-sc文法要語解説テキスト2],
+div[data-sc文法要語解説テキスト-2] {
+	margin-left: 1em;
+} */
+
+span[data-sc文法要語解説ルビ] {
+    font-size: 0.7em;
+	vertical-align: -0.5em;
+}
+
+span[data-sc-rect] {
+	padding: 0.1em 0.12em;
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: normal;
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--ozk5-black, black);
+	word-break: keep-all;
+}
+
+span[data-sc-rect][data-sc-fill] {
+	color: var(--ozk5-white, white);
+	border-style: none;
+	background-color: var(--ozk5-black, black) !important;
+}
+
+span[data-sc-rectr] {
+	padding: 0.1em 0.12em;
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: normal;
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--ozk5-black, black);
+	word-break: keep-all;
+	-webkit-border-radius: 0.15em;
+}
+
+span[data-sc-rectr][data-sc-fill] {
+	color: var(--ozk5-white, white);
+	border-style: none;
+	background-color: var(--ozk5-black, black) !important;
+}
+
+span[data-sc-rectr][data-sc品詞],
+span[data-sc-rectr][data-sc文法] {
+	background-color: var(--ozk5-hinshi-mark, #444) !important;
+}
+
+span[data-sc-rectr][data-sc用例],
+span[data-sc-rectr][data-sc用例訳],
+span[data-sc-rectr][data-sc冒頭文] {
+	background-color: var(--ozk5-red, #C00000) !important;
+}
+
+span[data-sc-rectr][data-sc分類],
+span[data-sc-rectr][data-sc季語] {
+	background-color: var(--ozk5-gray, #888) !important;
+}
+
+span[data-sc-rectr][data-scメタデータ作品] {
+	font-size: 0.9em;
+	color: var(--ozk5-white, white);
+	border-color: var(--ozk5-white, white);
+}
+
+span[data-sc-rectr][data-sc現代] {
+	background-color: var(--ozk5-gendai-mark, #888) !important;
+}
+
+span[data-sc-rectr][data-sc-mark] {
+	background-color: var(--ozk5-mark-border, #660) !important;
+}
+
+span[data-sc-rectr][data-sc敬語ガイド],
+span[data-sc-rectr][data-sc図解学習],
+span[data-sc-rectr][data-sc慣用表現] {
+	background-color: var(--ozk5-red, #C00000) !important;
+}
+
+span[data-sc-rectr][data-sc-button] {
+	color: var(--ozk5-white, white);
+	border-color: var(--ozk5-white, white);
+}
+
+span[data-sc-circle] {
+	padding: 0.095em;
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: normal;
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--ozk5-black, black);
+	-webkit-border-radius: 0.67em;
+}
+
+span[data-sc-circle][data-sc用例活用] {
+	color: var(--ozk5-example-katsuyou-mark, #666);
+	border-color: var(--ozk5-example-katsuyou-mark, #666);
+	-webkit-user-select: nocopy;
+}
+
+span[data-sc-circle][data-sc敬語ガイド分類] {
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+span[data-sc語義-m],
+span[data-sc小語義-m] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+}
+
+span[data-sc-f-m]{
+    margin-right: 0.15em;
+}
+
+span[data-sc-b-m] {
+	margin-left: 0.15em;
+}
+
+span[data-sc-i-m] {
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+}
+
+span[data-scハイフン] {
+	vertical-align: 0.15em;
+	font-size: 0.95em;
+}
+
+span[data-sc-headword-dot] {
+	font-weight: normal;
+}
+
+span[data-scヘッドライン括弧番号] {
+	margin-left: 0.2em;
+	font-size: 0.6em;
+	text-combine-horizontal: all;
+}
+
+span[data-sc括弧番号] {
+	text-combine-horizontal: all;
+	margin-right: 0.1em;
+}
+
+span[data-sc参照矢印] {
+	/* font-family: "Yu Mincho Pr6N"; */
+}
+
+span[data-sc縦中横] {
+	text-combine-horizontal: all;
+}
+
+span[data-sc-bold] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+}
+
+span[data-sc-color] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+	color: var(--ozk5-red, #C00000);
+}
+
+span[data-sc-red] {
+	color: var(--ozk5-red, #C00000);
+}
+
+span[data-sc-strong] {
+	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
+	font-weight: bold;
+}
+
+span[data-sc文法要語underline],
+span[data-sc文法要語-underline] {
+	padding-top: 0.05em;
+	border-top: solid 0.05em var(--ozk5-black, black);
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+}
+
+span[data-sc文法要語hasen],
+span[data-sc文法要語-hasen] {
+	padding-top: 0.05em;
+	border-top: solid 0.05em var(--ozk5-black, black);
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+}
+
+span[data-sc文法要語nijyusen],
+span[data-sc文法要語-nijyusen] {
+	padding-top: 0.024em;
+	border-top: solid 0.12em var(--ozk5-black, black);
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+	margin-left: 0.05em;
+	margin-right: 0.05em;
+}
+
+div[data-sc画像-g] {
+	padding: 0.25em;
+}
+
+/* For anki */
+/* div[data-sc画像-g] {
+	padding: 0.5em 2em;
+} */
+
+div[data-sc画像タイトル] {
+	font-size: 0.8em;
+}
+
+span[data-sc-img][data-sc和歌・俳句],
+span[data-sc-img][data-sc文法要語解説],
+span[data-sc-img][data-sc修辞解説] {
+	max-width: 22em;
+}
+
+span[data-sc-img][data-scカラー],
+span[data-sc-img][data-scモノクロ],
+span[data-sc-img][data-sc図解学習],
+span[data-sc-img][data-sc発展],
+span[data-sc-img][data-sc語の広がり] {
+	width: 45%;
+}
+
+span[data-sc-gendai見出] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-size: 1.1em;
+	font-weight: bold;;
+}
+
+div[data-sc-gendai-ref-g] {
+	margin-top: 0.4em;
+}
+
+div[data-sc-gendai-ref] span[data-sc品詞-m] {
+	border-color: var(--ozk5-blue, rgb(49, 49, 226));
+	background-color: var(--ozk5-blue, rgb(49, 49, 226)) !important;
+}
+
+span[data-sc-img][data-sc外字] {
+	height: 1em;
+	text-combine-horizontal: all;
+}
+
+span[data-sc-img][data-sc-audio],
+span[data-sc-img][data-sc-audio] {
+	padding: 0 0.5em;
+	height: 1em;
+}
+
+span[data-sc-img][data-sc小倉番号] {
+	padding-left: 0.3em;
+	height: 1em;
+}
+
+span[data-sc-img][data-sc-class="audio"] .gloss-image-container,
+span[data-sc-img][data-sc-class="audio"] .gloss-image,
+span[data-sc-img][data-sc-audio_play_button] .gloss-image-container,
+span[data-sc-img][data-sc-audio_play_button] .gloss-image {
+	display: none !important;
+}
+
+span[data-sc-id="index"] {
+	display: none !important;
+}
+
+span[data-sc-rank] {
+	display: none !important;
+}
+
+div[data-sc用例-g] {
+	margin-left: 0.3em;
+}
+
+div[data-sc画像-g] a {
+    max-width: 70% !important;
+}
+
+div[data-sc画像-g] a {
+	max-height: 100% !important;
+}
+
+.gloss-image-container {
+	max-height: 100% !important;
+}
+
+@media (max-width: 500px) {
+	div[data-sc画像-g] a {
+		max-width: 60% !important;
+	}
+}
+
+a:hover, a:focus, a:active {
+	color: #e4671b;
+}

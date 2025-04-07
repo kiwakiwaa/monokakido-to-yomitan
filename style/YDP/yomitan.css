@@ -1,0 +1,43 @@
+:root[data-theme="dark"] {
+    .definition-item[data-dictionary='現代心理学辞典'] {
+        --ydp-black: #CCCCCC;
+        --ydp-image-background: #333333;
+        --ydp-blue: #00AAFF;
+
+	    [data-sc-img][data-sc-class="数式"] .gloss-image {
+			-webkit-filter: invert(100%);
+			filter: invert(100%);
+		}
+    }
+}
+
+.definition-item[data-dictionary='現代心理学辞典'] {
+    [data-sc-body],
+    rt,
+    span[data-sc-ref_group] span[data-sc-ref],
+    span[data-sc-ref_items] span[data-sc-ref] {
+        font-family: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN";
+    }
+
+    span[data-sc-em],
+    div[data-sc-entryrefs],
+    span[data-sc-headword][data-sc見出],
+    span[data-sc-ref_group] {
+        font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴシック";
+    }
+
+    span[data-sc-i],
+    span[data-sc-headword][data-sc英語],
+    span[data-sc-headword][data-sc独語],
+    span[data-sc-headword][data-sc仏語] {
+        font-family: "Times New Roman";  
+    }
+
+    div[data-sc-image_caption] {
+       font-family: "Hiragino Kaku Gothic ProN";
+    }
+
+    span[data-sc-lang] {
+        font-family: "Helvetica Neue";
+    }
+}

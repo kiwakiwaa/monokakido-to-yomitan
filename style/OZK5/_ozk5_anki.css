@@ -1,0 +1,41 @@
+.card:not(.nightMode) {
+	--ozk5-white: white;
+	--ozk5-black: black;
+	--ozk5-blue: rgb(49, 49, 226);
+	--ozk5-red: #C00000;
+	--ozk5-light-red: #D96666;
+	--ozk5-gray: #888;
+	--ozk5-hinshi-mark: #444;
+	--ozk5-kakomi-border: #999;
+	--ozk5-metadata-background: #999;
+	--ozk5-example-katsuyou-mark: #666;
+	--ozk5-mark-border: #660;
+	--ozk5-gogi-panel-header: #F9E6E6;
+	--ozk5-ruigo-panel-background: #444;
+	--ozk5-ruigo-panel-border: #AAA;
+	--ozk5-appendix-title-background: #633;
+	--ozk5-gendai-mark: #888;
+}
+
+.card.nightMode {
+	--ozk5-black: #DDDDDD;
+	--ozk5-white: #000000;
+	--ozk5-blue: #00AAFF;
+	--ozk5-red: #FF6666;
+	--ozk5-light-red: #B24747;
+	--ozk5-gray: #888;
+	--ozk5-hinshi-mark: #CCCCCC;
+	--ozk5-kakomi-border: #888;
+	--ozk5-metadata-background: #888;
+	--ozk5-example-katsuyou-mark: #AAAAAA;
+	--ozk5-mark-border: #ACAC04;
+	--ozk5-gogi-panel-header: #331414;
+	--ozk5-ruigo-panel-background: #CCCCCC;
+	--ozk5-ruigo-panel-border: #777;
+	--ozk5-appendix-title-background: #BF6666;
+	--ozk5-gendai-mark: #CCCCCC;
+}
+
+span[data-sc-img][data-sc-audio] {
+	display: none;
+}

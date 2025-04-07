@@ -1,0 +1,539 @@
+@color header-DJS = #B65058;
+@color header-DJSP = #999999;
+@color header-text = #FFFFFF;
+@color logo-color = #000000;
+@color backgroundL3 = #606060;
+@color accent-mark = #CC0000;
+@color accent-slash = #808080;
+
+body {
+	margin: 0;
+	color: black;
+}
+
+entry-index {
+	display: none;
+}
+
+Header {
+	display: block;
+	color: header-text;
+}
+
+Header.DJS {
+	background-color: header-DJS;
+}
+
+Header.DJSP {
+	background-color: header-DJSP;
+}
+
+HeaderTitle {
+	display: block;
+	margin-top: 0.05em;
+	margin-bottom: 0.05em;
+	margin-left: 8px;
+	margin-right: 8px;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.7em;
+	line-height: 1.333em;
+}
+
+Contents {
+	display: block;
+	font-family: "Hiragino Mincho ProN";
+	font-size: 1.2em;
+	line-height: 1.5em;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+見出G {
+	display: block;
+	margin-bottom: 0.5em;
+}
+
+解説G {
+	display: block;
+}
+
+SubItem {
+	display: block;
+	margin-top: 0.8em;
+}
+
+SubItemH {
+	display: block;
+}
+
+SubItemC {
+	display: block;
+	margin-left: 0.5em;
+}
+
+headword.見出 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+headword.表記, headword.原綴 {
+	margin-left: 0.25em;
+}
+
+headword.歴史 {
+	margin-left: 0.417em;
+	font-size: 0.7em;
+}
+
+Hhyphen {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	font-size: 1.2em;
+	vertical-align: 0.03em;
+	margin-left: 0.03em;
+	margin-right: 0.03em;
+}
+
+Hdot {
+	font-size: 0.8em;
+}
+
+Wdot {
+	glyph: 12644;
+	font-size: 0.45em;
+}
+
+HyokiS {
+	glyph: 435;
+	vertical-align: -0.1em;
+}
+
+MG {
+	display: block;
+}
+
+MG.L1A {
+	margin-top: 0.5em;
+}
+
+MG.L2A, MG.L3A {
+	margin-top: 0.3em;
+}
+
+MG.L4A {
+}
+
+meaning {
+	display: block;
+}
+
+meaning.C {
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+SubMeaning {
+}
+
+SubMeaning.block {
+	display: block;
+}
+
+CampaignDesc {
+	display: block;
+	margin-top: 0.3em;
+	font-size: 0.9em;
+}
+
+CampaignDesc.inline {
+	display: inline;
+	margin-top: 0em;
+}
+
+CampaignExG {
+	display: block;
+	margin-top: 0.2em;
+}
+
+CampaignEx {
+	display: block;
+	font-size: 0.9em;
+	text-indent: -0.9em;
+	margin-left: 0.9em;
+}
+
+CampaignName {
+	display: block;
+	margin-left: 1.05em;
+	font-size: 0.8em;
+}
+
+ExG {
+}
+
+ExG.BM {
+	margin-left: 0.4em;
+}
+
+ExS {
+	margin-left: 0.2em;
+	font-size: 0.9em;
+}
+
+L4 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+L4.small {
+	font-size: 0.9em;
+}
+
+MeanT {
+	display: table;
+	font-size: 0.8em;
+	line-height: 1.5em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	border-top: solid 0.05em gray;
+	border-left: solid 0.05em gray;
+}
+
+MeanTR {
+	display: table-row;
+}
+
+MeanTD {
+	display: table-cell;
+	padding: 0.3em;
+	border-bottom: solid 0.05em gray;
+	border-right: solid 0.05em gray;
+}
+
+MImageG {
+	display: block;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+MImage {
+	display: block;
+	margin: 0.5em;
+}
+
+img.Image {
+	zoom: 60%;
+}
+
+MCaption {
+	display: block;
+	font-size: 0.75em;
+	line-height: 1.5em;
+}
+
+MUrlG, MLocationG {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+MUrl, MLocation {
+	display: block;
+	font-size: 0.9em;
+	line-height: 1.5em;
+}
+
+MUrl.TM {
+	margin-top: 0.3em;
+}
+
+MUrlTitle {
+	display: block;
+}
+
+MUrlUrl {
+	display: block;
+	font-size: 0.9em;
+}
+
+MAccentAudioG {
+	display: block;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+MAccentM {
+	color: accent-mark;
+}
+
+MAccentSlash {
+	font-size: 0.9em;
+	color: accent-slash;
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+}
+
+img.audio {
+	height: 1em;
+}
+
+rect {
+	padding: 0.04em 0.05em 0.058em 0.05em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	word-break: keep-all;
+	-webkit-border-radius: 0.1em;
+}
+
+rect.fill {
+	padding: 0.1em;
+	color: white;
+	border-style: none;
+	background-color: black;
+}
+
+rect.L3 {
+	padding: 0.1em 0.15em 0.1em 0.19em;
+	color: white;
+	border-style: none;
+	background-color: backgroundL3;
+}
+
+rect.bold {
+	font-weight: bold;
+}
+
+rect.small {
+	font-size: 0.72em;
+}
+
+circle {
+	padding: 0.06em 0.1em 0.08em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	-webkit-border-radius: 0.67em;
+}
+
+補足ロゴG {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.8em;
+	background-color: logo-color;
+	-webkit-border-radius: 0.2em;
+	padding: 0.09em 0.25em 0.11em 0.25em;
+	word-break: keep-all;
+	vertical-align: 0.05em;
+}
+
+補足ロゴ {
+	background-color: white;
+	color: black;
+	border-top: solid 0.05em logo-color;
+	border-bottom: solid 0.05em logo-color;
+	padding: 0.04em 0.08em 0.06em 0.08em;
+}
+
+補足ロゴG.small {
+	font-size: 0.7em;
+}
+
+HinshiSahen {
+	font-size: 0.5em;
+	vertical-align: 1.1em;
+	margin-right: 0.6em;
+}
+
+季語ロゴ前 {
+	background-color: white;
+	color: black;
+	border-top: solid 0.05em black;
+	border-bottom: solid 0.05em black;
+	border-right: solid 0.05em white;
+	padding: 0.04em 0 0.06em 0;
+}
+
+季語ロゴ後 {
+	background-color: white;
+	color: black;
+	border-top: solid 0.05em black;
+	border-bottom: solid 0.05em black;
+	border-left: solid 0.05em white;
+	padding: 0.04em 0 0.06em 0;
+}
+
+季語ロゴ中 {
+	background-color: white;
+	color: black;
+	padding: 0.1em 0 0.12em 0;
+}
+
+季語ロゴS {
+	font-size: 0.4em;
+}
+
+季語M {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	font-size: 0.85em;
+	margin-right: 0.3em;
+}
+
+季語 {
+	font-family: "Hiragino Mincho ProN";
+	font-size: 1.1em;
+}
+
+歌枕M {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+lang {
+	font-size: 0.7em;
+	margin-left: 0.05em;
+}
+
+lang.FM {
+	margin-right: 0.3em;
+}
+
+lang.BM {
+	margin-left: 0.3em;
+}
+
+lang.IM {
+	margin-left: 0.3em;
+	margin-right: 0.3em;
+}
+
+歴史 {
+	font-size: 0.7em;
+}
+
+bold {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+italic {
+	font-family: Georgia;
+	font-style: italic;
+}
+
+sub {
+	font-size: 0.6em;
+	font-weight: normal;
+	vertical-align: -0.7em;
+}
+
+sub.capital {
+	font-size: 0.5em;
+	vertical-align: -1.1em;
+}
+
+sub.kana {
+	vertical-align: -0.7em;
+}
+
+sub.DJSP_kana {
+	font-size: 0.7em;
+	vertical-align: -0.45em;
+}
+
+sup {
+	font-size: 0.6em;
+	vertical-align: 1.1em;
+}
+
+sup.kaeriten {
+	font-size: 0.5em;
+	vertical-align: -1em;
+}
+
+常外音訓M {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.38em;
+	vertical-align: 1.9em;
+}
+
+常外M {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.55em;
+	vertical-align: 1.6em;
+}
+
+付表有M, 付表無M {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.45em;
+}
+
+WhiteDiamond, BlackDiamond {
+	font-size: 0.7em;
+	margin-right: 0.3em;
+}
+
+K-h {
+}
+
+K-v {
+	display: none;
+}
+
+wari, Small {
+	font-size: 0.7em;
+	vertical-align: -0.4em;
+}
+
+headword wari, bold wari {
+	font-weight: normal;
+}
+
+Gaiji.dakuten, Gaiji.handakuten {
+	margin-left: 0.3em;
+	margin-right: -0.5em;
+}
+
+Gaiji.keigashira {
+	font-family: "Heiti TC";
+}
+
+img.gaiji {
+	display: gaiji;
+	height: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a.blue {
+	color: blue;
+}
+
+a.blue rect, a.blue circle {
+	border-color: blue;
+}
+
+a.blue rect.fill, a.blue rect.L3 {
+	background-color: blue;
+}
+
+.FM {
+	margin-right: 0.15em;
+}
+
+.BM {
+	margin-left: 0.15em;
+}
+
+.IM {
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+}

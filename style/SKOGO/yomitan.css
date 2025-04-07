@@ -1,0 +1,69 @@
+/* ----------------------- */
+/* -- Dark mode colours -- */
+/* ----------------------- */
+:root[data-theme="dark"] {
+    .definition-item[data-dictionary='三省堂 全訳読解古語辞典'] {
+        --skogo-black: #DDDDDD;
+        --skogo-white: #000000;
+        --skogo-blue: #00AAFF;
+        --skogo-red: #FF6666;
+        --skogo-light-red: #A54447;
+        --skogo-extra-light-red: #481D1E;
+        --skogo-hinshi-mark: #CCCCCC;
+        --skogo-shubetsu-mark: #CCCCCC;
+        --skogo-gendai-mark: #CCCCCC;
+    }
+}
+
+.definition-item[data-dictionary='三省堂 全訳読解古語辞典'] {
+    /* ----------- */
+    /* -- Fonts -- */
+    /* ----------- */
+    [data-sc-body],
+    span[data-sc見出歴史仮名],
+    span[data-sc見出現代仮名],
+    span[data-sc段落歴史仮名],
+    span[data-sc段落現代仮名],
+    span[data-sc中黒語義],
+    span[data-sc-em][data-sc小書き],
+    span[data-scルビ],
+    span[data-sc返り点] {
+        font-family: "Hiragino Mincho ProN";
+    }
+
+    span[data-sc見出G],
+    span[data-sc絵巻タイトル],
+    span[data-scGendai見出],
+    span[data-sc活用分節],
+    span[data-sc語構成],
+    span[data-sc-f-w-hyphen],
+    span[data-sc活用表-label],
+    span[data-sc詩歌全形],
+    span[data-sc見出相当部],
+    span[data-sc詩歌技法ロゴ],
+    span[data-sc用例訳注ロゴ],
+    span[data-sc参考ロゴ],
+    span[data-sc注釈ロゴ],
+    span[data-sc冒頭文ロゴテキスト],
+    span[data-sc作品例ロゴテキスト],
+    span[data-sc-em][data-sc-gothic],
+    span[data-sc-em][data-sc赤],
+    span[data-sc補説小見出],
+    span[data-sc読解見出],
+    span[data-sc現代見出],
+    span[data-sc読解小見出],
+    span[data-sc現代小見出],
+    span[data-scチャート見出],
+    span[data-sc付録参照ロゴ],
+    span[data-sc絵巻図版],
+    span[data-sc識別見出],
+    td[data-sc識別ヘッダ項],
+    span[data-sc識別説明],
+    span[data-sc-gendai-ref品詞],
+    span[data-sc-gendai-ref-品詞],
+    span[data-sc-gendai-ref-desc],
+    span[data-sc-gendai-ref-desc],
+    span[data-sc-rectr] {
+        font-family: "Hiragino Kaku Gothic ProN";
+    }
+}

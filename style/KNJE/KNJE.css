@@ -1,0 +1,280 @@
+/*
+@color gray = #666666;
+@color blue = #2967cc;
+@color light-gray = #BBBBBB;
+@color header-Main = #4B9E5B;
+@color header-Sup = #888888;
+@color header-text = #FFFFFF;
+*/
+
+body {
+	margin: 0;
+	font-family: Georgia;
+	line-height: 1.5em;
+	color: black;
+	vertical-align: baseline;
+}
+
+entry-index {
+	display: none;
+}
+
+Header {
+	display: block;
+	margin-bottom: 0.73em;
+	color: header-text;
+}
+
+Header.Main {
+	background-color: header-Main;
+}
+
+Header.Sup {
+	background-color: header-Sup;
+}
+
+HeaderTitle {
+	display: block;
+	margin-top: 0.05em;
+	margin-bottom: 0.05em;
+	margin-left: 8px;
+	margin-right: 8px;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.7em;
+	line-height: 1.333em;
+}
+
+Contents {
+	display: block;
+	margin-top: 0.73em;
+	margin-bottom: 2em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+HeadG {
+	display: block;
+	margin-bottom: 0.4em;
+}
+
+headword {
+	font-size: 1.333em;
+	font-weight: bold;
+}
+
+headword.表記 {
+	font-weight: normal;
+}
+
+ComplexG {
+	display: block;
+	margin-top: 1em;
+}
+
+ComplexH {
+	display: block;
+}
+
+SubItem {
+	display: block;
+	margin-top: 1em;
+}
+
+SubItem.NoTM {
+	margin-top: 0;
+}
+
+SubItem.M23 {
+	margin-left: 0.8em;
+}
+
+SubItem.M23NoTM {
+	margin-top: 0.3em;
+}
+
+SubItemC {
+	display: block;
+	margin-left: 0.8em;
+}
+
+subheadword {
+	display: block;
+	font-weight: bold;
+}
+
+MeaningG {
+	display: block;
+}
+
+MeaningG.L1 {
+	margin-top: 0.5em;
+}
+
+MeaningG.L2, MeaningG.L3 {
+	margin-top: 1em;
+}
+
+MeaningG.L2 MeaningG.L3 {
+	margin-left: 0.8em;
+}
+
+MeaningG.NoTM {
+	margin-top: 0.3em;
+}
+
+meaning {
+	display: block;
+}
+
+meaning.活用TM {
+	margin-top: 0.4em;
+}
+
+meaning.協力 {
+	margin-top: 1.6em;
+}
+
+example {
+	display: block;
+	margin-top: 0.6em;
+	margin-bottom: 0.5em;
+	margin-left: 0.8em;
+}
+
+用例 {
+	display: block;
+	color: dark-blue;
+}
+
+用例訳 {
+	display: block;
+}
+
+column {
+	display: block;
+	margin-top: 0.6em;
+	margin-bottom: 0.6em;
+	padding: 0.25em 0.5em;
+	border: solid 1px gray;
+}
+
+num {
+	padding: 0.17em 0.22em 0.03em 0.22em;
+	font-family: Helvetica;
+	font-weight: bold;
+	font-size: 1em;
+	color: white;
+	background-color: black;
+	text-decoration: none;
+	word-break: keep-all;
+	vertical-align: 0.1em;
+	border-radius: 0.2em;
+	margin-right: 0.1em;
+}
+
+glabel, slabel, alabel {
+	margin-left: 0.05em;
+	margin-right: 0.05em;
+	font-weight: normal;
+	font-size: 0.9em;
+}
+
+pron {
+	font-family: "Doulos SIL";
+	font-weight: normal;
+	font-style: normal;
+	color: black;
+	word-break: keep-all;
+}
+
+pron i {
+	font-family: "Times New Roman";
+	font-style: italic;
+	font-weight: normal;
+}
+
+PronS {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: normal;
+	margin-right: 0.05em;
+}
+
+PronE {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: normal;
+	margin-left: 0.05em;
+}
+
+MlgG {
+	font-weight: normal;
+	font-style: normal;
+}
+
+mlg {
+	display: warichu;
+	font-size: 0.66em;
+	vertical-align: 0.3em;
+}
+
+sc {
+	font-variant: small-caps;
+}
+
+Hsup {
+	margin-left: 0.1em;
+	font-size: 0.6em;
+	font-weight: normal;
+	vertical-align: 1.7em;
+}
+
+sup {
+	font-weight: normal;
+}
+
+sub {
+	font-weight: normal;
+}
+
+sub.CL {
+	font-size: 0.6em;
+}
+
+VLine {
+	vertical-align: 0.15em;
+}
+
+BTriangle {
+	font-size: 0.95em;
+	margin-left: 0.05em;
+	margin-right: 0.1em;
+}
+
+WTriangle {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+	margin-left: 0.053em;
+	margin-right: 0.11em;
+}
+
+Graphic {
+	display: block;
+	margin-left: 0.8em;
+	margin-right: 0.8em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+Graphic img {
+	width: 80%;
+}
+
+a {
+	padding-bottom: 0.1em;
+	text-decoration: none;
+	border-bottom: solid 0.05em blue;
+}
+
+img.gaiji {
+	display: gaiji;
+	height: 1em;
+}

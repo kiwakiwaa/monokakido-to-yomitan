@@ -1,0 +1,268 @@
+@color image-background = #EEEEEE;
+@color title-background = #D0B48B;
+
+body {
+	margin: 1em 0.5em;
+	font-family: japanese;
+	color: black;
+	line-height: 1.5em;
+	vertical-align: baseline;
+}
+
+entry-index {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+b {
+	
+}
+
+br {
+	
+}
+
+data {
+	display: none;
+}
+
+data.筆者名 {
+	display: block;
+	text-align: right;
+}
+
+def {
+}
+
+dic-item {
+	display: block;
+}
+
+div.表 {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	text-align: center;
+}
+
+em {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	font-style: normal;
+}
+
+gaiji {
+	
+}
+
+gi {
+	
+}
+
+i {
+	font-family: "Times New Roman";
+	font-size: 1.1em;
+}
+
+image {
+	display: block;
+	margin-top: 0.5em;
+	padding: 0.5em;
+	background-color: image-background;
+	border-radius: 0.333em;
+}
+
+image-caption {
+	display: block;
+	margin-top: 0.5em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+}
+
+image-note {
+	display: block;
+	margin-top: 1em;
+}
+
+image-source {
+	display: block;
+	margin-top: 1.2em;
+	padding-left: 2em;
+	text-indent: -2em;
+	font-size: 0.85em;
+}
+
+image-img {
+	display: block;
+	margin-top: 0.5em;
+	text-align: center;
+}
+
+image-img image-caption {
+	margin: 0.5em 0;
+	font-size: 0.85em;
+	font-weight: normal;
+}
+
+image-img img {
+	width: 80%;
+	background-color: #fff;
+}
+
+entryrefs {
+	display: block;
+	margin-top: 0.5em;
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+head2 {
+	display: block;
+}
+
+headword.見出 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+headword.英語, headword.独語, headword.仏語 {
+	font-family: "Times New Roman"
+}
+
+i {
+	
+}
+
+image {
+	
+}
+
+img {
+	
+}
+
+img.gaiji {
+	display: gaiji;
+	height: 1em;
+}
+
+img.数式 {
+	display: gaiji;
+	margin: 0 0.25em;
+	height: 1em;
+}
+
+img.表 {
+	max-width: 80%;
+	background-color: #fff;
+}
+
+key {
+	display: none;
+}
+
+lang {
+	font-family: "Helvetica Neue";
+}
+
+meaning {
+	display: block;
+	margin-top: 0.5em;
+	text-indent: 1em;
+}
+
+meaning.見よ項目 {
+	margin-left: 1em;
+	text-indent: 0;
+}
+
+meaning.引用 {
+	padding-left: 2em;
+	text-indent: -2em;
+}
+
+mlg {
+	margin: 0 0.333em;
+	font-size: 0.667em;
+}
+
+mlgbr {
+	
+}
+
+nobr {
+	
+}
+
+ref {
+	
+}
+
+ref.文献 {
+	vertical-align: 0.5em;
+	font-size: 0.85em;
+}
+
+rt {
+	font-family: "Hiragino Mincho ProN";
+	font-size: 0.5em;
+	font-weight: normal;
+}
+
+small {
+	
+}
+
+span {
+	
+}
+
+sub {
+	
+}
+
+sup {
+	
+}
+
+u {
+	
+}
+
+xref {
+	
+}
+
+body.refs {
+	margin: 0;
+}
+
+ref-group {
+	display: block;
+	font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN";
+	line-height: 1.25em;
+}
+
+ref-group ref {
+	display: block;
+	padding-left: 2em;
+	font-family: "Hiragino Mincho ProN";
+	text-indent: -2em;
+}
+
+ref-items {
+	display: block;
+	margin-top: 0.25em;
+}
+
+ref-item {
+}
+
+ref-item headword.見出 {
+	font-size: 0.9em;
+	font-weight: normal;
+}

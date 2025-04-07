@@ -1,0 +1,178 @@
+body {
+	margin: 1em 44px 1em 1em;
+	line-height: 1.5em;
+	font-family: "Hiragino Mincho ProN";
+	font-size: 1.2em;
+	color: black;
+	writing-mode: vertical-rl;
+}
+
+#index {
+	display: none;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+a {
+	text-decoration: none;
+}
+
+cid {
+	text-combine-horizontal: all;
+}
+
+entry {
+	display: block;
+}
+
+gi {
+	
+}
+
+hn {
+	
+}
+
+hs {
+	
+}
+
+hw {
+	
+}
+
+img.gaiji {
+	display: gaiji;
+	height: 1em;
+	text-combine-horizontal: all;
+}
+
+innote {
+	font-size: 0.85em;
+}
+
+key {
+	
+}
+
+qs {
+	
+}
+
+r-hyphen {
+	
+}
+
+rb {
+	
+}
+
+rt {
+	font-size: 0.5em;
+}
+
+rt.常用外マーク {
+	font-size: 0.333em;
+}
+
+ruby {
+	
+}
+
+みよ項目 {
+	
+}
+
+ソート番号 {
+	
+}
+
+分科1 {
+	
+}
+
+分科2 {
+	
+}
+
+参照先ID {
+	display: none;
+}
+
+参照項目 {
+	
+}
+
+執筆者 {
+	
+}
+
+常用外マーク {
+	
+}
+
+本文 {
+	display: block;
+	margin-left: 1em;
+}
+
+本文データ {
+	display: block;
+}
+
+段落 {
+	display: block;
+}
+
+段落 + 段落 {
+	margin-top: 0.5em;
+}
+
+段落番号 {
+	margin-right: 0.25em;
+}
+
+管理データ {
+	display: none;
+}
+
+縦中横 {
+	text-combine-horizontal: all;
+}
+
+置換 {
+}
+
+追加 {
+	
+}
+
+離割禁止 {
+	word-break: keep-all;
+}
+
+項目 {
+	display: block;
+}
+
+項目表示 {
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+項目読み {
+	display: none;
+}
+
+四角 {
+	padding: 0.125em;
+	font-size: 0.8em;
+	border: solid 0.0625em black;
+	word-break: keep-all;
+}
+
+原語名 {
+	margin: 0 0.25em;
+}
