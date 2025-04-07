@@ -1,0 +1,526 @@
+@color black = #000000;
+@color white = #FFFFFF;
+@color red = #FF3333;
+@color green = #005522;
+@color gray = #666666;
+@color pink = #FFCCCC;
+@color light-pink = #FFEEEE;
+@color light-red = #EE3333;
+@color dark-red = #CC3333;
+@color fbox-white = #FFFFFF;
+@color fbox-gray = #333333;
+@color box-gray = #FFDDDD;
+
+body {
+	margin: 1em 44px 1em 1.5em;
+	line-height: 1.75em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 1.2em;
+	color: black;
+	writing-mode: vertical-rl;
+	/*text-combine-horizontal: digits 4;*/
+}
+
+entry-index {
+	display: none;
+}
+
+a {
+	font-family: "Hiragino Kaku Gothic ProN";
+	text-decoration: none;
+	padding-top: 0.05em;
+}
+
+b {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+bc {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+child-item {
+	display: block;
+	margin-top: 0.5em;
+}
+
+child-items {
+	display: block;
+}
+
+column {
+	display: block;
+	margin-top: 0.5em;
+	padding: 0 0.5em;
+	border-left: solid 5px box-gray;
+	border-right: solid 5px box-gray;
+}
+
+meaning.columntitle {
+	margin-bottom: 0.5em;
+	padding: 0.25em 0.25em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	color: dark-red;
+	border: solid 1px dark-red;
+}
+
+dic-item {
+	display: block;
+}
+
+div {
+	
+}
+
+div.body {
+	display: block;
+	margin-left: 1em;
+}
+
+div.head {
+	display: block;
+}
+
+div.hinkaku {
+	margin-top: 0.5em;
+	padding: 0.25em 0.5em;
+	background-color: box-gray;
+	border-radius: 0.5em;
+}
+
+div.shikiri {
+	margin: 0.5em 0;
+	background-color: pink;
+}
+
+div.shikiri meaning {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+div.shikiri td.red {
+	padding: 0 0.375em;
+	margin-right: 0.25em;
+	background-color: red;
+}
+
+div.shikiri td.red red {
+	color: fbox-white;
+}
+
+em {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+EM {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+example {
+	display: block;
+	font-family: "Hiragino Mincho ProN";
+}
+
+fbox {
+	margin-right: 0.25em;
+	padding: 0.1em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.8em;
+	font-weight: normal;
+	border-style: solid;
+	border-width: 0.05em;
+	border-color: black;
+	border-radius: 0.2em;
+	word-break: keep-all;
+}
+
+fbox.書き方 {
+	color: fbox-white;
+	background-color: dark-red;
+	border-color: dark-red;
+}
+
+fbox.使い方 {
+	background-color: pink;
+	border-color: red;
+}
+
+fbox.語源, fbox.数 {
+	color: red;
+	border-color: red;
+}
+
+fbox.注意 {
+	color: fbox-white;
+	background-color: red;
+	border-color: red;
+}
+
+fbox.品格 {
+	font-family: "Hiragino Mincho ProN";
+	font-size: 1.2em;
+	background-color: pink;
+	border-color: red;
+}
+
+fbox0 {
+	margin-right: 0.25em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.8em;
+	color: fbox-white;
+	word-break: keep-all;
+}
+
+fbox1 {
+	padding: 0.1em;
+	background-color: red;
+	border-top-left-radius: 0.2em;
+	border-bottom-left-radius: 0.2em;
+	border: solid 0.05em red;
+}
+
+fbox2 {
+	padding: 0.1em;
+	color: red;
+	border-top: solid 0.05em red;
+	border-bottom: solid 0.05em red;
+}
+
+fbox3 {
+	padding: 0.1em;
+	background-color: red;
+	border-top: solid 0.05em red;
+	border-bottom: solid 0.05em red;
+}
+
+fbox4 {
+	padding: 0.1em;
+	color: red;
+	border-top-right-radius: 0.2em;
+	border-bottom-right-radius: 0.2em;
+	border: solid 0.05em red;
+}
+
+fbox1.読み分け {
+	color: white;
+	background-color: fbox-gray;
+	border-color: fbox-gray;
+}
+
+fbox2.読み分け {
+	color: black;
+	border-top-color: fbox-gray;
+	border-bottom-color: fbox-gray;
+}
+
+fbox3.読み分け {
+	padding: 0.1em;
+	color: white;
+	background-color: fbox-gray;
+	border-top-color: fbox-gray;
+	border-bottom-color: fbox-gray;
+}
+
+fbox4.読み分け {
+	color: black;
+	border-color: fbox-gray;
+}
+
+gaiji {
+	
+}
+
+gentetsu {
+	
+}
+
+gi {
+	
+}
+
+glabel {
+	
+}
+
+head2 {
+	display: block;
+}
+
+headword.カナ, headword.子見出し {
+	font-weight: bold;
+}
+
+headword.カナ {
+	font-size: 1.2em;
+}
+
+headword.表記, headword.原綴 {
+	font-family: "Hiragino Mincho ProN";
+}
+
+headword.旧かな {
+	display: warichu;
+	margin-left: 0.5em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.667em;
+}
+
+hidden {
+	display: none;
+}
+
+i {
+	
+}
+
+img {
+	
+}
+
+img.gaiji {
+	display: gaiji;
+	height: 1em;
+	text-combine-horizontal: all;
+}
+
+table.img {
+	margin-top: 1em;
+	margin-left: 1em;
+}
+
+td.img {
+	border: none;
+}
+
+td.img-title {
+	padding-left: 0.5em;
+	min-width: 1em;
+	text-combine-horizontal: all;
+	border: none;
+}
+
+index {
+	display: none;
+}
+
+indexlist {
+	
+}
+
+kanji {
+	
+}
+
+katsuyo {
+	display: warichu;
+	margin-left: 0.25em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.667em;
+}
+
+key {
+	display: none;
+}
+
+lang {
+	font-size: 0.667em;
+	vertical-align: 0.5em;
+}
+
+meaning {
+	display: block;
+}
+
+nobr {
+	word-break: keep-all;
+}
+
+pos {
+	margin-right: 0.5em;
+}
+
+POS {
+	margin-right: 0.5em;
+}
+
+Pos {
+	margin-right: 0.5em;
+}
+
+pron {
+	font-family: "Doulos SIL";
+}
+
+red {
+	
+}
+
+ref {
+	
+}
+
+ruby {
+}
+
+rb {
+}
+
+rt {
+	font-size: 0.667em;
+	font-weight: normal;
+}
+
+ruby.full {
+	display: inline;
+}
+
+ruby.full rb {
+	display: inline;
+}
+
+ruby.full rt {
+	display: none;
+}
+
+tate ruby {
+	text-combine-horizontal: none;
+}
+
+tate rb {
+	text-combine-horizontal: all 1;
+}
+
+RUBY {
+}
+
+ruigo {
+	
+}
+
+slabel {
+	
+}
+
+spellout {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+sub {
+	
+}
+
+sup {
+	
+}
+
+tate {
+	text-combine-horizontal: all 1;
+}
+
+yoko {
+	text-combine-horizontal: none;
+}
+
+xref {
+	
+}
+
+yourei {
+	
+}
+
+zoomkanji-container {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	line-height: 3em;
+}
+
+zoomkanji {
+	padding: 0.1em;
+	font-family: "Hiragino Mincho ProN";
+	font-size: 3em;
+	background-color: pink;
+}
+
+出典 {
+	
+}
+
+半角 {
+	
+}
+
+縦中横 {
+	text-combine-horizontal: all;
+}
+
+small {
+	font-size: 0.5em;
+	vertical-align: 1em;
+}
+
+red {
+	color: red;
+}
+
+gray {
+	color: gray;
+}
+
+div.shikiri red rect:first-child {
+	background-color: red;
+	text-combine-horizontal: all;
+}
+
+rect {
+	padding: 0.1em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	word-break: keep-all;
+	-webkit-border-radius: 0.1em;
+}
+
+ref rect {
+	border-color: blue;
+}
+
+rect.fill {
+	color: white;
+	border-style: none;
+	background-color: black;
+}
+
+rect + rect {
+	margin-left: 0.1em;
+}
+
+num {
+	text-combine-horizontal: all;
+}
+
+slash {
+	font-weight: normal;
+}
+
+div.ruigo-items {
+}
+
+ruigo-items {
+	display: block;
+}
+
+ruigo-items + ruigo-items {
+	margin-top: 0.5em;
+}
+
+ruigo-item {
+	word-break: keep-all;
+}

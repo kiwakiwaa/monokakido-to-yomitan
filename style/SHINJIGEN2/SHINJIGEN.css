@@ -1,0 +1,855 @@
+/*
+@color red = #CC0000;
+@color pink = #FF928E;
+@color light-pink = #FFDBDA;
+@color gogi-gray = #5C5C5C;
+@color light-gray = #AAAAAA;
+@color extra-light-gray = #EEEEEE;
+@color kodaimoji-branch-separator = #444444;
+@color kodaimoji-type-separator = #A0A0A0;
+*/
+
+body {
+	margin: 1em 44px 1em 1.5em;
+	line-height: 1.5em;
+	font-family: SHINJIMinchoW3;
+	font-size: 1.2em;
+	color: black;
+	writing-mode: vertical-rl;
+}
+
+entry-index {
+	display: none;
+}
+
+entry {
+	display: block;
+}
+
+BusyuHeadKaisetsuG {
+	display: block;
+}
+
+BusyuHeadG {
+	display: block;
+	background-color: pink;
+}
+
+BusyuHeadSubG {
+	display: table;
+}
+
+BusyuHeadC {
+	display: table-row;
+}
+
+BusyuKakusuG {
+	display: table-cell;
+}
+
+BusyuKakusuSubG {
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	color: white;
+	background-color: black;
+}
+
+BusyuKakusuLabel {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.7em;
+}
+
+BusyuKakusu {
+	font-family: Avenir;
+	font-weight: bold;
+	text-combine-horizontal: all;
+	margin-right: 0.25em;
+}
+
+BusyuNumberG {
+	display: table-cell;
+}
+
+BusyuNumber {
+	font-family: Avenir;
+	font-size: 0.85em;
+	text-combine-horizontal: all;
+}
+
+BusyuBusyuG {
+	display: table-cell;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	margin-left: 0.5em;
+	margin-right: 0.2em;
+}
+
+BusyuPrimaryBusyu {
+	font-size: 2.2em;
+	line-height: 1em;
+	color: white;
+}
+
+BusyuSubBusyu {
+	color: white;
+}
+
+BusyuBusyuLabelG {
+	display: table-cell;
+}
+
+BusyuBusyuLabel {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+BusyuYomiG {
+	display: block;
+	margin-bottom: 0.3em;
+	margin-left: 1em;
+}
+
+BusyuYomiContent {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+	line-height: 1.2em;
+}
+
+BusyuYomi {
+}
+
+BushuKaisetsuG {
+	display: block;
+	background-color: extra-light-gray;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	padding-left: 1em;
+	padding-right: 0.3em;
+}
+
+BusyuKaisetsuSubG {
+	display: block;
+}
+
+BushubetsuIndexG {
+	display: block;
+	margin-left: 1em;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+	line-height: 1.6em;
+}
+
+BushubetsuIndexContentG {
+	display: table;
+	width: 100%;
+}
+
+BusyubetsuIndexSubG {
+	display: table-row;
+}
+
+BusyuNaiKakusuLabel {
+	display: table-cell;
+	width: 1.05em;
+	vertical-align: top;
+}
+
+BusyuMidashijiG {
+	display: table-cell;
+}
+
+BiMidashiji {
+	display: inline-block;
+	font-size: 1.4em;
+	margin-left: 0.24em;
+}
+
+BiMidashiji.itaiji {
+	margin-left: 0.013em;
+}
+
+BiMidashijiItaijiM {
+	font-family: Optima;
+	font-weight: normal;
+	font-size: 1em;
+	vertical-align: 1.35em;
+	margin-right: -0.05em;
+}
+
+BiMidashijiC {
+}
+
+BiMidashijiC.joyo {
+	font-family: SHINJIMinchoW7;
+	color: red;
+}
+
+BiMidashijiC.jinmei {
+	color: red;
+}
+
+ShinsetsuMidashiG {
+	display: block;
+	margin-left: 1em;
+	background-color: light-pink;
+	border-left: solid 0.3em black;
+}
+
+ShinsetsuMidashiContent {
+	display: block;
+	line-height: 1.6em;
+	padding-left: 0.3em;
+	padding-top: 0.2em;
+	padding-right: 0.2em;
+	padding-bottom: 0.2em;
+}
+
+ShinsetsuMidashiSubG {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+ShinsetsuMidashiOyaji {
+	font-size: 1.4em;
+}
+
+ShinsetsuMidashiBusyu {
+}
+
+ShinsetsuMidashiArrow {
+	font-size: 0.8em;
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+}
+
+MidashijiInfoG {
+	display: block;
+}
+
+MidashijiInfoSubG, ItaijiKyujiInfoSubG {
+	display: block;
+	margin-left: 1em;
+}
+
+KyujiListG, ItaijiListG {
+	display: block;
+}
+
+ItaijiKyujiInfoG {
+	display: block;
+	margin-top: 0.4em;
+}
+
+ItaijiKyujiInfoG.First {
+	margin-top: 0.7em;
+}
+
+KanjiInfoHeadG {
+	display: table;
+}
+
+KanjiInfoHeadG.NoBranch {
+	margin-left: 1em;
+}
+
+KanjiInfoHeadSubG {
+	display: table-row;
+}
+
+BranchNumberG {
+	display: table-cell;
+	width: 0.95em;
+	writing-mode: horizontal-tb;
+	text-align: right;
+	padding-top: 0.17em;
+	padding-right: 0.05em;
+}
+
+BranchNumber {
+	font-size: 0.95em;
+}
+
+KenjiNumberG {
+	display: table-cell;
+	line-height: 1em;
+	writing-mode: horizontal-tb;
+	text-align: right;
+}
+
+KanjiBusyuG, KanjiSoukakusuG, MenkutenCodeG, UnicodeG, ItaijiLabelG, KokugoShisakuLabelG {
+	display: table-cell;
+	border-top: solid 0.05em black;
+	padding-top: 0.1em;
+	padding-left: 0;
+	padding-right: 0;
+	line-height: 0.8em;
+	writing-mode: horizontal-tb;
+	text-align: right;
+}
+
+KanjiG {
+	display: table-cell;
+	margin-right: 0.2em;
+	writing-mode: horizontal-tb;
+	text-align: right;
+}
+
+KanjiG.Oyaji {
+	padding-right: 0.74em;
+	width: 2.4em;
+}
+
+KanjiG.ItaijiKyuji {
+	padding-right: 0.14em;
+	width: 2em;
+}
+
+KenjiNumberG.Oyaji, KanjiG.Oyaji {
+	padding-top: 0.1em;
+	padding-bottom: 0.1em;
+	border-top: solid 0.23em black;
+	background-color: extra-light-gray;
+}
+
+KenjiNumberG.ItaijiKyuji, KanjiG.ItaijiKyuji {
+	padding-top: 0.1em;
+	padding-bottom: 0.1em;
+	border-top: solid 0.17em black;
+	background-color: extra-light-gray;
+}
+
+KenjiNumberG.Joyo, KanjiG.Joyo {
+	background-color: light-pink;
+}
+
+KenjiNumberG.Jinmei, KanjiG.Jinmei {
+	border-top-color: red;
+}
+
+KenjiNumber {
+	font-size: 0.65em;
+	padding-right: 0.1em;
+}
+
+Kanji {
+	font-family: SHINJIMinchoW7;
+}
+
+Kanji.Oyaji {
+	font-size: 2.4em;
+	line-height: 1em;
+}
+
+Kanji.ItaijiKyuji {
+	font-size: 2em;
+	line-height: 1em;
+}
+
+KanjiBusyu {
+	font-size: 0.8em;
+}
+
+KanjiSoukakusu {
+	font-family: Avenir;
+	font-size: 0.7em;
+}
+
+MenkutenCode {
+	font-family: Avenir;
+	font-weight: bold;
+	font-size: 0.63em;
+}
+
+Unicode {
+	font-family: Avenir;
+	font-size: 0.68em;
+}
+
+NoCode {
+	font-family: "Hiragino Mincho ProN";
+	font-size: 0.7em;
+}
+
+ItaijiLabel, KokugoShisakuLabel {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	font-size: 0.7em;
+}
+
+OnListG, KokujiG, JoyoOnkunG, FuhyoG {
+	display: block;
+}
+
+OnListSubG {
+	display: block;
+}
+
+OnListSubG.sub {
+	margin-left: 1.08em;
+}
+
+OnItem, KokujiItem {
+}
+
+JoyoOn, JoyoKun {
+	color: red;
+}
+
+KokujiLogo {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+KokujiOnSubG, KokujiKunSubG {
+}
+
+Yomi {
+	font-family: SHINJIMinchoW7;
+}
+
+Yomi.Bosen {
+	border-top: solid 0.05em red;
+	padding-top: 0.1em;
+}
+
+Yomi.W3 {
+	font-family: SHINJIMinchoW3;
+}
+
+Okuri {
+	font-family: SHINJIMinchoW3;
+}
+
+HonmonG {
+	display: block;
+	margin-top: 0.8em;
+	margin-left: 1em;
+}
+
+JukugoItem HonmonG {
+	display: inline;
+	margin-top: 0;
+	margin-left: 0.5em;
+}
+
+NaritachiG {
+	display: block;
+}
+
+Naritachi {
+}
+
+ImiG {
+	display: block;
+}
+
+JukugoItem ImiG {
+	display: inline;
+}
+
+Imi {
+	display: block;
+}
+
+Imi.inline {
+	display: inline;
+}
+
+JukugoItem Imi {
+	display: inline;
+}
+
+SankouG {
+	display: block;
+}
+
+Sankou {
+	display: block;
+}
+
+Sankou.inline {
+	display: inline;
+}
+
+JinmeiG {
+	display: block;
+}
+
+JinmeiComponent {
+}
+
+YomiInfo {
+	color: red;
+}
+
+KodaimojiListG {
+	font-size: 1.7em;
+	margin-left: 0.118em;
+}
+
+KodaimojiBranchG {
+}
+
+KodaimojiBranchG+KodaimojiBranchG {
+	margin-left: 0.1em;
+}
+
+KodaimojiBranch {
+	font-size: 0.5em;
+}
+
+KodaimojiTypeG {
+	margin-left: 0.05em;
+	padding-left: 0.059em;
+	padding-right: 0.059em;
+	border-right: solid 0.029em kodaimoji-type-separator;
+}
+
+KodaimojiTypeG.ChangeBranch {
+	border-right-color: kodaimoji-branch-separator;
+}
+
+KodaimojiType {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.411em;
+	text-combine-horizontal: all;
+}
+
+KodaimojiFile {
+	padding-left: 0.059em;
+	padding-right: 0.059em;
+}
+
+img.Kodaimoji {
+	display: gaiji;
+	height: 1.176em;
+	text-combine-horizontal: all;
+}
+
+KodaimojiListAfterSpace {
+	margin-right: 0.3em;
+}
+
+ImageListG {
+	display: block;
+}
+
+ImageG {
+	display: block;
+	margin-left: 1em;
+}
+
+ImageContentG {
+	display: block;
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+}
+
+ImageCaption {
+	display: block;
+	font-size: 0.8em;
+}
+
+ImageFile {
+	display: block;
+}
+
+img.ImageFile {
+	zoom: 30%;
+}
+
+source {
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+	font-size: 0.9em;
+}
+
+example {
+	margin-right: 0.5em;
+}
+
+Ref {
+}
+
+Ref.furoku {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+JukugoG {
+	display: block;
+	margin-top: 0.5em;
+	padding-top: 0.5em;
+	margin-left: 1em;
+	border-top: solid 0.05em black;
+}
+
+JukugoList {
+	display: block;
+}
+
+JukugoItem {
+	display: block;
+}
+
+JukugoItemContent {
+	display: block;
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+JukugoHead {
+}
+
+JukugoSubHead {
+	margin-right: 0.5em;
+}
+
+JukugoHyoki {
+}
+
+SankouJukugoG {
+	display: block;
+}
+
+Nandoku {
+	display: block;
+}
+
+NandokuComponent {
+}
+
+SankouJukugo {
+	display: block;
+}
+
+GyakuJukugo {
+	display: block;
+}
+
+DaggerRef {
+	display: block;
+}
+
+DaggerRefMark {
+	text-combine-horizontal: all;
+}
+
+rect {
+	padding: 0.04em 0.05em 0.058em 0.05em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	word-break: keep-all;
+	-webkit-border-radius: 0.2em;
+}
+
+rect.fill {
+	padding: 0.1em;
+	color: white;
+	border-style: none;
+	background-color: black;
+}
+
+rect.red {
+	color: red;
+	border-color: red;
+}
+
+rect.red-fill {
+	padding: 0.1em;
+	color: white;
+	border-style: none;
+	background-color: red;
+}
+
+rect.alphabet {
+	text-combine-horizontal: all;
+}
+
+rect.small {
+	font-size: 0.68em;
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+}
+
+rect.horizontal {
+	padding: 0.08em 0.24em 0.08em 0.24em;
+}
+
+rect-oval {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.75em;
+	word-break: keep-all;
+}
+
+rect-oval1 {
+	background-color: red;
+	-webkit-border-top-left-radius: 0.15em;
+	-webkit-border-bottom-left-radius: 0.15em;
+	padding: 0.07em 0 0.13em 0.18em;
+}
+
+rect-oval1-inside {
+	font-size: 0.05em;
+}
+
+rect-oval2 {
+	background-color: white;
+	color: red;
+	border-top: solid 0.05em red;
+	border-bottom: solid 0.05em red;
+	border-right: solid 0.05em red;
+	-webkit-border-top-right-radius: 0.6em;
+	-webkit-border-bottom-right-radius: 0.6em;
+	padding: 0.02em 0.2em 0.08em 0.02em;
+}
+
+circle {
+	padding: 0.06em 0.1em 0.08em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.75em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	-webkit-border-radius: 0.67em;
+}
+
+circle.double {
+	padding-left: 0.15em;
+	padding-right: 0.18em;
+	-webkit-border-radius: 0.6em;
+	word-break: keep-all;
+}
+
+circle.red {
+	color: red;
+	border-color: red;
+}
+
+CircleNumber, CircleKana {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+CircleNumber.fill {
+	color: gogi-gray;
+}
+
+CircleNumber.small, CircleKana.small {
+	font-size: 0.85em;
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+}
+
+wari, JukugoYomi, Jionrekishikana {
+	font-family: SHINJIMinchoW3;
+	font-size: 0.6em;
+	vertical-align: 0.6em;
+}
+
+TateC {
+	margin-left: 0.1em;
+	margin-right: -0.1em;
+	text-combine-horizontal: all;
+}
+
+YomiSeparator {
+	font-size: 1.1em;
+	vertical-align: 0.68em;
+}
+
+Kaeriten {
+	font-family: SHINJIMinchoW7;
+	font-size: 0.5em;
+	vertical-align: -1.1em;
+}
+
+Kaeriten.W3 {
+	font-family: SHINJIMinchoW3;
+}
+
+SmallWI, SmallWE {
+	font-size: 0.8em;
+	vertical-align: 0.3em;
+	margin: 0 0.125em;
+}
+
+Bracket {
+	font-family: "Hiragino Mincho ProN";
+}
+
+.FM {
+	margin-right: 0.15em;
+}
+
+.Logo-FM {
+	margin-right: 0.3em;
+}
+
+.BM {
+	margin-left: 0.15em;
+}
+
+.BM2 {
+	margin-left: 0.2em;
+}
+
+.IM {
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+}
+
+.IM2 {
+	margin-left: 0.2em;
+	margin-right: 0.15em;
+}
+
+img.gaiji {
+	display: gaiji;
+	height: 1em;
+	text-combine-horizontal: all;
+}
+
+img.gaiji-h {
+	display: gaiji;
+	height: 1em;
+	text-combine-horizontal: none;
+}
+
+img.accent {
+	display: gaiji;
+	height: 1em;
+	vertical-align: -0.05em;
+	text-combine-horizontal: none;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a.blue {
+	color: blue;
+}
+
+a.blue rect, a.blue circle {
+	border-color: blue;
+}
+
+a.blue rect.fill, a.blue rect.red-fill {
+	background-color: blue;
+}
+
+a.blue CircleNumber.fill {
+	color: blue;
+}
+
+JoyoOn a, JoyoKun a, YomiInfo a {
+	color: red;
+}

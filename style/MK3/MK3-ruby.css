@@ -1,0 +1,11 @@
+ruby.full {
+	display: ruby;
+}
+
+ruby.full rb {
+	display: ruby-base;
+}
+
+ruby.full rt {
+	display: ruby-text;
+}

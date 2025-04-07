@@ -29,6 +29,73 @@ class OZK5Parser(Parser):
         self.waka_path =  Path(index_path).parent / "waka_entries.json"
         self.audio_path =  Path(index_path).parent.parent / "audio/index.json"
         self.audio_index = self._init_audio_index()
+            
+            
+    def _process_file(self, filename: str, xml: str):
+        local_count = 0
+        filename_without_ext = os.path.splitext(filename)[0]
+        
+        # Get keys from index
+        entry_keys = self.index_reader.get_keys_for_file(filename_without_ext) 
+        
+        # Skip entries without keys
+        if not entry_keys:
+            return local_count
+        
+        # Parse xml
+        soup = bs4.BeautifulSoup(xml, "xml") 
+        
+        # Skip appendix entries
+        if soup.find("付録タイトル") or soup.find("付録見出"):     
+            return local_count
+        
+        # Handle Gendai entries
+        reading = ""
+        if soup.find("GendaiRef") or soup.find("GendaiHeadG"):
+            reading = OZK5Utils.extract_gendai_reading(soup)
+        else:
+            reading = OZK5Utils.extract_reading(soup)
+            
+        # Find audio files
+        audio_element = soup.find("a", class_="audio-play-button")
+        audio_filename = ""
+        if audio_element:
+            audio_filename = audio_element.get("href", "")
+            
+        # ----- Parsing of 和歌 entries ----- #
+        waka_element = soup.find("rectr", class_="fill 分類")
+        if waka_element and waka_element.text.strip() == "和歌":
+            local_count += self._handle_waka_entry(soup, reading, filename_without_ext, audio_filename)
+            self._save_waka_entry(soup, reading, filename_without_ext)
+        
+        # ----- Parsing of normal entries ----- #
+        else:
+            normalized_keys = self.normalize_keys(reading, entry_keys)
+            matched_key_pairs = KanjiUtils.match_kana_with_kanji(normalized_keys)
+            matched_key_pairs = process_unmatched_entries(
+                self, filename, normalized_keys, matched_key_pairs, self.manual_handler
+            )
+            
+            # Determine search ranking (rank kana entries higher)
+            has_kanji = any(kanji_part for kanji_part, _ in matched_key_pairs)
+            search_rank = 1 if not has_kanji else 0 
+            
+            for kanji_part, kana_part in matched_key_pairs:
+                pos_tag = ""
+                if kanji_part:
+                    _, pos_tag = self.get_pos_tags(kanji_part)
+                    local_count += self.parse_entry(
+                        kanji_part, kana_part, soup, pos_tag=pos_tag, search_rank=search_rank
+                    )
+                elif kana_part:
+                    local_count += self.parse_entry(
+                        kana_part, "", soup, search_rank=search_rank
+                    )
+                
+                if audio_filename:
+                    self._save_audio_entry(kanji_part, kana_part, audio_filename)
+                    
+        return local_count
         
         
     def export(self, output_path: Optional[str] = None, export_waka_entries: bool = False):
@@ -40,63 +107,6 @@ class OZK5Parser(Parser):
                 
         with open(self.audio_path, "w", encoding="utf-8") as f:
             json.dump(self.audio_index, f, ensure_ascii=False, indent=2)
-            
-            
-    def parse(self):
-        count = 0
-        
-        for filename, xml in tqdm(self.dict_data.items(), desc="進歩", bar_format=self.bar_format, unit="事項"):
-            filename_without_ext = os.path.splitext(filename)[0]
-            entry_keys = self.index_reader.get_keys_for_file(filename_without_ext) 
-            
-            if not entry_keys: # Skip entries without keys
-                continue
-            
-            soup = bs4.BeautifulSoup(xml, "xml") 
-            if soup.find("付録タイトル") or soup.find("付録見出"): # Skip appendix entries       
-                continue
-            
-            # Handle Gendai entries
-            reading = ""
-            if soup.find("GendaiRef") or soup.find("GendaiHeadG"):
-                reading = OZK5Utils.extract_gendai_reading(soup)
-            else:
-                reading = OZK5Utils.extract_reading(soup)
-                
-            # Find audio files
-            audio_element = soup.find("a", class_="audio-play-button")
-            audio_filename = ""
-            if audio_element:
-                audio_filename = audio_element.get("href", "")
-                
-            # ----- Parsing of 和歌 entries ----- #
-            waka_element = soup.find("rectr", class_="fill 分類")
-            if waka_element and waka_element.text.strip() == "和歌":
-                count += self._handle_waka_entry(soup, reading, filename_without_ext, audio_filename)
-                self._save_waka_entry(soup, reading, filename_without_ext)
-            
-            # ----- Parsing of normal entries ----- #
-            else:
-                normalized_keys = self.normalize_keys(reading, entry_keys)
-                matched_key_pairs = KanjiUtils.match_kana_with_kanji(normalized_keys)
-                matched_key_pairs = process_unmatched_entries(self, filename, normalized_keys, matched_key_pairs, self.manual_handler)
-                
-                has_kanji = any(kanji_part for kanji_part, _ in matched_key_pairs)
-                search_rank = 1 if not has_kanji else 0 
-                
-                for kanji_part, kana_part in matched_key_pairs:
-                    pos_tag = ""
-                    if kanji_part:
-                        _, pos_tag = self.get_pos_tags(kanji_part)
-                        count += self.parse_entry(kanji_part, kana_part, soup, pos_tag=pos_tag, search_rank=search_rank)
-                    elif kana_part:
-                        count += self.parse_entry(kana_part, "", soup, search_rank=search_rank)
-                    
-                    if audio_filename:
-                        self._save_audio_entry(kanji_part, kana_part, audio_filename)
-                            
-        print(f"和歌事項を{len(self.waka_entries)}件見つかりました")
-        print(f"{count}の事項を収録しました")
         
         
     def _handle_waka_entry(self, soup: bs4.BeautifulSoup, reading: str,

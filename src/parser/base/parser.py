@@ -1,8 +1,10 @@
 from abc import ABC, abstractmethod
-from typing import Dict, List, Tuple, Optional, Set, Callable, Any
+from typing import Dict, List, Tuple, Optional, Set, Iterator
 
 import bs4
 import jaconv
+import concurrent.futures
+from tqdm import tqdm
 
 from index import IndexReader
 from utils import FileUtils, KanjiUtils
@@ -16,13 +18,18 @@ from parser.base.strategies import LinkHandlingStrategy, ImageHandlingStrategy, 
 class Parser:
     def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str = None,
                  link_handling_strategy: LinkHandlingStrategy = None,
-                 image_handling_strategy: ImageHandlingStrategy = None):
+                 image_handling_strategy: ImageHandlingStrategy = None,
+                 batch_size: int = 100,
+                 max_workers: int = 4):
         
-        self.dict_data = FileUtils.read_xml_files(dict_path)
         self.dictionary = Dictionary(dict_name)
         self.index_reader = IndexReader(index_path)
         
+        self.batch_size = batch_size
+        self.max_workers = max_workers
+        
         # Set up index and JMdict data if provided
+        self.dict_data = FileUtils.read_xml_files(dict_path)
         self.jmdict_data = FileUtils.load_term_banks(jmdict_path) if jmdict_path else {}
         self.manual_handler = ManualMatchHandler() if index_path else None
         
@@ -224,13 +231,69 @@ class Parser:
         
         return 1
     
+
+    def _process_batch(self, batch: List[Tuple[str, str]]) -> int:
+        batch_count = 0
+        for filename, xml in batch:
+            try:
+                batch_count += self._process_file(filename, xml)
+            except Exception as e:
+                print(f"Error processing file {filename}: {str(e)}")
+        return batch_count
+    
+    
+    @abstractmethod
+    def _process_file(self, filename: str, xml: str) -> int:
+        """Process a single file - to be implemented by derived classes"""
+        pass
+        
+        
+    def _get_batches(self) -> Iterator[List[Tuple[str, str]]]:
+        """Split the input into batches"""
+        items = list(self.dict_data.items())
+        for i in range(0, len(items), self.batch_size):
+            yield items[i:i + self.batch_size]
+        
+    
+    def parse(self) -> int:
+        """Parse the dictionary with batch processing and parallelization"""
+        count = 0
+        
+        if self.max_workers is None or self.max_workers <= 1:
+            with tqdm(total=len(self.dict_data), desc="進歩", bar_format=self.bar_format, unit="事項") as pbar:
+                for batch in self._get_batches():
+                    batch_count = self._process_batch(batch)
+                    count += batch_count
+                    pbar.update(len(batch))
+        else:
+            # Parallel processing
+            batches = list(self._get_batches())
+            
+            with tqdm(total=len(self.dict_data), desc="進歩", bar_format=self.bar_format, unit="事項") as pbar:
+                with concurrent.futures.ProcessPoolExecutor(max_workers=self.max_workers) as executor:
+                    # Submit all batch processing tasks
+                    futures_to_batches = {
+                        executor.submit(self._process_batch, batch): batch 
+                        for batch in batches
+                    }
+                    
+                    # Process results as they complete
+                    for future in concurrent.futures.as_completed(futures_to_batches):
+                        batch = futures_to_batches[future]
+                        batch_size = len(batch)
+                        
+                        try:
+                            batch_count = future.result()
+                            count += batch_count
+                        except Exception as e:
+                            self.logger.error(f"Batch processing error: {str(e)}")
+                        
+                        # Update progress bar with actual batch size
+                        pbar.update(batch_size)
+        
+        return count
+    
     
     def export(self, output_path: Optional[str] = None) -> None:
         """Export the dictionary to the specified path"""
         self.dictionary.export(output_path)
-        
-    
-    @abstractmethod
-    def parse(self) -> None:
-        """Parse the dictionary - to be implemented by derived classes"""
-        pass

@@ -56,11 +56,11 @@ def main():
             dict_type="OZK5",
             parser_class=OZK5Parser
         ),
-        "knje": DictionaryConfig(
-            dict_name="研究社 新和英大辞典",
-            rev_name="knje5",
-            dict_type="KNJE",
-            parser_class=KNJEParser
+        "shinjigen": DictionaryConfig(
+            dict_name="角川 新字源",
+            rev_name="shinjigen2",
+            dict_type="SHINJIGEN2",
+            parser_class=None
         ),
         "skogo": DictionaryConfig(
             dict_name="三省堂 全訳読解古語辞典",
@@ -75,6 +75,8 @@ def main():
             parser_class=YDPParser
         )
     }
+    
+    # TODO maybe add caching for JMdict data
     
     config_to_process = "kogo"
     process_dictionary(dictionary_configs[config_to_process])
