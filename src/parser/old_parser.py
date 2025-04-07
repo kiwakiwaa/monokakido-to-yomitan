@@ -3,7 +3,7 @@ import bs4
 from utils import FileUtils
 from yomitandic import Dictionary, DicEntry, create_html_element
 
-class Parser:
+class OldParser:
     
     IGNORED_ELEMENTS = {}
     EXPRESSION_ELEMENT = None

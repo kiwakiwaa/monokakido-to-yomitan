@@ -7,7 +7,7 @@ from yomitandic import create_html_element
 from parser.base.strategies import LinkHandlingStrategy, ImageHandlingStrategy
 
 class DaijisenLinkHandlingStrategy(LinkHandlingStrategy):
-    def handle_link_element(html_glossary: bs4.element.Tag, html_elements: List,
+    def handle_link_element(self, html_glossary: bs4.element.Tag, html_elements: List,
                             data_dict: Dict, class_list: List[str]) -> Dict:   
         """Handle link elements for Daijisen""" 
         href = html_glossary.get("href", "")
@@ -41,8 +41,8 @@ class DaijisenLinkHandlingStrategy(LinkHandlingStrategy):
             return create_html_element("span", content=html_elements, data=data_dict)
         
         
-class DaijisenImagePathStrategy(ImageHandlingStrategy):
-    def get_image_path(self, html_glossary: bs4.element.Tag, html_elements: List,
+class DaijisenImageHandlingStrategy(ImageHandlingStrategy):
+    def handle_image_element(self, html_glossary: bs4.element.Tag, html_elements: List,
                        data_dict: Dict, class_list: List[str]) -> Dict:
         # Check if the src attribute ends with .heic
         src_attr = html_glossary.get("src", "")

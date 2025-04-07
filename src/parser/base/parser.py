@@ -13,7 +13,7 @@ from parser.base.manual_match_handler import ManualMatchHandler
 from parser.base.strategies import LinkHandlingStrategy, ImageHandlingStrategy, DefaultLinkHandlingStrategy, DefaultImageHandlingStrategy
 
 
-class EnhancedParser:
+class Parser:
     def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str = None,
                  link_handling_strategy: LinkHandlingStrategy = None,
                  image_handling_strategy: ImageHandlingStrategy = None):

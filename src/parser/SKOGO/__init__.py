@@ -1,5 +1,5 @@
-from .skogo_enhanced_parser import EnhancedSKOGOParser
+from .skogo_parser import SKOGOParser
 
 __all__ = [
-    "EnhancedSKOGOParser"
+    "SKOGOParser"
 ]

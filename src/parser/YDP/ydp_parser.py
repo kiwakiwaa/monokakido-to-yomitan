@@ -5,13 +5,13 @@ from tqdm import tqdm
 from typing import List
 
 from utils import KanjiUtils
-from parser.base.enhanced_parser import EnhancedParser
+from parser.base.parser import Parser
 from parser.base.manual_match_handler import process_unmatched_entries
 from parser.YDP.tag_map import TAG_MAPPING
 from parser.YDP.ydp_utils import YDPUtils
 from parser.YDP.ydp_strategies import YDPImageHandlingStrategy
 
-class YDPParser(EnhancedParser):
+class YDPParser(Parser):
 
     def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str):
         

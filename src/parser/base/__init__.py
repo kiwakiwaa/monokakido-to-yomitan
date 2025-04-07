@@ -1,5 +1,5 @@
-from .enhanced_parser import EnhancedParser
+from .parser import Parser
 
 __all__ = [
-    "EnhancedParser"
+    "Parser"
 ]

@@ -4,14 +4,14 @@ from tqdm import tqdm
 from typing import Dict, List, Tuple, Optional, Set, Callable, Any
 
 from utils import KanjiUtils
-from parser.base.enhanced_parser import EnhancedParser
+from parser.base.parser import Parser
 from parser.base.manual_match_handler import process_unmatched_entries
 from parser.SKOGO.mapping.tag_map import TAG_MAPPING
 from parser.SKOGO.skogo_utils import SKOGOUtils
 from parser.SKOGO.skogo_strategies import SKOGOLinkHandlingStrategy, SKOGOImageHandlingStrategy
 
 
-class EnhancedSKOGOParser(EnhancedParser):
+class SKOGOParser(Parser):
     
     def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str):
         

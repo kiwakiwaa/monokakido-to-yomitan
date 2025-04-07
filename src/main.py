@@ -2,10 +2,10 @@ from typing import Optional
 
 from config import DictionaryConfig, PathManager
 from utils import FileUtils
-from parser.OZK5 import EnhancedOZK5Parser
-from parser.Daijisen import DaijisenParser, EnhancedDaijisenParser
+from parser.OZK5 import OZK5Parser
+from parser.Daijisen import DaijisenParser
 from parser.KNJE import KNJEParser
-from parser.SKOGO import EnhancedSKOGOParser
+from parser.SKOGO import SKOGOParser
 from parser.YDP import YDPParser
         
 
@@ -48,13 +48,13 @@ def main():
             dict_name="大辞泉 第二版",
             rev_name="daijisen2",
             dict_type="Daijisen",
-            parser_class=EnhancedDaijisenParser
+            parser_class=DaijisenParser
         ),
         "kogo": DictionaryConfig(
             dict_name="旺文社 全訳古語辞典",
             rev_name="oubunsha_kogo5",
             dict_type="OZK5",
-            parser_class=EnhancedOZK5Parser
+            parser_class=OZK5Parser
         ),
         "knje": DictionaryConfig(
             dict_name="研究社 新和英大辞典",
@@ -66,7 +66,7 @@ def main():
             dict_name="三省堂 全訳読解古語辞典",
             rev_name="skogo5",
             dict_type="SKOGO",
-            parser_class=EnhancedSKOGOParser
+            parser_class=SKOGOParser
         ),
         "ydp": DictionaryConfig(
             dict_name="現代心理学辞典",
@@ -76,7 +76,7 @@ def main():
         )
     }
     
-    config_to_process = "skogo"
+    config_to_process = "kogo"
     process_dictionary(dictionary_configs[config_to_process])
     
 

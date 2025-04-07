@@ -4,7 +4,7 @@ import jaconv
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-from ..parser import Parser
+from ..old_parser import OldParser
 from utils.sudachi_tags import sudachi_rules
 from parser.base.manual_match_handler import ManualMatchHandler, process_unmatched_entries
 
@@ -16,7 +16,7 @@ from utils import KanjiUtils, FileUtils
 from yomitandic import DicEntry, create_html_element
 
 
-class KNJEParser(Parser):
+class KNJEParser(OldParser):
     
     IGNORED_ELEMENTS = {"header", "entry-index"}
     EXPRESSION_ELEMENT = "subitem"

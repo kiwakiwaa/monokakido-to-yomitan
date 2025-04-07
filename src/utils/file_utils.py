@@ -69,8 +69,10 @@ class FileUtils:
         date_str = datetime.now().strftime("%Y-%m-%d")
         zip_name = name + f"[{date_str}].zip"
         zip_path = os.path.join(output_path, zip_name)
+        
+        total_files = len(file_paths)
 
-        with tqdm(total=100, desc="辞書圧縮処理", bar_format="「{desc}: {bar:30}」{percentage:3.0f}%{postfix}", 
+        with tqdm(total=total_files, desc="辞書圧縮処理", bar_format="「{desc}: {bar:30}」{percentage:3.0f}%{postfix}", 
                 ascii="░▒█") as p_bar:
             
             with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as zipf:
@@ -97,14 +99,14 @@ class FileUtils:
                     else: 
                         rel_path = os.path.join(base_path, file)
                         
-                        # Remove dictionary folder prefix if flatten_dict_folder=True
-                        if flatten_dict_folder and rel_path.startswith(f"{name}/"):
-                            rel_path = os.path.basename(rel_path)  # Only keep filename
+                    # Remove dictionary folder prefix if flatten_dict_folder=True
+                    if flatten_dict_folder and rel_path.startswith(f"{name}/"):
+                        rel_path = os.path.basename(rel_path)  # Only keep filename
 
                     # Write file to zip
                     zipf.write(file, rel_path)
                     
-                    p_bar.update()
+                    p_bar.update(1)
 
         print(f"完了しました: {zip_path}")
         return zip_path

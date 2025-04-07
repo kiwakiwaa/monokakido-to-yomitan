@@ -72,8 +72,7 @@ The conversion process involves:
 1. Reading the extracted dictionary XML files
 2. Parsing the entries and their structures
 3. Converting the content to Yomitan's format
-4. Generating index files for efficient lookup
-5. Packaging everything into a format that Yomitan can import
+4. Packaging everything into a zip that Yomitan can import
 
 Each dictionary type has its own specialized parser that handles the unique structure and features of that dictionary.
 
