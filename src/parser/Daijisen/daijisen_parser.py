@@ -1,6 +1,5 @@
 import os
 import bs4
-from tqdm import tqdm
 
 from utils import KanjiUtils
 from yomitandic import DicEntry

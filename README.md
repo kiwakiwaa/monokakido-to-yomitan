@@ -11,6 +11,7 @@ This project provides tools to convert dictionaries from the Monokakido format t
 - 研究社 新和英大辞典 (Index files are corrupted as of now :/)
 - 三省堂 全訳読解古語辞典
 - 現代心理学辞典
+- 角川新字源 改訂新版
 
 ## Prerequisites
 
@@ -43,7 +44,7 @@ This project provides tools to convert dictionaries from the Monokakido format t
 
 3. Run the conversion script:
    ```bash
-   python main.py
+   python src/main.py
    ```
 
 4. The converted dictionary will be saved in the `converted` directory.
@@ -57,6 +58,7 @@ This project provides tools to convert dictionaries from the Monokakido format t
 | 研究社 新和英大辞典 | KNJE | WIP |
 | 三省堂 全訳読解古語辞典 | SKOGO | ✅ Supported |
 | 現代心理学辞典 | YDP | ✅ Supported |
+| 角川新字源 改訂新版 | SHINJIGEN2 | ✅ Supported (MDX) |
 
 ## Directory Structure
 
@@ -74,7 +76,7 @@ The conversion process involves:
 3. Converting the content to Yomitan's format
 4. Packaging everything into a zip that Yomitan can import
 
-Each dictionary type has its own specialized parser that handles the unique structure and features of that dictionary.
+Each dictionary type has its own specialised parser that handles the unique structure and features of that dictionary.
 
 ## Adding a New Dictionary
 

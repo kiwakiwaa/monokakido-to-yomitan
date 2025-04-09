@@ -1,0 +1,305 @@
+.card:not(.nightMode) {
+	--skogo-white: white;
+	--skogo-black: black;
+	--skogo-blue: rgb(49, 49, 226);
+	--skogo-red: #C00000;
+	--skogo-light-red: #DFA6A8;
+    --skogo-extra-light-red: #FFEEEE;
+	--skogo-hinshi-mark: #444;
+    --skogo-shubetsu-mark: #707070;
+    --skogo-gendai-mark: #888;
+}
+
+.card.nightMode {
+	--skogo-black: #DDDDDD;
+	--skogo-white: #000000;
+	--skogo-blue: #00AAFF;
+	--skogo-red: #FF6666;
+	--skogo-light-red: #A54447;
+    --skogo-extra-light-red: #481D1E;
+	--skogo-hinshi-mark: #CCCCCC;
+    --skogo-shubetsu-mark: #CCCCCC;
+    --skogo-gendai-mark: #CCCCCC;
+}
+
+.yomitan-glossary span[data-sc-body],
+.yomitan-glossary span[data-sc見出歴史仮名],
+.yomitan-glossary span[data-sc見出現代仮名],
+.yomitan-glossary span[data-sc段落歴史仮名],
+.yomitan-glossary span[data-sc段落現代仮名],
+.yomitan-glossary span[data-sc中黒語義],
+.yomitan-glossary span[data-sc-em][data-sc小書き],
+.yomitan-glossary span[data-scルビ],
+.yomitan-glossary span[data-sc返り点] {
+    font-family: "Hiragino Mincho ProN";
+}
+
+.yomitan-glossary span[data-sc見出G],
+.yomitan-glossary span[data-sc絵巻タイトル],
+.yomitan-glossary span[data-scGendai見出],
+.yomitan-glossary span[data-sc活用分節],
+.yomitan-glossary span[data-sc語構成],
+.yomitan-glossary span[data-sc-f-w-hyphen],
+.yomitan-glossary span[data-sc活用表-label],
+.yomitan-glossary span[data-sc詩歌全形],
+.yomitan-glossary span[data-sc見出相当部],
+.yomitan-glossary span[data-sc詩歌技法ロゴ],
+.yomitan-glossary span[data-sc用例訳注ロゴ],
+.yomitan-glossary span[data-sc参考ロゴ],
+.yomitan-glossary span[data-sc注釈ロゴ],
+.yomitan-glossary span[data-sc冒頭文ロゴテキスト],
+.yomitan-glossary span[data-sc作品例ロゴテキスト],
+.yomitan-glossary span[data-sc-em][data-sc-gothic],
+.yomitan-glossary span[data-sc-em][data-sc赤],
+.yomitan-glossary span[data-sc補説小見出],
+.yomitan-glossary span[data-sc読解見出],
+.yomitan-glossary span[data-sc現代見出],
+.yomitan-glossary span[data-sc読解小見出],
+.yomitan-glossary span[data-sc現代小見出],
+.yomitan-glossary span[data-scチャート見出],
+.yomitan-glossary span[data-sc付録参照ロゴ],
+.yomitan-glossary span[data-sc絵巻図版],
+.yomitan-glossary span[data-sc識別見出],
+.yomitan-glossary td[data-sc識別ヘッダ項],
+.yomitan-glossary span[data-sc識別説明],
+.yomitan-glossary span[data-sc-gendai-ref品詞],
+.yomitan-glossary span[data-sc-gendai-ref-品詞],
+.yomitan-glossary span[data-sc-gendai-ref-desc],
+.yomitan-glossary span[data-sc-gendai-ref-desc],
+.yomitan-glossary span[data-sc-rectr] {
+    font-family: "Hiragino Kaku Gothic ProN";
+}
+
+span[data-sc-body] {
+    line-height: 1.3em;
+}
+
+/* Fix margins for vertical layout */
+@media (min-width: 601px) {
+    div[data-sc見出部] {
+        margin-left: 0 !important;
+        margin-top: 0.909em;
+    }
+    
+    span[data-sc-rank] {
+        margin-left: 0 !important;
+        margin-top: -0.44em;
+
+        margin-right: 0 !important;
+        margin-bottom: 0.1em;
+    }
+
+    span[data-sc表記-g],
+    span[data-scチャート表記-g] {
+        margin-left: 0 !important;
+        margin-top: 0.15em;
+
+        margin-right: 0 !important;
+        margin-bottom: 0.15em;
+    }
+
+    span[data-sc見出歴史仮名],
+    span[data-sc見出現代仮名],
+    span[data-sc段落歴史仮名],
+    span[data-sc段落現代仮名] {
+        margin-left: 0 !important;
+        margin-top: 0.15em;
+
+        margin-right: 0 !important;
+        margin-bottom: 0.1em;
+    }
+
+    span[data-sc活用語尾-g] {
+        margin-left: 0 !important;
+        margin-top: 0.15em;
+
+        margin-right: 0 !important;
+        margin-bottom: 0.15em;
+    }
+
+    div[data-sc箇条書] {
+        margin-left: 0 !important;
+        margin-top: 1.15em;
+    }
+    
+    div[data-sc箇条書][data-sc-noindent] {
+        margin-top: 0;
+    }
+
+    div[data-sc箇条書][data-sc-findent] {
+        margin-top: 0;
+    }
+    
+    table[data-sc箇条書][data-sc連結語義] {
+        margin-top: 0;
+    }
+
+    span[data-sc括弧語義] {
+        margin-left: 0 !important;
+        margin-top: 0.1em;
+
+        margin-right: 0 !important;
+        margin-bottom: 0.1em;
+    }
+
+    div[data-sc用例-g][data-sc-inline] {
+        margin-top: 0;
+    }
+
+    span[data-sc文法情報],
+    span[data-sc百人一首] {
+        margin-left: 0 !important;
+        margin-top: 0.15em;
+
+        margin-right: 0 !important;
+        margin-bottom: 0.15em;
+    }
+
+    span[data-sc言換イコール] {
+        margin-right: 0 !important;
+        margin-bottom: 0.1em;
+    }
+
+    span[data-sc段落][data-sc字下0_1] {
+        margin-left: 0 !important;
+        margin-top: 1em;
+    }
+
+    span[data-sc段落][data-sc字下1_1] {
+        margin-left: 0 !important;
+        margin-top: 1em;
+    }
+    
+    span[data-sc段落][data-sc字下2_2] {
+        margin-left: 0 !important;
+        margin-top: 2em;
+    }
+
+    span[data-sc付録参照ロゴ] {
+        margin-left: 0 !important;
+        margin-top: 0.1em;
+
+        margin-right: 0 !important;
+        margin-bottom: 0.1em;
+    }
+
+    table[data-sc識別-g] {
+        margin-left: 0 !important;
+        margin-top: 1em;
+    }
+
+    span[data-sc列-c] {
+        margin-right: 0 !important;
+        margin-bottom: 1em;
+    }
+
+    span[data-sc識別見出サブ] {
+        margin-left: 0 !important;
+        margin-top: 0.1em;
+    }
+
+    span[data-sc-gendai-ref品詞],
+    span[data-sc-gendai-ref-品詞],
+    span[data-sc-gendai-ref-desc] {
+        margin-left: 0 !important;
+        margin-top: 0.25em;
+    }
+
+    span[data-sc-gendai-ref-desc] {
+        margin-left: 0 !important;
+        margin-top: 0.25em;
+    }
+
+    span[data-sc縦中横][data-sc-small] {
+        margin-left: 0 !important;
+        margin-top: 0.1em;
+
+        margin-right: 0 !important;
+        margin-bottom: 0.1em;
+    }
+
+    [data-sc-b-m] {
+        margin-left: 0 !important;
+        margin-top: 0.15em;
+    }
+    
+    [data-sc-i-m] {
+        margin-left: 0 !important;
+        margin-top: 0.15em;
+
+        margin-right: 0 !important;
+        margin-bottom: 0.15em;
+    }
+
+    span[data-sc箇条書-h] {
+        margin-right: 0 !important;
+        margin-bottom: 0.15em;
+    }
+
+    [data-sc-f-m] {
+        margin-right: 0 !important;
+        margin-bottom: 0.15em;
+    }
+    
+    [data-sc-logo_-f-m] {
+        margin-right: 0 !important;
+        margin-bottom: 0.3em;
+    }
+    
+    table[data-sc活用表] {
+        margin-top: 0 !important;
+        margin-right: 0.3em;
+
+        margin-bottom: 0 !important;
+        margin-left: 0.3em;
+    }
+
+    div[data-sc語義要説-g] {
+        margin-top: 0 !important;
+        margin-right: 0.6em;
+
+        margin-bottom: 0 !important;
+        margin-left: 0.6em;
+    }
+
+    div[data-sc関連語] {
+        margin-top: 0 !important;
+        margin-right: 0.3em;
+
+        margin-bottom: 0 !important;
+        margin-left: 0.3em;
+    }
+
+    div[data-sc読解-g],
+    div[data-sc現代-g],
+    div[data-scチャート項目],
+    div[data-sc絵巻項目] {
+        margin-top: 0 !important;
+        margin-right: 0.4em;
+
+        margin-bottom: 0 !important;
+        margin-left: 0.4em;
+    }
+
+    table[data-sc表-g] {
+        margin-top: 0 !important;
+        margin-right: 0.3em;
+
+        margin-bottom: 0 !important;
+        margin-left: 0.3em;
+    }
+
+    div[data-sc-gendai-ref-g] {
+        margin-top: 0 !important;
+        margin-right: 0.4em;
+    }
+
+    div[data-sc画像-g],
+    div[data-sc絵巻画像-g] {
+        margin-top: 0 !important;
+        margin-right: 0.3em;
+
+        margin-bottom: 0 !important;
+        margin-left: 0.3em;
+    }
+}

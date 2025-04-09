@@ -7,6 +7,7 @@ from parser.Daijisen import DaijisenParser
 from parser.KNJE import KNJEParser
 from parser.SKOGO import SKOGOParser
 from parser.YDP import YDPParser
+from parser.SHINJIGEN2 import ShinjigenParser
         
 
 def process_dictionary(config: DictionaryConfig, base_dir: Optional[str] = None):
@@ -56,12 +57,6 @@ def main():
             dict_type="OZK5",
             parser_class=OZK5Parser
         ),
-        "shinjigen": DictionaryConfig(
-            dict_name="角川 新字源",
-            rev_name="shinjigen2",
-            dict_type="SHINJIGEN2",
-            parser_class=None
-        ),
         "skogo": DictionaryConfig(
             dict_name="三省堂 全訳読解古語辞典",
             rev_name="skogo5",
@@ -73,12 +68,18 @@ def main():
             rev_name="ydp1",
             dict_type="YDP",
             parser_class=YDPParser
+        ),
+        "shinjigen": DictionaryConfig(
+            dict_name="角川新字源 改訂新版",
+            rev_name="shinjigen2",
+            dict_type="SHINJIGEN2",
+            parser_class=ShinjigenParser
         )
     }
     
     # TODO maybe add caching for JMdict data
     
-    config_to_process = "kogo"
+    config_to_process = "shinjigen"
     process_dictionary(dictionary_configs[config_to_process])
     
 

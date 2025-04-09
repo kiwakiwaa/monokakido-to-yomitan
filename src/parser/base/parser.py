@@ -16,20 +16,20 @@ from parser.base.strategies import LinkHandlingStrategy, ImageHandlingStrategy, 
 
 
 class Parser:
-    def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str = None,
+    def __init__(self, dict_name: str, dict_path: str = None, index_path: str = None, jmdict_path: str = None,
                  link_handling_strategy: LinkHandlingStrategy = None,
                  image_handling_strategy: ImageHandlingStrategy = None,
                  batch_size: int = 100,
-                 max_workers: int = 4):
+                 max_workers: int = 1):
         
         self.dictionary = Dictionary(dict_name)
-        self.index_reader = IndexReader(index_path)
+        self.index_reader = IndexReader(index_path) if index_path else None
         
         self.batch_size = batch_size
         self.max_workers = max_workers
         
         # Set up index and JMdict data if provided
-        self.dict_data = FileUtils.read_xml_files(dict_path)
+        self.dict_data = FileUtils.read_xml_files(dict_path) if dict_path else None
         self.jmdict_data = FileUtils.load_term_banks(jmdict_path) if jmdict_path else {}
         self.manual_handler = ManualMatchHandler() if index_path else None
         
@@ -286,7 +286,7 @@ class Parser:
                             batch_count = future.result()
                             count += batch_count
                         except Exception as e:
-                            self.logger.error(f"Batch processing error: {str(e)}")
+                            print(f"Batch processing error: {str(e)}")
                         
                         # Update progress bar with actual batch size
                         pbar.update(batch_size)

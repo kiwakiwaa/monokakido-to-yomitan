@@ -1,0 +1,751 @@
+body {
+    margin: 1em 44px 1em 1.5em;
+    line-height: 1.5em;
+    /* font-family: SHINJIMinchoW3; */
+    font-size: 1.2em;
+    color: var(--kadokawa-black, black);
+    /* 	writing-mode: vertical-rl; */
+}
+
+div[data-sc-busyuheadg] {
+    background-color: var(--kadokawa-pink, #FF928E);
+}
+
+table[data-sc-busyuheadsubg] {
+    display: table;
+    border-collapse: none;
+}
+
+tr[data-sc-busyuheadc] {
+    display: table-row;
+}
+
+td[data-sc-busyukakusug] {
+    border: none;
+    display: table-cell;
+}
+
+
+span[data-sc-busyukakususubg] {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    color: var(--kadokawa-white, white);
+    background-color: var(--kadokawa-black, black);
+}
+
+span[data-sc-busyukakusulabel] {
+    font-size: 0.7em;
+}
+
+span[data-sc-busyukakusu] {
+    /* font-family: Avenir; */
+    font-weight: bold;
+    text-combine-upright: all;
+    margin-right: 0.25em;
+}
+
+td[data-sc-busyunumberg] {
+    border: none;
+    display: table-cell;
+}
+
+span[data-sc-busyunumber] {
+    /* font-family: Avenir; */
+    font-size: 0.85em;
+    margin-left: 0.25em;
+    text-combine-upright: all;
+    margin-right: 0.25em;
+}
+
+td[data-sc-busyubusyug] {
+    border: none;
+    display: table-cell;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    margin-left: 0.5em;
+    margin-right: 0.2em;
+}
+
+span[data-sc-busyuprimarybusyu] {
+    font-size: 2.2em;
+    line-height: 1em;
+    color: var(--kadokawa-white, white);
+}
+
+span[data-sc-busyusubbusyu] {
+    color: var(--kadokawa-white, white);
+}
+
+td[data-sc-busyubusyulabelg] {
+    border: none;
+    display: table-cell;
+}
+
+span[data-sc-busyubusyulabel] {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+div[data-sc-busyuyomig] {
+    margin-bottom: 0.3em;
+    margin-left: 1em;
+}
+
+div[data-sc-busyuyomicontent] {
+    font-size: 0.9em;
+    line-height: 1.2em;
+    padding-bottom: 0.25em;
+}
+
+div[data-sc-bushukaisetsug] {
+    background-color: var(--kadokawa-extra-light-gray, #EEEEEE);
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 1em;
+    padding-right: 0.3em;
+}
+
+div[data-sc-bushubetsuindexg] {
+    margin-left: 1em;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    line-height: 1.6em;
+}
+
+table[data-sc-bushubetsuindexcontentg] {
+    display: table;
+    width: 100%;
+}
+
+.glosss-sc-tr[data-sc-busyubetsuindexsubg] {
+    display: table-row;
+}
+
+td[data-sc-busyunaikakusulabel] {
+    display: table-cell;
+    border: none;
+    width: 1.05em;
+    vertical-align: top;
+}
+
+td[data-sc-busyumidashijig] {
+    display: table-cell;
+    border: none;
+}
+
+span[data-sc-bimidashiji] {
+    display: inline-block;
+    font-size: 1.4em;
+    margin-left: 0.24em;
+}
+
+span[data-sc-bimidashiji][data-sc-itaiji] {
+    margin-left: 0.013em;
+}
+
+span[data-sc-bimidashijiitaijim] {
+    display: none;
+}
+
+span[data-sc-bimidashijic][data-sc-joyo] {
+    color: var(--kadokawa-red, #CC0000);
+}
+
+
+span[data-sc-bimidashijic][data-sc-jinmei] {
+    color: var(--kadokawa-red, #CC0000);
+}
+
+div[data-sc-shinsetsumidashig] {
+    margin-left: 1em;
+    background-color: var(--kadokawa-light-pink, #FFDBDA);
+    border-left: solid 0.3em var(--kadokawa-black, black);
+}
+
+div[data-sc-shinsetsumidashicontent] {
+    line-height: 1.6em;
+    padding-left: 0.3em;
+    padding-top: 0.2em;
+    padding-right: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+span[data-sc-shinsetsumidashisubg] {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+span[data-sc-shinsetsumidashioyaji] {
+    font-size: 1.4em;
+}
+
+span[data-sc-shinsetsumidashiarrow] {
+    font-size: 0.8em;
+    margin-left: 0.15em;
+    margin-right: 0.15em;
+}
+
+div[data-sc-itaijikyujiinfog] {
+    margin-top: 0.4em;
+}
+
+div[data-sc-itaijikyujiinfog][data-sc-first] {
+    margin-top: 0.7em;
+}
+
+table[data-sc-kanjiinfoheadg] {
+    display: table;
+    margin-top: 0.25em;
+}
+
+tr[data-sc-kanjiinfoheadsubg] {
+    display: table-row;
+}
+
+td[data-sc-branchnumberg] {
+    display: table-cell;
+    width: 0.95em;
+    border: none;
+    writing-mode: horizontal-tb;
+    text-align: right;
+    padding-top: 0.17em;
+    padding-right: 0.05em;
+}
+
+span[data-sc-branchnumber] {
+    font-size: 0.95em;
+}
+
+td[data-sc-kenjinumberg] {
+    display: table-cell;
+    line-height: 1em;
+    writing-mode: horizontal-tb;
+    text-align: right;
+}
+
+td[data-sc-kanjibusyug],
+td[data-sc-kanjisoukakusug],
+td[data-sc-menkutencodeg],
+td[data-sc-itaijilabelg],
+td[data-sc-kokugoshisakulabelg],
+td[data-sc-unicodeg] {
+    display: table-cell;
+    border-top: solid 0.05em var(--kadokawa-black, black);
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    padding-top: 0.1em;
+    padding-left: 0.2em;
+    padding-bottom: 0.1em;
+    padding-right: 0;
+    line-height: 0.8em;
+    text-align: right;
+    writing-mode: horizontal-tb;
+}
+
+td[data-sc-kanjig] {
+    display: table-cell;
+    margin-right: 0.2em;
+    writing-mode: horizontal-tb;
+    text-align: right;
+}
+
+td[data-sc-kanjig][data-sc-oyaji] {
+    padding-right: 0.74em;
+    width: 2.4em;
+}
+
+span[data-sc-kanjig][data-sc-itaiji-kyuji] {
+    padding-right: 0.14em;
+    width: 2em;
+}
+
+td[data-sc-kenjinumberg][data-sc-oyaji],
+td[data-sc-kanjig][data-sc-oyaji] {
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    border-top: solid 0.23em var(--kadokawa-black, black);
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    background-color: var(--kadokawa-extra-light-gray, #EEEEEE);
+}
+
+td[data-sc-kenjinumberg][data-sc-itaiji-kyuji],
+td[data-sc-kanjig][data-sc-itaiji-kyuji] {
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    border-top: solid 0.17em var(--kadokawa-black, black);
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    background-color: var(--kadokawa-extra-light-gray, #EEEEEE);
+}
+
+td[data-sc-kenjinumberg][data-sc-joyo],
+td[data-sc-kanjig][data-sc-joyo] {
+    background-color: var(--kadokawa-light-pink, #FFDBDA);
+}
+
+td[data-sc-kenjinumberg][data-sc-jinmei],
+td[data-sc-kanjig][data-sc-jinmei] {
+    border-top-color: var(--kadokawa-red, #CC0000);
+}
+
+span[data-sc-kenjinumber] {
+    font-size: 0.65em;
+    padding-right: 0.1em;
+}
+
+span[data-sc-kanji][data-sc-oyaji] {
+    font-size: 2em;
+    /*line-height: 1.2em !important;*/
+}
+
+span[data-sc-kanji][data-sc-itaiji-kyuji] {
+    font-size: 2em;
+    /*line-height: 1.2em !important;*/
+}
+
+span[data-sc-kanjibusyu] {
+    font-size: 0.8em;
+}
+
+span[data-sc-kanjisoukakusu] {
+    font-family: Avenir;
+    font-size: 0.7em;
+}
+
+span[data-sc-menkutencode] {
+    font-family: Avenir;
+    font-weight: bold;
+    font-size: 0.63em;
+}
+
+span[data-sc-unicode] {
+    font-family: Avenir;
+    font-size: 0.68em;
+}
+
+span[data-sc-unicode] {
+    font-family: Avenir;
+    font-size: 0.68em;
+}
+
+span[data-sc-nocode] {
+    font-size: 0.7em;
+}
+
+span[data-sc-itaijilabel],
+span[data-sc-kokugoshisakulabel] {
+    font-weight: bold;
+    font-size: 0.7em;
+}
+
+div[data-sc-onlistsubg][data-sc-sub] {
+    margin-left: 1.08em;
+}
+
+span[data-sc-joyoon],
+span[data-sc-joyokun] {
+    color: var(--kadokawa-red, #CC0000);
+}
+
+span[data-sc-yomi][data-sc-bosen] {
+    border-bottom: solid 0.05em var(--kadokawa-red, #CC0000);
+    padding-top: 0.1em;
+}
+
+div[data-sc-honmong] {
+    margin-top: 0.8em;
+    /*margin-left: 1em;*/
+}
+
+div[data-sc-honmong][data-sc-jukugo-item] {
+    display: inline;
+    margin-top: 0;
+    margin-left: 0.5em;
+}
+
+span[data-sc-jukugo-item] span[data-sc-imig],
+span[data-sc-jukugo-item] span[data-sc-imi-g] {
+    display: inline;
+}
+
+span[data-sc-imi][data-sc-inline] {
+    display: inline;
+}
+
+span[data-sc-sankou][data-sc-inline] {
+    display: inline;
+}
+
+span[data-sc-yomiinfo] {
+    color: var(--kadokawa-red, #CC0000);
+}
+
+span[data-sc-kodaimojilistg] {
+    font-size: 1.7em;
+    margin-left: 0.118em;
+}
+
+span[data-sc-kodaimojibranchg]+span[data-sc-kodaimojibranchg] {
+    margin-left: 0.1em;
+}
+
+span[data-sc-kodaimojibranch] {
+    font-size: 0.5em;
+}
+
+span[data-sc-kodaimojitypeg] {
+    margin-left: 0.05em;
+    padding-left: 0.059em;
+    padding-right: 0.059em;
+    border-right: solid 0.029em var(--kadokawa-kodaimoji-type-separator, #A0A0A0);
+}
+
+span[data-sc-kodaimojitypeg][data-sc-change-branch] {
+    border-right-color: var(--kadokawa-kodaimoji-branch-separator, #444444);
+}
+
+span[data-sc-kodaimojitype] {
+    text-combine-upright: all;
+    font-size: 0.411em;
+}
+
+span[data-sc-kodaimojifile] {
+    padding-left: 0.059em;
+    padding-right: 0.059em;
+}
+
+span[data-sc-kodaimojilistafterspace] {
+    margin-right: 0.3em;
+}
+
+div[data-sc-imagecontentg] {
+    margin-left: 1em;
+    margin-right: 2em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+div[data-sc-imagecaption] {
+    font-size: 0.8em;
+}
+
+span[data-sc-source] {
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    font-size: 0.9em;
+}
+
+span[data-sc-example] {
+    margin-right: 0.5em;
+}
+
+div[data-sc-jukugog] {
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    /*margin-left: 1em;*/
+    border-top: solid 0.05em var(--kadokawa-black, black);
+}
+
+span[data-sc-jukugohead] {
+    display: block;
+    font-size: 1.75em;
+    font-weight: 900;
+    color: var(--kadokawa-jukugo-hyoki-color, #0A246A);
+    margin: -0.1em 0 -0.2em 0;
+}
+
+span[data-sc-jukugosubhead] {
+    margin-right: 0.5em;
+}
+
+span[data-sc-jukugohyoki] {
+    font-weight: 700;
+}
+
+span[data-sc-jukugohyoki]+span[data-sc-jukugohyoki]:before {
+    content: "・"
+}
+
+span[title="熟語義"] {
+    color: var(--kadokawa-red, #CC0000);
+}
+
+span[data-sc-rect] {
+    padding: 0.04em 0.05em 0.058em 0.05em;
+    font-size: 0.8em;
+    border-width: 0.05em;
+    border-style: solid;
+    border-color: var(--kadokawa-black, black);
+    word-break: keep-all;
+    border-radius: 0.2em;
+}
+
+span[data-sc-rect][data-sc-fill] {
+    padding: 0.1em;
+    color: var(--kadokawa-white, white);
+    border-style: none;
+    background-color: var(--kadokawa-black, black);
+}
+
+span[data-sc-rect][data-sc-red] {
+    color: var(--kadokawa-red, #CC0000);
+    border-color: var(--kadokawa-red, #CC0000);
+}
+
+span[data-sc-rect][data-sc-red_fill] {
+    padding: 0.1em;
+    color: var(--kadokawa-white, white);
+    border-style: none;
+    background-color: var(--kadokawa-red, #CC0000);
+}
+
+span[data-sc-rect][data-sc-alphabet] {
+    text-combine-upright: all;
+}
+
+span[data-sc-rect][data-sc-small] {
+    font-size: 0.68em;
+    margin-left: 0.15em;
+    margin-right: 0.15em;
+}
+
+span[data-sc-rect][data-sc-horizontal] {
+    padding: 0.08em 0.24em 0.08em 0.24em;
+}
+
+span[data-sc-rect_oval] {
+    font-size: 0.75em;
+    word-break: keep-all;
+}
+
+span[data-sc-rect_oval1] {
+    background-color: var(--kadokawa-red, #CC0000);
+    border-top-left-radius: 0.15em;
+    border-bottom-left-radius: 0.15em;
+    padding: 0.07em 0 0.13em 0.18em;
+}
+
+span[data-sc-rect_oval1_inside] {
+    font-size: 0.05em;
+}
+
+span[data-sc-rect_oval2] {
+    background-color: var(--kadokawa-white, white);
+    color: var(--kadokawa-red, #CC0000);
+    border-top: solid 0.05em var(--kadokawa-red, #CC0000);
+    border-bottom: solid 0.05em var(--kadokawa-red, #CC0000);
+    border-right: solid 0.05em var(--kadokawa-red, #CC0000);
+    border-top-right-radius: 0.6em;
+    border-bottom-right-radius: 0.6em;
+    padding: 0.02em 0.2em 0.08em 0.02em;
+}
+
+span[data-sc-circle] {
+    padding: 0.06em 0.1em 0.08em;
+    font-size: 0.75em;
+    border-width: 0.05em;
+    border-style: solid;
+    border-color: var(--kadokawa-black, black);
+    border-radius: 0.67em;
+}
+
+span[data-sc-circle][data-sc-double] {
+    padding-left: 0.15em;
+    padding-right: 0.18em;
+    border-radius: 0.6em;
+    word-break: keep-all;
+}
+
+span[data-sc-circle][data-sc-red] {
+    color: var(--kadokawa-red, #CC0000);
+    border-color: var(--kadokawa-red, #CC0000);
+}
+
+span[data-sc-circlenumber][data-sc-fill] {
+    color: var(--kadokawa-gogi-gray, #5C5C5C);
+}
+
+span[data-sc-circlenumber][data-sc-small],
+span[data-sc-circlekana][data-sc-small] {
+    font-size: 0.85em;
+    margin-left: 0.15em;
+    margin-right: 0.15em;
+}
+
+span[data-sc-wari],
+span[data-sc-jukugoyomi],
+span[data-sc-jionrekishikana] {
+    font-size: 0.6em;
+    vertical-align: 0.6em;
+}
+
+span[data-sc-tate-c],
+span[data-sc-tate_c] {
+    margin-left: 0.1em;
+    margin-right: -0.1em;
+    text-combine-upright: all;
+}
+
+span[yomiseparator] {
+    font-size: 1.1em;
+    vertical-align: 0.68em;
+}
+
+span[data-sc-kaeriten] {
+    font-size: 0.5em;
+    vertical-align: -1.1em;
+}
+
+span[smallwi],
+span[smallw-i],
+span[small-w-i],
+span[smallwe],
+span[smallw-e],
+span[small-w-e] {
+    font-size: 0.8em;
+    vertical-align: 0.3em;
+    margin: 0 0.125em;
+}
+
+span[data-sc-f-m] {
+    margin-right: 0.15em;
+}
+
+span[data-sc-logo_-f-m] {
+    margin-right: 0.3em;
+}
+
+span[data-sc-b-m] {
+    margin-left: 0.15em;
+}
+
+span[data-sc-b-m2] {
+    margin-left: 0.2em;
+}
+
+span[data-sc-i-m] {
+    margin-left: 0.15em;
+    margin-right: 0.15em;
+}
+
+span[data-sc-i-m2] {
+    margin-left: 0.2em;
+    margin-right: 0.15em;
+}
+
+a {
+    color: var(--kadokawa-black, black);
+    text-decoration: none;
+}
+
+a[data-sc-blue] {
+    color: var(--kadokawa-blue, blue);
+}
+
+a[data-sc-blue] span[data-sc-rect],
+a[data-sc-blue] span[data-sc-circle] {
+    border-color: var(--kadokawa-blue, blue);
+}
+
+a[data-sc-blue] span[data-sc-rect][data-sc-fill],
+a[data-sc-blue] span[data-sc-rect][data-sc-red_fill] {
+    background-color: var(--kadokawa-blue, blue);
+}
+
+a[data-sc-blue] span[data-sc-circle][data-sc-fill] {
+    color: var(--kadokawa-blue, blue);
+}
+
+span[data-sc-joyoon] a[data-sc-blue],
+span[data-sc-joyokun] a[data-sc-blue],
+span[data-sc-yomiinfo] a[data-sc-blue] {
+    color: var(--kadokawa-red, #CC0000);
+}
+
+/*------- 画像の大きさ -------*/
+
+span[data-sc-img][data-sc-gaiji][data-sc-alt="⇂"] {
+    vertical-align: 0.1em;
+}
+
+span[data-sc-img][data-sc-gaiji_h][data-sc-alt*="レ"],
+span[data-sc-img][data-sc-gaiji_h][data-sc-alt="一。"],
+span[data-sc-img][data-sc-gaiji_h][data-sc-alt="一、"] {
+    vertical-align: -0.7em;
+}
+
+span[data-sc-img][data-sc-gaiji_h][data-sc-alt*="|"] {
+    vertical-align: -0.5em;
+}
+
+span[data-sc-img][data-sc-gaiji_h] {
+    width: 1em;
+    vertical-align: -0.25em;
+}
+
+span[data-sc-img][data-sc-gaiji] {
+    height: 1em;
+}
+
+span[data-sc-img][data-sc-accent] {
+    height: 1em;
+    vertical-align: -0.05em;
+}
+
+
+/* Custom fixes for Yomitan */
+/* Make sure tables are displayed */
+div:has(table-container) {
+    display: block;
+}
+
+span[title="熟語義"] {
+    border-color: var(--kadokawa-red, #CC0000) !important;
+}
+
+span[data-sc-kodaimoji] span[data-sc-img] .gloss-image-container,
+span[data-sc-kodaimoji] span[data-sc-img] .gloss-image {
+    width: 20em !important;
+}
+
+span[data-sc-gaiji_h][data-sc-img] .gloss-image-container,
+span[data-sc-gaiji_h][data-sc-img] .gloss-image,
+span[data-sc-gaiji][data-sc-img] .gloss-image-container,
+span[data-sc-gaiji][data-sc-img] .gloss-image {
+    width: 20em !important;
+}
+
+span[data-sc-kodaimoji] span[data-sc-img] .gloss-image-container,
+span[data-sc-gaiji_h][data-sc-img] .gloss-image-container,
+span[data-sc-gaiji][data-sc-img] .gloss-image-container {
+    vertical-align: text-bottom;
+}
+
+span[data-sc-kodaimoji] span[data-sc-img] .gloss-image-container {
+    vertical-align: -0.25em;
+}
+
+span[data-sc-jukugolist] a + a:before,
+span[data-sc-jukugohyoki] + span[data-sc-jukugohyoki]:before {
+    content: "・";
+}
+
+@media (max-width: 500px) {
+    span[data-sc-kodaimoji] span[data-sc-img] .gloss-image-container,
+    span[data-sc-kodaimoji] span[data-sc-img] .gloss-image {
+        width: 15em !important;
+    }
+
+    span[data-sc-gaiji_h][data-sc-img] .gloss-image-container,
+    span[data-sc-gaiji_h][data-sc-img] .gloss-image,
+    span[data-sc-gaiji][data-sc-img] .gloss-image-container,
+    span[data-sc-gaiji][data-sc-img] .gloss-image {
+        width: 15em !important;
+    }
+}

@@ -2,7 +2,6 @@ import os
 import json
 import bs4
 from pathlib import Path
-from tqdm import tqdm
 from typing import Dict, List, Optional
 
 from utils import KanjiUtils

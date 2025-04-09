@@ -5,6 +5,8 @@ import glob
 import zipfile
 import regex as re
 
+from typing import List, Dict, Any
+
 from tqdm import tqdm
 from datetime import datetime
 
@@ -200,4 +202,36 @@ class FileUtils:
         # Write updated data back
         with open(index_path, "w", encoding="utf-8") as f:
             json.dump(index_data, f, ensure_ascii=False, indent=4)
+            
+
+    @staticmethod
+    def load_mdx_json(dir_path: str) -> Dict[str, Any]:
+        """
+        Load the first JSON file found in the specified directory.
+        """
+        try:
+            # Check if the directory exists
+            if not os.path.isdir(dir_path):
+                print(f"Error: {dir_path} is not a valid directory")
+                return {}
+                
+            # Find all JSON files in the directory
+            json_files = [f for f in os.listdir(dir_path) if f.lower().endswith('.json')]
+            
+            if not json_files:
+                print(f"No JSON files found in {dir_path}")
+                return {}
+                
+            # Get the first JSON file
+            json_file_path = os.path.join(dir_path, json_files[0])
+            
+            # Load and return the JSON data
+            with open(json_file_path, 'r', encoding='utf-8') as f:
+                mdx_data = json.load(f)
+                print(f"Successfully loaded JSON file: {json_files[0]}")
+                return mdx_data
+                
+        except Exception as e:
+            print(f"Error loading MDX JSON file: {e}")
+            return {}
     
