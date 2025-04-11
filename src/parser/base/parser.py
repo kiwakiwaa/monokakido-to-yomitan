@@ -1,9 +1,8 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 from typing import Dict, List, Tuple, Optional, Set, Iterator
 
 import bs4
 import jaconv
-import concurrent.futures
 from tqdm import tqdm
 
 from index import IndexReader
@@ -19,14 +18,12 @@ class Parser:
     def __init__(self, dict_name: str, dict_path: str = None, index_path: str = None, jmdict_path: str = None,
                  link_handling_strategy: LinkHandlingStrategy = None,
                  image_handling_strategy: ImageHandlingStrategy = None,
-                 batch_size: int = 100,
-                 max_workers: int = 1):
+                 batch_size: int = 100):
         
         self.dictionary = Dictionary(dict_name)
         self.index_reader = IndexReader(index_path) if index_path else None
         
         self.batch_size = batch_size
-        self.max_workers = max_workers
         
         # Set up index and JMdict data if provided
         self.dict_data = FileUtils.read_xml_files(dict_path) if dict_path else None
@@ -193,7 +190,7 @@ class Parser:
         
         # Handle image elements where the content isnt empty
         if tag_name == "img" and html_glossary.contents:
-            element = self.handle_image_element(html_glossary)
+            element = self.handle_image_element(html_glossary, html_elements, data_dict, class_list)
             if element:
                 return element
         
@@ -256,40 +253,14 @@ class Parser:
         
     
     def parse(self) -> int:
-        """Parse the dictionary with batch processing and parallelization"""
+        """Parse the dictionary with batch processing"""
         count = 0
         
-        if self.max_workers is None or self.max_workers <= 1:
-            with tqdm(total=len(self.dict_data), desc="進歩", bar_format=self.bar_format, unit="事項") as pbar:
-                for batch in self._get_batches():
-                    batch_count = self._process_batch(batch)
-                    count += batch_count
-                    pbar.update(len(batch))
-        else:
-            # Parallel processing
-            batches = list(self._get_batches())
-            
-            with tqdm(total=len(self.dict_data), desc="進歩", bar_format=self.bar_format, unit="事項") as pbar:
-                with concurrent.futures.ProcessPoolExecutor(max_workers=self.max_workers) as executor:
-                    # Submit all batch processing tasks
-                    futures_to_batches = {
-                        executor.submit(self._process_batch, batch): batch 
-                        for batch in batches
-                    }
-                    
-                    # Process results as they complete
-                    for future in concurrent.futures.as_completed(futures_to_batches):
-                        batch = futures_to_batches[future]
-                        batch_size = len(batch)
-                        
-                        try:
-                            batch_count = future.result()
-                            count += batch_count
-                        except Exception as e:
-                            print(f"Batch processing error: {str(e)}")
-                        
-                        # Update progress bar with actual batch size
-                        pbar.update(batch_size)
+        with tqdm(total=len(self.dict_data), desc="進歩", bar_format=self.bar_format, unit="事項") as pbar:
+            for batch in self._get_batches():
+                batch_count = self._process_batch(batch)
+                count += batch_count
+                pbar.update(len(batch))
         
         return count
     

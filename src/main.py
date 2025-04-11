@@ -8,6 +8,7 @@ from parser.KNJE import KNJEParser
 from parser.SKOGO import SKOGOParser
 from parser.YDP import YDPParser
 from parser.SHINJIGEN2 import ShinjigenParser
+from parser.NANMED20 import NanmedParser
         
 
 def process_dictionary(config: DictionaryConfig, base_dir: Optional[str] = None):
@@ -73,6 +74,12 @@ def main():
             dict_name="角川新字源 改訂新版",
             rev_name="shinjigen2",
             dict_type="SHINJIGEN2",
+            parser_class=ShinjigenParser
+        ),
+        "nanmed": DictionaryConfig(
+            dict_name="南山堂医学大辞典 第20版",
+            rev_name="nanmed20",
+            dict_type="NANMED20",
             parser_class=ShinjigenParser
         )
     }

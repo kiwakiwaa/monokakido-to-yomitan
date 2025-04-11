@@ -1,0 +1,108 @@
+body	{
+	font: 14px 'Lucida Grande','Hiragino Kaku Gothic Pro','ƒqƒ‰ƒMƒmŠpƒS Pro W3','‚l‚r ‚oƒSƒVƒbƒN',sans-serif;line-height: 18px;
+	color: #000000;
+	font-weight: normal
+	}
+tr,td	{
+	font: 14px 'Lucida Grande','Hiragino Kaku Gothic Pro','ƒqƒ‰ƒMƒmŠpƒS Pro W3','‚l‚r ‚oƒSƒVƒbƒN',sans-serif;line-height: 18px;
+	color: #000000;
+	font-weight: normal
+	}
+h1{
+    border: solid;
+    border-width: 0px 0px 1px 1px;
+    padding: 5px;
+    border-color: #0000FF;
+    font-size: 140% ;
+	}
+.mainTitle{
+	font: 18px 'Lucida Grande','Hiragino Kaku Gothic Pro','ƒqƒ‰ƒMƒmŠpƒS Pro W3','‚l‚r ‚oƒSƒVƒbƒN',sans-serif;
+	font-weight: bold;
+	color: #000000;
+	border: solid;
+    border-width: 3px 0px 3px 0px;
+    padding: 5px;
+    border-color: #d1b7ad
+}
+.contents_title {  
+	font: 18px 'Lucida Grande','Hiragino Kaku Gothic Pro','ƒqƒ‰ƒMƒmŠpƒS Pro W3','‚l‚r ‚oƒSƒVƒbƒN',sans-serif;
+	font-weight: bold; 
+	color: #990000;
+	border: solid;
+    border-width: 1px 1px 1px 20px;
+    padding: 5px;
+    border-color: #999999;
+	}
+.dic_title {
+	font: 18px 'Lucida Grande','Hiragino Kaku Gothic Pro','ƒqƒ‰ƒMƒmŠpƒS Pro W3','‚l‚r ‚oƒSƒVƒbƒN',sans-serif;
+	font-weight: bold; 	
+	}
+.dic_titleWhite {
+	font: 18px 'Lucida Grande','Hiragino Kaku Gothic Pro','ƒqƒ‰ƒMƒmŠpƒS Pro W3','‚l‚r ‚oƒSƒVƒbƒN',sans-serif;
+	color:#FFFFFF;
+	font-weight: bold; 	
+	}
+.letter_lower {  font-size: 9px}
+.plain {  font-weight: normal}
+.midashi_1 {
+	font: 14px 'Lucida Grande','Hiragino Kaku Gothic Pro','ƒqƒ‰ƒMƒmŠpƒS Pro W3','‚l‚r ‚oƒSƒVƒbƒN',sans-serif;
+	font-weight: bold;
+	border: solid;
+	border-width: 3px 0px 3px 0px;
+	padding: 5px;
+	border-color: #006600;
+	color: #006600;
+}
+.midashi_2 {  
+	font: 14px 'Lucida Grande','Hiragino Kaku Gothic Pro','ƒqƒ‰ƒMƒmŠpƒS Pro W3','‚l‚r ‚oƒSƒVƒbƒN',sans-serif;
+	font-weight: bold;
+	color: #000066;
+	}
+.midashi_3 {  
+	font: 12px 'Lucida Grande','Hiragino Kaku Gothic Pro','ƒqƒ‰ƒMƒmŠpƒS Pro W3','‚l‚r ‚oƒSƒVƒbƒN',sans-serif;
+	font-weight: bold
+	}
+.midashi_4 {  
+	font: 14px 'Lucida Grande','Hiragino Kaku Gothic Pro','ƒqƒ‰ƒMƒmŠpƒS Pro W3','‚l‚r ‚oƒSƒVƒbƒN',sans-serif;
+	font-weight: bold;
+	border: solid;
+	border-width: 0px 0px 1px 10px;
+	padding: 2px;
+	border-color: #000066;
+	color: #000066;
+	}
+.midashi_tyuui {  font-weight: bold; color: #990000}
+.midashi_kanren1 {  font-weight: bold; color: #006633}
+.midashi_youhou1 {  font-weight: bold; color: #006633}
+.caution {  color: #990000}
+.pagetop{
+	font: 12px;
+	text-align: right;
+}
+.blue{
+	color:#0000FF;
+	}
+.skyblue{
+	color:#3399CC;
+	font-weight:bold;
+	}
+.url {  font-size: 10px}
+.url2 {  font-size: 12px}
+.midashi_big {
+	font-size: 36px;
+	font-weight: bold;
+}
+.font8 {
+	font-size: 8px;
+	line-height: normal;
+}
+.font9 {
+	font-size: 9px;
+	line-height: normal;
+}
+.shohou_midashi {
+	font-family: "ƒqƒ‰ƒMƒmŠÛƒS Pro W4";
+	font-size: 36px;
+	line-height: normal;
+	font-weight: bold;
+}
