@@ -1,0 +1,102 @@
+/* Fonts for 南山堂医学大辞典 第20版 */
+.definition-item[data-dictionary="南山堂医学大辞典 第20版"] {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-body] {
+    color: #e0e0e0;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] span[data-sc-gaiji_img] .gloss-image {
+       -webkit-filter: invert(90%);
+       filter: invert(90%);
+}
+
+.definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-midashi_hyoki] {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
+    font-weight: bold;
+}
+
+.definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-midashi_yomi] {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
+}
+
+.definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-gaikokugo_title],
+.definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-dougigo_title],
+.definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-image-mark1],
+.definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-image-mark5] {
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    font-weight: bold;
+}
+
+.definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-image-mark2] {
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    font-weight: bold;
+}
+
+.definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-lang]>.gloss-sc-span:not([data-sc-image-mark2]) {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-dougigo-h] {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-exp] {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] {
+    color: #e0e0e0;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-midashi] {
+    border-bottom-color: #555;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-midashi]::after {
+    background-color: #d66;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-midashi_hyoki] {
+    color: #d66;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-midashi_yomi] {
+    color: #aaa;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-gaikokugo_layer],
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-dougigo_layer] {
+    border-left-color: #555;
+}
+
+
+/* Dark mode 南山堂医学大辞典 第20版 */
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-gaikokugo_title],
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-dougigo_title],
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-image-mark1],
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-image-mark5] {
+    color: #aaa;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-image-mark2] {
+    color: #d66;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-dougigo-h] {
+    color: #9aacbf;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] a {
+    color: #9aacbf;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] a:hover {
+    color: #d66;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] .gloss-image-container {
+    border-color: #555;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}

@@ -86,6 +86,8 @@ class FileUtils:
                         rel_path = os.path.join('gaiji', os.path.basename(file))
                     elif 'graphics' in path_parts:
                         rel_path = os.path.join('graphics', os.path.basename(file))
+                    elif 'images' in path_parts:
+                        rel_path = os.path.join('images', os.path.basename(file))
                     elif 'logos' in path_parts:
                         rel_path = os.path.join('logos', os.path.basename(file))
                     elif 'icons' in path_parts:

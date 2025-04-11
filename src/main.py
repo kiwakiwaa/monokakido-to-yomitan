@@ -80,13 +80,13 @@ def main():
             dict_name="南山堂医学大辞典 第20版",
             rev_name="nanmed20",
             dict_type="NANMED20",
-            parser_class=ShinjigenParser
+            parser_class=NanmedParser
         )
     }
     
     # TODO maybe add caching for JMdict data
     
-    config_to_process = "shinjigen"
+    config_to_process = "nanmed"
     process_dictionary(dictionary_configs[config_to_process])
     
 

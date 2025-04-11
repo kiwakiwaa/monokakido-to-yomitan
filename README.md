@@ -12,6 +12,7 @@ This project provides tools to convert dictionaries from the Monokakido format t
 - 三省堂 全訳読解古語辞典
 - 現代心理学辞典
 - 角川新字源 改訂新版
+- 南山堂医学大辞典 第20版
 
 ## Prerequisites
 
@@ -59,6 +60,7 @@ This project provides tools to convert dictionaries from the Monokakido format t
 | 三省堂 全訳読解古語辞典 | SKOGO | ✅ Supported |
 | 現代心理学辞典 | YDP | ✅ Supported |
 | 角川新字源 改訂新版 | SHINJIGEN2 | ✅ Supported (MDX) |
+| 南山堂医学大辞典 第20版 | NANMED20 | ✅ Supported (SQL) |
 
 ## Directory Structure
 

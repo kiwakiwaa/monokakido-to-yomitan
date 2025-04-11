@@ -24,6 +24,60 @@ def parse_arguments():
     parser.add_argument('--limit', '-l', type=int, help='Limit entries per table (for testing)')
     return parser.parse_args()
 
+def check_for_css_patterns(cursor, tables):
+    """Check for potential CSS content in the database."""
+    print("\nLooking for potential CSS content...")
+    
+    # Tables that might contain CSS
+    css_tables = []
+    for table in tables:
+        if any(pattern in table.lower() for pattern in ['css', 'style', 'theme', 'format', 'layout']):
+            css_tables.append(table)
+    
+    if css_tables:
+        print(f"  Found {len(css_tables)} tables with CSS-related names: {', '.join(css_tables)}")
+    
+    # Check content columns for CSS patterns
+    css_patterns = ['{', 'px', 'em', 'rem', '#', 'rgb', '@media', '@font-face', 'url(']
+    
+    for table in tables:
+        cursor.execute(f"PRAGMA table_info({table})")
+        columns = [row[1] for row in cursor.fetchall()]
+        
+        for col in columns:
+            # Skip non-text columns
+            cursor.execute(f"SELECT typeof({col}) FROM {table} LIMIT 1")
+            col_type = cursor.fetchone()
+            if not col_type or col_type[0].lower() != 'text':
+                continue
+            
+            # Look for CSS-like patterns
+            for pattern in css_patterns:
+                cursor.execute(f"SELECT COUNT(*) FROM {table} WHERE {col} LIKE '%{pattern}%'")
+                count = cursor.fetchone()[0]
+                if count > 0:
+                    print(f"  Found potential CSS in {table}.{col} ({count} rows with '{pattern}')")
+                    cursor.execute(f"SELECT {col} FROM {table} WHERE {col} LIKE '%{pattern}%' LIMIT 1")
+                    sample = cursor.fetchone()
+                    if sample and sample[0]:
+                        print(f"  Sample: {sample[0][:150]}...")
+                    break
+    
+    # Look for specific style tables
+    style_tables = ['styles', 'css', 'stylesheet', 't_css', 't_style', 't_format']
+    for table in style_tables:
+        if table in tables:
+            print(f"\nFound specific style table: {table}")
+            cursor.execute(f"SELECT * FROM {table} LIMIT 5")
+            rows = cursor.fetchall()
+            if rows:
+                cursor.execute(f"PRAGMA table_info({table})")
+                columns = [row[1] for row in cursor.fetchall()]
+                print(f"  Columns: {', '.join(columns)}")
+                for row in rows:
+                    print(f"  Row: {row}")
+
+
 def analyze_database(input_path):
     """Analyze database structure and report details about all tables."""
     print(f"\nAnalyzing database: {input_path}")
@@ -118,6 +172,8 @@ def analyze_database(input_path):
                         
                         if col1 in columns2:
                             print(f"  Possible relationship: {table1}.{col1} -> {table2}.{col1}")
+    
+    check_for_css_patterns(cursor, tables)
     
     conn.close()
     return True
