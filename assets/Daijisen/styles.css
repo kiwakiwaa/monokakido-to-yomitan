@@ -443,6 +443,10 @@ span[data-sc-small] {
 	vertical-align: -0.4em;
 }
 
+span[data-sc-rect][data-sc-small] {
+	vertical-align: 0;
+}
+
 span[data-sc-headword] span[data-sc-wari],
 span[data-sc-bold] span[data-sc-wari] {
 	font-weight: normal;
@@ -498,8 +502,7 @@ span[data-sc-i-m] {
 	margin-right: 0.15em;
 }
 
-span[data-sc-img] .gloss-image-container,
-span[data-sc-img] .gloss-image-overlay {
+span[data-sc-img] .gloss-image-link {
     max-width: 70% !important;
 }
 

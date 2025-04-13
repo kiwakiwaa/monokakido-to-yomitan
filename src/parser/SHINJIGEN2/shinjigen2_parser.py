@@ -5,12 +5,13 @@ from utils import FileUtils
 
 from parser.base.parser import Parser
 from parser.SHINJIGEN2.tag_map import TAG_MAPPING
+from parser.SHINJIGEN2.shinjigen2_strategies import ShinjigenImageHandlingStrategy
 
 class ShinjigenParser(Parser):
 
     def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str):
         
-        super().__init__(dict_name)
+        super().__init__(dict_name, image_handling_strategy=ShinjigenImageHandlingStrategy())
         
         self.dict_data = FileUtils.load_mdx_json(dict_path)
         self.ignored_elements = {"entry-index", "link"}

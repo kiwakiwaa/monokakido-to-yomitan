@@ -1,12 +1,12 @@
 /* 南山堂医学大辞典 第20版 */
 [data-sc-body] {
-    color: #333;
+    color: var(--nanmed-base-color, #333);
     line-height: 1.5;
 }
 
 [data-sc-midashi] {
     position: relative;
-    border-bottom: 1px solid #a9a9a9;
+    border-bottom: 1px solid var(--nanmed-midashi-border, #a9a9a9);
     margin-bottom: 0.8rem;
     padding-bottom: 0.3rem;
 }
@@ -18,19 +18,19 @@
     left: 0;
     width: 80px;
     height: 2px;
-    background-color: #ba3f3f;
+    background-color: var(--nanmed-red, #ba3f3f);
 }
 
 [data-sc-midashi_hyoki] {
     font-size: 1.35rem;
     font-weight: bold;
-    color: #ba3f3f;
+    color: var(--nanmed-red, #ba3f3f);
     margin-bottom: 0.2rem;
 }
 
 [data-sc-midashi_yomi] {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--nanmed-light-text-color, #555);
     margin-bottom: 0.4rem;
 }
 
@@ -42,7 +42,7 @@
     position: relative;
     padding: 0.5rem;
     margin-bottom: 0.8rem;
-    border-left: 2px solid #ddd;
+    border-left: 2px solid var(--nanmed-border-color, #ddd);
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -50,7 +50,7 @@
 
 [data-sc-gaikokugo_title] {
     font-weight: bold;
-    color: #555;
+    color: var(--nanmed-light-text-color, #555);
     width: 100%;
     margin-bottom: 0.4rem;
 }
@@ -58,7 +58,7 @@
 [data-sc-image-mark1] {
     display: inline-block;
     font-size: 0.9rem;
-    color: #555;
+    color: var(--nanmed-light-text-color, #555);
     margin-right: 0.2rem;
 }
 
@@ -72,7 +72,7 @@
 
 [data-sc-image-mark2] {
     display: inline-block;
-    color: #ba3f3f;
+    color: var(--nanmed-red, #ba3f3f);
     margin-right: 0.5rem;
     min-width: 1.5rem;
     font-size: 1rem;
@@ -97,46 +97,63 @@
 [data-sc-dougigo_layer] {
     position: relative;
     padding: 0.5rem;
-    border-left: 2px solid #ddd;
+    border-left: 2px solid var(--nanmed-border-color, #ddd);
     margin-bottom: 0.8rem;
 }
 
 [data-sc-dougigo_title] {
     font-weight: bold;
     margin-bottom: 0.4rem;
-    color: #555;
+    color: var(--nanmed-light-text-color, #555);
 }
 
 [data-sc-image-mark5] {
     display: inline-block;
     font-size: 0.9rem;
-    color: #555;
+    color: var(--nanmed-light-text-color, #555);
     margin-right: 0.3rem;
 }
 
 [data-sc-syn] {
     display: inline-block;
-    margin-right: 0.8rem;
+}
+
+[data-sc-roman_numeral] {
+    display: inline-block;
+    font-family: serif;
+    font-weight: bold;
+    color: var(--nanmed-red, #ba3f3f);
+    padding: 0 0.05em;
+    vertical-align: baseline;
+    position: relative;
+    letter-spacing: 0.02em;
+}
+
+[data-sc-syn] > span:first-child {
+    margin-right: 0.5em;
 }
 
 [data-sc-exp] {
     line-height: 1.8;
     margin-top: 0.5rem;
-    text-align: justify;
+    text-align: left;
 }
 
 [data-sc-exp] .gloss-sc-span {
     display: inline;
 }
 
+[data-sc-scale-image] {
+    display: block !important;
+}
+
 /* Image styling */
 .gloss-image-link {
-    display: block;
     margin: 0.8rem 0;
 }
 
 .gloss-image-container {
-    border: 1px solid #ddd;
+    border: 1px solid var(--nanmed-border-color, #ddd);
     overflow: hidden;
     max-width: 100%;
     max-height: 100% !important;
@@ -149,12 +166,21 @@
 }
 
 a {
-    color: #647687;
+    color: var(--nanmed-link-color, #647687);
     text-decoration: none;
 }
 
 a:hover {
-    color: #ba3f3f;
+    color: var(--nanmed-red, #ba3f3f);
+}
+
+[data-sc-link-aster] {
+    display: inline-block;
+    color: var(--nanmed-red, #ba3f3f);
+    font-size: 0.9em;
+    margin-left: 0.05em;
+    margin-right: 0.05em;
+    font-weight: normal;
 }
 
 span[data-sc-gaiji_img][data-sc-img] .gloss-image-container,
@@ -176,7 +202,7 @@ span[data-sc-gaiji_img] .gloss-image-container {
 }
 
 @media (max-width: 500px) {
-	span[data-sc画像] a {
-		max-width: 75%;
+	span[data-sc-scale-image] .gloss-image-link {
+		max-width: 75% !important;
 	}
 }

@@ -1,15 +1,21 @@
+/* Alternative text colours, uncomment to try them out */
+/*
+.definition-item[data-dictionary="南山堂医学大辞典 第20版"] {
+    --nanmed-base-color: #000000; 
+    --nanmed-light-text-color: #414141;
+    --nanmed-link-color: #314559;
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] {
+    --nanmed-base-color: #ffffff; 
+    --nanmed-light-text-color: #d6d5d5;
+    --nanmed-link-color: #abc7e5;
+}
+*/
+
 /* Fonts for 南山堂医学大辞典 第20版 */
 .definition-item[data-dictionary="南山堂医学大辞典 第20版"] {
     font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
-}
-
-:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-body] {
-    color: #e0e0e0;
-}
-
-:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] span[data-sc-gaiji_img] .gloss-image {
-       -webkit-filter: invert(90%);
-       filter: invert(90%);
 }
 
 .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-midashi_hyoki] {
@@ -46,57 +52,79 @@
     font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
 }
 
-:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] {
-    color: #e0e0e0;
+@media (max-width: 500px) {
+	span[data-sc-scale-image] .gloss-image-link {
+		max-width: 75% !important;
+	}
+}
+
+/* Dark mode 南山堂医学大辞典 第20版 */
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] span[data-sc-gaiji_img] .gloss-image {
+       -webkit-filter: invert(90%);
+       filter: invert(90%);
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-body] {
+    color: var(--nanmed-base-color, #e0e0e0);
 }
 
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-midashi] {
-    border-bottom-color: #555;
+    border-bottom-color: var(--nanmed-midashi-border, #555);
 }
 
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-midashi]::after {
-    background-color: #d66;
+    background-color: var(--nanmed-red, #d66);
+}
+
+:root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-link-aster] {
+    color: var(--nanmed-red, #d66);
 }
 
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-midashi_hyoki] {
-    color: #d66;
+    color: var(--nanmed-red, #d66);
 }
 
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-midashi_yomi] {
-    color: #aaa;
+    color: var(--nanmed-light-text-color, #aaa);
 }
 
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-gaikokugo_layer],
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-dougigo_layer] {
-    border-left-color: #555;
+    border-left-color: var(--nanmed-border-color, #555);
 }
 
-
-/* Dark mode 南山堂医学大辞典 第20版 */
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-gaikokugo_title],
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-dougigo_title],
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-image-mark1],
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-image-mark5] {
-    color: #aaa;
+    color: var(--nanmed-light-text-color, #aaa);
 }
 
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-image-mark2] {
-    color: #d66;
+    color: var(--nanmed-red, #d66);
+}
+
+:root[data-theme="dark"] [data-sc-roman_numeral] {
+    color: var(--nanmed-red, #d66);
+}
+
+[data-sc-syn] > span:first-child {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
 }
 
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] [data-sc-dougigo-h] {
-    color: #9aacbf;
+    color: var(--nanmed-link-color, #9aacbf);
 }
 
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] a {
-    color: #9aacbf;
+    color: var(--nanmed-link-color, #9aacbf);
 }
 
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] a:hover {
-    color: #d66;
+    color: var(--nanmed-red, #d66);
 }
 
 :root[data-theme="dark"] .definition-item[data-dictionary="南山堂医学大辞典 第20版"] .gloss-image-container {
-    border-color: #555;
+    border-color: var(--nanmed-border-color, #555);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }

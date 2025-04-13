@@ -38,32 +38,49 @@ CLOSE_PUNCT_MAP = {
     "'": '」',
 }
 
-
 JAPANESE_CHARS = r'[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}ー]'
+LATIN_CHARS = re.compile(r'\p{Latin}[\p{Latin}\d\s\-\']*')
 
 PUNCT_FIX_REGEX = re.compile(
     fr'(?<={JAPANESE_CHARS})([.,!?:，．！？：])|([.,!?:，．！？：])(?={JAPANESE_CHARS})'
 )
 
+JAPANESE_PUNCT = r'[。、！？：；]'
+JP_PUNCT_SPACE_REGEX = re.compile(fr'({JAPANESE_PUNCT}){FULLWIDTH_SPACE}')
+SINGLE_PUNCT_REGEX = re.compile(r'^[.,!?:，．！？：]$')
+
 escaped_open = re.escape('([{{"\'')
 escaped_close = re.escape(')]}}"\'')
-
 OPEN_PUNCT_REGEX = re.compile(fr'([{escaped_open}])(?={JAPANESE_CHARS})')
-CLOSE_PUNCT_REGEX = re.compile(fr'(?<={re})([{escaped_close}])')
+CLOSE_PUNCT_REGEX = re.compile(fr'(?<={JAPANESE_CHARS})([{escaped_close}])')
 
 TRAILING_JP_WHITESPACE_REGEX = re.compile(fr'{FULLWIDTH_SPACE}+$')
 CONSECUTIVE_JP_WHITESPACE_REGEX = re.compile(fr'{FULLWIDTH_SPACE}{{2,}}')
 
-JAPANESE_PUNCT = r'[。、！？：；]'
-JP_PUNCT_SPACE_REGEX = re.compile(fr'({JAPANESE_PUNCT}){FULLWIDTH_SPACE}')
-
-LATIN_CHARS = re.compile(r'\p{Latin}[\p{Latin}\d\s\-\']*')
-
 NUMBERS = re.compile(r'\d+(?:\.\d+)?%?(?:[-–~～]\d+(?:\.\d+)?%?)?')
+
+ROMAN_NUMERAL_ENTITY_REGEX = re.compile(r'&((?:I|V|X){1,4})(?:_w)?;')
+ROMAN_NUMERALS = [
+    'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X',
+    'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX'
+]
+
+def replace_roman_numeral_entities(html_content):
+    """Replace Roman numeral entities with properly formatted spans."""
+    def replacement(match):
+        roman_numeral = match.group(1)
+        # Only process if it's a valid Roman numeral in our list
+        if roman_numeral in ROMAN_NUMERALS:
+            return f'<span class="roman_numeral">{roman_numeral}</span>'
+        # If not valid, leave as is
+        return match.group(0)
+    
+    # Replace all Roman numeral entity patterns
+    return ROMAN_NUMERAL_ENTITY_REGEX.sub(replacement, html_content)
 
 def contains_japanese(text):
     """Check if text contains Japanese characters."""
-    return bool(JAPANESE_CHARS.search(text))
+    return bool(re.search(JAPANESE_CHARS, text))
 
 def fix_spaces_in_latin(text):
     text = re.sub(r'(?<=\p{Latin})\u3000(?=\p{Latin})', NORMAL_SPACE, text)
@@ -110,6 +127,62 @@ def should_skip_element(el):
     classes = el.get('class', [])
     return any(cls in SKIP_CLASSES for cls in classes)
 
+def get_surrounding_text_content(node, max_length=50):
+    """Get surrounding text content to determine language context."""
+    # Get previous siblings' text
+    prev_text = ""
+    current = node
+    while current.previous_sibling and len(prev_text) < max_length:
+        current = current.previous_sibling
+        if isinstance(current, bs4.NavigableString):
+            prev_text = str(current) + prev_text
+        elif hasattr(current, 'get_text'):
+            prev_text = current.get_text() + prev_text
+    
+    # Get parent's previous siblings if needed
+    if len(prev_text) < 10 and node.parent and node.parent.previous_sibling:
+        parent_prev = node.parent.previous_sibling
+        if isinstance(parent_prev, bs4.NavigableString):
+            prev_text = str(parent_prev) + prev_text
+        elif hasattr(parent_prev, 'get_text'):
+            prev_text = parent_prev.get_text() + prev_text
+    
+    # Get next siblings' text
+    next_text = ""
+    current = node
+    while current.next_sibling and len(next_text) < max_length:
+        current = current.next_sibling
+        if isinstance(current, bs4.NavigableString):
+            next_text += str(current)
+        elif hasattr(current, 'get_text'):
+            next_text += current.get_text()
+    
+    # Get parent's next siblings if needed
+    if len(next_text) < 10 and node.parent and node.parent.next_sibling:
+        parent_next = node.parent.next_sibling
+        if isinstance(parent_next, bs4.NavigableString):
+            next_text += str(parent_next)
+        elif hasattr(parent_next, 'get_text'):
+            next_text += parent_next.get_text()
+    
+    return prev_text, next_text
+
+def should_use_japanese_punctuation(prev_text, next_text):
+    """Determine if Japanese punctuation should be used based on context."""
+    # Check if either previous or next content contains Japanese
+    prev_has_japanese = bool(re.search(JAPANESE_CHARS, prev_text))
+    next_has_japanese = bool(re.search(JAPANESE_CHARS, next_text))
+    
+    # Count Japanese and Latin characters
+    jp_chars = len(re.findall(JAPANESE_CHARS, prev_text + next_text))
+    latin_chars = len(re.findall(LATIN_CHARS, prev_text + next_text))
+    
+    # If there's Japanese on both sides, definitely use Japanese punctuation
+    if prev_has_japanese and next_has_japanese:
+        return True
+    
+    # If there's more Japanese than Latin overall, use Japanese punctuation
+    return jp_chars > latin_chars
 
 def preserve_html_entities(html_content):
     """Replace HTML entities with temporary placeholders before parsing."""
@@ -137,6 +210,8 @@ def restore_html_entities(html_content, entity_map):
 
 def process_html_content(html_content):
     """Process HTML content and preserve entities."""
+    html_content = replace_roman_numeral_entities(html_content)
+    
     # Step 1: Replace HTML entities with placeholders
     modified_content, entity_map = preserve_html_entities(html_content)
     
@@ -145,6 +220,51 @@ def process_html_content(html_content):
     
     changes_made = False
     
+    # First pass: handle isolated punctuation
+    def process_isolated_punctuation():
+        nonlocal changes_made
+        
+        # Find all spans with lang="ja" attribute that might contain punctuation
+        for span in soup.find_all('span', lang='ja'):
+            if should_skip_element(span):
+                continue
+                
+            # Check if the span contains only punctuation
+            text = span.get_text().strip()
+            if len(text) == 1 and text in PUNCTUATION_MAP:
+                # Get surrounding text
+                prev_text, next_text = get_surrounding_text_content(span)
+                
+                # Check if Japanese punctuation should be used
+                if should_use_japanese_punctuation(prev_text, next_text):
+                    jp_punct = PUNCTUATION_MAP[text]
+                    if span.string != jp_punct:
+                        span.string.replace_with(jp_punct)
+                        changes_made = True
+        
+        # Also check for any isolated punctuation in text nodes
+        for text_node in soup.find_all(string=SINGLE_PUNCT_REGEX):
+            if should_skip_element(text_node.parent):
+                continue
+                
+            # Get the punctuation mark
+            punct = str(text_node).strip()
+            
+            # Skip if not in our mapping
+            if punct not in PUNCTUATION_MAP:
+                continue
+                
+            # Get surrounding text
+            prev_text, next_text = get_surrounding_text_content(text_node)
+            
+            # Check if Japanese punctuation should be used
+            if should_use_japanese_punctuation(prev_text, next_text):
+                jp_punct = PUNCTUATION_MAP[punct]
+                if str(text_node) != jp_punct:
+                    text_node.replace_with(jp_punct)
+                    changes_made = True
+    
+    # Second pass: normal text processing
     def process_node(node):
         nonlocal changes_made
         # Skip comments
@@ -166,6 +286,8 @@ def process_html_content(html_content):
         for child in list(node.children):
             process_node(child)
     
+    # Apply both passes
+    process_isolated_punctuation()
     process_node(soup)
     
     # Step 3: Convert back to string and restore entities

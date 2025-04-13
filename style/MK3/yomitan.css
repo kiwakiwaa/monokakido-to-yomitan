@@ -1,0 +1,63 @@
+.definition-item[data-dictionary='明鏡国語辞典 第三版'] {
+    /* Uncomment this to disable furigana */
+    /*
+    .gloss-sc-ruby[data-sc-class="full"] .gloss-sc-rt[data-sc-rt] {
+	    display: none;
+    }
+    */
+
+    /* Uncomment this to show the 類語 section (Hidden by default) */
+    /*
+    div[data-sc-ruigo_items] {
+	    display: block;
+    }
+    */
+
+    [data-sc-body],
+    span[data-sc-rect],
+    span[data-sc-katsuyo],
+    span[data-sc-headword][data-sc-class="旧かな"],
+    span[data-sc-fbox0],
+    span[data-sc-fbox],
+    span[data-sc-e-m],
+    span[data-sc-em],
+    div[data-sc-class="shikiri"] div[data-sc-meaning],
+    span[data-sc-meaning][data-sc-class="columntitle"],
+    div[data-sc-meaning][data-sc-class="columntitle"],
+    span[data-sc-b],
+    a,
+    span[data-sc-bc]  {
+        font-family: "Hiragino Kaku Gothic ProN";
+    }
+
+    div[data-sc-example],
+    span[data-sc-fbox][data-sc-class="品格"],
+    span[data-sc-headword][data-sc-class="表記"],
+    span[data-sc-headword][data-sc-class="原綴"],
+    span[data-sc-zoomkanji] {
+        font-family: "Hiragino Mincho ProN";
+    }
+
+    span[data-sc-pron] {
+        font-family: "Doulos SIL";
+    }
+}
+
+:root[data-theme="dark"] {
+    .definition-item[data-dictionary='明鏡国語辞典 第三版'] {
+        --meikyo-white: #000000;
+        --meikyo-black: #CCCCCC;
+        --meikyo-red: #FF3333;
+        --meikyo-gray: #BBBBBB;
+        --meikyo-pink: #CC6666;
+        --meikyo-dark-red: #993333;
+        --meikyo-fbox-white: #FFFFFF;
+        --meikyo-fbox-gray: #CCCCCC;
+        --meikyo-box-gray: #663333;
+
+        .gloss-sc-span[data-sc-class="gaiji"] .gloss-image {
+            -webkit-filter: invert(90%);
+            filter: invert(90%);
+        }
+    }
+}

@@ -731,12 +731,13 @@ span[data-sc-kodaimoji] span[data-sc-img] .gloss-image-container {
     vertical-align: -0.25em;
 }
 
-span[data-sc-jukugolist] a + a:before,
-span[data-sc-jukugohyoki] + span[data-sc-jukugohyoki]:before {
+span[data-sc-jukugolist] a+a:before,
+span[data-sc-jukugohyoki]+span[data-sc-jukugohyoki]:before {
     content: "・";
 }
 
 @media (max-width: 500px) {
+
     span[data-sc-kodaimoji] span[data-sc-img] .gloss-image-container,
     span[data-sc-kodaimoji] span[data-sc-img] .gloss-image {
         width: 15em !important;
@@ -748,4 +749,82 @@ span[data-sc-jukugohyoki] + span[data-sc-jukugohyoki]:before {
     span[data-sc-gaiji][data-sc-img] .gloss-image {
         width: 15em !important;
     }
+}
+
+/* 韻目表示 */
+.rhyme-char {
+    position: relative;
+    display: inline-block;
+    border: 2px solid black;
+    width: 60px;
+    height: 60px;
+    font-size: 34px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bold;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 10px;
+    overflow: hidden;
+}
+
+/* Bottom-left hollow triangle for type 1 */
+.inmoku-type-1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 0 25px;
+    border-color: transparent transparent transparent black;
+    z-index: 1;
+}
+
+.inmoku-type-1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 22px 0 0 22px;
+    border-color: transparent transparent transparent white;
+    z-index: 2;
+}
+
+/* Top-left filled triangle for type 2 */
+.inmoku-type-2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid black;
+    border-right: 20px solid transparent;
+}
+
+.inmoku-type-3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid black;
+    border-left: 20px solid transparent;
+}
+
+.inmoku-type-4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid black;
+    border-left: 20px solid transparent;
 }

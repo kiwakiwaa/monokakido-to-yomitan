@@ -1,3 +1,13 @@
+/* Alternative brighter colours, uncommon to try them out */
+/*
+:root[data-theme="dark"] {
+    .definition-item[data-dictionary='現代心理学辞典'] {
+        --ydp-black: #ffffff !important;
+        --ydp-image-background: #252525 !important;
+    }
+}
+*/
+
 :root[data-theme="dark"] {
     .definition-item[data-dictionary='現代心理学辞典'] {
         --ydp-black: #CCCCCC;

@@ -18,7 +18,7 @@ class Parser:
     def __init__(self, dict_name: str, dict_path: str = None, index_path: str = None, jmdict_path: str = None,
                  link_handling_strategy: LinkHandlingStrategy = None,
                  image_handling_strategy: ImageHandlingStrategy = None,
-                 batch_size: int = 100):
+                 batch_size: int = 250):
         
         self.dictionary = Dictionary(dict_name)
         self.index_reader = IndexReader(index_path) if index_path else None
@@ -137,13 +137,18 @@ class Parser:
                                ignore_expressions: bool = False) -> List:
         """Process child elements of an HTML element"""
         html_elements = []
-        
         if html_glossary.contents:
             for content in html_glossary.contents:
                 if isinstance(content, bs4.Comment):
                     continue
                 if isinstance(content, bs4.NavigableString) or isinstance(content, str):
-                    html_elements.append(create_html_element("span", content))
+                    # Check for empty strings or strings with only whitespace
+                    content_str = str(content)
+                    if content_str and not content_str.isspace():
+                        if content_str.startswith("\n") and "・" in content_str:
+                            html_elements.append(create_html_element("span", "・"))
+                        else:
+                            html_elements.append(create_html_element("span", content))
                 else:
                     converted_element = self.convert_element_to_yomitan(content, ignore_expressions=ignore_expressions)
                     if converted_element is not None:  # Avoid inserting None
@@ -181,6 +186,14 @@ class Parser:
         if not isinstance(html_elements, List):
             return html_elements
         
+        # Check if all elements in the list are empty strings or whitespace-only strings
+        if all(isinstance(elem, dict) and 
+            elem.get('content') and 
+            (not elem['content'] or 
+                (isinstance(elem['content'], str) and elem['content'].isspace())) 
+            for elem in html_elements):
+            return None
+                
         # add elements that yomitan supports
         if tag_name in self.__yomitan_supported_tags:
             return create_html_element(html_glossary.name, content=html_elements, data=data_dict)
