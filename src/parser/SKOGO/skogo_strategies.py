@@ -64,7 +64,7 @@ class SKOGOImageHandlingStrategy(ImageHandlingStrategy):
             if original_filename in self.image_file_map:
                 src_attr = src_attr.replace(original_filename, self.image_file_map[original_filename])
                 
-                imgElement = {"tag": "img", "path": src_attr, "collapsible": False, "data": data_dict}
+                imgElement = {"tag": "img", "path": src_attr, "collapsible": False, "background": False, "data": data_dict}
                 html_elements.insert(0, imgElement)
                 return create_html_element("span", content=html_elements, data=data_dict) 
             
@@ -75,7 +75,7 @@ class SKOGOImageHandlingStrategy(ImageHandlingStrategy):
                 if normalized in self.image_file_map:
                     src_attr = src_attr.replace(original_filename, self.image_file_map[normalized])
                     
-                    imgElement = {"tag": "img", "path": src_attr, "collapsible": False, "data": data_dict}
+                    imgElement = {"tag": "img", "path": src_attr, "collapsible": False, "background": False, "data": data_dict}
                     html_elements.insert(0, imgElement)
                     return create_html_element("span", content=html_elements, data=data_dict) 
             
@@ -86,7 +86,7 @@ class SKOGOImageHandlingStrategy(ImageHandlingStrategy):
                 if base_name == key_base:
                     src_attr = src_attr.replace(original_filename, self.image_file_map[key])
                     
-                    imgElement = {"tag": "img", "path": src_attr, "collapsible": False, "data": data_dict}
+                    imgElement = {"tag": "img", "path": src_attr, "collapsible": False, "background": False, "data": data_dict}
                     html_elements.insert(0, imgElement)
                     return create_html_element("span", content=html_elements, data=data_dict) 
             
@@ -96,14 +96,14 @@ class SKOGOImageHandlingStrategy(ImageHandlingStrategy):
             if possible_matches:
                 src_attr = src_attr.replace(original_filename, self.image_file_map[possible_matches[0]])
                 
-                imgElement = {"tag": "img", "path": src_attr, "collapsible": False, "data": data_dict}
+                imgElement = {"tag": "img", "path": src_attr, "collapsible": False, "background": False, "data": data_dict}
                 html_elements.insert(0, imgElement)
                 return create_html_element("span", content=html_elements, data=data_dict) 
             
             print(f"No match found for '{original_filename}'")
             
         if src_attr:
-            imgElement = {"tag": "img", "path": src_attr, "collapsible": False, "data": data_dict}
+            imgElement = {"tag": "img", "path": src_attr, "collapsible": False, "background": False, "data": data_dict}
             html_elements.insert(0, imgElement)
             return create_html_element("span", content=html_elements, data=data_dict)
             

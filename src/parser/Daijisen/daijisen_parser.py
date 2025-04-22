@@ -22,7 +22,7 @@ class DaijisenParser(Parser):
         )
         
         self.tag_mapping = TAG_MAPPING
-        self.ignored_elements = {"k-v", "header", "index", "mimageg"}
+        self.ignored_elements = {"k-v", "header", "index"} # mimageg
         self.expression_element = "subitem"
         
         

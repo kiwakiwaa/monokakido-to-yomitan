@@ -10,7 +10,7 @@ body {
 
 div[data-sc見出部] {
 	font-size: 1.1em;
-	margin-left: 0.909em;
+	margin-inline-start: 0.909em;
 	text-indent: -0.909em;
 }
 
@@ -26,8 +26,8 @@ span[data-sc見出-g][data-sc-red] {
 }
 
 span[data-sc-rank] {
-	margin-left: -0.44em;
-	margin-right: 0.1em;
+	margin-inline-start: -0.44em;
+	margin-inline-end: 0.1em;
 }
 
 span[data-sc活用分節] {
@@ -47,8 +47,8 @@ span[data-sc-f-w-hyphen] {
 
 span[data-sc表記-g],
 span[data-scチャート表記-g] {
-	margin-left: 0.15em;
-	margin-right: 0.15em;
+	margin-inline-start: 0.15em;
+	margin-inline-end: 0.15em;
 }
 
 span[data-sc見出歴史仮名],
@@ -57,8 +57,8 @@ span[data-sc段落歴史仮名],
 span[data-sc段落現代仮名] {
 	/* font-family: "Hiragino Mincho ProN"; */
 	font-weight: normal;
-	margin-left: 0.15em;
-	margin-right: 0.15em;
+	margin-inline-start: 0.15em;
+	margin-inline-end: 0.15em;
 	font-size: 0.6em;
 	vertical-align: 0.5em;
 }
@@ -71,20 +71,20 @@ span[data-sc終了] {
 }
 
 span[data-sc活用語尾-g] {
-	margin-left: 0.15em;
-	margin-right: 0.15em;
+	margin-inline-start: 0.15em;
+	margin-inline-end: 0.15em;
 	font-size: 0.8em;
 }
 
 table[data-sc活用表] {
 	display: table;
 	text-indent: 0;
-	border-top: solid 0.05em var(--skogo-red, #C00000);
-	border-left: solid 0.05em var(--skogo-red, #C00000);
-    border-right: none;
-    border-bottom: none;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
+	border-block-start: solid 0.05em var(--skogo-red, #C00000);
+	border-inline-start: solid 0.05em var(--skogo-red, #C00000);
+    border-inline-end: none;
+    border-block-end: none;
+	margin-block-start: 0.3em;
+	margin-block-end: 0.3em;
 }
 
 tr[data-sc活用表-行],
@@ -97,10 +97,10 @@ td[data-sc活用表_項] {
     display: table-cell;
 	text-align: center;
 	vertical-align: middle;
-	border-bottom: solid 0.05em var(--skogo-red, #C00000);
-	border-right: solid 0.05em var(--skogo-red, #C00000);
-    border-top: none;
-    border-left: none;
+	border-block-end: solid 0.05em var(--skogo-red, #C00000);
+	border-inline-end: solid 0.05em var(--skogo-red, #C00000);
+    border-block-start: none;
+    border-inline-start: none;
 }
 
 td[data-sc活用表-項][data-sc-label],
@@ -117,12 +117,12 @@ td[data-sc活用表_項][data-sc-value] {
 
 td[data-sc活用表-項][data-sc-normal],
 td[data-sc活用表_項][data-sc-normal] {
-	border-right: solid 0.085em var(--skogo-red, #C00000);
+	border-inline-end: solid 0.085em var(--skogo-red, #C00000);
 }
 
 td[data-sc活用表-項][data-sc-first],
 td[data-sc活用表_項][data-sc-first] {
-	border-bottom-color: var(--skogo-light-red, #DFA6A8);
+	border-block-end-color: var(--skogo-light-red, #DFA6A8);
 }
 
 span[data-sc活用表-label] {
@@ -140,13 +140,13 @@ span[data-sc活用表-empty] {
 
 div[data-sc語義要説-g] {
 	text-indent: 0;
-	margin-top: 0.6em;
-	margin-bottom: 0.6em;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
 	padding: 0 0.3em;
-	border-left: solid 0.3em var(--skogo-light-red, #DFA6A8);
-	border-right: solid 0.3em var(--skogo-light-red, #DFA6A8);  
-    border-top: none;
-    border-bottom: none;
+	border-inline-start: solid 0.3em var(--skogo-light-red, #DFA6A8);
+	border-inline-end: solid 0.3em var(--skogo-light-red, #DFA6A8);  
+    border-block-start: none;
+    border-block-end: none;
 }
 
 div[data-sc要説][data-sc-indent] {
@@ -154,12 +154,12 @@ div[data-sc要説][data-sc-indent] {
 }
 
 div[data-sc箇条書] {
-	margin-left: 1.15em;
+	margin-inline-start: 1.15em;
 	text-indent: -1.15em;
 }
 
 div[data-sc箇条書][data-sc-noindent] {
-	margin-left: 0;
+	margin-inline-start: 0;
 	text-indent: 0;
 }
 
@@ -168,18 +168,18 @@ div[data-sc箇条書][data-sc-indent] {
 }
 
 div[data-sc箇条書][data-sc-findent] {
-	margin-left: 0;
+	margin-inline-start: 0;
 	text-indent: 1.15em;
 }
 
 table[data-sc箇条書][data-sc連結語義] {
 	display: table;
-	margin-left: 0;
+	margin-inline-start: 0;
 	text-indent: 0;
 }
 
 span[data-sc箇条書-h] {
-    margin-right: 0.15em;
+    margin-inline-end: 0.15em;
 }
 
 table[data-sc箇条書][data-sc連結語義] td[data-sc箇条書-h] {
@@ -208,8 +208,8 @@ span[data-scalph語義][data-sc-small] {
 }
 
 span[data-sc括弧語義] {
-	margin-left: 0.1em;
-	margin-right: 0.1em;
+	margin-inline-start: 0.1em;
+	margin-inline-end: 0.1em;
 }
 
 span[data-sc中黒語義] {
@@ -230,7 +230,7 @@ div[data-sc用例-g] {
 }
 
 div[data-sc用例-g][data-sc-inline] {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 span[data-sc詩歌全形] {
@@ -283,23 +283,23 @@ span[data-sc単位] {
 
 span[data-sc文法情報],
 span[data-sc百人一首] {
-	margin-left: 0.15em;
-	margin-right: 0.15em;
+	margin-inline-start: 0.15em;
+	margin-inline-end: 0.15em;
 }
 
 span[data-sc言換イコール] {
 	vertical-align: 0.13em;
-	margin-right: 0.1em;
+	margin-inline-end: 0.1em;
 }
 
 span[data-sc冒頭文ロゴ],
 span[data-sc作品例ロゴ] {
-	padding-left: 0.08em;
-	padding-right: 0.08em;
-	border-left: solid 0.2em var(--skogo-red, #C00000);
-	border-right: solid 0.2em var(--skogo-red, #C00000);
-    border-top: none;
-    border-bottom: none;
+	padding-inline-start: 0.08em;
+	padding-inline-end: 0.08em;
+	border-inline-start: solid 0.2em var(--skogo-red, #C00000);
+	border-inline-end: solid 0.2em var(--skogo-red, #C00000);
+    border-block-start: none;
+    border-block-end: none;
 }
 
 span[data-sc冒頭文ロゴテキスト],
@@ -341,10 +341,10 @@ span[data-sc関連語] {
 }
 
 div[data-sc関連語] {
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	padding-left: 0.3em;
-	border-left: solid 0.3em light-gray;
+	margin-block-start: 0.3em;
+	margin-block-end: 0.3em;
+	padding-inline-start: 0.3em;
+	border-inline-start: solid 0.3em light-gray;
 }
 
 span[data-sc補説小見出] {
@@ -356,10 +356,10 @@ div[data-sc読解-g],
 div[data-sc現代-g],
 div[data-scチャート項目],
 div[data-sc絵巻項目] {
-	margin-top: 0.4em;
-	margin-bottom: 0.4em;
-	padding-left: 0.3em;
-	padding-right: 0.3em;
+	margin-block-start: 0.4em;
+	margin-block-end: 0.4em;
+	padding-inline-start: 0.3em;
+	padding-inline-end: 0.3em;
 	background-color: var(--skogo-extra-light-red, #FFEEEE);
 }
 
@@ -377,7 +377,7 @@ span[data-scチャート見出] {
 }
 
 span[data-sc段落][data-sc字下0_1] {
-	margin-left: 1em;
+	margin-inline-start: 1em;
 	text-indent: -1em;
 }
 
@@ -386,16 +386,16 @@ span[data-sc段落][data-sc字下1_0] {
 }
 
 span[data-sc段落][data-sc字下1_1] {
-	margin-left: 1em;
+	margin-inline-start: 1em;
 }
 
 span[data-sc段落][data-sc字下2_2] {
-	margin-left: 2em;
+	margin-inline-start: 2em;
 }
 
 span[data-sc付録参照ロゴ] {
-	margin-left: 0.1em;
-	margin-right: 0.1em;
+	margin-inline-start: 0.1em;
+	margin-inline-end: 0.1em;
 	/* font-family: "Hiragino Kaku Gothic ProN"; */
 	font-size: 0.9em;
 }
@@ -413,15 +413,15 @@ span[data-sc絵巻図版] {
 
 table[data-sc表-g] {
     display: table;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
+	margin-block-start: 0.3em;
+	margin-block-end: 0.3em;
 }
 
 table[data-sc表-g][data-sc-b] {
-	border-top: solid 0.05em gray;
-	border-left: solid 0.05em gray;
-    border-right: none;
-    border-bottom: none;
+	border-block-start: solid 0.05em gray;
+	border-inline-start: solid 0.05em gray;
+    border-inline-end: none;
+    border-block-end: none;
 	max-width: 24em;
 }
 
@@ -435,16 +435,16 @@ tr[data-sc行] {
 
 td[data-sc列] {
     display: table-cell;
-	vertical-align: top;
+	vertical-align: block-start;
 }
 
 td[data-sc列][data-sc-b] {
 	padding: 0.3em;
 	line-height: 1.1em;
-	border-bottom: solid 0.05em gray;
-	border-right: solid 0.05em gray;
-    border-top: none;
-    border-left: none;
+	border-block-end: solid 0.05em gray;
+	border-inline-end: solid 0.05em gray;
+    border-block-start: none;
+    border-inline-start: none;
 	width: 20%;
 }
 
@@ -462,7 +462,7 @@ td[data-sc列][data-sc-c2] {
 
 span[data-sc列-c] {
 	display: inline-block;
-	margin-right: 1em;
+	margin-inline-end: 1em;
 }
 
 span[data-sc圏点] {
@@ -473,7 +473,7 @@ span[data-sc圏点] {
 
 table[data-sc識別-g] {
     display: table;
-	margin-left: 1;
+	margin-inline-start: 1;
 }
 
 tr[data-sc識別見出行],
@@ -483,32 +483,32 @@ tr[data-sc識別行] {
 }
 
 [data-sc識別-l-b] {
-    border-left: solid 0.05em var(--skogo-red, #C00000);
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+    border-inline-start: solid 0.05em var(--skogo-red, #C00000);
+    border-inline-end: none;
+    border-block-start: none;
+    border-block-end: none;
 }
 
 [data-sc識別-r-b] {
-    border-left: solid 0.05em var(--skogo-red, #C00000);
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+    border-inline-start: solid 0.05em var(--skogo-red, #C00000);
+    border-inline-end: none;
+    border-block-start: none;
+    border-block-end: none;
 }
 
 [data-sc識別-b-b] {
-    border-left: solid 0.05em var(--skogo-red, #C00000);
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+    border-inline-start: solid 0.05em var(--skogo-red, #C00000);
+    border-inline-end: none;
+    border-block-start: none;
+    border-block-end: none;
 }
 
 td[data-sc識別見出項] {
     display: table-cell;
 	background-color: var(--skogo-red, #C00000);
 	color: var(--skogo-white, white);
-	padding-left: 0.3em;
-	padding-right: 0.3em;
+	padding-inline-start: 0.3em;
+	padding-inline-end: 0.3em;
 	vertical-align: top;
 }
 
@@ -519,7 +519,7 @@ span[data-sc識別見出] {
 
 span[data-sc識別見出サブ] {
 	font-size: 0.85em;
-	margin-left: 0.1em;
+	margin-inline-start: 0.1em;
 }
 
 td[data-sc識別ヘッダ項] {
@@ -528,10 +528,10 @@ td[data-sc識別ヘッダ項] {
 	font-size: 0.85em;
 	line-height: 1.4em;
 	background-color: var(--skogo-extra-light-red, #FFEEEE);
-	padding-left: 0.353em;
-	padding-right: 0.353em;
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
+	padding-inline-start: 0.353em;
+	padding-inline-end: 0.353em;
+	padding-block-start: 0.2em;
+	padding-block-end: 0.2em;
 	vertical-align: top;
 	min-width: 4em;
 }
@@ -540,10 +540,10 @@ td[data-sc識別項] {
 	display: table-cell;
 	font-size: 0.85em;
 	line-height: 1.4em;
-	padding-left: 0.353em;
-	padding-right: 0.353em;
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
+	padding-inline-start: 0.353em;
+	padding-inline-end: 0.353em;
+	padding-block-start: 0.2em;
+	padding-block-end: 0.2em;
 	vertical-align: top;
 }
 
@@ -552,20 +552,20 @@ span[data-sc識別説明] {
 }
 
 div[data-sc-gendai-ref-g] {
-	margin-top: 0.4em;
+	margin-block-start: 0.4em;
 }
 
 span[data-sc-gendai-ref品詞],
 span[data-sc-gendai-ref-品詞],
 span[data-sc-gendai-ref-desc] {
 /* 	font-family: "Hiragino Kaku Gothic ProN"; */
-	margin-left: 0.25em;
+	margin-inline-start: 0.25em;
 }
 
 span[data-sc-gendai-ref-desc] {
 	/* font-family: "Hiragino Kaku Gothic ProN"; */
 	font-size: 0.85em;
-	margin-left: 0.25em;
+	margin-inline-start: 0.25em;
 }
 
 span[data-sc返り点] {
@@ -575,8 +575,8 @@ span[data-sc返り点] {
 }
 
 span[data-sc縦中横][data-sc-small] {
-	margin-left: 0.1em;
-	margin-right: 0.1em;
+	margin-inline-start: 0.1em;
+	margin-inline-end: 0.1em;
 	font-size: 0.8em;
 }
 
@@ -641,8 +641,8 @@ span[data-sc-inner_white] {
 
 div[data-sc画像-g],
 div[data-sc絵巻画像-g] {
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
+	margin-block-start: 0.3em;
+	margin-block-end: 0.3em;
 }
 
 a {
@@ -662,20 +662,20 @@ a[data-sc-blue] span[data-sc-rectr][data-sc-fill] {
 }
 
 [data-sc-f-m] {
-    margin-right: 0.15em;
+    margin-inline-end: 0.15em;
 }
 
 [data-sc-logo_-f-m] {
-	margin-right: 0.3em;
+	margin-inline-end: 0.3em;
 }
 
 [data-sc-b-m] {
-	margin-left: 0.15em;
+	margin-inline-start: 0.15em;
 }
 
 [data-sc-i-m] {
-	margin-left: 0.15em;
-	margin-right: 0.15em;
+	margin-inline-start: 0.15em;
+	margin-inline-end: 0.15em;
 }
 
 span[data-sc-a][data-sc-href="$h1"],

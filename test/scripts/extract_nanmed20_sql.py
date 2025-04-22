@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-NANMED20 Comprehensive Dictionary Extractor
+NANMED20 Dictionary Extractor
 
 Analyzes and extracts entries from ALL tables in the database.
 Creates a simple JSON with each dictionary entry as a separate item.
@@ -397,7 +397,7 @@ def extract_dictionary(args):
 
 def main():
     print("\n" + "="*60)
-    print("NANMED20 Comprehensive Dictionary Extractor")
+    print("NANMED20 Dictionary Extractor")
     print("="*60)
     print(f"Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     

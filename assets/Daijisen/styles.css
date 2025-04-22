@@ -17,58 +17,54 @@ div[data-sc-header][data-sc-d-j-s-p] {
 
 div[data-sc-headertitle],
 div[data-sc-header-title] {
-	margin-top: 0.05em;
-	margin-bottom: 0.05em;
-	margin-left: 8px;
-	margin-right: 8px;
-	font-family: "Hiragino Kaku Gothic ProN";
+	margin-block-start: 0.05em;
+	margin-block-end: 0.05em;
+	margin-inline-start: 8px;
+	margin-inline-end: 8px;
 	font-size: 0.7em;
 	line-height: 1.333em;
 }
 
 div[data-sc-contents] {
-	font-family: "Hiragino Mincho ProN";
 	font-size: 1.5em;
 /* 	line-height: 1.5em;
-	margin-bottom: 1em;
-	margin-left: 0.5em;
-	margin-right: 0.5em; */
+	margin-block-end: 1em;
+	margin-inline-start: 0.5em;
+	margin-inline-end: 0.5em; */
 }
 /* 
 div[data-sc見出-g] {
-	margin-bottom: 0.5em;
+	margin-block-end: 0.5em;
 }
 
 div[data-sc-subitem] {
-	margin-top: 0.8em;
+	margin-block-start: 0.8em;
 }
 
 div[data-sc-subitem-c] {
-	margin-left: 0.5em;
+	margin-inline-start: 0.5em;
 } */
 
 span[data-sc-headword][data-sc見出] {
-	font-family: "Hiragino Kaku Gothic ProN";
 	font-weight: bold;
 }
 
 span[data-sc-headword][data-sc表記],
 span[data-sc-headword][data-sc原綴] {
-    margin-left: 0.25em;
+    margin-inline-start: 0.25em;
 }
 
 span[data-sc-headword][data-sc歴史] {
-	margin-left: 0.417em;
+	margin-inline-start: 0.417em;
 	font-size: 0.7em;
 }
 
 span[data-sc-hhyphen] {
-	font-family: "Hiragino Kaku Gothic ProN";
 	font-weight: bold;
 	font-size: 1.2em;
 	vertical-align: 0.03em;
-	margin-left: 0.03em;
-	margin-right: 0.03em;
+	margin-inline-start: 0.03em;
+	margin-inline-end: 0.03em;
 }
 
 span[data-sc-hdot] {
@@ -84,54 +80,53 @@ span[data-sc-hyoki-s] {
 }
 
 div[data-sc-m-g][data-sc-l1-a] {
-	margin-top: 0.5em;
+	margin-block-start: 0.5em;
 }
 
 div[data-sc-m-g][data-sc-l2-a],
 div[data-sc-m-g][data-sc-l3-a] {
-	margin-top: 0.3em;
+	margin-block-start: 0.3em;
 }
 
 div[data-sc-meaning][data-sc-c] {
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
+	margin-block-start: 0.3em;
+	margin-block-end: 0.3em;
 }
 
 div[data-sc-campaigndesc],
 div[data-sc-campaign-desc] {
-	margin-top: 0.3em;
+	margin-block-start: 0.3em;
 	font-size: 0.9em;
 }
 
 div[data-sc-campaigndesc][data-sc-inline] {
 	display: inline;
-	margin-top: 0em;
+	margin-block-start: 0em;
 }
 
 div[data-sc-campaignex],
 div[data-sc-campaign-ex] {
 	font-size: 0.9em;
 	text-indent: -0.9em;
-	margin-left: 0.9em;
+	margin-inline-start: 0.9em;
 }
 
 div[data-sc-campaignname],
 div[data-sc-campaign-name] {
-	margin-left: 1.05em;
+	margin-inline-start: 1.05em;
 	font-size: 0.8em;
 }
 
 span[data-sc-ex-g][data-sc-b-m] {
-	margin-left: 0.4em;
+	margin-inline-start: 0.4em;
 }
 
 span[data-sc-ex-s] {
-	margin-left: 0.2em;
+	margin-inline-start: 0.2em;
 	font-size: 0.9em;
 }
 
 span[data-sc-l4] {
-	font-family: "Hiragino Kaku Gothic ProN";
 	font-weight: bold;
 }
 
@@ -143,26 +138,26 @@ table[data-sc-mean-t] {
 	display: table;
 	font-size: 0.8em;
 	line-height: 1.5em;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	border-top: solid 0.05em gray;
-	border-bottom: none;
-	border-left: solid 0.05em gray;
-	border-right: none;
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
+	border-block-start: solid 0.05em gray;
+	border-block-end: none;
+	border-inline-start: solid 0.05em gray;
+	border-inline-end: none;
 }
 
 td[data-sc-mean-t-d] {
 	display: table-cell;
 	padding: 0.3em;
-	border-top: none;
-	border-bottom: solid 0.05em gray;
-	border-right: solid 0.05em gray;
-	border-left: none;
+	border-block-start: none;
+	border-block-end: solid 0.05em gray;
+	border-inline-end: solid 0.05em gray;
+	border-inline-start: none;
 }
 
 div[data-sc-m-image-g] {
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
+	margin-block-start: 0.3em;
+	margin-block-end: 0.3em;
 }
 
 div[data-sc-m-image] {
@@ -176,8 +171,8 @@ div[data-sc-m-caption] {
 
 div[data-sc-m-url-g],
 div[data-sc-m-location-g] {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
 }
 
 div[data-sc-m-url],
@@ -187,7 +182,7 @@ div[data-sc-m-location] {
 }
 
 span[data-sc-m-url][data-sc-t-m] {
-	margin-top: 0.3em;
+	margin-block-start: 0.3em;
 }
 
 div[data-sc-m-urlurl],
@@ -197,8 +192,8 @@ div[data-sc-m-url-url] {
 
 /* div[data-sc-m-accent-audio-g],
 div[data-sc-m-accentaudio-g] {
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
+	margin-block-start: 0.3em;
+	margin-block-end: 0.3em;
 } */
 
 span[data-sc-m-accent-m] {
@@ -209,8 +204,8 @@ span[data-sc-m-accent-slash],
 span[data-sc-m-accentslash] {
 	font-size: 0.9em;
 	color: var(--daijisen-accent-slash, #808080);
-/* 	margin-left: 0.2em;
-	margin-right: 0.2em; */
+/* 	margin-inline-start: 0.2em;
+	margin-inline-end: 0.2em; */
 }
 
 img[data-sc-audio] {
@@ -218,8 +213,9 @@ img[data-sc-audio] {
 }
 
 span[data-sc-rect] {
-	padding: 0.04em 0.05em 0.058em 0.05em;
-	font-family: "Hiragino Kaku Gothic ProN";
+	padding-block-start: 0.04em;
+	padding-block-end: 0.58em;
+	padding-inline: 0.05em;
 	font-size: 0.8em;
 	border-width: 0.05em;
 	border-style: solid;
@@ -237,6 +233,9 @@ span[data-sc-rect][data-sc-fill] {
 
 span[data-sc-rect][data-sc-l3] {
 	padding: 0.1em 0.15em 0.1em 0.19em;
+	padding-block: 0.1em;
+	padding-inline-start: 0.19em;
+	padding-inline-end: 0.15em;
 	color: var(--daijisen-white, white);
 	border-style: none;
 	background-color: var(--daijisen-background-l3, #606060);
@@ -255,8 +254,9 @@ span[data-sc-rect][data-sc-small] {
 }
 
 span[data-sc-circle] {
-	padding: 0.06em 0.1em 0.08em;
-	font-family: "Hiragino Kaku Gothic ProN";
+	padding-block-start: 0.06em;
+	padding-block-end: 0.08em;
+	padding-inline: 0.1em;
 	font-size: 0.8em;
 	border-width: 0.05em;
 	border-style: solid;
@@ -265,7 +265,6 @@ span[data-sc-circle] {
 }
 
 span[data-sc補足ロゴ-g] {
-	/* font-family: "Hiragino Kaku Gothic ProN"; */
 	font-size: 0.8em;
 	background-color: var(--daijisen-logo-color, #000000);
 	-webkit-border-radius: 0.2em;
@@ -277,11 +276,13 @@ span[data-sc補足ロゴ-g] {
 span[data-sc補足ロゴ] {
 	background-color: var(--daijisen-white, white);
 	color: var(--daijisen-black, black);
-	border-top: solid 0.05em var(--daijisen-logo-color, #000000);
-	border-bottom: solid 0.05em var(--daijisen-logo-color, #000000);
-	border-right: none;
-	border-left: none;
-	padding: 0.04em 0.08em 0.06em 0.08em;
+	border-block-start: solid 0.05em var(--daijisen-logo-color, #000000);
+	border-block-end: solid 0.05em var(--daijisen-logo-color, #000000);
+	border-inline-end: none;
+	border-inline-start: none;
+	padding-block-start: 0.04em;
+	padding-block-end: 0.06em;
+	padding-inline: 0.08em;
 }
 
 span[data-sc補足ロゴ-g][data-sc-small] {
@@ -291,39 +292,47 @@ span[data-sc補足ロゴ-g][data-sc-small] {
 span[data-sc-hinshi-sahen] {
 	font-size: 0.5em;
 	vertical-align: 1.1em;
-	margin-right: 0.6em;
+	margin-inline-end: 0.6em;
 }
 
 span[data-sc季語ロゴ前] {
 	background-color: var(--daijisen-white, white);
 	color: var(--daijisen-black, black);
-	border-top: solid 0.05em var(--daijisen-black, black);
-	border-bottom: solid 0.05em var(--daijisen-black, black);
-	border-right: solid 0.05em var(--daijisen-white, white);
-	border-left: none;
-	padding: 0.04em 0 0.06em 0;
+	border-block-start: solid 0.05em var(--daijisen-black, black);
+	border-block-end: solid 0.05em var(--daijisen-black, black);
+	border-inline-end: solid 0.05em var(--daijisen-white, white);
+	border-inline-start: none;
+	padding-block-start: 0.04em;
+	padding-block-end: 0.06em;
+	padding-inline: 0;
 }
 
 span[data-sc季語ロゴ後] {
 	background-color: var(--daijisen-white, white);
 	color: var(--daijisen-black, black);
-	border-top: solid 0.05em var(--daijisen-black, black);
-	border-right: none;
-	border-bottom: solid 0.05em var(--daijisen-black, black);
-	border-left: solid 0.05em var(--daijisen-white, white);
-	padding: 0.04em 0 0.06em 0;
+	border-block-start: solid 0.05em var(--daijisen-black, black);
+	border-inline-end: none;
+	border-block-end: solid 0.05em var(--daijisen-black, black);
+	border-inline-start: solid 0.05em var(--daijisen-white, white);
+	padding-block-start: 0.04em;
+	padding-block-end: 0.06em;
+	padding-inline: 0;
 }
 
 span[data-sc季語ロゴ中] {
 	background-color: var(--daijisen-white, white);
 	color: var(--daijisen-black, black);
-	padding: 0.1em 0 0.12em 0;
+	padding-block-start: 0.1em;
+	padding-block-end: 0.12em;
+	padding-inline: 0;
 }
 
 span[data-sc季語ロゴ中] {
 	background-color: var(--daijisen-white, white);
 	color: var(--daijisen-black, black);
-	padding: 0.1em 0 0.12em 0;
+	padding-block-start: 0.1em;
+	padding-block-end: 0.12em;
+	padding-inline: 0;
 }
 
 span[data-sc季語ロゴ-s] {
@@ -331,19 +340,13 @@ span[data-sc季語ロゴ-s] {
 }
 
 span[data-sc季語-m] {
-	font-family: "Hiragino Kaku Gothic ProN";
 	font-weight: bold;
 	font-size: 0.85em;
-	margin-right: 0.3em;
+	margin-inline-end: 0.3em;
 }
 
 span[data-sc季語] {
-	font-family: "Hiragino Mincho ProN";
 	font-size: 1.1em;
-}
-
-span[data-sc歌枕-m] {
-	font-family: "Hiragino Mincho ProN";
 }
 
 span[data-sc-lang] {
@@ -351,16 +354,16 @@ span[data-sc-lang] {
 }
 
 span[data-sc-lang][data-sc-f-m] {
-	margin-right: 0.3em;
+	margin-inline-end: 0.3em;
 }
 
 span[data-sc-lang][data-sc-b-m] {
-	margin-left: 0.3em;
+	margin-inline-start: 0.3em;
 }
 
 span[data-sc-lang][data-sc-i-m] {
-	margin-left: 0.3em;
-	margin-right: 0.3em;
+	margin-inline-start: 0.3em;
+	margin-inline-end: 0.3em;
 }
 
 span[data-sc歴史] {
@@ -368,12 +371,10 @@ span[data-sc歴史] {
 }
 
 span[data-sc-bold] {
-	font-family: "Hiragino Kaku Gothic ProN";
 	font-weight: bold;
 }
 
 span[data-sc-italic] {
-	font-family: Georgia;
 	font-style: italic;
 }
 
@@ -408,20 +409,17 @@ span[data-sc-sup][data-sc-kaeriten] {
 }
 
 span[data-sc常外音訓-m] {
-	font-family: "Hiragino Kaku Gothic ProN";
 	font-size: 0.38em;
 	vertical-align: 1.9em;
 }
 
 span[data-sc常外-m] {
-	font-family: "Hiragino Kaku Gothic ProN";
 	font-size: 0.55em;
 	vertical-align: 1em;
 }
 
 span[data-sc付表有-m],
 span[data-sc付表無-m] {
-	font-family: "Hiragino Kaku Gothic ProN";
 	font-size: 0.45em;
 }
 
@@ -430,7 +428,7 @@ span[data-sc-black-diamond],
 span[data-sc-whitediamond],
 span[data-sc-blackdiamond] {
 	font-size: 0.7em;
-	margin-right: 0.3em;
+	margin-inline-end: 0.3em;
 }
 
 span[data-sc-k-v] {
@@ -454,12 +452,8 @@ span[data-sc-bold] span[data-sc-wari] {
 
 span[data-sc-gaiji][data-sc-dakuten],
 span[data-sc-gaiji][data-sc-handakuten] {
-	margin-left: 0.3em;
-	margin-right: -0.5em;
-}
-
-span[data-sc-gaiji][data-sc-keigashira] {
-	font-family: "Heiti TC";
+	margin-inline-start: 0.3em;
+	margin-inline-end: -0.5em;
 }
 
 img[data-sc-gaiji] {
@@ -490,20 +484,24 @@ a[data-sc-blue] span[data-sc-rect][data-sc-l-3] {
 }
 
 span[data-sc-f-m] {
-	margin-right: 0.15em;
+	margin-inline-end: 0.15em;
 }
 
 span[data-sc-b-m] {
-	margin-left: 0.15em;
+	margin-inline-start: 0.15em;
 }
 
 span[data-sc-i-m] {
-	margin-left: 0.15em;
-	margin-right: 0.15em;
+	margin-inline-start: 0.15em;
+	margin-inline-end: 0.15em;
 }
 
 span[data-sc-img] .gloss-image-link {
     max-width: 70% !important;
+}
+
+.gloss-image-container {
+	max-height: 100% !important;
 }
 
 span[data-sc-id="index"] {

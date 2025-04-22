@@ -168,7 +168,7 @@ def get_surrounding_text_content(node, max_length=50):
     return prev_text, next_text
 
 def should_use_japanese_punctuation(prev_text, next_text):
-    """Determine if Japanese punctuation should be used based on context."""
+    # Determine if Japanese punctuation should be used based on context
     # Check if either previous or next content contains Japanese
     prev_has_japanese = bool(re.search(JAPANESE_CHARS, prev_text))
     next_has_japanese = bool(re.search(JAPANESE_CHARS, next_text))
@@ -185,7 +185,7 @@ def should_use_japanese_punctuation(prev_text, next_text):
     return jp_chars > latin_chars
 
 def preserve_html_entities(html_content):
-    """Replace HTML entities with temporary placeholders before parsing."""
+    # Replace HTML entities with temporary placeholders before parsing
     entity_map = {}
     counter = 0
     
@@ -203,75 +203,61 @@ def preserve_html_entities(html_content):
     return modified_content, entity_map
 
 def restore_html_entities(html_content, entity_map):
-    """Restore HTML entities from placeholders after parsing."""
+    # Restore HTML entities from placeholders after parsing
     for placeholder, entity in entity_map.items():
         html_content = html_content.replace(placeholder, entity)
     return html_content
 
 def process_html_content(html_content):
-    """Process HTML content and preserve entities."""
+    # Process HTML content and preserve entities
     html_content = replace_roman_numeral_entities(html_content)
     
-    # Step 1: Replace HTML entities with placeholders
     modified_content, entity_map = preserve_html_entities(html_content)
     
-    # Step 2: Parse with BeautifulSoup
     soup = BeautifulSoup(modified_content, 'html.parser')
     
     changes_made = False
     
-    # First pass: handle isolated punctuation
+    # First pass handle isolated punctuation
     def process_isolated_punctuation():
         nonlocal changes_made
         
-        # Find all spans with lang="ja" attribute that might contain punctuation
         for span in soup.find_all('span', lang='ja'):
             if should_skip_element(span):
                 continue
                 
-            # Check if the span contains only punctuation
             text = span.get_text().strip()
             if len(text) == 1 and text in PUNCTUATION_MAP:
-                # Get surrounding text
                 prev_text, next_text = get_surrounding_text_content(span)
                 
-                # Check if Japanese punctuation should be used
                 if should_use_japanese_punctuation(prev_text, next_text):
                     jp_punct = PUNCTUATION_MAP[text]
                     if span.string != jp_punct:
                         span.string.replace_with(jp_punct)
                         changes_made = True
         
-        # Also check for any isolated punctuation in text nodes
         for text_node in soup.find_all(string=SINGLE_PUNCT_REGEX):
             if should_skip_element(text_node.parent):
                 continue
                 
-            # Get the punctuation mark
             punct = str(text_node).strip()
-            
-            # Skip if not in our mapping
             if punct not in PUNCTUATION_MAP:
                 continue
                 
-            # Get surrounding text
             prev_text, next_text = get_surrounding_text_content(text_node)
             
-            # Check if Japanese punctuation should be used
             if should_use_japanese_punctuation(prev_text, next_text):
                 jp_punct = PUNCTUATION_MAP[punct]
                 if str(text_node) != jp_punct:
                     text_node.replace_with(jp_punct)
                     changes_made = True
     
-    # Second pass: normal text processing
+    # Second pass normal text processing
     def process_node(node):
         nonlocal changes_made
-        # Skip comments
         if isinstance(node, bs4.Comment):
             return
             
-        # Process direct text in the current node
         if isinstance(node, bs4.NavigableString) and not isinstance(node, bs4.CData):
             parent = node.parent
             if parent and not should_skip_element(parent):
@@ -282,15 +268,12 @@ def process_html_content(html_content):
                     changes_made = True
             return
             
-        # Recurse into children
         for child in list(node.children):
             process_node(child)
     
-    # Apply both passes
     process_isolated_punctuation()
     process_node(soup)
     
-    # Step 3: Convert back to string and restore entities
     processed_html = str(soup)
     final_html = restore_html_entities(processed_html, entity_map)
     
@@ -306,7 +289,6 @@ def main():
     
     args = parser.parse_args()
     
-    # Test mode
     if args.test:
         print(f"Input:  {args.test}")
         print(f"Output: {process_text_node(args.test)}")

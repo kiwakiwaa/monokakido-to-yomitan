@@ -38,7 +38,16 @@ class DefaultImageHandlingStrategy(ImageHandlingStrategy):
         src_path = html_glossary.get("src", "").lstrip("/")
         
         if src_path:
-            imgElement = {"tag": "img", "path": src_path, "collapsible": False, "data": data_dict}
+            imgElement = {
+                "tag": "img", 
+                "path": src_path, 
+                "collapsible": False, 
+                "collapsed": False,
+                "background": False,
+                "appearance": "auto",
+                "imageRendering": "auto",
+                "data": data_dict
+            }
             html_elements.insert(0, imgElement)
         
         return create_html_element("span", content=html_elements, data=data_dict)

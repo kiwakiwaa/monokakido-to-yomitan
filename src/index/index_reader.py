@@ -1,10 +1,10 @@
 import os
-
+from typing import List
 from collections import defaultdict
 from tqdm import tqdm
 
 class IndexReader:
-    def __init__(self, index_file_path):
+    def __init__(self, index_file_path: str) -> None:
         """Initialize with the path to the index_d.tsv file"""
         self.index_file_path = index_file_path
         self.dict_data = {}  # Dictionary mapping keys to filenames
@@ -12,7 +12,7 @@ class IndexReader:
         self.load_index()
         
     
-    def load_index(self):
+    def load_index(self) -> None:
         """Load the index file and build both mappings"""
         if not os.path.exists(self.index_file_path):
             raise FileNotFoundError(f"Index file not found: {self.index_file_path}")
@@ -44,12 +44,12 @@ class IndexReader:
                 pbar.update(1)
                     
     
-    def get_keys_for_file(self, filename):
+    def get_keys_for_file(self, filename: str) -> List[str]:
         """Get all dictionary keys associated with a given filename"""
         return self.file_to_keys.get(filename, [])
     
     
-    def process_all_files(self):
+    def process_all_files(self) -> None:
         """Process all files and show their associated keys"""
         count = 0
         import random

@@ -20,7 +20,16 @@ class NanmedImageHandlingStrategy(ImageHandlingStrategy):
             # Add 'images/' prefix to the path
             modified_path = f"images/{src_path}"
             
-            imgElement = {"tag": "img", "path": modified_path, "collapsible": False, "data": data_dict}
+            imgElement = {
+                "tag": "img", 
+                "path": modified_path, 
+                "collapsible": False, 
+                "collapsed": False,
+                "background": False,
+                "appearance": "auto",
+                "imageRendering": "auto",
+                "data": data_dict
+            }
             html_elements.insert(0, imgElement)
         
         return create_html_element("span", content=html_elements, data=data_dict)

@@ -142,13 +142,7 @@ class Parser:
                 if isinstance(content, bs4.Comment):
                     continue
                 if isinstance(content, bs4.NavigableString) or isinstance(content, str):
-                    # Check for empty strings or strings with only whitespace
-                    content_str = str(content)
-                    if content_str and not content_str.isspace():
-                        if content_str.startswith("\n") and "・" in content_str:
-                            html_elements.append(create_html_element("span", "・"))
-                        else:
-                            html_elements.append(create_html_element("span", content))
+                    html_elements.append(create_html_element("span", content))
                 else:
                     converted_element = self.convert_element_to_yomitan(content, ignore_expressions=ignore_expressions)
                     if converted_element is not None:  # Avoid inserting None

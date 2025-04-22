@@ -1,5 +1,6 @@
 import unicodedata
 import regex as re
+from typing import List, Tuple, Optional
 
 
 class KanjiUtils:
@@ -8,12 +9,12 @@ class KanjiUtils:
     JAPANESE_PATTERN = re.compile(r"[\p{Hiragana}\p{Katakana}\p{Unified_Ideograph}]+", re.UNICODE)
       
     @staticmethod
-    def is_kanji(unichar):
+    def is_kanji(unichar: str) -> bool:
         return bool(KanjiUtils.CJK_RE.match(unicodedata.name(unichar, "")))
     
     
     @staticmethod
-    def is_katakana(char):
+    def is_katakana(char: str) -> bool:
         if len(char) != 1:
             raise ValueError("This function checks a single character only")
             
@@ -23,33 +24,33 @@ class KanjiUtils:
     
     
     @staticmethod
-    def is_only_katakana(text):
+    def is_only_katakana(text: str) -> bool:
         return bool(re.fullmatch(r'[ー\p{Katakana}\p{Block: Katakana_Phonetic_Extensions}]+', text))
     
     
     @staticmethod
-    def is_only_hiragana(text):
+    def is_only_hiragana(text: str) -> bool:
         return bool(re.fullmatch(r'[\p{Hiragana}]+', text))
     
     
     @staticmethod
-    def is_only_kana(text):
+    def is_only_kana(text: str) -> bool:
         return bool(re.fullmatch(r'[ー\p{Hiragana}\p{Katakana}\p{Block: Kana_Extended_A}\p{Block: Kana_Extended_B}\p{Block: Kana_Supplement}\p{Block: Katakana_Phonetic_Extensions}]+', text))
     
     
     @staticmethod
-    def is_not_japanese(text):
+    def is_not_japanese(text: str) -> bool:
         """Returns True if the string contains NO Japanese characters at all."""
         return bool(KanjiUtils.IS_NOT_JAPANESE_PATTERN.fullmatch(text))
     
     
     @staticmethod
-    def clean_reading(reading):
+    def clean_reading(reading: str) -> str:
         return re.sub(r'[^ー\p{Hiragana}\p{Katakana}\p{Block: Kana_Extended_A}\p{Block: Kana_Extended_B}\p{Block: Kana_Supplement}\p{Block: Katakana_Phonetic_Extensions}]', "", reading)
     
     
     @staticmethod
-    def clean_headword(head_word):
+    def clean_headword(head_word: str) -> str:
         return re.sub(r'[^・\p{Unified_Ideograph}ー\p{Hiragana}\p{Katakana}\p{Block: Kana_Extended_A}\p{Block: Kana_Extended_B}\p{Block: Kana_Supplement}\p{Block: Katakana_Phonetic_Extensions}]', "", head_word)
     
     
@@ -66,7 +67,7 @@ class KanjiUtils:
     (None, 'かなしぶ')
     """
     @staticmethod
-    def match_kana_with_kanji(entries, recursion_level=0):
+    def match_kana_with_kanji(entries: List[str], recursion_level: int = 0) -> List[Tuple[Optional[str], Optional[str]]]:
         # Returns: List of DicEntry objects with paired kanji and kana matches
             
         # Separate entries into kana and kanji
@@ -251,7 +252,7 @@ class KanjiUtils:
 
     # find the length of the longest common suffix between two strings
     @staticmethod
-    def longest_common_suffix(str1, str2):
+    def longest_common_suffix(str1: str, str2: str) -> int:
         common_length = 0
         for i in range(1, min(len(str1), len(str2)) + 1):
             if str1[-i:] == str2[-i:]:
@@ -261,7 +262,7 @@ class KanjiUtils:
         return common_length
     
     @staticmethod
-    def longest_common_prefix(str1, str2):
+    def longest_common_prefix(str1: str, str2: str) -> int:
         common_length = 0
         for i in range(min(len(str1), len(str2))):
             if str1[i] == str2[i]:
@@ -272,12 +273,12 @@ class KanjiUtils:
 
     #extract kanji part of sentence
     @staticmethod
-    def extract_kanji_stem(kanji_entry):
+    def extract_kanji_stem(kanji_entry: str) -> str:
         return ''.join(char for char in kanji_entry if KanjiUtils.is_kanji(char))
 
     # check if a kana string could be a reading for a kanji (not very good method ngl but it doesnt matter)
     @staticmethod
-    def is_plausible_reading(kana, kanji):
+    def is_plausible_reading(kana: str, kanji: str) -> bool:
         kanji_chars = sum(1 for char in kanji if KanjiUtils.is_kanji(char))
         return len(kana) >= kanji_chars and len(kana) <= kanji_chars * 5
     

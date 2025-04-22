@@ -47,9 +47,18 @@ class DaijisenImageHandlingStrategy(ImageHandlingStrategy):
         # Check if the src attribute ends with .heic
         src_attr = html_glossary.get("src", "")
         if src_attr.lower().endswith('.heic'):
-            jpg_src = src_attr[:-5] + '.avif'
+            avif_src = src_attr[:-5] + '.avif'
             
-            imgElement = {"tag": "img", "path": jpg_src, "collapsible": False, "data": data_dict}
+            imgElement = {
+                "tag": "img", 
+                "path": avif_src, 
+                "collapsible": False, 
+                "collapsed": False,
+                "background": False,
+                "appearance": "auto",
+                "imageRendering": "auto",
+                "data": data_dict
+            }
             html_elements.insert(0, imgElement)
     
         return create_html_element("span", content=html_elements, data=data_dict)

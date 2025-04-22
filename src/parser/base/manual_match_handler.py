@@ -45,31 +45,24 @@ class ManualMatchHandler:
     
     def has_mapping(self, key, file_id=None):
         """Check if there's a manual mapping for this entry"""
-        # Check if entry should be ignored
         if self._is_ignored(key, file_id):
             return True
             
-        # Check file-specific mapping first
         if file_id and file_id in self.mappings and key in self.mappings[file_id]:
             return True
-        # Check global mappings
         return key in self.mappings.get('global', {})
     
     def get_mapping(self, key, file_id=None):
         """Get the manual mapping for an entry"""
-        # Check if entry should be ignored
         if self._is_ignored(key, file_id):
             return None
             
-        # Try file-specific mapping first
         if file_id and file_id in self.mappings and key in self.mappings[file_id]:
             return self.mappings[file_id][key]
-        # Fall back to global mapping
         return self.mappings.get('global', {}).get(key)
     
     def add_mapping(self, unmatched_key, matched_value, file_id=None, is_global=False):
         """Add a new manual mapping"""
-        # Remove from ignored if it exists
         self._remove_from_ignored(unmatched_key, file_id, is_global)
         
         if is_global:
@@ -109,10 +102,8 @@ class ManualMatchHandler:
     
     def _is_ignored(self, key, file_id=None):
         """Check if an entry should be ignored"""
-        # Check file-specific ignored entries
         if file_id and file_id in self.ignored_entries and key in self.ignored_entries[file_id]:
             return True
-        # Check global ignored entries
         return key in self.ignored_entries.get('global', [])
     
     def _remove_from_ignored(self, key, file_id=None, is_global=False):
@@ -126,7 +117,6 @@ def process_unmatched_entries(parser, filename, entry_keys, matched_key_pairs, m
     """Process unmatched entries with user input"""
     filename_without_ext = os.path.splitext(os.path.basename(filename))[0]
     
-    # Identify unmatched entries
     unmatched_kanji = []
     unmatched_kana = []
     
@@ -144,7 +134,6 @@ def process_unmatched_entries(parser, filename, entry_keys, matched_key_pairs, m
     
     #print(f"\n===== Processing unmatched entries in file {filename_without_ext} =====")
     
-    # Process unmatched kanji entries
     for kanji in unmatched_kanji:
         # Check if we already have a manual mapping
         if manual_handler.has_mapping(kanji, filename_without_ext):
@@ -208,13 +197,12 @@ def process_unmatched_entries(parser, filename, entry_keys, matched_key_pairs, m
             manual_handler.ignore_entry(kanji, 
                                        file_id=None if global_ignore else filename_without_ext,
                                        is_global=global_ignore)
-            # Don't add to updated pairs - it's ignored
             
         else:  # choice == '4' or invalid input
             # Skip for now
             updated_pairs.append((kanji, None))
     
-    # Process unmatched kana entries (similar structure with appropriate modifications)
+    # Process unmatched kana entries
     for kana in unmatched_kana:
         if manual_handler.has_mapping(kana, filename_without_ext):
             kanji_match = manual_handler.get_mapping(kana, filename_without_ext)
@@ -231,7 +219,6 @@ def process_unmatched_entries(parser, filename, entry_keys, matched_key_pairs, m
     
     return updated_pairs
 
-# Add a function to manage existing mappings
 def manage_mappings(manual_handler):
     """Interface for managing existing mappings"""
     print("\n===== Manage Existing Mappings =====")

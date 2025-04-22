@@ -25,12 +25,11 @@ td[data-sc-busyukakusug] {
     display: table-cell;
 }
 
-
 span[data-sc-busyukakususubg] {
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
+    padding-block-start: 0.2em;
+    padding-block-end: 0.2em;
+    padding-inline-start: 0.2em;
+    padding-inline-end: 0.2em;
     color: var(--kadokawa-white, white);
     background-color: var(--kadokawa-black, black);
 }
@@ -43,7 +42,7 @@ span[data-sc-busyukakusu] {
     /* font-family: Avenir; */
     font-weight: bold;
     text-combine-upright: all;
-    margin-right: 0.25em;
+    margin-inline-end: 0.25em;
 }
 
 td[data-sc-busyunumberg] {
@@ -54,18 +53,18 @@ td[data-sc-busyunumberg] {
 span[data-sc-busyunumber] {
     /* font-family: Avenir; */
     font-size: 0.85em;
-    margin-left: 0.25em;
+    margin-inline-start: 0.25em;
     text-combine-upright: all;
-    margin-right: 0.25em;
+    margin-inline-end: 0.25em;
 }
 
 td[data-sc-busyubusyug] {
     border: none;
     display: table-cell;
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
-    margin-left: 0.5em;
-    margin-right: 0.2em;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
+    margin-inline-start: 0.5em;
+    margin-inline-end: 0.2em;
 }
 
 span[data-sc-busyuprimarybusyu] {
@@ -89,28 +88,28 @@ span[data-sc-busyubusyulabel] {
 }
 
 div[data-sc-busyuyomig] {
-    margin-bottom: 0.3em;
-    margin-left: 1em;
+    margin-block-end: 0.3em;
+    margin-inline-start: 1em;
 }
 
 div[data-sc-busyuyomicontent] {
     font-size: 0.9em;
     line-height: 1.2em;
-    padding-bottom: 0.25em;
+    padding-block-end: 0.25em;
 }
 
 div[data-sc-bushukaisetsug] {
     background-color: var(--kadokawa-extra-light-gray, #EEEEEE);
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    padding-left: 1em;
-    padding-right: 0.3em;
+    padding-block-start: 0.2em;
+    padding-block-end: 0.2em;
+    padding-inline-start: 1em;
+    padding-inline-end: 0.3em;
 }
 
 div[data-sc-bushubetsuindexg] {
-    margin-left: 1em;
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
+    margin-inline-start: 1em;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
     line-height: 1.6em;
 }
 
@@ -138,11 +137,11 @@ td[data-sc-busyumidashijig] {
 span[data-sc-bimidashiji] {
     display: inline-block;
     font-size: 1.4em;
-    margin-left: 0.24em;
+    margin-inline-start: 0.24em;
 }
 
 span[data-sc-bimidashiji][data-sc-itaiji] {
-    margin-left: 0.013em;
+    margin-inline-start: 0.013em;
 }
 
 span[data-sc-bimidashijiitaijim] {
@@ -159,22 +158,22 @@ span[data-sc-bimidashijic][data-sc-jinmei] {
 }
 
 div[data-sc-shinsetsumidashig] {
-    margin-left: 1em;
+    margin-inline-start: 1em;
     background-color: var(--kadokawa-light-pink, #FFDBDA);
-    border-left: solid 0.3em var(--kadokawa-black, black);
+    border-inline-start: solid 0.3em var(--kadokawa-black, black);
 }
 
 div[data-sc-shinsetsumidashicontent] {
     line-height: 1.6em;
-    padding-left: 0.3em;
-    padding-top: 0.2em;
-    padding-right: 0.2em;
-    padding-bottom: 0.2em;
+    padding-inline-start: 0.3em;
+    padding-block-start: 0.2em;
+    padding-inline-end: 0.2em;
+    padding-block-end: 0.2em;
 }
 
 span[data-sc-shinsetsumidashisubg] {
     display: inline-block;
-    margin-right: 1em;
+    margin-inline-end: 1em;
 }
 
 span[data-sc-shinsetsumidashioyaji] {
@@ -183,21 +182,21 @@ span[data-sc-shinsetsumidashioyaji] {
 
 span[data-sc-shinsetsumidashiarrow] {
     font-size: 0.8em;
-    margin-left: 0.15em;
-    margin-right: 0.15em;
+    margin-inline-start: 0.15em;
+    margin-inline-end: 0.15em;
 }
 
 div[data-sc-itaijikyujiinfog] {
-    margin-top: 0.4em;
+    margin-block-start: 0.4em;
 }
 
 div[data-sc-itaijikyujiinfog][data-sc-first] {
-    margin-top: 0.7em;
+    margin-block-start: 0.7em;
 }
 
 table[data-sc-kanjiinfoheadg] {
     display: table;
-    margin-top: 0.25em;
+    margin-block-start: 0.25em;
 }
 
 tr[data-sc-kanjiinfoheadsubg] {
@@ -210,8 +209,8 @@ td[data-sc-branchnumberg] {
     border: none;
     writing-mode: horizontal-tb;
     text-align: right;
-    padding-top: 0.17em;
-    padding-right: 0.05em;
+    padding-block-start: 0.17em;
+    padding-inline-end: 0.05em;
 }
 
 span[data-sc-branchnumber] {
@@ -232,14 +231,14 @@ td[data-sc-itaijilabelg],
 td[data-sc-kokugoshisakulabelg],
 td[data-sc-unicodeg] {
     display: table-cell;
-    border-top: solid 0.05em var(--kadokawa-black, black);
-    border-right: none;
-    border-bottom: none;
-    border-left: none;
-    padding-top: 0.1em;
-    padding-left: 0.2em;
-    padding-bottom: 0.1em;
-    padding-right: 0;
+    border-block-start: solid 0.05em var(--kadokawa-black, black);
+    border-inline-end: none;
+    border-block-end: none;
+    border-inline-start: none;
+    padding-block-start: 0.1em;
+    padding-inline-start: 0.2em;
+    padding-block-end: 0.1em;
+    padding-inline-end: 0;
     line-height: 0.8em;
     text-align: right;
     writing-mode: horizontal-tb;
@@ -247,40 +246,40 @@ td[data-sc-unicodeg] {
 
 td[data-sc-kanjig] {
     display: table-cell;
-    margin-right: 0.2em;
+    margin-inline-end: 0.2em;
     writing-mode: horizontal-tb;
     text-align: right;
 }
 
 td[data-sc-kanjig][data-sc-oyaji] {
-    padding-right: 0.74em;
+    padding-inline-end: 0.74em;
     width: 2.4em;
 }
 
 span[data-sc-kanjig][data-sc-itaiji-kyuji] {
-    padding-right: 0.14em;
+    padding-inline-end: 0.14em;
     width: 2em;
 }
 
 td[data-sc-kenjinumberg][data-sc-oyaji],
 td[data-sc-kanjig][data-sc-oyaji] {
-    padding-top: 0.1em;
-    padding-bottom: 0.1em;
-    border-top: solid 0.23em var(--kadokawa-black, black);
-    border-right: none;
-    border-bottom: none;
-    border-left: none;
+    padding-block-start: 0.1em;
+    padding-block-end: 0.1em;
+    border-block-start: solid 0.23em var(--kadokawa-black, black);
+    border-inline-end: none;
+    border-block-end: none;
+    border-inline-start: none;
     background-color: var(--kadokawa-extra-light-gray, #EEEEEE);
 }
 
 td[data-sc-kenjinumberg][data-sc-itaiji-kyuji],
 td[data-sc-kanjig][data-sc-itaiji-kyuji] {
-    padding-top: 0.1em;
-    padding-bottom: 0.1em;
-    border-top: solid 0.17em var(--kadokawa-black, black);
-    border-right: none;
-    border-bottom: none;
-    border-left: none;
+    padding-block-start: 0.1em;
+    padding-block-end: 0.1em;
+    border-block-start: solid 0.17em var(--kadokawa-black, black);
+    border-inline-end: none;
+    border-block-end: none;
+    border-inline-start: none;
     background-color: var(--kadokawa-extra-light-gray, #EEEEEE);
 }
 
@@ -291,12 +290,12 @@ td[data-sc-kanjig][data-sc-joyo] {
 
 td[data-sc-kenjinumberg][data-sc-jinmei],
 td[data-sc-kanjig][data-sc-jinmei] {
-    border-top-color: var(--kadokawa-red, #CC0000);
+    border-block-start-color: var(--kadokawa-red, #CC0000);
 }
 
 span[data-sc-kenjinumber] {
     font-size: 0.65em;
-    padding-right: 0.1em;
+    padding-inline-end: 0.1em;
 }
 
 span[data-sc-kanji][data-sc-oyaji] {
@@ -345,7 +344,7 @@ span[data-sc-kokugoshisakulabel] {
 }
 
 div[data-sc-onlistsubg][data-sc-sub] {
-    margin-left: 1.08em;
+    margin-inline-start: 1.08em;
 }
 
 span[data-sc-joyoon],
@@ -354,19 +353,19 @@ span[data-sc-joyokun] {
 }
 
 span[data-sc-yomi][data-sc-bosen] {
-    border-bottom: solid 0.05em var(--kadokawa-red, #CC0000);
-    padding-top: 0.1em;
+    border-block-end: solid 0.05em var(--kadokawa-red, #CC0000);
+    padding-block-start: 0.1em;
 }
 
 div[data-sc-honmong] {
-    margin-top: 0.8em;
-    /*margin-left: 1em;*/
+    margin-block-start: 0.8em;
+    /*margin-inline-start: 1em;*/
 }
 
 div[data-sc-honmong][data-sc-jukugo-item] {
     display: inline;
-    margin-top: 0;
-    margin-left: 0.5em;
+    margin-block-start: 0;
+    margin-inline-start: 0.5em;
 }
 
 span[data-sc-jukugo-item] span[data-sc-imig],
@@ -388,11 +387,11 @@ span[data-sc-yomiinfo] {
 
 span[data-sc-kodaimojilistg] {
     font-size: 1.7em;
-    margin-left: 0.118em;
+    margin-inline-start: 0.118em;
 }
 
 span[data-sc-kodaimojibranchg]+span[data-sc-kodaimojibranchg] {
-    margin-left: 0.1em;
+    margin-inline-start: 0.1em;
 }
 
 span[data-sc-kodaimojibranch] {
@@ -400,14 +399,14 @@ span[data-sc-kodaimojibranch] {
 }
 
 span[data-sc-kodaimojitypeg] {
-    margin-left: 0.05em;
-    padding-left: 0.059em;
-    padding-right: 0.059em;
-    border-right: solid 0.029em var(--kadokawa-kodaimoji-type-separator, #A0A0A0);
+    margin-inline-start: 0.05em;
+    padding-inline-start: 0.059em;
+    padding-inline-end: 0.059em;
+    border-inline-end: solid 0.029em var(--kadokawa-kodaimoji-type-separator, #A0A0A0);
 }
 
 span[data-sc-kodaimojitypeg][data-sc-change-branch] {
-    border-right-color: var(--kadokawa-kodaimoji-branch-separator, #444444);
+    border-inline-end-color: var(--kadokawa-kodaimoji-branch-separator, #444444);
 }
 
 span[data-sc-kodaimojitype] {
@@ -416,19 +415,19 @@ span[data-sc-kodaimojitype] {
 }
 
 span[data-sc-kodaimojifile] {
-    padding-left: 0.059em;
-    padding-right: 0.059em;
+    padding-inline-start: 0.059em;
+    padding-inline-end: 0.059em;
 }
 
 span[data-sc-kodaimojilistafterspace] {
-    margin-right: 0.3em;
+    margin-inline-end: 0.3em;
 }
 
 div[data-sc-imagecontentg] {
-    margin-left: 1em;
-    margin-right: 2em;
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
+    margin-inline-start: 1em;
+    margin-inline-end: 2em;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
 }
 
 div[data-sc-imagecaption] {
@@ -436,20 +435,20 @@ div[data-sc-imagecaption] {
 }
 
 span[data-sc-source] {
-    margin-left: 0.2em;
-    margin-right: 0.2em;
+    margin-inline-start: 0.2em;
+    margin-inline-end: 0.2em;
     font-size: 0.9em;
 }
 
 span[data-sc-example] {
-    margin-right: 0.5em;
+    margin-inline-end: 0.5em;
 }
 
 div[data-sc-jukugog] {
-    margin-top: 0.5em;
-    padding-top: 0.5em;
-    /*margin-left: 1em;*/
-    border-top: solid 0.05em var(--kadokawa-black, black);
+    margin-block-start: 0.5em;
+    padding-block-start: 0.5em;
+    /*margin-inline-start: 1em;*/
+    border-block-start: solid 0.05em var(--kadokawa-black, black);
 }
 
 span[data-sc-jukugohead] {
@@ -461,7 +460,7 @@ span[data-sc-jukugohead] {
 }
 
 span[data-sc-jukugosubhead] {
-    margin-right: 0.5em;
+    margin-inline-end: 0.5em;
 }
 
 span[data-sc-jukugohyoki] {
@@ -511,8 +510,8 @@ span[data-sc-rect][data-sc-alphabet] {
 
 span[data-sc-rect][data-sc-small] {
     font-size: 0.68em;
-    margin-left: 0.15em;
-    margin-right: 0.15em;
+    margin-inline-start: 0.15em;
+    margin-inline-end: 0.15em;
 }
 
 span[data-sc-rect][data-sc-horizontal] {
@@ -526,8 +525,8 @@ span[data-sc-rect_oval] {
 
 span[data-sc-rect_oval1] {
     background-color: var(--kadokawa-red, #CC0000);
-    border-top-left-radius: 0.15em;
-    border-bottom-left-radius: 0.15em;
+    border-start-start-radius: 0.15em;
+    border-start-end-radius: 0.15em;
     padding: 0.07em 0 0.13em 0.18em;
 }
 
@@ -538,11 +537,11 @@ span[data-sc-rect_oval1_inside] {
 span[data-sc-rect_oval2] {
     background-color: var(--kadokawa-white, white);
     color: var(--kadokawa-red, #CC0000);
-    border-top: solid 0.05em var(--kadokawa-red, #CC0000);
-    border-bottom: solid 0.05em var(--kadokawa-red, #CC0000);
-    border-right: solid 0.05em var(--kadokawa-red, #CC0000);
-    border-top-right-radius: 0.6em;
-    border-bottom-right-radius: 0.6em;
+    border-block-start: solid 0.05em var(--kadokawa-red, #CC0000);
+    border-block-end: solid 0.05em var(--kadokawa-red, #CC0000);
+    border-inline-end: solid 0.05em var(--kadokawa-red, #CC0000);
+    border-start-end-radius: 0.6em;
+    border-end-end-radius: 0.6em;
     padding: 0.02em 0.2em 0.08em 0.02em;
 }
 
@@ -556,8 +555,8 @@ span[data-sc-circle] {
 }
 
 span[data-sc-circle][data-sc-double] {
-    padding-left: 0.15em;
-    padding-right: 0.18em;
+    padding-inline-start: 0.15em;
+    padding-inline-end: 0.18em;
     border-radius: 0.6em;
     word-break: keep-all;
 }
@@ -574,8 +573,8 @@ span[data-sc-circlenumber][data-sc-fill] {
 span[data-sc-circlenumber][data-sc-small],
 span[data-sc-circlekana][data-sc-small] {
     font-size: 0.85em;
-    margin-left: 0.15em;
-    margin-right: 0.15em;
+    margin-inline-start: 0.15em;
+    margin-inline-end: 0.15em;
 }
 
 span[data-sc-wari],
@@ -587,8 +586,8 @@ span[data-sc-jionrekishikana] {
 
 span[data-sc-tate-c],
 span[data-sc-tate_c] {
-    margin-left: 0.1em;
-    margin-right: -0.1em;
+    margin-inline-start: 0.1em;
+    margin-inline-end: -0.1em;
     text-combine-upright: all;
 }
 
@@ -600,6 +599,37 @@ span[yomiseparator] {
 span[data-sc-kaeriten] {
     font-size: 0.5em;
     vertical-align: -1.1em;
+}
+
+span[data-sc-kaeritenimg] {
+    font-size: 0.5em !important;
+    vertical-align: -1.1em !important;
+}
+
+span[data-sc-kaeritenre] {
+    font-size: 0.5em !important;
+    vertical-align: -0.7em !important;
+    writing-mode: vertical-rl !important;
+    letter-spacing: -0.65em !important;
+}
+
+span[data-sc-kaeritensanre] {
+    font-size: 0.5em !important;
+    vertical-align: -1.1em !important;
+    writing-mode: vertical-rl !important;
+    letter-spacing: -0.35em !important;
+}
+
+span[data-sc-kaeritennum] {
+    font-size: 0.5em !important;
+    vertical-align: -1.1em !important;
+}
+
+span[data-sc-kaeritenjoure] {
+    font-size: 0.4em !important;
+    vertical-align: -1.5em !important;
+    letter-spacing: -0.25em !important;
+    writing-mode: vertical-rl !important;
 }
 
 span[smallwi],
@@ -614,29 +644,29 @@ span[small-w-e] {
 }
 
 span[data-sc-f-m] {
-    margin-right: 0.15em;
+    margin-inline-end: 0.15em;
 }
 
 span[data-sc-logo_-f-m] {
-    margin-right: 0.3em;
+    margin-inline-end: 0.3em;
 }
 
 span[data-sc-b-m] {
-    margin-left: 0.15em;
+    margin-inline-start: 0.15em;
 }
 
 span[data-sc-b-m2] {
-    margin-left: 0.2em;
+    margin-inline-start: 0.2em;
 }
 
 span[data-sc-i-m] {
-    margin-left: 0.15em;
-    margin-right: 0.15em;
+    margin-inline-start: 0.15em;
+    margin-inline-end: 0.15em;
 }
 
 span[data-sc-i-m2] {
-    margin-left: 0.2em;
-    margin-right: 0.15em;
+    margin-inline-start: 0.2em;
+    margin-inline-end: 0.15em;
 }
 
 a {
@@ -674,19 +704,9 @@ span[data-sc-img][data-sc-gaiji][data-sc-alt="⇂"] {
     vertical-align: 0.1em;
 }
 
-span[data-sc-img][data-sc-gaiji_h][data-sc-alt*="レ"],
-span[data-sc-img][data-sc-gaiji_h][data-sc-alt="一。"],
-span[data-sc-img][data-sc-gaiji_h][data-sc-alt="一、"] {
-    vertical-align: -0.7em;
-}
-
-span[data-sc-img][data-sc-gaiji_h][data-sc-alt*="|"] {
-    vertical-align: -0.5em;
-}
-
 span[data-sc-img][data-sc-gaiji_h] {
     width: 1em;
-    vertical-align: -0.25em;
+    vertical-align: 0.25em;
 }
 
 span[data-sc-img][data-sc-gaiji] {
@@ -711,24 +731,14 @@ span[title="熟語義"] {
 
 span[data-sc-kodaimoji] span[data-sc-img] .gloss-image-container,
 span[data-sc-kodaimoji] span[data-sc-img] .gloss-image {
-    width: 20em !important;
+    width: 15em !important;
 }
 
 span[data-sc-gaiji_h][data-sc-img] .gloss-image-container,
 span[data-sc-gaiji_h][data-sc-img] .gloss-image,
 span[data-sc-gaiji][data-sc-img] .gloss-image-container,
 span[data-sc-gaiji][data-sc-img] .gloss-image {
-    width: 20em !important;
-}
-
-span[data-sc-kodaimoji] span[data-sc-img] .gloss-image-container,
-span[data-sc-gaiji_h][data-sc-img] .gloss-image-container,
-span[data-sc-gaiji][data-sc-img] .gloss-image-container {
-    vertical-align: text-bottom;
-}
-
-span[data-sc-kodaimoji] span[data-sc-img] .gloss-image-container {
-    vertical-align: -0.25em;
+    width: 15em !important;
 }
 
 span[data-sc-jukugolist] a+a:before,
@@ -737,94 +747,19 @@ span[data-sc-jukugohyoki]+span[data-sc-jukugohyoki]:before {
 }
 
 @media (max-width: 500px) {
+    span[data-sc-kodaimoji][data-sc-img] {
+        vertical-align: -0.25em;
+    }
 
     span[data-sc-kodaimoji] span[data-sc-img] .gloss-image-container,
     span[data-sc-kodaimoji] span[data-sc-img] .gloss-image {
-        width: 15em !important;
+        width: 10em !important;
     }
 
     span[data-sc-gaiji_h][data-sc-img] .gloss-image-container,
     span[data-sc-gaiji_h][data-sc-img] .gloss-image,
     span[data-sc-gaiji][data-sc-img] .gloss-image-container,
     span[data-sc-gaiji][data-sc-img] .gloss-image {
-        width: 15em !important;
+        width: 10em !important;
     }
-}
-
-/* 韻目表示 */
-.rhyme-char {
-    position: relative;
-    display: inline-block;
-    border: 2px solid black;
-    width: 60px;
-    height: 60px;
-    font-size: 34px;
-    text-align: center;
-    line-height: 60px;
-    font-weight: bold;
-    box-sizing: border-box;
-    background-color: white;
-    margin: 10px;
-    overflow: hidden;
-}
-
-/* Bottom-left hollow triangle for type 1 */
-.inmoku-type-1::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 25px 0 0 25px;
-    border-color: transparent transparent transparent black;
-    z-index: 1;
-}
-
-.inmoku-type-1::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 22px 0 0 22px;
-    border-color: transparent transparent transparent white;
-    z-index: 2;
-}
-
-/* Top-left filled triangle for type 2 */
-.inmoku-type-2::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-top: 20px solid black;
-    border-right: 20px solid transparent;
-}
-
-.inmoku-type-3::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-top: 20px solid black;
-    border-left: 20px solid transparent;
-}
-
-.inmoku-type-4::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-bottom: 20px solid black;
-    border-left: 20px solid transparent;
 }

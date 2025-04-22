@@ -5,7 +5,7 @@ import re
 from typing import List, Dict, Set, Tuple, Any
 
 def get_next_term_bank_number(directory: str) -> int:
-    """Find the next available term bank number in the specified directory."""
+    # Find the next available term bank number in the specified directory
     pattern = re.compile(r'term_bank_(\d+)\.json')
     max_number = 0
     
@@ -18,7 +18,7 @@ def get_next_term_bank_number(directory: str) -> int:
     return max_number + 1
 
 def load_all_term_banks(directory: str) -> Dict[str, List[Any]]:
-    """Load all term_bank_*.json files from the specified directory."""
+    # Load all term_bank_*.json files from the specified directory
     term_banks = {}
     pattern = re.compile(r'term_bank_\d+\.json')
     
@@ -35,7 +35,7 @@ def load_all_term_banks(directory: str) -> Dict[str, List[Any]]:
     return term_banks
 
 def extract_all_terms(term_banks: Dict[str, List[Any]]) -> Set[str]:
-    """Extract all dictionary terms from the term banks."""
+    # Extract all dictionary terms from the term banks
     all_terms = set()
     
     for bank_name, entries in term_banks.items():
@@ -46,7 +46,7 @@ def extract_all_terms(term_banks: Dict[str, List[Any]]) -> Set[str]:
     return all_terms
 
 def create_character_mapping(variant_pairs: List[List[str]]) -> Dict[str, str]:
-    """Create a bidirectional mapping of character variants."""
+    # Create a bidirectional mapping of character variants
     mapping = {}
     
     for pair in variant_pairs:
@@ -58,21 +58,9 @@ def create_character_mapping(variant_pairs: List[List[str]]) -> Dict[str, str]:
     return mapping
 
 def generate_term_variants(term: str, char_mapping: Dict[str, str], processed_terms: Set[str] = None) -> List[str]:
-    """Generate all possible variants of a term using character mapping.
-    
-    Args:
-        term: The term to generate variants for
-        char_mapping: Dictionary mapping characters to their variants
-        processed_terms: Set of terms already processed (to prevent infinite recursion)
-    
-    Returns:
-        List of variant terms
-    """
-    # Initialize processed_terms set if not provided
     if processed_terms is None:
         processed_terms = set()
     
-    # Add current term to processed terms
     processed_terms.add(term)
     
     variants = []
@@ -86,44 +74,35 @@ def generate_term_variants(term: str, char_mapping: Dict[str, str], processed_te
                 variants.append(variant)
                 processed_terms.add(variant)
                 
-                # Also generate recursive variants (for terms with multiple characters that can be replaced)
                 sub_variants = generate_term_variants(variant, char_mapping, processed_terms)
                 variants.extend(sub_variants)
     
-    return list(set(variants))  # Remove duplicates in case there are any
+    return list(set(variants))
 
 def main(directory: str, variant_pairs: List[List[str]]):
-    """Main function to generate variant entries."""
-    # Load all term banks
     print(f"Scanning directory: {directory}")
     term_banks = load_all_term_banks(directory)
     if not term_banks:
         print("No term bank files found.")
         return
     
-    # Extract all existing terms
     all_terms = extract_all_terms(term_banks)
     print(f"Found {len(all_terms)} unique terms across all term banks")
     
-    # Create character mapping
     char_mapping = create_character_mapping(variant_pairs)
     print(f"Created mapping for {len(char_mapping)} characters")
     
-    # Create a set of "left" characters in the mapping pairs
     left_chars = set(pair[0] for pair in variant_pairs)
     print(f"Identified {len(left_chars)} 'left' characters in the mapping")
     
-    # Generate new entries
     new_entries = []
     terms_processed = 0
     variants_added = 0
     
-    # Flatten term_banks to process all entries
     all_entries = []
     for bank_entries in term_banks.values():
         all_entries.extend(bank_entries)
     
-    # Create a global set to track all processed terms (to prevent recursion issues)
     all_processed_terms = set(all_terms)
     
     for entry in all_entries:
@@ -136,22 +115,18 @@ def main(directory: str, variant_pairs: List[List[str]]):
         if not isinstance(term, str):
             continue
         
-        # Generate variants - pass the global processed terms set
         variants = generate_term_variants(term, char_mapping, all_processed_terms)
         
         # Add variants that don't already exist
         for variant in variants:
             if variant not in all_terms:
-                # Create a new entry with the variant term
                 new_entry = entry.copy()
                 new_entry[0] = variant
                 
-                # Check if this variant contains any "left" characters from the mapping
+                # Check if this variant contains any "left" characters
                 # If so, decrease its search rank by 1
                 has_left_char = False
                 for i, char in enumerate(variant):
-                    # Check if this character differs from the original term at this position
-                    # and is in the left_chars set
                     if (i < len(term) and char != term[i] and char in left_chars):
                         has_left_char = True
                         break
@@ -165,11 +140,10 @@ def main(directory: str, variant_pairs: List[List[str]]):
                 all_terms.add(variant)  # Add to set to avoid duplicates
                 variants_added += 1
         
-        # Show progress for large datasets
         if terms_processed % 1000 == 0:
             print(f"Processed {terms_processed} terms, added {variants_added} variants so far")
     
-    # Save new entries to term bank file(s), with a maximum of 10,000 entries per file
+    # Save new entries to term bank files, with a maximum of 10,000 entries per file
     if new_entries:
         next_number = get_next_term_bank_number(directory)
         
@@ -182,7 +156,7 @@ def main(directory: str, variant_pairs: List[List[str]]):
             new_file_path = os.path.join(directory, new_file_name)
             
             with open(new_file_path, 'w', encoding='utf-8') as f:
-                json.dump(chunk, f, ensure_ascii=False)  # No indentation for raw data
+                json.dump(chunk, f, ensure_ascii=False)
             
             print(f"Created new term bank file: {new_file_name} with {len(chunk)} entries")
         
@@ -201,10 +175,8 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
-    # Example usage with dictionary_directory
     dictionary_directory = args.input_dir
     
-    # Example kanji variant mappings - replace with your actual mapping list
     kanji_mappings = [
         ['亞', '亜'],
         ['惡', '悪'],

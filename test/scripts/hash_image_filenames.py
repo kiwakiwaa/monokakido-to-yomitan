@@ -10,7 +10,7 @@ def hash_filename(filename, length=10):
     return hash_hex
 
 def process_png_files(folder_path):
-    """Process all PNG files in a folder, hash filenames, and rename them"""
+    # Process all PNG files in a folder, hash filenames, and rename them
     image_file_map = {}
     
     png_files = [f for f in os.listdir(folder_path) if f.lower().endswith('.png')]

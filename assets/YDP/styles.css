@@ -1,7 +1,6 @@
 
 
 [data-sc-body] {
-	font-family: japanese;
 	color: var(--ydp-black, black);
 	line-height: 1.5em;
 	vertical-align: baseline;
@@ -20,8 +19,8 @@ div[data-sc-data][data-sc筆者名] {
 }
 
 div[data-sc表] {
-    margin-top: 0.5em;
-	margin-bottom: 0.5em;
+    margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
 	text-align: center;
 }
 
@@ -37,14 +36,14 @@ span[data-sc-i] {
 }
 
 div[data-sc-image] {
-    margin-top: 0.5em;
+    margin-block-start: 0.5em;
 	padding: 0.5em;
 	background-color: var(--ydp-image-background, #EEEEEE);
 	border-radius: 0.333em;
 }
 
 div[data-sc-image_caption] {
-	margin-top: 0.5em;
+	margin-block-start: 0.5em;
 	/* font-family: "Hiragino Kaku Gothic ProN"; */
 	font-size: 1em;
 	font-weight: bold;
@@ -52,18 +51,19 @@ div[data-sc-image_caption] {
 }
 
 div[data-sc-image_note] {
-	margin-top: 1em;
+	margin-block-start: 1em;
 }
 
 div[data-sc-image_source] {
-	margin-top: 1.2em;
-	padding-left: 2em;
+	margin-block-start: 1.2em;
+	padding-inline-start: 2em;
 	text-indent: -2em;
 	font-size: 0.85em;
 }
 
 div[data-sc-image_img] div[data-sc-image_caption] {
-	margin: 0.5em 0;
+	margin-block: 0.5em;
+	margin-inline: 0;
 	font-size: 0.85em;
 	font-weight: normal;
 }
@@ -74,7 +74,7 @@ div[data-sc-image_img] div[data-sc-img] {
 }
 
 div[data-sc-entryrefs] {
-    margin-top: 0.5em;
+    margin-block-start: 0.5em;
 	/* font-family: "Hiragino Kaku Gothic ProN"; */
 }
 
@@ -99,23 +99,24 @@ span[data-sc-lang] {
     font-family: "Helvetica Neue";
 }
 
-span[data-sc-meaning] {
-	margin-top: 0.5em;
+[data-sc-meaning] {
+	margin-block-start: 0.5em;
 	text-indent: 1em;
 }
 
-span[data-sc-meaning][data-sc見よ項目] {
-	margin-left: 1em;
+[data-sc-meaning][data-sc見よ項目] {
+	margin-inline-start: 1em;
 	text-indent: 0;
 }
 
-span[data-sc-meaning][data-sc引用] {
-	padding-left: 2em;
+[data-sc-meaning][data-sc引用] {
+	padding-inline-start: 2em;
 	text-indent: -2em;
 }
 
 span[data-sc-mlg] {
-	margin: 0 0.333em;
+	margin-block: 0;
+	margin-inline: 0.333em;
 	font-size: 0.667em;
 }
 
@@ -140,19 +141,19 @@ span[data-sc-ref_group] {
 }
 
 span[data-sc-ref_group] span[data-sc-ref] {
-	padding-left: 2em;
+	padding-inline-start: 2em;
 	/* font-family: "Hiragino Mincho ProN"; */
 	text-indent: -2em;
 }
 
 span[data-sc-ref_items] span[data-sc-ref] {
-	padding-left: 2em;
+	padding-inline-start: 2em;
 	/* font-family: "Hiragino Mincho ProN"; */
 	text-indent: -2em;
 }
 
 span[data-sc-ref_items] {
-	margin-top: 0.25em;
+	margin-block-start: 0.25em;
 }
 
 span[data-sc-ref_item] span[data-sc-headword][data-sc見出] {
@@ -160,17 +161,15 @@ span[data-sc-ref_item] span[data-sc-headword][data-sc見出] {
 	font-weight: normal;
 }
 
-
-
-
 span[data-sc-class="gaiji gaiji_arrow_thick"] {
 	font-weight: bold;
 }
 
 span[data-sc-class="gaiji_dsm_5"] {
 	border: 1px solid var(--ydp-black, black);
-	border-radius: 0.5em; 
-	padding: 0.1em 0.5em; 
+	border-radius: 0.5em;
+	padding-block: 0.1em;
+	padding-inline: 0.5em;
 }
 
 span[data-sc-class="gaiji_maruko"] {
@@ -185,7 +184,7 @@ span[data-sc-class="gaiji_maruko"] {
 
 
 span[data-sc-class="数式 math_letter"] span:first-child {
-	margin-left: 0.1em;
+	margin-inline-start: 0.1em;
 }
 
 span[data-sc-class="数式 math_letter"] {
@@ -197,13 +196,13 @@ span[data-sc-class="数式 math_letter"] {
 span[data-sc-sup] {
 	vertical-align: 0.5em;
 	font-size: 0.8em;
-	margin-left: 0.25em;
+	margin-inline-start: 0.25em;
 }
 
 span[data-sc-sub] {
 	vertical-align: -0.5em;
 	font-size: 0.8em;
-	margin-left: 0.25em;
+	margin-inline-start: 0.25em;
 }
 
 div[data-sc-image]:has([data-sc-href="graphics/2311.mp4"]),
@@ -230,11 +229,12 @@ div[data-sc-image]:has([data-sc-href="graphics/2332.mp4"]) {
 }
 
 span[data-sc-img] {
-    margin: 0 0.3em;
+	margin-block: 0;
+	margin-inline: 0.3em;
 }
 
 div[data-sc-img] {
-    margin-left: 2em;
+    margin-inline-start: 2em;
 }
 
 [data-sc-img] .gloss-image-container {

@@ -1,6 +1,5 @@
-from sudachipy import tokenizer
-from sudachipy import dictionary
-from sudachipy import SplitMode
+from typing import List, Dict
+from sudachipy import tokenizer, dictionary, SplitMode
  
 __U_KANA_LIST = ["う", "く", "す", "つ", "ぬ", "ふ", "む",
                  "ゆ", "る", "ぐ", "ず", "づ", "ぶ", "ぷ"]
@@ -8,7 +7,7 @@ __U_KANA_LIST = ["う", "く", "す", "つ", "ぬ", "ふ", "む",
 __SUDACHI_DICTIONARY = None
  
  
-def sudachi_rules(expression):
+def sudachi_rules(expression: str) -> str:
     global __SUDACHI_DICTIONARY
     if __SUDACHI_DICTIONARY is None:
         __SUDACHI_DICTIONARY = dictionary.Dictionary(dict="full").create()
@@ -34,7 +33,7 @@ def sudachi_rules(expression):
     return rules
  
  
-def tags_to_rules(expression, tags, inflection_categories):
+def tags_to_rules(expression: str, tags: List[str], inflection_categories: Dict[str, List[str]]) -> str:
     rules = set()
     exp_final_character = expression[len(expression)-1:]
     for tag in tags:

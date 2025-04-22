@@ -6,7 +6,6 @@ import zipfile
 import regex as re
 
 from typing import List, Dict, Any
-
 from tqdm import tqdm
 from datetime import datetime
 
@@ -15,7 +14,7 @@ bar_format = "「{desc}: {bar:30}」{percentage:3.0f}% | {n_fmt}/{total_fmt} {un
 class FileUtils:
     
     @staticmethod
-    def read_xml_files(directory_path):
+    def read_xml_files(directory_path: str) -> Dict[str, str]:
         """
         Reads all XML files in the specified directory and stores them in a dictionary.
         """
@@ -43,7 +42,7 @@ class FileUtils:
     
     
     @staticmethod
-    def gather_files(term_bank_folder, assets_folder, index_json_path, output_path):
+    def gather_files(term_bank_folder: str, assets_folder: str, index_json_path: str, output_path: str) -> List[str]:
         file_paths = []
 
         # Collect dictionary files
@@ -64,7 +63,7 @@ class FileUtils:
         
     
     @staticmethod
-    def zip_dictionary(file_paths, name, base_path, output_path, flatten_dict_folder=True):
+    def zip_dictionary(file_paths: List[str], name: str, base_path: str, output_path: str, flatten_dict_folder: bool = True) -> str:
         if not file_paths:
             raise ValueError("No files provided")
 
@@ -117,7 +116,7 @@ class FileUtils:
     
     
     @staticmethod
-    def extract_entry_keys(entry: str) -> list[str]:
+    def extract_entry_keys(entry: str) -> List[str]:
         parts = entry.split('|')
         
         # Ensure there are at least two parts (to skip the number)
@@ -130,7 +129,7 @@ class FileUtils:
 
     # Reads JMdict for part of speech tags
     @staticmethod
-    def load_term_banks(folder_path):
+    def load_term_banks(folder_path: str) -> Dict[str, List[str]]:
         term_dict = {}
         
         # Find all term_bank_*.json files in the folder
@@ -189,7 +188,7 @@ class FileUtils:
     
     
     @staticmethod
-    def update_index_revision(revision_name, index_path):
+    def update_index_revision(revision_name: str, index_path: str) -> None:
         if not os.path.exists(index_path):
             print("Warning: index.json not found, skipping revision update.")
             return
