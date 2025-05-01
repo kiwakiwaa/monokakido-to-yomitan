@@ -13,6 +13,10 @@ from parser.YDP import YDPParser
 from parser.SHINJIGEN2 import ShinjigenParser
 from parser.NANMED20 import NanmedParser
 from parser.MK3 import MeikyoParser
+from parser.YDL import YDLParser
+from parser.TISMKANJI import TismKanjiParser
+from parser.OKO12 import Oko12Parser
+from parser.RGKO12 import Rgko12Parser, Rgko12AppendixHandler
 
 
 def process_dictionary(config: DictionaryConfig, base_dir: Optional[str] = None, repackage_only: bool = False):
@@ -37,6 +41,16 @@ def process_dictionary(config: DictionaryConfig, base_dir: Optional[str] = None,
             paths["jmdict_path"]
         )
         parser.parse()
+        
+        if config.has_appendix and config.appendix_handler_class and "appendix_path" in paths:
+            appendix_path = paths["appendix_path"]
+            if appendix_path.exists():
+                print(f"{config.dict_name}の付録を処理します")
+                appendix_path = str(appendix_path)
+                appendix_handler = config.appendix_handler_class(parser.dictionary, appendix_path)
+                appendix_count = appendix_handler.parse_appendix_directory()
+                print(f"{appendix_count}の付録項目を追加しました")
+        
         parser.export(paths["output_path"])
         FileUtils.update_index_revision(config.rev_name, paths["index_json_path"])
     else:
@@ -60,7 +74,7 @@ def process_dictionary(config: DictionaryConfig, base_dir: Optional[str] = None,
     )
     print(f"Dictionary package created at: {paths['output_path']}")
 
-
+# TODO move to config file
 def get_available_dictionaries() -> Dict[str, DictionaryConfig]:
     """Return a dictionary of available dictionary configurations"""
     return {
@@ -111,6 +125,32 @@ def get_available_dictionaries() -> Dict[str, DictionaryConfig]:
             rev_name="meikyo3",
             dict_type="MK3",
             parser_class=MeikyoParser
+        ),
+        "ydl": DictionaryConfig (
+            dict_name="有斐閣 法律用語辞典",
+            rev_name="ydl",
+            dict_type="YDL",
+            parser_class=YDLParser
+        ),
+        "tismkanji": DictionaryConfig (
+            dict_name="TISMKANJI",
+            rev_name="kanjirin",
+            dict_type="TISMKANJI",
+            parser_class=TismKanjiParser
+        ),
+        "oko12": DictionaryConfig (
+            dict_name="旺文社国語辞典 第十二版",
+            rev_name="oko12",
+            dict_type="OKO12",
+            parser_class=Oko12Parser
+        ),
+        "rgko12": DictionaryConfig (
+            dict_name="例解学習国語 第十二版",
+            rev_name="rgko12",
+            dict_type="RGKO12",
+            parser_class=Rgko12Parser,
+            appendix_handler_class=Rgko12AppendixHandler,
+            has_appendix=True
         )
     }
 

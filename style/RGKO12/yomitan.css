@@ -1,0 +1,90 @@
+/* ========================= */
+/* === 例解学習国語 第十二版 === */
+/* ========================= */
+:root[data-theme="dark"] .definition-item[data-dictionary='例解学習国語 第十二版'] {
+	--rgko12-blue: #54b5e4;
+	--rgko12-light-blue: #7dc9ef;
+	--rgko12-light-light-blue: #003366;
+	--rgko12-light-light-purple: #330033;
+	--rgko12-light-orange: #663300;
+	--rgko12-red: #d65252;
+	--rgko12-green: #389938;
+	--rgko12-gray: #CCCCCC;
+	--rgko12-brown: #885522;
+	--rgko12-light-brown: #887766;
+	--rgko12-light-light-brown: #AA9988;
+	--rgko12-cream: #333300;
+	--rgko12-link: #33CCFF;
+}
+
+.definition-item[data-dictionary='例解学習国語 第十二版'] {
+	--rgko12-blue: #4a8ade;  /* var(--rgko12-blue, var(--accent-color, var(--shadow-focus, #4a8ade))) */
+	--rgko12-light-blue: #7fb4f3; /* var(--rgko12-light-blue, var(--accent-color-lighter, var(--button-primary-disabled, #7fb4f3))) */
+	--rgko12-light-light-blue: #DDEEFF; /* var(--rgko12-light-light-blue, var(--accent-color-lightest, var(--button-bg, #DDEEFF))) */
+	--rgko12-light-light-purple: #EEDDFF; /* var(--rgko12-light-light-purple, var(--advanced-color-lighter, var(--canvas-elevated, #EEDDFF))) */
+	--rgko12-red: #e84a4a; /* var(--rgko12-red, var(--sidebar-button-danger-background-color-hover, var(--flag-1, #e84a4a))) */
+	--rgko12-green: #109a2f; /* var(--rgko12-green, var(--tag-frequency-background-color, var(--state-review, #109a2f))) */
+	--rgko12-orange: #FF9900; /* var(--rgko12-orange, var(--tag-expression-background-color, var(--state-buried, #FF9900))) */
+	--rgko12-light-orange: #FFCC99; /* var(--rgko12-light-orange, var(--tag-expression-background-color, var(--state-buried, #FFCC99))) */
+	--rgko12-pink: #FF0099;  /* var(--rgko12-pink, var(--tag-dictionary-background-color, var(--flag-5, #FF0099))) */
+	--rgko12-gray: #666666; /* var(--rgko12-gray, var(--tag-default-background-color, var(--border, #666666))) */
+	--rgko12-brown: #976B33; /* var(--rgko12-brown, var(--tag-part-of-speech-background-color, var(--shadow-inset, #976B33))) */
+	--rgko12-light-brown: #DDCCBB; /* var(--rgko12-light-brown, var(--light-border-color, var(---button-bg, #DDCCBB))) */
+	--rgko12-light-light-brown: #FFEEDD; /* var(--rgko12-light-light-brown, var(--tag-text-color, var(--canvas-elevated, #FFEEDD))) */
+	--rgko12-spring: #DDFFEE; /* var(--rgko12-spring, var(--tag-text-color, var(--canvas-elevated, #DDFFEE))) */
+	--rgko12-summer: #DDFFEE; /* var(--rgko12-summer, var(--tag-text-color, var(--canvas-elevated, #DDFFEE))) */
+	--rgko12-autumn: #FFEECC; /* var(--rgko12-autumn, var(--tag-text-color, var(--canvas-elevated, #FFEECC))) */
+	--rgko12-winter: #CCEEFF; /* var(--rgko12-winter, var(--tag-text-color, var(--canvas-elevated, #CCEEFF))) */
+	--rgko12-travel: #DDFFEE; /* var(--rgko12-travel, var(--tag-text-color, var(--canvas-elevated, #DDFFEE))) */
+	--rgko12-romance: #EEDDFF; /* var(--rgko12-romance, var(--tag-text-color, var(--canvas-elevated, #EEDDFF))) */
+	--rgko12-other: #FFFFCC; /* var(--rgko12-other, var(--tag-text-color, var(--canvas-elevated, #FFFFCC))) */
+	--rgko12-cream: #FFFFDD; /* var(--rgko12-cream, var(--tag-text-color, var(--canvas-elevated, #FFFFDD))) */
+	--rgko12-link: #3333CC; /* var(--rgko12-link, var(--accent-color, var(--link-color, #3333CC))) */
+}
+
+[data-sc-body],
+[data-sc-acc],
+[data-sc-headword],
+[data-sc-headword] > [data-sc-em],
+[data-sc-headword] rt,
+[data-sc-rank_num],
+[data-sc使い分け],
+[data-sc-paren],
+[data-sc-ws],
+[data-sc-bs],
+[data-sc-wc],
+[data-sc-bc],
+[data-scコラム],
+[data-sc-num],
+[data-sc付録] [data-sc-id="この辞典の使い方"] [data-sc-em],
+[data-sc付録] [data-sc-id="この辞典の使い方"] [data-sc-b],
+[data-sc付録] [data-sc-h1],
+[data-sc付録] [data-sc-h2],
+[data-sc付録] [data-sc-combi] {
+	font-family: "Hiragino Sans"; 
+}
+
+[data-sc-dic_item][data-scコラム],
+[data-sc-headword][data-sc標準表記],
+[data-sc-headword][data-sc参考表記],
+[data-sc-meaning][data-scコラム],
+[data-sc教科書] {
+	font-family: "G-OTF 教科書ICA Pro", "OT-Jo Kyoukasho ICA ProN", "UDDigiKyokasho ProN", "Hiragino Mincho ProN", "G-OTF Kyoukasho ICA Pro R", "G-OTF Kyoukasho ICA Pro L", "G-OTF Kyoukasho ICA Pro M";
+}
+
+[data-sc-headword][data-sc原綴],
+[data-sc単位] {
+	font-family: "Source Sans Pro", "Source Han Sans JP", "Hiragino Kaku Gothic ProN";
+}
+
+[data-sc付録] td[data-sc符号],
+[data-sc活字],
+[data-sc付録] [data-sc-mincho] {
+	font-family: "Hiragino Mincho ProN";
+}
+
+html[data-glossary-layout-mode="compact"] {
+	.definition-item[data-dictionary="例解学習国語 第十二版"] {
+		/* Inline */
+	}
+}

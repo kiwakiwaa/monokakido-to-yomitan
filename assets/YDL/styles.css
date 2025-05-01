@@ -1,0 +1,102 @@
+[data-sc-h1] {
+    font-size: 1.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--text-color);
+    filter: brightness(1.3);
+    text-decoration: underline;
+    text-decoration-color: oklch(65% 0.2 260);
+}
+
+[data-sc-innote] {
+	font-size: 0.85em;
+}
+
+rt {
+	font-size: 0.5em;
+}
+
+rt[data-sc常用外マーク] {
+	font-size: 0.333em;
+}
+
+[data-sc置換] {
+    display: inline-block;
+    min-width: 1em;
+    margin-inline-start: 0.15em;
+    margin-inline-end: 0.3em;
+    
+    font-size: 0.7em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.1;
+
+    border: 0.08em solid var(--link-color);
+
+    vertical-align: middle;
+    position: relative;
+    top: -0.05em;
+}
+
+[data-sc段落番号] {
+    display: inline-block;
+    min-width: 1em;
+    margin-inline-end: 0.3em;
+    
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+
+    border: 0.08em solid var(--text-color);
+    border-radius: 0.15em;
+    filter: contrast(10000%);
+
+    vertical-align: middle;
+    position: relative;
+    top: -0.05em;
+}
+
+[data-sc段落] + [data-sc段落] {
+    margin-block-start: 0.5em;
+}
+
+[data-sc段落番号] {
+	margin-inline-end: 0.25em;
+}
+
+[data-sc離割禁止] {
+	word-break: keep-all;
+}
+
+[data-sc項目表示] {
+	font-weight: bold;
+}
+
+[data-sc四角] {
+    padding: 0.125em;
+    font-size: 0.8em;
+    border: solid 0.0625em transparent;
+    position: relative;
+    word-break: keep-all;
+}
+
+[data-sc四角]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: solid 0.0625em var(--text-color);
+    filter: contrast(10000%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+[data-sc原語名] {
+    margin-block: 0;
+    margin-inline: 0.25em;
+}

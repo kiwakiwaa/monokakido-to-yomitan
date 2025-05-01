@@ -22,6 +22,8 @@ class NanmedParser(Parser):
             "酢酸"
         }
         
+        self.initialize_html_converter()
+        
         
     def extract_entry_keys(self, entry: str) -> List[str]:
         entry = entry.replace('《', '').replace('》', '')

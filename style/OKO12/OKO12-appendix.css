@@ -1,0 +1,141 @@
+b {
+	
+}
+
+h1 {
+	margin: 0 0 1em 1em;
+	font-size: 1.5em;
+}
+
+h2 {
+	margin: 1em 0 0 0;
+	padding: 0.25em 0.5em;
+	font-family: gothic;
+	font-size: 1em;
+	background-color: light-red;
+}
+
+p {
+	margin: 0.5em 0 0 1em;
+	padding: 0;
+}
+
+.right {
+	text-align: right;
+}
+
+num {
+	margin-right: 0.25em;
+	font-family: mincho;
+}
+
+.indent1 {
+	margin-left: 2.25em;
+	text-indent: -1.25em;
+}
+
+.indent2 {
+	margin-left: 3.5em;
+	text-indent: -1.25em;
+}
+
+.この辞典のきまりと使い方 .indent3 {
+	margin-left: 3em;
+	text-indent: 0;
+}
+
+.この辞典のきまりと使い方 .indent31 {
+	margin-left: 4.75em;
+	text-indent: -1.25em;
+}
+
+.indent3 {
+	margin-left: 9em;
+	text-indent: -7em;
+}
+
+.indent4 {
+	margin-left: 5em;
+	text-indent: -1em;
+}
+
+.indent10 {
+	margin-top: 0;
+	margin-left: 9em;
+}
+
+.ex {
+	margin-left: 2.25em;
+	text-indent: -1em;
+}
+
+.ex1 {
+	margin-left: 1.25em;
+	text-indent: -1.25em;
+}
+
+ex-logo {
+	margin-right: 0.25em;
+	padding: 0.1em;
+	font-family: mincho;
+	font-size: 0.8em;
+	color: black;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	border-radius: 0.15em;
+}
+
+blockquote {
+	display: block;
+	margin: 0;
+	padding: 0 0 0 4em;
+}
+
+kanji {
+	font-size: 1.5em;
+}
+
+kyoyo, kyuji {
+	font-size: 1.2em;
+}
+
+midashi {
+	font-weight: bold;
+}
+
+gendai, rekishi {
+	display: warichu;
+	font-size: 0.5em;
+}
+
+nb {
+	word-break: keep-all;
+}
+
+table {
+	margin-left: 1em;
+}
+
+table.略語・記号表 {
+	border-color: black;
+	border-bottom: solid 0.5px black;
+}
+
+table.略語・記号表 td {
+	border-color: black;
+	border-bottom-style: none;
+	vertical-align: middle;
+}
+
+table.常用漢字表 {
+	border-style: none;
+}
+
+table.常用漢字表 td {
+	border-style: none;
+}
+
+kanyo {
+	font-family: gothic;
+}

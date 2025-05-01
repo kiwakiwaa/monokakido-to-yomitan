@@ -1,0 +1,1170 @@
+
+/* ---- 外字 ---- */
+/* 関連　*/
+[data-sc外字][data-sc左丸] {
+	display: inline-block;
+	font-family: "ヒラギノ丸ゴ ProN";
+	border: 1px solid var(--rgko12-blue, var(--accent-color, var(--shadow-focus, #4a8ade)));
+	border-radius-topleft: 8px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	font-weight: bold;
+	padding-block: -0.1em;
+	padding-inline: 0.2em;
+	vertical-align: baseline;
+	text-align: center;
+	white-space: nowrap;
+}
+
+/* 全丸*/
+[data-sc外字][data-sc全丸] {
+	display: inline-block;
+	border: 2px solid inherit;
+	border-radius: 8px;
+	padding-block: 0.1em;
+	padding-inline: 0.2em;
+	vertical-align: baseline;
+	text-align: center;
+	white-space: nowrap;
+}
+
+[data-sc外字][data-sc-fill] {
+	color: white;
+	border: 1px solid var(--rgko12-blue, var(--accent-color, var(--shadow-focus, #4a8ade)));
+	background-color: var(--rgko12-blue, var(--accent-color, var(--shadow-focus, #4a8ade)));
+	border-radius: 8px;
+	padding-inline: 0.2em;
+}
+
+[data-sc外字][data-sc矢印] {
+	font-size: 1.2em;
+	margin-inline: 0.05em;
+}
+
+[data-sc外字][data-sc三角] {
+	font-size: 0.8em;
+	vertical-align: middle;
+}
+
+[data-sc外字] [data-sc下印] {
+	font-size: 1em;
+}
+
+[data-sc外字] {
+	font-size: 0.8em;
+	vertical-align: middle;
+}
+
+
+/* 画像 */
+.gloss-image-link {
+	max-width: 75;
+}
+
+.gloss-image-container {
+	max-height: 100% !important;
+}
+
+[data-path="gaiji/101364073c.svg"] {
+	max-width: 1em;
+	vertical-align: text-top;
+}
+
+table[data-sc-image] td {
+	border: none;
+}
+
+table[data-sc-image] td[data-sc-caption] {
+	text-align: start;
+	writing-mode: vertical-rl;
+}
+
+
+/* 折りたたみ要素 */
+details {
+	display: inline-block;
+	margin: 0.2em 0;
+	border: 1px solid var(--gaiji-border, #ccc);
+	border-radius: 4px;
+	background-color: var(--bg-color, #f9f9f9);
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+summary {
+	padding: 0.2em 0.5em;
+	font-size: 0.8em;
+	font-weight: bold;
+	color: var(--accent-color, #4a8ade);
+	background-color: var(--bg-color, #f9f9f9);
+	cursor: pointer;
+	user-select: none;
+	outline: none;
+}
+
+details img {
+	display: block;
+	padding: 0.3em;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+details[open] > *:not(summary) {
+	animation: details-show 0.2s ease-in-out;
+}
+
+@keyframes details-show {
+	from {
+		opacity: 0;
+		transform: translateY(-2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+
+a {
+	text-decoration: none;
+}
+
+a:has(rt) {
+	border-bottom: none !important;
+}
+
+a:hover {
+	color: var(--text-color);
+	filter: brightness(1.3);
+	text-decoration: underline;
+	text-decoration-color: oklch(65% 0.2 260);
+}
+
+.gloss-image-link:hover {
+	filter: none !important;
+}
+
+[data-sc-asterisk] {
+	color: var(--rgko12-green, var(--tag-frequency-background-color, var(--state-review, #109a2f)));
+	font-size: 0.5em;
+	vertical-align: 1em;
+}
+
+[data-sc-acc] {
+	/* font-family: "Hiragino Sans"; */
+	font-size: 0.667em;
+	font-weight: normal;
+}
+
+[data-sc-b] {
+	font-weight: bold;
+}
+
+[data-sc-dic_item] {
+	display: block;
+}
+
+[data-sc-head2] {
+	display: block;
+}
+
+[data-sc-image] {
+	display: block;
+}
+
+[data-sc-meaning] {
+	display: block;
+}
+
+[data-sc-tkw] {
+	display: block;
+}
+
+[data-sc-dic_item][data-scコラム] {
+	/* font-family: "OT-Jo Kyoukasho ICA ProN", "UDDigiKyokasho ProN", "Hiragino Mincho ProN"; */
+}
+
+[data-sc-image] {
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
+}
+
+div[data-sc-main] {
+	margin-block-start: 0.5em;
+}
+
+[data-sc-em] {
+	color: var(--rgko12-red, var(--sidebar-button-danger-background-color-hover, var(--flag-1, #e84a4a)));
+}
+
+[data-sc-em][data-sc-blue] {
+	color: var(--rgko12-blue, var(--accent-color, var(--shadow-focus, #4a8ade)));
+}
+
+[data-sc-headword] {
+	/* font-family: "Hiragino Sans"; */
+	font-size: 1.333em;
+	font-weight: 900;
+}
+
+[data-sc-headword] > [data-sc-em] {
+	/* font-family: "Hiragino Sans"; */
+	font-weight: 900;
+	font-style: normal;
+}
+
+[data-sc-headword][data-sc標準表記],
+[data-sc-headword][data-sc参考表記] {
+	/* font-family: "OT-Jo Kyoukasho ICA ProN", "UDDigiKyokasho ProN", "Hiragino Mincho ProN"; */
+	font-weight: normal;
+}
+
+[data-sc-headword][data-sc固有名詞] {
+	font-weight: normal;
+}
+
+[data-sc-headword][data-sc原綴] {
+	/* font-family: "Source Sans Pro", "UDDigiKyokasho ProN"; */
+	font-weight: normal;
+}
+
+[data-sc-headword][data-scアクセント] {
+	font-size: 1em;
+}
+
+[data-sc-headword][data-scコラム] {
+	/* font-family: "UDDigiKyokasho ProN", "Hiragino Mincho ProN"; */
+	font-weight: bold;
+	color: var(--rgko12-blue, var(--accent-color, var(--shadow-focus, #4a8ade)));
+}
+
+[data-sc-headword][data-sc使い分け] {
+	font-size: 1em;
+}
+
+[data-sc-headword] rt {
+	/* font-family: "Hiragino Sans"; */
+	color: var(--rgko12-green, var(--tag-frequency-background-color, var(--state-review, #109a2f)));
+}
+
+[data-sc-headword][data-scコラム] rt {
+	color: var(--rgko12-blue, var(--accent-color, var(--shadow-focus, #4a8ade)));
+}
+
+[data-sc-headword][data-sc-rank] rt[data-sc-normal] {
+	color: var(--text-color);
+}
+
+[data-sc-headword][data-sc-rank] rt[data-sc-em] {
+	color: var(--rgko12-red, var(--sidebar-button-danger-background-color-hover, var(--flag-1, #e84a4a)));
+}
+
+[data-sc訓読み][data-sc-em] {
+	color: var(--rgko12-green, var(--tag-frequency-background-color, var(--state-review, #109a2f)));
+}
+
+[data-sc-rank_num] {
+	/* font-family: "Hiragino Sans"; */
+	font-size: 0.5em;
+	font-weight: normal;
+	color: var(--rgko12-red, var(--sidebar-button-danger-background-color-hover, var(--flag-1, #e84a4a)));
+}
+
+[data-sc-meaning][data-sc-level0] {
+	margin-inline-start: 1.5em;
+	text-indent: -1.5em;
+}
+
+[data-sc-meaning][data-sc-level1] {
+	margin-inline-start: 1.333em;
+	text-indent: -1.333em;
+}
+
+[data-sc-meaning][data-scコラム] {
+	/* font-family: "OT-Jo Kyoukasho ICA ProN", "UDDigiKyokasho ProN", "Hiragino Mincho ProN"; */
+}
+
+[data-sc-meaning][data-scコラム]:first-child {
+	margin-block-start: 0.5em;
+}
+
+[data-sc-meaning][data-scコラム] [data-sc-b] {
+	font-weight: 900;
+}
+
+[data-sc-ws] + [data-sc-p-o-s] {
+	margin-inline-start: 0.125em;
+}
+
+[data-sc-p-o-s] {
+	margin-inline-start: 0.125em;
+}
+
+rt {
+	font-size: 0.5em;
+	font-weight: normal;
+}
+
+ruby rt {
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+rt[data-sc-small] {
+	font-size: 0.4em;
+}
+
+[data-sc-subv] {
+	font-size: 0.667em;
+	vertical-align: 0.5em;
+}
+
+table {
+	display: table;
+	margin-block: 0.5em;
+	margin-inline: 0;
+}
+
+td {
+	display: table-cell;
+}
+
+tr {
+	display: table-row;
+}
+
+td[data-sc-small] {
+	font-size: 0.875em;
+}
+
+td[data-sc-caption] {
+	margin-inline-start: 0.5em;
+	text-align: center;
+}
+
+[data-sc使い分け] {
+	padding: 0.125em;
+	/* font-family: "Hiragino Sans"; */
+	font-size: 0.8em;
+	font-weight: normal;
+	color: #FFF;
+	background-color: var(--rgko12-brown, var(--tag-part-of-speech-background-color, var(--shadow-inset, #976B33)));
+	border-radius: 0.2em;
+}
+
+table[data-sc使い分け] {
+	font-size: 0.8em;
+	line-height: 2em;
+}
+
+table[data-sc使い分け] tr {
+	border-block-start: solid 2px white;
+}
+
+table[data-sc使い分け] td {
+	padding: 0.5em;
+	border-inline-start: solid 2px white;
+	background-color: var(--rgko12-light-light-brown, var(--tag-text-color, var(--canvas-elevated, #FFEEDD)));
+}
+
+table[data-sc使い分け] td:first-child {
+	background-color: var(--rgko12-light-brown, var(--light-border-color, var(---button-bg, #DDCCBB)));
+	word-break: keep-all;
+}
+
+table[data-scヘッダあり] td {
+	color: var(--rgko12-brown, var(--tag-part-of-speech-background-color, var(--shadow-inset, #976B33)));
+	text-align: center;
+}
+
+table[data-scヘッダあり] tr:first-child td {
+	color: var(--text-color);
+	text-align: left;
+	word-break: keep-all;
+	background-color: var(--rgko12-light-brown, var(--light-border-color, var(---button-bg, #DDCCBB)));
+}
+
+table[data-scヘッダあり] tr:first-child td:first-child {
+	background-color: var(--rgko12-light-light-brown, var(--tag-text-color, var(--canvas-elevated, #FFEEDD)));
+}
+
+table[data-scヘッダあり] td:first-child {
+	color: var(--text-color);
+	text-align: left;
+	background-color: var(--rgko12-light-brown, var(--light-border-color, var(---button-bg, #DDCCBB)));
+	border-inline-start-width: 0;
+}
+
+[data-sc-ud] rt {
+	font-size: 0.25em;
+}
+
+[data-sc-paren] {
+	/* font-family: "Hiragino Sans"; */
+	font-weight: normal;
+}
+
+[data-sc-ws] {
+	padding: 0.125em;
+	/* font-family: "Hiragino Sans"; */
+	font-size: 0.8em;
+	font-weight: bold;
+	color: var(--text-color);
+	border: solid 1px var(--text-color);
+	border-radius: 0.2em;
+	word-break: keep-all;
+}
+
+[data-sc-ws] + [data-sc-ws] {
+	margin-inline-start: 0.1em;
+}
+
+[data-sc-bs] {
+	padding: 0.125em;
+	/* font-family: "Hiragino Sans"; */
+	font-size: 0.8em;
+	font-weight: bold;
+	color: white;
+	background-color: var(--text-color);
+	border-radius: 0.2em;
+	word-break: keep-all;
+}
+
+[data-sc-bs][data-sc-blue] {
+	color: white;
+	background-color: var(--rgko12-blue, var(--accent-color, var(--shadow-focus, #4a8ade)));
+}
+
+[data-sc-bs][data-sc-gray] {
+	background-color: var(--rgko12-gray, var(--tag-default-background-color, var(--border, #666666)));
+}
+
+[data-sc-wc] {
+	margin-inline-end: 0.125em;
+	padding: 0.2em;
+	/* font-family: "Hiragino Sans"; */
+	font-size: 0.7em;
+	font-weight: bold;
+	color: var(--text-color);
+	border: solid 1px var(--text-color);
+	border-radius: 0.7em;
+	word-break: keep-all;
+}
+
+[data-sc-wc] + [data-sc-wc] {
+	margin-inline-start: 0.1em;
+}
+
+[data-sc-wc][data-sc-normal] {
+	font-weight: normal;
+}
+
+[data-sc-bc] {
+	margin-inline-end: 0.125em;
+	padding: 0.2em;
+	/* font-family: "Hiragino Sans"; */
+	font-size: 0.7em;
+	font-weight: bold;
+	color: white;
+	background-color: var(--text-color);
+	border-radius: 0.7em;
+	word-break: keep-all;
+}
+
+[data-sc-bc][data-sc-gray] {
+	background-color: var(--rgko12-gray, var(--tag-default-background-color, var(--border, #666666)));
+}
+
+[data-sc-bc][data-sc-red] {
+	background-color: var(--rgko12-red, var(--sidebar-button-danger-background-color-hover, var(--flag-1, #e84a4a)));
+}
+
+[data-scコラム] {
+	margin-inline-end: 0.5em;
+	/* font-family: "Hiragino Sans"; */
+	font-size: 0.5em;
+	color: white;
+	background-color: var(--rgko12-orange, var(--tag-expression-background-color, var(--state-buried, #FF9900)));
+	border-radius: 0.2em;
+	text-combine-horizontal: all;
+}
+
+[data-sc-blue] {
+	color: var(--rgko12-blue, var(--accent-color, var(--shadow-focus, #4a8ade)));
+}
+
+[data-sc-green] {
+	color: var(--rgko12-green, var(--tag-frequency-background-color, var(--state-review, #109a2f)));
+}
+
+[data-sc-num] {
+	/* font-family: "Hiragino Sans"; */
+	font-weight: bold;
+}
+
+[data-sc-orange] {
+	color: var(--rgko12-orange, var(--tag-expression-background-color, var(--state-buried, #FF9900)));
+}
+
+[data-sc-red] {
+	color: var(--rgko12-red, var(--sidebar-button-danger-background-color-hover, var(--flag-1, #e84a4a)));
+}
+
+[data-sc縦中横] {
+	text-combine-horizontal: all;
+}
+
+[data-sc単位] {
+	/* font-family: "Source Sans Pro"; */
+	text-combine-horizontal: all;
+}
+
+[data-sc配当学年],
+[data-sc総画数] {
+	/* font-family: "Hiragino Maru Gothic ProN", "Hiragino Sans"; */
+	font-size: 0.8em;
+}
+
+[data-sc教科書] {
+	/* font-family: "OT-Jo Kyoukasho ICA ProN", "UDDigiKyokasho ProN", "Hiragino Mincho ProN"; */
+}
+
+[data-sc-bs] + [data-sc教科書] {
+	margin-inline-start: 0.25em;
+}
+
+[data-sc活字] {
+	padding: 0.1em;
+	/* font-family: "Hiragino Mincho ProN"; */
+	font-size: 1.333em;
+	border: solid 1px var(--text-color);
+	border-radius: 0.15em;
+}
+
+
+
+/* ----- 付録 ----- */
+
+[data-sc付録] [data-sc-body] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-size: 1.1em;
+}
+
+[data-sc付録] [data-sc-id="index"] {
+	display: none;
+}
+
+[data-sc付録] [data-sc-b][data-sc-large] {
+	font-size: 1.333em;
+}
+
+[data-sc付録] [data-sc-light_blue] {
+	color: var(--rgko12-light-blue, var(--accent-color-lighter, var(--button-primary-disabled, #7fb4f3)));
+}
+
+[data-sc付録] [data-sc-dd] {
+	padding-inline-start: 0.5em;
+}
+
+[data-sc付録] [data-sc-ddd] {
+	word-break: keep-all;
+}
+
+[data-sc付録] [data-sc-kyokasho] {
+	/* font-family: "UDDigiKyokasho ProN", "Hiragino Mincho ProN"; */
+}
+
+[data-sc付録] [data-sc-mincho] {
+	/* font-family: "Hiragino Mincho ProN"; */
+}
+
+[data-sc付録] div[data-sc-box] {
+	margin-block: 1em;
+	margin-inline: 0;
+	padding-block: 0.25em;
+	padding-inline: 0.5em;
+	/* font-family: "UDDigiKyokasho ProN", "Hiragino Mincho ProN"; */
+	border: solid var(--text-color) 1px;
+}
+
+[data-sc付録] [data-sc-dt] {
+	padding-block: 0.25em;
+	padding-inline: 0;
+}
+
+[data-sc付録] [data-sc-dl][data-sc-inline] [data-sc-dd] {
+	display: inline;
+	word-break: keep-all;
+}
+
+[data-sc付録] [data-sc-em] {
+	font-weight: bold;
+	font-style: normal;
+}
+
+[data-sc付録] [data-sc-id="この辞典の使い方"] [data-sc-em] {
+	margin: 0;
+	padding: 0;
+	/* font-family: "Hiragino Sans"; */
+	font-weight: 900;
+	font-style: normal;
+	color: var(--rgko12-red, var(--sidebar-button-danger-background-color-hover, var(--flag-1, #e84a4a)));
+}
+
+[data-sc付録] [data-sc-id="この辞典の使い方"] [data-sc-b] {
+	/* font-family: "Hiragino Sans"; */
+	font-weight: 900;
+	font-style: normal;
+}
+
+[data-sc付録] [data-sc-h1] {
+	display: block;
+	/* font-family: "Hiragino Sans"; */
+	font-size: 1.5em;
+	font-weight: 900;
+}
+
+[data-sc付録] [data-sc-h2] {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 0;
+	margin-inline: 0;
+	/* font-family: "Hiragino Sans"; */
+	font-size: 1.333em;
+	font-weight: 900;
+	color: var(--rgko12-light-blue, var(--accent-color-lighter, var(--button-primary-disabled, #7fb4f3)));
+}
+
+[data-sc付録] [data-sc-h3] {
+	margin-block-start: 0.5em;
+	margin-block-end: 0;
+	margin-inline: 0;
+	font-size: 1em;
+}
+
+[data-sc付録] [data-sc-image] {
+	margin-block-start: 1em;
+}
+
+[data-sc付録] [data-sc-dt] [data-sc-image] {
+	display: inline;
+	margin-inline-start: 0;
+	margin-inline-end: 0.5em;
+}
+
+[data-sc付録] [data-sc-image][data-sc-inline] {
+	display: inline;
+}
+
+[data-sc付録] [data-sc-num] {
+	text-combine-horizontal: all;
+}
+
+[data-sc付録] [data-sc-p] {
+	margin-block: 0.5em;
+	margin-inline: 0;
+}
+
+[data-sc付録] [data-sc-p][data-sc-right] {
+	text-align: right;
+}
+
+[data-sc付録] [data-sc-p][data-sc例] {
+	margin-inline-start: 2em;
+}
+
+[data-sc付録] [data-sc-p][data-sc例2] {
+	margin-inline-start: 3.5em;
+}
+
+[data-sc付録] [data-sc-p][data-sc例] > [data-sc-em]:first-child {
+	margin-inline-start: -0.5em;
+}
+
+[data-sc付録] [data-sc-p][data-sc-note] {
+	margin-inline-start: 1em;
+	font-size: 0.9em;
+}
+
+[data-sc付録] table {
+	line-height: 1.75em;
+}
+
+[data-sc付録] [data-sc-p][data-sc-right],
+[data-sc付録] [data-sc-p][data-sc-note],
+[data-sc付録] [data-sc-p][data-sc-note] [data-sc-blue],
+[data-sc付録] [data-sc-p][data-sc例] {
+	display: block;
+}
+
+[data-sc付録] table[data-sc-bordered] {
+	border-block-end: solid 1px var(--text-color);
+	border-inline-end: solid 1px var(--text-color);
+}
+
+[data-sc付録] table[data-sc-bordered] th,
+[data-sc付録] table[data-sc-bordered] td {
+	border-block-start: solid 1px var(--text-color);
+	border-inline-start: solid 1px var(--text-color);
+}
+
+[data-sc付録] table[data-sc-bordered] td[data-sc-leftdot] {
+	border-inline-start-style: dashed;
+}
+
+[data-sc付録] table[data-scことばのはたらき] {
+	overflow: scroll;
+}
+
+[data-sc付録] tr[data-sc-cream] {
+	background-color: var(--rgko12-cream, var(--tag-text-color, var(--canvas-elevated, #FFFFDD)));
+}
+
+
+
+
+[data-sc付録] th,
+[data-sc付録] td {
+	padding: 0.25em;
+}
+
+[data-sc付録] [data-sc-id="レベル１"],
+[data-sc付録] [data-sc-id="レベル２"],
+[data-sc付録] [data-sc-id="レベル３"],
+[data-sc付録] [data-sc-id="レベル４"],
+[data-sc付録] [data-sc-id="レベル５"],
+[data-sc付録] [data-sc-id="レベル６"],
+[data-sc付録] [data-sc-id="レベル７"],
+[data-sc付録] [data-sc-id="レベル８"],
+[data-sc付録] [data-sc-id="レベル９"],
+[data-sc付録] [data-sc-p] {
+	display: block;
+}
+
+
+[data-sc-id="編集された先生方"] td,
+[data-sc-id="人の性格に関することば"] td {
+	border: none !important;
+}
+
+[data-sc付録] table[data-sc使い分け] {
+	background-color: transparent !important;
+}
+
+[data-sc付録] th[data-sc-fixed] {
+	word-break: keep-all;
+}
+
+[data-sc付録] td[data-sc-dd] {
+	padding-block: 0.25em;
+	padding-inline: 0.5em;
+}
+
+[data-sc付録] [data-sc-ul] {
+	margin-inline-start: 1em;
+	margin-block: 0;
+	margin-inline-end: 0;
+}
+
+[data-sc付録] [data-sc-ul][data-sc-no_ellipsis] {
+	list-style-type: none;
+}
+
+[data-sc付録] [data-sc句] {
+	display: block;
+	margin-block: 1em;
+	margin-inline: 0;
+	padding: 0.5em;
+	color: #000000;
+	/* font-family: "UDDigiKyokasho ProN", "Hiragino Mincho ProN"; */
+	border-radius: 0.2em;
+}
+
+[data-sc付録] [data-sc句][data-sc春] {
+	background-color: var(--rgko12-spring, var(--tag-text-color, var(--canvas-elevated, #DDFFEE)));
+}
+
+[data-sc付録] [data-sc句][data-sc夏] {
+	background-color: var(--rgko12-summer, var(--tag-text-color, var(--canvas-elevated, #DDFFEE)));
+}
+
+[data-sc付録] [data-sc句][data-sc秋] {
+	background-color: var(--rgko12-autumn, var(--tag-text-color, var(--canvas-elevated, #FFEECC)));
+}
+
+[data-sc付録] [data-sc句][data-sc冬] {
+	background-color: var(--rgko12-winter, var(--tag-text-color, var(--canvas-elevated, #CCEEFF)));
+}
+
+[data-sc付録] [data-sc句][data-sc旅] {
+	background-color: var(--rgko12-travel, var(--tag-text-color, var(--canvas-elevated, #DDFFEE)));
+}
+
+[data-sc付録] [data-sc句][data-sc恋] {
+	background-color: var(--rgko12-romance, var(--tag-text-color, var(--canvas-elevated, #EEDDFF)));
+}
+
+[data-sc付録] [data-sc句][data-scその他] {
+	background-color: var(--rgko12-other, var(--tag-text-color, var(--canvas-elevated, #FFFFCC)));
+}
+
+[data-sc付録] span[data-sc付録] [data-sc句][data-sc春] {
+	color: #000000;
+	background-color: var(--rgko12-spring, var(--tag-text-color, var(--canvas-elevated, #DDFFEE)));
+}
+
+[data-sc付録] span[data-sc付録] [data-sc句][data-sc夏] {
+	color: #000000;
+	background-color: var(--rgko12-summer, var(--tag-text-color, var(--canvas-elevated, #DDFFEE)));
+}
+
+[data-sc付録] span[data-sc付録] [data-sc句][data-sc秋] {
+	color: #000000;
+	background-color: var(--rgko12-autumn, var(--tag-text-color, var(--canvas-elevated, #FFEECC)));
+}
+
+[data-sc付録] span[data-sc付録] [data-sc句][data-sc冬] {
+	color: #000000;
+	background-color: var(--rgko12-winter, var(--tag-text-color, var(--canvas-elevated, #CCEEFF)));
+}
+
+[data-sc付録] span[data-sc付録] [data-sc句][data-sc旅] {
+	color: #000000;
+	background-color: var(--rgko12-travel, var(--tag-text-color, var(--canvas-elevated, #DDFFEE)));
+}
+
+[data-sc付録] span[data-sc付録] [data-sc句][data-sc恋] {
+	color: #000000;
+	background-color: var(--rgko12-romance, var(--tag-text-color, var(--canvas-elevated, #EEDDFF)));
+}
+
+[data-sc付録] span[data-sc付録] [data-sc句][data-scその他] {
+	color: #000000;
+	background-color: var(--rgko12-other, var(--tag-text-color, var(--canvas-elevated, #FFFFCC)));
+}
+
+[data-sc付録] [data-sc句ヘッダ] {
+	display: block;
+}
+
+[data-sc付録] [data-sc句番号] {
+	margin-inline-end: 0.5em;
+	text-combine-horizontal: all;
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+}
+
+[data-sc付録] [data-sc季節] {
+	font-size: 0.75em;
+}
+
+[data-sc付録] [data-sc上の句] {
+	display: block;
+	margin-block-start: 0.5em;
+	margin-inline-start: 1.5em;
+}
+
+[data-sc付録] [data-sc下の句] {
+	display: block;
+	margin-inline-start: 1.5em;
+}
+
+[data-sc付録] [data-sc読み人] {
+	display: block;
+	margin-inline-start: 1.5em;
+	margin-inline-end: 3em;
+	text-align: right;
+}
+
+[data-sc付録] [data-sc意味] {
+	display: block;
+	margin-block-start: 0.5em;
+	margin-inline-start: 1.5em;
+}
+
+[data-sc付録] [data-sc意味] [data-sc-ws] {
+	color: #000000;
+	border-color: #000000;
+}
+
+[data-sc付録] [data-sc教体] {
+	/* font-family: "UDDigiKyokasho ProN", "Hiragino Mincho ProN"; */
+}
+
+[data-sc付録] table[data-sc敬語の使い方] tr[data-sc-even] td {
+	background-color: var(--rgko12-light-light-blue, #DDEEFF);
+}
+
+[data-sc付録] table[data-sc敬語の使い方] td:first-child {
+	width: 6em;
+}
+
+[data-sc付録] table[data-sc敬語の使い方] th {
+	text-align: center;
+	background-color: var(--rgko12-cream, var(--tag-text-color, var(--canvas-elevated, #FFFFDD)));
+}
+
+[data-sc付録] [data-sc-dt] [data-sc-image] {
+	display: inline;
+	margin-inline-start: 0;
+	margin-inline-end: 0.5em;
+}
+
+[data-sc付録] [data-sc-image][data-sc-inline] {
+	display: inline;
+}
+
+[data-sc付録] [data-scことばのはたらき] [data-sc-red] {
+	font-weight: bold;
+}
+
+[data-sc付録] [data-scことばのはたらき] [data-sc-h3] {
+	color: var(--rgko12-green, var(--tag-frequency-background-color, var(--state-review, #109a2f)));
+}
+
+[data-sc付録] table[data-scことばのはたらき] th:first-child {
+	font-weight: normal;
+	background-color: var(--rgko12-cream, var(--tag-text-color, var(--canvas-elevated, #FFFFDD)));
+}
+
+[data-sc付録] [data-sc-combi] {
+	padding: 0.25em;
+	/* font-family: "Hiragino Sans"; */
+	font-weight: 900;
+	background-color: var(--rgko12-light-orange, var(--tag-expression-background-color, var(--state-buried, #FFCC99)));
+}
+
+[data-sc付録] [data-scことばの組み合わせ] [data-sc-h3] {
+	color: var(--rgko12-green, var(--tag-frequency-background-color, var(--state-review, #109a2f)));
+}
+
+[data-sc付録] [data-scことばの組み合わせ] [data-sc-num] {
+	color: var(--rgko12-green, var(--tag-frequency-background-color, var(--state-review, #109a2f)));
+}
+
+[data-sc付録] [data-scことばの組み合わせ] [data-sc-u] {
+	text-decoration-color: var(--rgko12-red, var(--sidebar-button-danger-background-color-hover, var(--flag-1, #e84a4a)));
+}
+
+[data-sc付録] [data-sc-p][data-sc-s0_1] {
+	padding-inline-start: 1em;
+	text-indent: -1em;
+}
+
+[data-sc付録] [data-sc-p][data-sc-s1_2] {
+	padding-inline-start: 2em;
+	text-indent: -1em;
+}
+
+[data-sc付録] [data-sc-center] {
+	text-align: center;
+}
+
+[data-sc付録] [data-sc-horizontal] {
+	text-align: center;
+}
+
+[data-sc付録] table[data-scアクセントと方言] {
+	border: solid 1px var(--text-color);
+	border-inline-end-style: none;
+}
+
+[data-sc付録] table[data-scアクセントと方言] th {
+	padding-block: 0;
+	padding-inline: 0.5em;
+	font-weight: normal;
+	text-align: center;
+	color: #000;
+	background-color: var(--rgko12-light-light-blue, #DDEEFF);
+	border-inline-end: solid 1px var(--text-color);
+}
+
+[data-sc付録] table[data-scアクセントと方言] td {
+	padding-block: 0;
+	padding-inline: 0.5em;
+	border-inline-end: solid 1px var(--text-color);
+}
+
+[data-sc付録] table[data-scアクセントと方言] tr:first-child th {
+	background-color: var(--rgko12-cream, var(--tag-text-color, var(--canvas-elevated, #FFFFDD)));
+	border-block-end: solid 1px var(--text-color);
+}
+
+[data-sc付録] th[data-sc-light_blue] {
+	color: #000;
+	background-color: var(--rgko12-light-light-blue, #DDEEFF);
+}
+
+
+[data-sc付録] [data-sc-yellow_black] {
+	background-color: var(--rgko12-cream, var(--tag-text-color, var(--canvas-elevated, #FFFFDD)));
+}
+
+[data-sc付録] [data-sc-yellow_blue] {
+	color: var(--rgko12-light-blue, var(--accent-color-lighter, var(--button-primary-disabled, #7fb4f3)));
+	text-align: center;
+	background-color: var(--rgko12-cream, var(--tag-text-color, var(--canvas-elevated, #FFFFDD)));
+}
+
+[data-sc付録] [data-sc-blue_black] {
+	text-align: center;
+	background-color: var(--rgko12-light-light-blue, #DDEEFF);
+}
+
+[data-sc付録] [data-sc-purple_black] {
+	text-align: center;
+	background-color: var(--rgko12-light-light-purple, var(--advanced-color-lighter, var(--canvas-elevated, #EEDDFF)));
+}
+
+[data-sc付録] [data-scローマ字] th,
+[data-sc付録] [data-scローマ字] td {
+	width: 3em;
+	line-height: 1.5em;
+	text-align: center;
+}
+
+[data-sc付録] td[data-sc-small] {
+	font-size: 0.8em;
+}
+
+[data-sc付録] [data-sc原こう用紙・手紙の書き方] [data-sc-green] {
+	font-weight: bold;
+}
+
+[data-sc付録] [data-sc縦中横] {
+	text-combine-horizontal: all;
+}
+
+[data-sc付録] [data-sc畿内] {
+	color: #000;
+	text-align: center;
+	background-color: #BBDDFF;
+}
+
+[data-sc付録] [data-sc東山道] {
+	color: #000;
+	text-align: center;
+	background-color: #FFFF99;
+}
+
+[data-sc付録] [data-sc北陸道] {
+	color: #000;
+	text-align: center;
+	background-color: #AA88BB;
+}
+
+[data-sc付録] [data-sc東海道] {
+	color: #000;
+	text-align: center;
+	background-color: #EEBBDD;
+}
+
+[data-sc付録] [data-sc山陰道] {
+	color: #000;
+	text-align: center;
+	background-color: #FFDD88;
+}
+
+[data-sc付録] [data-sc山陽道] {
+	color: #000;
+	text-align: center;
+	background-color: #FFFF77;
+}
+
+[data-sc付録] [data-sc南海道] {
+	color: #000;
+	text-align: center;
+	background-color: #EECC88;
+}
+
+[data-sc付録] [data-sc西海道] {
+	color: #000;
+	text-align: center;
+	background-color: #99CCBB;
+}
+
+[data-sc付録] td[data-sc符号] {
+	margin: 0.1em;
+	padding: 0.2em;
+	/* font-family: "Hiragino Mincho ProN"; */
+	font-size: 2em;
+	font-weight: bold;
+	color: #000;
+	text-align: center;
+	background-color: #FFBBDD;
+	border-radius: 0.1em;
+	word-break: keep-all;
+}
+
+[data-sc付録] td[data-sc符号解説] {
+	padding-inline-start: 0.5em;
+}
+
+[data-sc付録] td[data-sc符号解説] [data-sc-p] {
+	margin: 0;
+	line-height: 2em;
+}
+
+[data-sc付録] [data-sc-p][data-sc符号解説] {
+	color: var(--rgko12-green, var(--tag-frequency-background-color, var(--state-review, #109a2f)));
+}
+
+[data-sc付録] [data-sc符号タイトル] {
+	padding: 0.5em;
+	background-color: var(--rgko12-light-orange, var(--tag-expression-background-color, var(--state-buried, #FFCC99)));
+}
+
+[data-sc付録] [data-sc-goma] {
+	font-size: 0.5em;
+}
+
+[data-sc付録] [data-sc-underline] {
+	border-block-start: solid 2p var(--rgko12-red, var(--sidebar-button-danger-background-color-hover, var(--flag-1, #e84a4a)));
+}
+
+[data-sc付録] [data-sc-p] {
+	display: block;
+}
+	
+[data-sc付録] [data-sc-head] {
+	display: none;
+}
+	
+[data-sc付録] [data-sc-h1] span:last-of-type>a {
+	max-width: 25%;
+	vertical-align: middle;
+}
+	
+[data-sc付録] [data-sc-h2] span:last-of-type>a {
+	max-width: 25%;
+	vertical-align: middle;
+}
+	
+[data-sc-id="この辞典の使い方"] span:nth-of-type(5)>a {
+	max-width: 25%;
+	vertical-align: middle;
+}
+	
+[data-sc付録] [data-sc-id="原こう用紙・手紙の書き方"] a[data-path="images/841b301e39.png"] {
+	max-width: 25%;
+	vertical-align: middle;
+}
+	
+[data-sc付録] [data-sc-id="符号の使い方"] td {
+	border: none;
+}
+	
+[data-sc付録] [data-sc-id="この辞典の使い方"] td {
+	border: none;
+	color: var(--text-color);
+}
+
+[data-sc付録] [data-sc-id="この辞典の使い方"] td[data-sc-yes],
+[data-sc付録] [data-sc-id="この辞典の使い方"] td[data-sc-no] {
+	background-color: var(--rgko12-light-light-brown, var(--tag-text-color, var(--canvas-elevated, #FFEEDD)));
+}
+
+[data-sc付録] [data-sc-id="この辞典の使い方"] td:last-of-type {
+	background-color: var(--rgko12-light-light-brown, var(--tag-text-color, var(--canvas-elevated, #FFEEDD)));
+}

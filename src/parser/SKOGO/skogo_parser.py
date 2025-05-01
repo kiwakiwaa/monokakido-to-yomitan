@@ -22,6 +22,8 @@ class SKOGOParser(Parser):
         self.ignored_elements = {"entry-index"}
         self.tag_mapping = TAG_MAPPING
         
+        self.initialize_html_converter()
+        
         
     def _process_file(self, filename: str, xml: str):
         local_count = 0

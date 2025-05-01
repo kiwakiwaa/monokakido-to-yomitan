@@ -1,0 +1,544 @@
+@color blue = #3333CC;
+@color light-blue = #4499FF;
+@color light-light-blue = #DDEEFF;
+@color light-light-purple = #EEDDFF;
+@color red = #FF3300;
+@color green = #009922;
+@color orange = #FF9900;
+@color light-orange = #FFCC99;
+@color pink = #FF0099;
+@color gray = #666666;
+@color brown = #976B33;
+@color light-brown = #DDCCBB;
+@color light-light-brown = #FFEEDD;
+@color spring = #FFCCCC;
+@color summer = #DDFFEE;
+@color autumn = #FFEECC;
+@color winter = #CCEEFF;
+@color travel = #DDFFEE;
+@color romance = #EEDDFF;
+@color other = #FFFFCC;
+@color cream = #FFFFDD;
+@color link = #3333CC;
+
+#index {
+	display: none;
+}
+
+body {
+	margin: 1em 44px 1em 1em;
+	line-height: 2em;
+	font-family: "Hiragino Sans";
+	font-size: 1.25em;
+	writing-mode: vertical-rl;
+}
+
+a {
+	text-decoration: none;
+	color: link;
+}
+
+asterisk {
+	color: green;
+	font-size: 0.5em;
+	vertical-align: 1em;
+}
+
+POSG {
+	
+}
+
+SUP {
+	
+}
+
+acc {
+	font-family: "Hiragino Sans";
+	font-size: 0.667em;
+	font-weight: normal;
+}
+
+b {
+	font-weight: bold;
+}
+
+byflow {
+	
+}
+
+caption {
+	
+}
+
+ex {
+}
+
+dic-item {
+	display: block;
+}
+
+dic-item.コラム {
+	font-family: "OT-Jo Kyoukasho ICA ProN", "UDDigiKyokasho ProN", "Hiragino Mincho ProN";
+}
+
+div.main {
+	margin-top: 0.5em;
+	margin-left: 1em;
+}
+
+em {
+	color: red;
+}
+
+em.blue {
+	color: blue;
+}
+
+gaiji {
+	
+}
+
+img.gaiji {
+	display: gaiji;
+	height: 1em;
+	text-combine-horizontal: all;
+}
+
+img.logo {
+	height: 1em;
+}
+
+head2 {
+	display: block;
+}
+
+headword {
+	font-family: "Hiragino Sans";
+	font-size: 1.333em;
+	font-weight: 900;
+}
+
+headword > em {
+	font-family: "Hiragino Sans";
+	font-weight: 900;
+	font-style: normal;
+}
+
+headword.標準表記, headword.参考表記 {
+	font-family: "OT-Jo Kyoukasho ICA ProN", "UDDigiKyokasho ProN", "Hiragino Mincho ProN";
+	font-weight: normal;
+}
+
+headword.固有名詞 {
+	font-weight: normal;
+}
+
+headword.原綴 {
+	font-family: "Source Sans Pro", "UDDigiKyokasho ProN";
+	font-weight: normal;
+}
+
+headword.アクセント {
+	font-size: 1em;
+}
+
+headword.コラム {
+	font-family: "UDDigiKyokasho ProN", "Hiragino Mincho ProN";
+	font-weight: bold;
+	color: blue;
+}
+
+headword.使い分け {
+	font-size: 1em;
+}
+
+headword rt {
+	font-family: "Hiragino Sans";
+	color: green;
+}
+
+headword.コラム rt {
+	color: blue;
+}
+
+headword.rank {
+}
+
+headword.rank rt.normal {
+	color: black;
+}
+
+headword.rank rt.em {
+	color: red;
+}
+
+訓読み em {
+	color: green;
+}
+
+rank {
+	margin-right: -0.5em;
+	vertical-align: 1.5em;
+}
+
+rank-num {
+	font-family: "Hiragino Sans";
+	font-size: 0.5em;
+	font-weight: normal;
+	color: red;
+}
+
+hidden {
+	display: none;
+}
+
+ht {
+	display: none;
+}
+
+i {
+	
+}
+
+image {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+head2 image {
+	margin-left: 0.5em;
+}
+
+img {
+	
+}
+
+img.flag {
+	width: 7em;
+}
+
+img.color {
+	width: 7em;
+}
+
+key {
+	
+}
+
+lang {
+	
+}
+
+meaning {
+	display: block;
+}
+
+meaning.level0 {
+	margin-left: 1.5em;
+	text-indent: -1.5em;
+}
+
+meaning.level1 {
+	margin-left: 1.333em;
+	text-indent: -1.333em;
+}
+
+meaning.活用, meaning.関連, meaning.敬語, meaning.参考, meaning.成句, meaning.熟語, meaning.参照 {
+}
+
+meaning.コラム {
+	font-family: "OT-Jo Kyoukasho ICA ProN", "UDDigiKyokasho ProN", "Hiragino Mincho ProN";
+}
+
+meaning.コラム:first-child {
+	margin-top: 0.5em;
+}
+
+meaning.コラム b {
+	font-weight: 900;
+}
+
+POS {
+}
+
+ws + POS {
+	margin-left: 0.125em;
+}
+
+pos {
+	margin-left: 0.125em;
+}
+
+ref {
+	
+}
+
+rt {
+	font-size: 0.5em;
+	font-weight: normal;
+}
+
+rt.small {
+	font-size: 0.4em;
+}
+
+ruby {
+	
+}
+
+sp {
+	
+}
+
+sub {
+	
+}
+
+subv {
+	font-size: 0.667em;
+	vertical-align: 0.5em;
+}
+
+sup {
+	
+}
+
+table {
+	margin: 0.5em 0
+}
+
+table {
+	
+}
+
+td.img {
+}
+
+td.small {
+	font-size: 0.875em;
+}
+
+td.caption {
+	margin-left: 0.5em;
+	writing-mode: horizontal-tb;
+	text-align: center;
+}
+
+使い分け {
+	padding: 0.125em;
+	font-family: "Hiragino Sans";
+	font-size: 0.8em;
+	font-weight: normal;
+	color: #FFF;
+	background-color: brown;
+	border-radius: 0.2em;
+}
+
+table.使い分け {
+	font-size: 0.8em;
+	line-height: 2em;
+}
+
+table.使い分け tr {
+	border-top: solid 2px white;
+}
+
+table.使い分け td {
+	padding: 0.5em;
+	border-left: solid 2px white;
+	background-color: light-light-brown;
+}
+
+table.使い分け td:first-child {
+	background-color: light-brown;
+	word-break: keep-all;
+}
+
+table.ヘッダあり td {
+	color: brown;
+	text-align: center;
+}
+
+table.ヘッダあり tr:first-child td {
+	color: black;
+	text-align: left;
+	word-break: keep-all;
+	background-color: light-brown;
+}
+
+table.ヘッダあり tr:first-child td:first-child {
+	background-color: light-light-brown;
+}
+
+table.ヘッダあり td:first-child {
+	color: black;
+	text-align: left;
+	background-color: light-brown;
+	border-left-width: 0;
+}
+
+tkw {
+	display: block;
+}
+
+u {
+	
+}
+
+ud {
+	
+}
+
+ud rt {
+	font-size: 0.25em;
+}
+
+vt {
+	
+}
+
+xref {
+	
+}
+
+paren {
+	font-family: "Hiragino Sans";
+	font-weight: normal;
+}
+
+ws {
+	padding: 0.125em;
+	font-family: "Hiragino Sans";
+	font-size: 0.8em;
+	font-weight: bold;
+	color: black;
+	border: solid 1px black;
+	border-radius: 0.2em;
+	word-break: keep-all;
+}
+
+ws + ws {
+	margin-left: 0.1em;
+}
+
+bs {
+	padding: 0.125em;
+	font-family: "Hiragino Sans";
+	font-size: 0.8em;
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	border-radius: 0.2em;
+	word-break: keep-all;
+}
+
+bs.blue {
+	color: white;
+	background-color: blue;
+}
+
+bs.gray {
+	background-color: gray;
+}
+
+wc {
+	margin-right: 0.125em;
+	padding: 0.2em;
+	font-family: "Hiragino Sans";
+	font-size: 0.7em;
+	font-weight: bold;
+	color: black;
+	border: solid 1px black;
+	border-radius: 0.7em;
+	word-break: keep-all;
+}
+
+ws + wc {
+	margin-left: 0.1em;
+}
+
+wc.normal {
+	font-weight: normal;
+}
+
+bc {
+	margin-right: 0.125em;
+	padding: 0.2em;
+	font-family: "Hiragino Sans";
+	font-size: 0.7em;
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	border-radius: 0.7em;
+	word-break: keep-all;
+}
+
+bc.gray {
+	background-color: gray;
+}
+
+bc.red {
+	background-color: red;
+}
+
+コラム {
+	margin-right: 0.5em;
+	font-family: "Hiragino Sans";
+	font-size: 0.5em;
+	color: white;
+	background-color: orange;
+	border-radius: 0.2em;
+	text-combine-horizontal: all;
+}
+
+blue {
+	color: blue;
+}
+
+green {
+	color: green;
+}
+
+.num {
+	font-family: "Hiragino Sans";
+	font-weight: bold;
+}
+
+orange {
+	color: orange;
+}
+
+red {
+	color: red;
+}
+
+縦中横 {
+	text-combine-horizontal: all;
+}
+
+単位 {
+	font-family: "Source Sans Pro";
+	text-combine-horizontal: all;
+}
+
+配当学年, 総画数 {
+	font-family: "Hiragino Maru Gothic ProN", "Hiragino Sans";
+	font-size: 0.8em;
+}
+
+教科書 {
+	font-family: "OT-Jo Kyoukasho ICA ProN", "UDDigiKyokasho ProN", "Hiragino Mincho ProN";
+}
+
+bs + 教科書 {
+	margin-left: 0.25em;
+}
+
+活字 {
+	padding: 0.1em;
+	font-family: "Hiragino Mincho ProN";
+	font-size: 1.333em;
+	border: solid 1px black;
+	border-radius: 0.15em;
+}

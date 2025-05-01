@@ -61,7 +61,7 @@ class DicEntry:
         self.structured_content = True
 
     def validate_element(self, element):
-        allowed_elements = ["br", "ruby", "rt", "rp", "table", "thead", "tbody", "tfoot", "tr", "td", "th", "span", "div", "ol", "ul", "li", "img", "a"]
+        allowed_elements = ["br", "ruby", "rt", "rp", "table", "thead", "tbody", "tfoot", "tr", "td", "th", "span", "div", "ol", "ul", "li", "img", "a", "details", "summary"]
         allowed_href_elements = ["a"]
 
         if element["tag"] not in allowed_elements:
@@ -71,11 +71,28 @@ class DicEntry:
             raise ValueError(f"The 'href' attribute is not allowed in the '{element['tag']}' element, only <a>.")
 
         if "content" in element:
-            if isinstance(element["content"], list):
-                for child_element in element["content"]:
-                    self.validate_element(child_element)
-            elif not isinstance(element["content"], str):
-                raise ValueError("Content must be a string or a list of elements")
+            content = element["content"]
+            
+            # If content is None, that's a problem
+            if content is None:
+                raise ValueError(f"Element '{element['tag']}' has 'None' as content, which is invalid")
+            
+            # If content is a list, validate each child element
+            elif isinstance(content, list):
+                for i, child_element in enumerate(content):
+                    try:
+                        # Recursively validate child elements
+                        if isinstance(child_element, dict):
+                            self.validate_element(child_element)
+                        elif not isinstance(child_element, str):
+                            raise ValueError(f"Element {element['tag']} has invalid content at index {i}: expected string or element dict, got {type(child_element).__name__} - Value: {repr(child_element)}")
+                    except ValueError as e:
+                        # Enhance error message with path information
+                        raise ValueError(f"In {element['tag']} > content[{i}]: {str(e)}")
+            
+            # If content is not a string or list, it's invalid
+            elif not isinstance(content, str):
+                raise ValueError(f"Element '{element['tag']}' has invalid content: expected string or list of elements, got {type(content).__name__} - Value: {repr(content)}")
 
 class Dictionary:
     def __init__(self, dictionary_name):
@@ -158,7 +175,7 @@ class Dictionary:
                     file_path = os.path.join(root, file)
                     zipf.write(file_path, os.path.relpath(file_path, self.dictionary_name))
 
-def create_html_element(tag, content=None, id=None, title=None, href=None, style=None, data=None):
+def create_html_element(tag, content=None, id=None, title=None, href=None, style=None, data=None, name=None):
     element = {"tag": tag}
     if tag != "br":
         if isinstance(content, str):
@@ -175,6 +192,8 @@ def create_html_element(tag, content=None, id=None, title=None, href=None, style
         element["style"] = style
     if data:
         element["data"] = data
+    if name:
+        element["name"] = name
     return element
 
 if __name__ == "__main__":

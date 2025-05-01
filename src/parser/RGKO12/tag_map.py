@@ -1,0 +1,14 @@
+
+TAG_MAPPING = {
+	"dic-item": "div",
+	"head2": "div",
+	"image": "div",
+	"meaning": "div",
+	"句": "div",
+	"句ヘッダ": "div",
+	"上の句": "div",
+	"下の句": "div",
+	"読み人": "div",
+	"意味": "div",
+	"上の句": "div",
+}

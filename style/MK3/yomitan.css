@@ -45,8 +45,7 @@
 
 :root[data-theme="dark"] {
     .definition-item[data-dictionary='明鏡国語辞典 第三版'] {
-        --meikyo-white: #000000;
-        --meikyo-black: #CCCCCC;
+        --meikyo-blue: #00AAFF;
         --meikyo-red: #FF3333;
         --meikyo-gray: #BBBBBB;
         --meikyo-pink: #CC6666;
@@ -60,4 +59,14 @@
             filter: invert(90%);
         }
     }
+}
+
+.definition-item[data-dictionary='明鏡国語辞典 第三版'] {
+    --meikyo-blue: #4a8ade;
+    --meikyo-red: #FF3333;
+    --meikyo-gray: #666666;
+    --meikyo-pink: #FFCCCC;
+    --meikyo-dark-red: #CC3333;
+    --meikyo-fbox-gray: #333333;
+    --meikyo-box-gray: #FFDDDD;
 }

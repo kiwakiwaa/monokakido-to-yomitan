@@ -14,12 +14,15 @@ This project provides tools to convert dictionaries from the Monokakido format t
 - 角川新字源 改訂新版
 - 南山堂医学大辞典 第20版
 - 明鏡国語辞典 第三版
+- 旺文社国語辞典 第十二版
+- 漢字林
+- 例解学習国語 第十二版
 
 ## Prerequisites
 
 - Python 3.9+
 - Required libraries (see `requirements.txt`)
-- See the monokakido rust library for extracting the original dictionary files from Monokakido format. It can be modified to extract audio and images too.
+- Monokakido dictionary files. No instructions will provided for extracting the raw dictionary data.
 
 ## Installation
 
@@ -37,7 +40,7 @@ This project provides tools to convert dictionaries from the Monokakido format t
 
 ## Usage
 
-1. First, extract your dictionary files from the Monokakido app using the rust library. Then place the appropriate files in "assets" and "data".
+1. Place the appropriate dictionary files in "assets" and "data".
 
 2. Configure the dictionary you want to convert in `main.py`:
    ```python
@@ -63,6 +66,9 @@ This project provides tools to convert dictionaries from the Monokakido format t
 | 角川新字源 改訂新版 | SHINJIGEN2 | ✅ Supported (MDX) |
 | 南山堂医学大辞典 第20版 | NANMED20 | ✅ Supported (SQL) |
 | 明鏡国語辞典 第三版 | MK3 | ✅ Supported |
+| 旺文社国語辞典 第十二版 | OKO12 | ✅ Supported |
+| 漢字林 | TISMKANJI | ✅ Supported |
+| 例解学習国語 第十二版 | RGKO12 | ✅ Supported |
 
 ## Directory Structure
 

@@ -1,0 +1,7 @@
+:root[data-theme="dark"] {
+    .definition-item[data-dictionary='TISMKANJI'] {
+        [data-sc-rect] {
+            border-color: #888;
+        }
+    }
+}

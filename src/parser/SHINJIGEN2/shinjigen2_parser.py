@@ -17,6 +17,8 @@ class ShinjigenParser(Parser):
         self.ignored_elements = {"entry-index", "link"}
         self.tag_mapping = TAG_MAPPING
         
+        self.initialize_html_converter()
+        
         
     def extract_entry_keys(self, entry: str) -> List[str]:
         entry = entry.replace('《', '').replace('》', '')

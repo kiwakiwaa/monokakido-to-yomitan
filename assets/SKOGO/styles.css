@@ -5,7 +5,7 @@ body {
 	line-height: 1.5em;
 	/* font-family: "Hiragino Mincho ProN"; */
 	font-size: 1.2em;
-	color: var(--skogo-black, black);
+	color: var(--text-color);
 }
 
 div[data-sc見出部] {
@@ -22,7 +22,7 @@ span[data-scGendai見出] {
 }
 
 span[data-sc見出-g][data-sc-red] {
-    color: var(--skogo-red, #C00000);
+    color: var(--skogo-red, var(--danger-color));
 }
 
 span[data-sc-rank] {
@@ -79,8 +79,8 @@ span[data-sc活用語尾-g] {
 table[data-sc活用表] {
 	display: table;
 	text-indent: 0;
-	border-block-start: solid 0.05em var(--skogo-red, #C00000);
-	border-inline-start: solid 0.05em var(--skogo-red, #C00000);
+	border-block-start: solid 0.05em var(--skogo-red, var(--danger-color));
+	border-inline-start: solid 0.05em var(--skogo-red, var(--danger-color));
     border-inline-end: none;
     border-block-end: none;
 	margin-block-start: 0.3em;
@@ -97,8 +97,8 @@ td[data-sc活用表_項] {
     display: table-cell;
 	text-align: center;
 	vertical-align: middle;
-	border-block-end: solid 0.05em var(--skogo-red, #C00000);
-	border-inline-end: solid 0.05em var(--skogo-red, #C00000);
+	border-block-end: solid 0.05em var(--skogo-red, var(--danger-color));
+	border-inline-end: solid 0.05em var(--skogo-red, var(--danger-color));
     border-block-start: none;
     border-inline-start: none;
 }
@@ -117,12 +117,12 @@ td[data-sc活用表_項][data-sc-value] {
 
 td[data-sc活用表-項][data-sc-normal],
 td[data-sc活用表_項][data-sc-normal] {
-	border-inline-end: solid 0.085em var(--skogo-red, #C00000);
+	border-inline-end: solid 0.085em var(--skogo-red, var(--danger-color));
 }
 
 td[data-sc活用表-項][data-sc-first],
 td[data-sc活用表_項][data-sc-first] {
-	border-block-end-color: var(--skogo-light-red, #DFA6A8);
+	border-block-end-color: var(--skogo-light-red, var(--danger-color-lighter));
 }
 
 span[data-sc活用表-label] {
@@ -143,8 +143,8 @@ div[data-sc語義要説-g] {
 	margin-block-start: 0.6em;
 	margin-block-end: 0.6em;
 	padding: 0 0.3em;
-	border-inline-start: solid 0.3em var(--skogo-light-red, #DFA6A8);
-	border-inline-end: solid 0.3em var(--skogo-light-red, #DFA6A8);  
+	border-inline-start: solid 0.3em var(--skogo-light-red, var(--danger-color-lighter));
+	border-inline-end: solid 0.3em var(--skogo-light-red, var(--danger-color-lighter));  
     border-block-start: none;
     border-block-end: none;
 }
@@ -198,7 +198,7 @@ span[data-sc箇条書補足] {
 }
 
 span[data-sc箇条書補足-m] {
-	color: var(--skogo-red, #C00000);
+	color: var(--skogo-red, var(--danger-color));
 }
 
 span[data-sc語義番号][data-sc-small],
@@ -242,7 +242,7 @@ span[data-sc訳][data-sc-inline] {
 }
 
 span[data-sc訳相当部] {
-	color: var(--skogo-red, #C00000);
+	color: var(--skogo-red, var(--danger-color));
 }
 
 span[data-sc見出相当部] {
@@ -258,7 +258,7 @@ span[data-sc詩歌技法ロゴ],
 span[data-sc用例訳注ロゴ],
 span[data-sc参考ロゴ],
 span[data-sc注釈ロゴ] {
-	font-family: "Hiragino Kaku Gothic ProN";
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
 	font-size: 0.95em;
 }
 
@@ -296,8 +296,8 @@ span[data-sc冒頭文ロゴ],
 span[data-sc作品例ロゴ] {
 	padding-inline-start: 0.08em;
 	padding-inline-end: 0.08em;
-	border-inline-start: solid 0.2em var(--skogo-red, #C00000);
-	border-inline-end: solid 0.2em var(--skogo-red, #C00000);
+	border-inline-start: solid 0.2em var(--skogo-red, var(--danger-color));
+	border-inline-end: solid 0.2em var(--skogo-red, var(--danger-color));
     border-block-start: none;
     border-block-end: none;
 }
@@ -325,7 +325,7 @@ span[data-sc-em][data-sc-gothic] {
 span[data-sc-em][data-sc赤] {
 	/* font-family: "Hiragino Kaku Gothic ProN"; */
 	font-weight: bold;
-	color: var(--skogo-red, #C00000);
+	color: var(--skogo-red, var(--danger-color));
 }
 
 span[data-sc参考-b][data-sc字下1_0] {
@@ -344,7 +344,7 @@ div[data-sc関連語] {
 	margin-block-start: 0.3em;
 	margin-block-end: 0.3em;
 	padding-inline-start: 0.3em;
-	border-inline-start: solid 0.3em light-gray;
+	border-inline-start: solid 0.3em lightgray;
 }
 
 span[data-sc補説小見出] {
@@ -360,13 +360,13 @@ div[data-sc絵巻項目] {
 	margin-block-end: 0.4em;
 	padding-inline-start: 0.3em;
 	padding-inline-end: 0.3em;
-	background-color: var(--skogo-extra-light-red, #FFEEEE);
+	background-color: var(--skogo-extra-light-red, var(--danger-color-lightest));
 }
 
 span[data-sc読解見出],
 span[data-sc現代見出] {
 	/* font-family: "Hiragino Kaku Gothic ProN"; */
-	color: var(--skogo-red, #C00000);
+	color: var(--skogo-red, var(--danger-color));
 }
 
 span[data-sc読解小見出],
@@ -401,13 +401,13 @@ span[data-sc付録参照ロゴ] {
 }
 
 span[data-sc付録参照ロゴ][data-sc-red] {
-	color: var(--skogo-red, #C00000);
+	color: var(--skogo-red, var(--danger-color));
 }
 
 span[data-sc絵巻図版] {
 	/* font-family: "Hiragino Kaku Gothic ProN"; */
 	font-weight: bold;
-	color: var(--skogo-red, #C00000);
+	color: var(--skogo-red, var(--danger-color));
 	font-size: 0.9em;
 }
 
@@ -483,21 +483,21 @@ tr[data-sc識別行] {
 }
 
 [data-sc識別-l-b] {
-    border-inline-start: solid 0.05em var(--skogo-red, #C00000);
+    border-inline-start: solid 0.05em var(--skogo-red, var(--danger-color));
     border-inline-end: none;
     border-block-start: none;
     border-block-end: none;
 }
 
 [data-sc識別-r-b] {
-    border-inline-start: solid 0.05em var(--skogo-red, #C00000);
+    border-inline-start: solid 0.05em var(--skogo-red, var(--danger-color));
     border-inline-end: none;
     border-block-start: none;
     border-block-end: none;
 }
 
 [data-sc識別-b-b] {
-    border-inline-start: solid 0.05em var(--skogo-red, #C00000);
+    border-inline-start: solid 0.05em var(--skogo-red, var(--danger-color));
     border-inline-end: none;
     border-block-start: none;
     border-block-end: none;
@@ -505,8 +505,8 @@ tr[data-sc識別行] {
 
 td[data-sc識別見出項] {
     display: table-cell;
-	background-color: var(--skogo-red, #C00000);
-	color: var(--skogo-white, white);
+	background-color: var(--skogo-red, var(--danger-color));
+	color: var(--background-color-light, var(--background-color));
 	padding-inline-start: 0.3em;
 	padding-inline-end: 0.3em;
 	vertical-align: top;
@@ -527,7 +527,7 @@ td[data-sc識別ヘッダ項] {
 	/* font-family: "Hiragino Kaku Gothic ProN"; */
 	font-size: 0.85em;
 	line-height: 1.4em;
-	background-color: var(--skogo-extra-light-red, #FFEEEE);
+	background-color: var(--skogo-extra-light-red, var(--danger-color-lightest));
 	padding-inline-start: 0.353em;
 	padding-inline-end: 0.353em;
 	padding-block-start: 0.2em;
@@ -587,39 +587,39 @@ span[data-sc-rectr] {
 	font-size: 0.8em;
 	border-width: 0.05em;
 	border-style: solid;
-	border-color: var(--skogo-black, black);
+	border-color: var(--text-color);
 	word-break: keep-all;
 	-webkit-border-radius: 0.15em;
 }
 
 span[data-sc-rectr][data-sc-fill] {
-	color: var(--skogo-white, white);
+	color: var(--background-color-light, var(--background-color));
 	border-style: none;
-	background-color: var(--skogo-black, black);
+	background-color: var(--text-color);
 }
 
 span[data-sc-rectr][data-sc品詞] {
-	background-color: var(--skogo-hinshi-mark, #444);
+	background-color: var(--skogo-hinshi-mark, var(--button-default-border-color));
 }
 
 span[data-sc-rectr][data-sc種別] {
-	background-color: var(--skogo-shubetsu-mark, #707070);
+	background-color: var(--skogo-shubetsu-mark, var(--button-default-border-color));
 }
 
 span[data-sc-rectr][data-sc-red] {
-	color: var(--skogo-red, #C00000);
-	border-color: var(--skogo-red, #C00000);
+	color: var(--skogo-red, var(--danger-color));
+	border-color: var(--skogo-red, var(--danger-color));
 }
 
 span[data-sc-rectr][data-sc-red_fill] {
 	padding: 0.1em;
-	color: var(--skogo-white, white);
+	color: var(--background-color-light, var(--background-color));
 	border-style: none;
-	background-color: var(--skogo-red, #C00000);
+	background-color: var(--skogo-red, var(--danger-color));
 }
 
 span[data-sc-rectr][data-sc-red_frame] {
-	border-color: var(--skogo-red, #C00000);
+	border-color: var(--skogo-red, var(--danger-color));
 }
 
 span[data-sc-rectr][data-sc-bold] {
@@ -632,11 +632,11 @@ span[data-sc-rectr][data-sc-small] {
 }
 
 span[data-sc-rectr][data-sc現代] {
-	background-color: var(--skogo-gendai-mark, #888);
+	background-color: var(--skogo-gendai-mark, var(--button-default-border-color));
 }
 
 span[data-sc-inner_white] {
-    color: var(--skogo-white, white);
+    color: var(--background-color-light, var(--background-color));
 }
 
 div[data-sc画像-g],
@@ -650,15 +650,15 @@ a {
 }
 
 a[data-sc-blue] {
-    color: blue;
+    color: var(--skogo-blue, var(--accent-color, var(--link-color)));
 }
 
 a[data-sc-blue] span[data-sc-rectr] {
-	border-color: blue;
+	border-color: var(--skogo-blue, var(--accent-color, var(--link-color)));
 }
 
 a[data-sc-blue] span[data-sc-rectr][data-sc-fill] {
-	background-color: blue;
+	background-color: var(--skogo-blue, var(--accent-color, var(--link-color)));
 }
 
 [data-sc-f-m] {
@@ -701,6 +701,9 @@ span[data-sc画像] a {
 	}
 }
 
-a:hover, a:focus, a:active {
-	color: #e4671b;
+a:hover {
+    color: var(--text-color);
+    filter: brightness(1.3);
+    text-decoration: underline;
+    text-decoration-color: oklch(65% 0.2 260);
 }

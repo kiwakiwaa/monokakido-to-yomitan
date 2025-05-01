@@ -1,14 +1,6 @@
-body {
-    margin: 1em 44px 1em 1.5em;
-    line-height: 1.5em;
-    /* font-family: SHINJIMinchoW3; */
-    font-size: 1.2em;
-    color: var(--kadokawa-black, black);
-    /* 	writing-mode: vertical-rl; */
-}
 
 div[data-sc-busyuheadg] {
-    background-color: var(--kadokawa-pink, #FF928E);
+    background-color: var(--kadokawa-pink, var(--danger-color-lighter));
 }
 
 table[data-sc-busyuheadsubg] {
@@ -30,8 +22,8 @@ span[data-sc-busyukakususubg] {
     padding-block-end: 0.2em;
     padding-inline-start: 0.2em;
     padding-inline-end: 0.2em;
-    color: var(--kadokawa-white, white);
-    background-color: var(--kadokawa-black, black);
+    color: var(--background-color-light, var(--background-color));
+    background-color: var(--text-color);
 }
 
 span[data-sc-busyukakusulabel] {
@@ -39,7 +31,7 @@ span[data-sc-busyukakusulabel] {
 }
 
 span[data-sc-busyukakusu] {
-    /* font-family: Avenir; */
+    /* font-family: "Avenir"; */
     font-weight: bold;
     text-combine-upright: all;
     margin-inline-end: 0.25em;
@@ -51,7 +43,7 @@ td[data-sc-busyunumberg] {
 }
 
 span[data-sc-busyunumber] {
-    /* font-family: Avenir; */
+    /* font-family: "Avenir"; */
     font-size: 0.85em;
     margin-inline-start: 0.25em;
     text-combine-upright: all;
@@ -70,11 +62,11 @@ td[data-sc-busyubusyug] {
 span[data-sc-busyuprimarybusyu] {
     font-size: 2.2em;
     line-height: 1em;
-    color: var(--kadokawa-white, white);
+    color: var(--background-color-light, var(--background-color));
 }
 
 span[data-sc-busyusubbusyu] {
-    color: var(--kadokawa-white, white);
+    color: var(--background-color-light, var(--background-color));
 }
 
 td[data-sc-busyubusyulabelg] {
@@ -99,7 +91,7 @@ div[data-sc-busyuyomicontent] {
 }
 
 div[data-sc-bushukaisetsug] {
-    background-color: var(--kadokawa-extra-light-gray, #EEEEEE);
+    background-color: var(--kadokawa-extra-light-gray, var(--input-background-color));
     padding-block-start: 0.2em;
     padding-block-end: 0.2em;
     padding-inline-start: 1em;
@@ -149,18 +141,18 @@ span[data-sc-bimidashijiitaijim] {
 }
 
 span[data-sc-bimidashijic][data-sc-joyo] {
-    color: var(--kadokawa-red, #CC0000);
+    color: var(--kadokawa-red, var(--danger-color));
 }
 
 
 span[data-sc-bimidashijic][data-sc-jinmei] {
-    color: var(--kadokawa-red, #CC0000);
+    color: var(--kadokawa-red, var(--danger-color));
 }
 
 div[data-sc-shinsetsumidashig] {
     margin-inline-start: 1em;
-    background-color: var(--kadokawa-light-pink, #FFDBDA);
-    border-inline-start: solid 0.3em var(--kadokawa-black, black);
+    background-color: var(--kadokawa-light-pink, var(--danger-color-lightest));
+    border-inline-start: solid 0.3em var(--text-color);
 }
 
 div[data-sc-shinsetsumidashicontent] {
@@ -231,7 +223,7 @@ td[data-sc-itaijilabelg],
 td[data-sc-kokugoshisakulabelg],
 td[data-sc-unicodeg] {
     display: table-cell;
-    border-block-start: solid 0.05em var(--kadokawa-black, black);
+    border-block-start: solid 0.05em var(--text-color);
     border-inline-end: none;
     border-block-end: none;
     border-inline-start: none;
@@ -265,32 +257,32 @@ td[data-sc-kenjinumberg][data-sc-oyaji],
 td[data-sc-kanjig][data-sc-oyaji] {
     padding-block-start: 0.1em;
     padding-block-end: 0.1em;
-    border-block-start: solid 0.23em var(--kadokawa-black, black);
+    border-block-start: solid 0.23em var(--text-color);
     border-inline-end: none;
     border-block-end: none;
     border-inline-start: none;
-    background-color: var(--kadokawa-extra-light-gray, #EEEEEE);
+    background-color: var(--kadokawa-extra-light-gray, var(--input-background-color));
 }
 
 td[data-sc-kenjinumberg][data-sc-itaiji-kyuji],
 td[data-sc-kanjig][data-sc-itaiji-kyuji] {
     padding-block-start: 0.1em;
     padding-block-end: 0.1em;
-    border-block-start: solid 0.17em var(--kadokawa-black, black);
+    border-block-start: solid 0.17em var(--text-color);
     border-inline-end: none;
     border-block-end: none;
     border-inline-start: none;
-    background-color: var(--kadokawa-extra-light-gray, #EEEEEE);
+    background-color: var(--kadokawa-extra-light-gray, var(--input-background-color));
 }
 
 td[data-sc-kenjinumberg][data-sc-joyo],
 td[data-sc-kanjig][data-sc-joyo] {
-    background-color: var(--kadokawa-light-pink, #FFDBDA);
+    background-color: var(--kadokawa-light-pink, var(--danger-color-lightest));
 }
 
 td[data-sc-kenjinumberg][data-sc-jinmei],
 td[data-sc-kanjig][data-sc-jinmei] {
-    border-block-start-color: var(--kadokawa-red, #CC0000);
+    border-block-start-color: var(--kadokawa-red, var(--danger-color));
 }
 
 span[data-sc-kenjinumber] {
@@ -313,23 +305,23 @@ span[data-sc-kanjibusyu] {
 }
 
 span[data-sc-kanjisoukakusu] {
-    font-family: Avenir;
+    font-family: "Avenir";
     font-size: 0.7em;
 }
 
 span[data-sc-menkutencode] {
-    font-family: Avenir;
+    font-family: "Avenir";
     font-weight: bold;
     font-size: 0.63em;
 }
 
 span[data-sc-unicode] {
-    font-family: Avenir;
+    font-family: "Avenir";
     font-size: 0.68em;
 }
 
 span[data-sc-unicode] {
-    font-family: Avenir;
+    font-family: "Avenir";
     font-size: 0.68em;
 }
 
@@ -349,11 +341,11 @@ div[data-sc-onlistsubg][data-sc-sub] {
 
 span[data-sc-joyoon],
 span[data-sc-joyokun] {
-    color: var(--kadokawa-red, #CC0000);
+    color: var(--kadokawa-red, var(--danger-color));
 }
 
 span[data-sc-yomi][data-sc-bosen] {
-    border-block-end: solid 0.05em var(--kadokawa-red, #CC0000);
+    border-block-end: solid 0.05em var(--kadokawa-red, var(--danger-color));
     padding-block-start: 0.1em;
 }
 
@@ -382,7 +374,7 @@ span[data-sc-sankou][data-sc-inline] {
 }
 
 span[data-sc-yomiinfo] {
-    color: var(--kadokawa-red, #CC0000);
+    color: var(--kadokawa-red, var(--danger-color));
 }
 
 span[data-sc-kodaimojilistg] {
@@ -402,11 +394,11 @@ span[data-sc-kodaimojitypeg] {
     margin-inline-start: 0.05em;
     padding-inline-start: 0.059em;
     padding-inline-end: 0.059em;
-    border-inline-end: solid 0.029em var(--kadokawa-kodaimoji-type-separator, #A0A0A0);
+    border-inline-end: solid 0.029em var(--kadokawa-kodaimoji-type-separator, var(--text-color-light4));
 }
 
 span[data-sc-kodaimojitypeg][data-sc-change-branch] {
-    border-inline-end-color: var(--kadokawa-kodaimoji-branch-separator, #444444);
+    border-inline-end-color: var(--kadokawa-kodaimoji-branch-separator, var(--text-color-light1));
 }
 
 span[data-sc-kodaimojitype] {
@@ -448,14 +440,14 @@ div[data-sc-jukugog] {
     margin-block-start: 0.5em;
     padding-block-start: 0.5em;
     /*margin-inline-start: 1em;*/
-    border-block-start: solid 0.05em var(--kadokawa-black, black);
+    border-block-start: solid 0.05em var(--text-color);
 }
 
 span[data-sc-jukugohead] {
     display: block;
     font-size: 1.75em;
     font-weight: 900;
-    color: var(--kadokawa-jukugo-hyoki-color, #0A246A);
+    color: var(--kadokawa-jukugo-hyoki-color, var(--accent-color));
     margin: -0.1em 0 -0.2em 0;
 }
 
@@ -472,7 +464,7 @@ span[data-sc-jukugohyoki]+span[data-sc-jukugohyoki]:before {
 }
 
 span[title="熟語義"] {
-    color: var(--kadokawa-red, #CC0000);
+    color: var(--kadokawa-red, var(--danger-color));
 }
 
 span[data-sc-rect] {
@@ -480,28 +472,28 @@ span[data-sc-rect] {
     font-size: 0.8em;
     border-width: 0.05em;
     border-style: solid;
-    border-color: var(--kadokawa-black, black);
+    border-color: var(--text-color);
     word-break: keep-all;
     border-radius: 0.2em;
 }
 
 span[data-sc-rect][data-sc-fill] {
     padding: 0.1em;
-    color: var(--kadokawa-white, white);
+    color: var(--background-color-light, var(--background-color));
     border-style: none;
-    background-color: var(--kadokawa-black, black);
+    background-color: var(--text-color);
 }
 
 span[data-sc-rect][data-sc-red] {
-    color: var(--kadokawa-red, #CC0000);
-    border-color: var(--kadokawa-red, #CC0000);
+    color: var(--kadokawa-red, var(--danger-color));
+    border-color: var(--kadokawa-red, var(--danger-color));
 }
 
 span[data-sc-rect][data-sc-red_fill] {
     padding: 0.1em;
-    color: var(--kadokawa-white, white);
+    color: var(--background-color-light, var(--background-color));
     border-style: none;
-    background-color: var(--kadokawa-red, #CC0000);
+    background-color: var(--kadokawa-red, var(--danger-color));
 }
 
 span[data-sc-rect][data-sc-alphabet] {
@@ -524,7 +516,7 @@ span[data-sc-rect_oval] {
 }
 
 span[data-sc-rect_oval1] {
-    background-color: var(--kadokawa-red, #CC0000);
+    background-color: var(--kadokawa-red, var(--danger-color));
     border-start-start-radius: 0.15em;
     border-start-end-radius: 0.15em;
     padding: 0.07em 0 0.13em 0.18em;
@@ -535,11 +527,11 @@ span[data-sc-rect_oval1_inside] {
 }
 
 span[data-sc-rect_oval2] {
-    background-color: var(--kadokawa-white, white);
-    color: var(--kadokawa-red, #CC0000);
-    border-block-start: solid 0.05em var(--kadokawa-red, #CC0000);
-    border-block-end: solid 0.05em var(--kadokawa-red, #CC0000);
-    border-inline-end: solid 0.05em var(--kadokawa-red, #CC0000);
+    background-color: var(--background-color-light, var(--background-color));
+    color: var(--kadokawa-red, var(--danger-color));
+    border-block-start: solid 0.05em var(--kadokawa-red, var(--danger-color));
+    border-block-end: solid 0.05em var(--kadokawa-red, var(--danger-color));
+    border-inline-end: solid 0.05em var(--kadokawa-red, var(--danger-color));
     border-start-end-radius: 0.6em;
     border-end-end-radius: 0.6em;
     padding: 0.02em 0.2em 0.08em 0.02em;
@@ -550,7 +542,7 @@ span[data-sc-circle] {
     font-size: 0.75em;
     border-width: 0.05em;
     border-style: solid;
-    border-color: var(--kadokawa-black, black);
+    border-color: var(--text-color);
     border-radius: 0.67em;
 }
 
@@ -562,12 +554,12 @@ span[data-sc-circle][data-sc-double] {
 }
 
 span[data-sc-circle][data-sc-red] {
-    color: var(--kadokawa-red, #CC0000);
-    border-color: var(--kadokawa-red, #CC0000);
+    color: var(--kadokawa-red, var(--danger-color));
+    border-color: var(--kadokawa-red, var(--danger-color));
 }
 
 span[data-sc-circlenumber][data-sc-fill] {
-    color: var(--kadokawa-gogi-gray, #5C5C5C);
+    color: var(--kadokawa-gogi-gray, var(--button-default-icon-color));
 }
 
 span[data-sc-circlenumber][data-sc-small],
@@ -670,32 +662,32 @@ span[data-sc-i-m2] {
 }
 
 a {
-    color: var(--kadokawa-black, black);
+    color: var(--text-color);
     text-decoration: none;
 }
 
 a[data-sc-blue] {
-    color: var(--kadokawa-blue, blue);
+    color: var(--kadokawa-blue, var(--accent-color, var(--link-color)));
 }
 
 a[data-sc-blue] span[data-sc-rect],
 a[data-sc-blue] span[data-sc-circle] {
-    border-color: var(--kadokawa-blue, blue);
+    border-color: var(--kadokawa-blue, var(--accent-color, var(--link-color)));
 }
 
 a[data-sc-blue] span[data-sc-rect][data-sc-fill],
 a[data-sc-blue] span[data-sc-rect][data-sc-red_fill] {
-    background-color: var(--kadokawa-blue, blue);
+    background-color: var(--kadokawa-blue, var(--accent-color, var(--link-color)));
 }
 
 a[data-sc-blue] span[data-sc-circle][data-sc-fill] {
-    color: var(--kadokawa-blue, blue);
+    color: var(--kadokawa-blue, var(--accent-color, var(--link-color)));
 }
 
 span[data-sc-joyoon] a[data-sc-blue],
 span[data-sc-joyokun] a[data-sc-blue],
 span[data-sc-yomiinfo] a[data-sc-blue] {
-    color: var(--kadokawa-red, #CC0000);
+    color: var(--kadokawa-red, var(--danger-color));
 }
 
 /*------- 画像の大きさ -------*/
@@ -726,7 +718,7 @@ div:has(table-container) {
 }
 
 span[title="熟語義"] {
-    border-color: var(--kadokawa-red, #CC0000) !important;
+    border-color: var(--kadokawa-red, var(--danger-color)) !important;
 }
 
 span[data-sc-kodaimoji] span[data-sc-img] .gloss-image-container,
@@ -762,4 +754,22 @@ span[data-sc-jukugohyoki]+span[data-sc-jukugohyoki]:before {
     span[data-sc-gaiji][data-sc-img] .gloss-image {
         width: 10em !important;
     }
+}
+
+[data-sc-body]
+span[data-sc-head],
+span[data-sc-yomi][data-sc-w3],
+span[data-sc-okuri],
+span[data-sc-wari],
+span[data-sc-jukugoyomi],
+span[data-sc-jionrekishikana],
+span[data-sc-kaeriten][data-sc-w3] {
+    font-family: "SHINJIMinchoW3", "SHINJIMinchoW3 W3" !important;
+}
+
+span[data-sc-kanji],
+span[data-sc-yomi],
+span[data-sc-kaeriten],
+span[data-sc-bimidashijic][data-sc-joyo] {
+    font-family: "SHINJIMinchoW7", "SHINJIMinchoW7 W7" !important;
 }

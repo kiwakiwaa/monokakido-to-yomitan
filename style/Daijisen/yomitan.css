@@ -1,19 +1,26 @@
 /* ----------------------------- */
 /* -- 大辞泉 Dark mode colours -- */
 /* ----------------------------- */
-:root[data-theme="dark"] {
-    .definition-item[data-dictionary='大辞泉'] {
-        --daijisen-black: #FFFFFF;
-        --daijisen-white: #000000;
-        --daijisen-blue: #00AAFF;
-        --daijisen-header-djs: #A0484F;
-        --daijisen-header-djsp: #7A7A7A;
-        --daijisen-header-text: #000000;
-        --daijisen-logo-color: #DDDDDD;
-        --daijisen-background-l3: #C0C0C0;
-        --daijisen-accent-mark: #FF6666;
-        --daijisen-accent-slash: #A0A0A0;
-    }
+:root[data-theme="dark"] .definition-item[data-dictionary='大辞泉'] {
+    --daijisen-blue: #00AAFF;
+    --daijisen-header-djs: #A0484F;
+    --daijisen-header-djsp: #7A7A7A;
+    --daijisen-header-text: #000000;
+    --daijisen-logo-color: #DDDDDD;
+    --daijisen-background-l3: #C0C0C0;
+    --daijisen-accent-mark: #FF6666;
+    --daijisen-accent-slash: #A0A0A0;
+}
+
+.definition-item[data-dictionary='大辞泉'] {
+    --daijisen-blue: #4a8ade;
+    --daijisen-header-djs: #B65058;
+    --daijisen-header-djsp: #999999;
+    --daijisen-header-text: #FFFFFF;
+    --daijisen-logo-color: #000000;
+    --daijisen-background-l3: #606060;
+    --daijisen-accent-mark: #CC0000;
+    --daijisen-accent-slash: #808080;
 }
 
 

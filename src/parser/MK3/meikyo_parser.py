@@ -24,6 +24,8 @@ class MeikyoParser(Parser):
         self.expression_element = "child-items"
         self.tag_mapping = TAG_MAPPING
         
+        self.initialize_html_converter()
+        
         
     def _handle_expression_entries(self, soup: bs4.BeautifulSoup):
         count = 0

@@ -2,7 +2,7 @@
 	line-height: 1.5em;
 	/* font-family: "Hiragino Kaku Gothic ProN"; */
 	font-size: 1.25em;
-	color: var(--meikyo-black, black);
+	color: var(--text-color);
 }
 
 span[data-sc-bc] {
@@ -33,8 +33,8 @@ span[data-sc-column],
 div[data-sc-column] {
 	margin-block-start: 0.5em;
 	padding: 0 0.5em;
-	padding-inline-start: solid 5px var(--meikyo-box-gray, #FFDDDD);
-	border-inline-end: solid 5px var(--meikyo-box-gray, #FFDDDD);
+	padding-inline-start: solid 5px var(--meikyo-box-gray, var(--danger-color-lightest));
+	border-inline-end: solid 5px var(--meikyo-box-gray, var(--danger-color-lightest));
 }
 
 span[data-sc-meaning][data-sc-class="columntitle"],
@@ -43,20 +43,20 @@ div[data-sc-meaning][data-sc-class="columntitle"] {
 	padding: 0.25em 0.25em;
 	/* font-family: "Hiragino Kaku Gothic ProN"; */
 	font-weight: bold;
-	color: var(--meikyo-dark-red, #CC3333);
-	border: solid 1px var(--meikyo-dark-red, #CC3333);
+	color: var(--meikyo-dark-red, var(--sidebar-button-danger-background-color-active));
+	border: solid 1px var(--meikyo-dark-red, var(--sidebar-button-danger-background-color-active));
 }
 
 div[data-sc-class="hinkaku"] {
 	margin-block-start: 0.5em;
 	padding: 0.25em 0.5em;
-	background-color: var(--meikyo-box-gray, #FFDDDD);
+	background-color: var(--meikyo-box-gray, var(--danger-color-lightest));
 	border-radius: 0.5em;
 }
 
 div[data-sc-class="shikiri"] {
     margin: 0.5em 0;
-	background-color: var(--meikyo-pink, #FFCCCC);
+	background-color: var(--meikyo-pink, var(--advanced-color-lighter));
 }
 
 div[data-sc-class="shikiri"] div[data-sc-meaning] {
@@ -68,11 +68,11 @@ div[data-sc-class="shikiri"] div[data-sc-meaning] {
 div[data-sc-class="shikiri"] td[data-sc-td][data-sc-class="red"] {
     padding: 0 0.375em;
 	margin-inline-end: 0.25em;
-	background-color: var(--meikyo-red, #FF3333);
+	background-color: var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
 }
 
 div[data-sc-class="shikiri"] td[data-sc-td][data-sc-class="red"] span[data-sc-red]  {
-	color: var(--meikyo-fbox-white, #FFFFFF);
+	color: #FFFFFF;
 }
 
 span[data-sc-em] {
@@ -96,102 +96,102 @@ span[data-sc-fbox] {
 	font-weight: normal;
 	border-style: solid;
 	border-width: 0.05em;
-	border-color: var(--meikyo-black, black);
+	border-color: var(--text-color);
 	border-radius: 0.2em;
 	word-break: keep-all;
 }
 
 span[data-sc-fbox][data-sc-class="書き方"] {
-	color: var(--meikyo-fbox-white, #FFFFFF);
-	background-color: var(--meikyo-dark-red, #CC3333);
-	border-color: var(--meikyo-dark-red, #CC3333);
+	color: #FFFFFF;
+	background-color: var(--meikyo-dark-red, var(--sidebar-button-danger-background-color-active));
+	border-color: var(--meikyo-dark-red, var(--sidebar-button-danger-background-color-active));
 }
 
 span[data-sc-fbox][data-sc-class="使い方"] {
-	background-color: var(--meikyo-pink, #FFCCCC);
-	border-color: var(--meikyo-red, #FF3333);
+	background-color: var(--meikyo-pink, var(--advanced-color-lighter));
+	border-color: var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
 }
 
 span[data-sc-fbox][data-sc-class="語源"],
 span[data-sc-fbox][data-sc-class="数"] {
-	color: var(--meikyo-red, #FF3333);
-	border-color: var(--meikyo-red, #FF3333);
+	color: var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
+	border-color: var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
 }
 
 span[data-sc-fbox][data-sc-class="注意"] {
-	color: var(--meikyo-fbox-white, #FFFFFF);
-	background-color: var(--meikyo-red, #FF3333);
-	border-color: var(--meikyo-red, #FF3333);
+	color: #FFFFFF;
+	background-color: var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
+	border-color: var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
 }
 
 span[data-sc-fbox][data-sc-class="品格"] {
 	/* font-family: "Hiragino Mincho ProN"; */
 	font-size: 1em;
-	background-color: var(--meikyo-pink, #FFCCCC);
-	border-color: var(--meikyo-red, #FF3333);
+	background-color: var(--meikyo-pink, var(--advanced-color-lighter));
+	border-color: var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
 }
 
 span[data-sc-fbox0] {
 	margin-inline-end: 0.25em;
 	/* font-family: "Hiragino Kaku Gothic ProN"; */
 	font-size: 0.8em;
-	color: var(--meikyo-fbox-white, #FFFFFF);
+	color: #FFFFFF;
 	word-break: keep-all;
 }
 
 span[data-sc-fbox1] {
 	padding: 0.1em;
-	background-color: var(--meikyo-red, #FF3333);
+	background-color: var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
 	border-start-start-radius: 0.2em;
 	border-end-start-radius: 0.2em;
-	border: solid 0.05em var(--meikyo-red, #FF3333);
+	border: solid 0.05em var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
 }
 
 span[data-sc-fbox2] {
 	padding: 0.1em;
-	color: var(--meikyo-red, #FF3333);
-	border-block-start: solid 0.05em var(--meikyo-red, #FF3333);
-	border-block-end: solid 0.05em var(--meikyo-red, #FF3333);
+	color: var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
+	border-block-start: solid 0.05em var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
+	border-block-end: solid 0.05em var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
 }
 
 span[data-sc-fbox3] {
 	padding: 0.1em;
-	background-color: var(--meikyo-red, #FF3333);
-	border-block-start: solid 0.05em var(--meikyo-red, #FF3333);
-	border-block-end: solid 0.05em var(--meikyo-red, #FF3333);
+	background-color: var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
+	border-block-start: solid 0.05em var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
+	border-block-end: solid 0.05em var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
 }
 
 span[data-sc-fbox4] {
 	padding: 0.1em;
-	color: var(--meikyo-red, #FF3333);
+	color: var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
 	border-start-end-radius: 0.2em;
 	border-end-end-radius: 0.2em;
-	border: solid 0.05em var(--meikyo-red, #FF3333);
+	border: solid 0.05em var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
 }
 
 span[data-sc-fbox1][data-sc-class="読み分け"] {
-	color: var(--meikyo-white, #FFFFFF);
-	background-color: var(--meikyo-fbox-gray, #333333);
-	border-color: var(--meikyo-fbox-gray, #333333);
+	color: var(--background-color-light, var(--background-color));
+	background-color: var(--meikyo-fbox-gray, var(--scrollbar-inverse-thumb-color, var(--text-color-light1)));
+	border-color: var(--meikyo-fbox-gray, var(--scrollbar-inverse-thumb-color, var(--text-color-light1)));
 }
 
 span[data-sc-fbox2][data-sc-class="読み分け"] {
-	color: var(--meikyo-black, black);
-	border-block-start-color: var(--meikyo-fbox-gray, #333333);
-	border-block-end-color: var(--meikyo-fbox-gray, #333333);
+	color: var(--text-color);
+	border-block-start-color: var(--meikyo-fbox-gray, var(--scrollbar-inverse-thumb-color, var(--text-color-light1)));
+	border-block-end-color: var(--meikyo-fbox-gray, var(--scrollbar-inverse-thumb-color, var(--text-color-light1)));
 }
 
 span[data-sc-fbox3][data-sc-class="読み分け"] {
 	padding: 0.1em;
-	color: var(--meikyo-white, #FFFFFF);
-	background-color: var(--meikyo-fbox-gray, #333333);
-	border-block-start-color: var(--meikyo-fbox-gray, #333333);
-	border-block-end-color: var(--meikyo-fbox-gray, #333333);
+	color: var(--background-color-light, var(--background-color));
+	background-color: var(--meikyo-fbox-gray, var(--scrollbar-inverse-thumb-color, var(--text-color-light1)));
+	border-block-start-color: var(--meikyo-fbox-gray, var(--scrollbar-inverse-thumb-color, var(--text-color-light1)));
+	border-block-end-color: var(--meikyo-fbox-gray, var(--scrollbar-inverse-thumb-color, var(--text-color-light1)));
 }
 
 span[data-sc-fbox4][data-sc-class="読み分け"] {
-	color: var(--meikyo-black, black);
-	border-color: var(--meikyo-fbox-gray, #333333);
+	color: var(--text-color);
+	border-color: var(--meikyo-fbox-gray, var(--scrollbar-inverse-thumb-color, var(--text-color-light1)));
 }
 
 span[data-sc-headword][data-sc-class="カナ"],
@@ -280,7 +280,7 @@ div:has(> span[data-sc-zoomkanji]) {
 span[data-sc-zoomkanji] {
 	/* font-family: "Hiragino Mincho ProN"; */
 	font-size: 3em;
-	background-color: var(--meikyo-pink, #FFCCCC);
+	background-color: var(--meikyo-pink, var(--advanced-color-lighter));
 }
 
 span[data-sc-small] {
@@ -289,15 +289,15 @@ span[data-sc-small] {
 }
 
 span[data-sc-red] {
-	color: var(--meikyo-red, #FF3333);
+	color: var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
 }
 
 span[data-sc-gray] {
-	color: var(--meikyo-gray, #666666);
+	color: var(--meikyo-gray, var(--text-color-light2, var(--button-default-icon-color-light)));
 }
 
 span[data-sc-class="shikiri"] span[data-sc-class="red"] span[data-sc-rect]:first-child {
-	background-color: var(--meikyo-red, #FF3333);
+	background-color: var(--meikyo-red, var(--sidebar-button-danger-background-color-hover, #FF3333));
 }
 
 span[data-sc-rect] {
@@ -306,19 +306,19 @@ span[data-sc-rect] {
 	font-size: 0.8em;
 	border-width: 0.05em;
 	border-style: solid;
-	border-color: var(--meikyo-black, black);
+	border-color: var(--text-color);
 	word-break: keep-all;
 	-webkit-border-radius: 0.1em;
 }
 
 span[data-sc-ref] span[data-sc-rect] {
-	border-color: var(--meikyo-blue, blue);
+	border-color: var(--meikyo-blue, var(--accent-color, var(--link-color)));
 }
 
 span[data-sc-rect][data-sc-fill] {
-	color: var(--meikyo-white, #FFFFFF);
+	color: var(--background-color-light, var(--background-color));
 	border-style: none;
-	background-color: var(--meikyo-black, black);
+	background-color: var(--text-color);
 }
 
 span[data-sc-rect]+span[data-sc-rect] {
@@ -409,10 +409,12 @@ span[data-sc-class="注意"] .gloss-image {
 }
 
 a:link {
-	color: #5066d4;
 	text-decoration: none;
 }
 
-a:hover, a:focus, a:active {
-	color: #e4671b;
+a:hover {
+    color: var(--text-color);
+    filter: brightness(1.3);
+    text-decoration: underline;
+    text-decoration-color: oklch(65% 0.2 260);
 }

@@ -22,6 +22,8 @@ class YDPParser(Parser):
         self.ignored_elements = {"entry-index", "key"}
         self.tag_mapping = TAG_MAPPING
         
+        self.initialize_html_converter()
+        
         
     def normalize_keys(self, reading: str, entry_keys: List[str]) -> List[str]:
         if all(KanjiUtils.is_kanji(c) for c in reading):

@@ -1,0 +1,155 @@
+/* TISMKANJI Dictionary Styling */
+[data-sc-entry] {
+    font-family: "SHINJIMinchoW3", "SHINJIMinchoW3 W3";
+}
+
+/* Kanken Level Tag */
+[data-sc漢検級] {
+    display: inline-block;
+    font-size: 0.8em;
+    padding-block: 0.15em;
+    padding-inline: 0.4em;
+    border-radius: 2px;
+    color: white;
+    margin-block-end: 0.5em;
+}
+
+/* Kanken level colors */
+[data-sc十級] {
+    background-color: #e00083;
+}
+
+[data-sc九級] {
+    background-color: #6d70b3;
+}
+
+[data-sc八級] {
+    background-color: #c5d700;
+}
+
+[data-sc七級] {
+    background-color: #0096bb;
+}
+
+[data-sc六級] {
+    background-color: #5b1f67;
+}
+
+[data-sc五級] {
+    background-color: #f7ad00;
+}
+
+[data-sc四級] {
+    background-color: #b81649;
+}
+
+[data-sc三級] {
+    background-color: #008a6c;
+}
+
+[data-sc凖二級] {
+    background-color: #e8390d;
+}
+
+[data-sc二級] {
+    background-color: #00427c;
+}
+
+[data-sc準一級],
+[data-sc準一級／一級] {
+    background-color: #690212;
+}
+
+[data-sc一級] {
+    background-color: #004129;
+}
+
+[data-sc配当外] {
+    background-color: #690212;
+}
+
+/* Reading Styles */
+[data-scよみ-g] {
+    margin-block-end: 0.4em;
+}
+
+[data-scよみ] {
+    font-family: "Hiragino Kaku Gothic ProN";
+}
+
+[data-sc音アイテム],
+[data-sc訓アイテム] {
+    display: inline-block;
+    margin-inline-end: 0.6em;
+}
+
+[data-sc-rect] {
+    display: inline-block;
+    border: 1px solid var(--dark-border-color);
+    border-radius: 2px;
+    font-size: 0.8em;
+    padding-block: 0.1em;
+    padding-inline: 0.25em;
+    margin-inline-end: 0.3em;
+    min-width: 1em;
+    text-align: center;
+}
+
+[data-sc注項] [data-sc-rect],
+[data-sc注解項] [data-sc-rect] {
+    border-color: var(--tag-archaism-background-color);
+    color: var(--tag-archaism-background-color);
+}
+
+/* Definition Styles */
+[data-sc意味-g] {
+    margin-block-end: 0.4em;
+}
+
+[data-sc意味内容] {
+    margin-inline-start: 0.3em;
+}
+
+[data-sc振り仮名] {
+    font-family: "Hiragino Kaku Gothic ProN";
+    font-size: 0.7em;
+    vertical-align: super;
+    color: var(--text-color-light1);
+}
+
+/* Notes Styles */
+[data-sc注解-g] {
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    color: var(--text-color-light1);
+}
+
+[data-sc注項],
+[data-sc注解項] {
+    margin-block-end: 0.2em;
+    border-inline-start: 1px solid var(--medium-border-color);
+    padding-inline-start: 0.4em;
+}
+
+[data-sc注],
+[data-sc注解] {
+    font-size: 0.9em;
+}
+
+[data-sc異体字-g]+[data-sc部首-g] {
+    border-block-start: none;
+    margin-block-start: 0.2em;
+    padding-block-start: 0;
+}
+
+[data-sc異体字-g],
+[data-sc部首-g] {
+    margin-block-start: 0.4em;
+    border-block-start: 1px solid color-mix(in srgb, var(--medium-border-color), transparent 30%);
+    padding-block-start: 0.3em;
+}
+
+[data-sc異体字],
+[data-sc部首] {
+    margin-inline-start: 0.3em;
+}

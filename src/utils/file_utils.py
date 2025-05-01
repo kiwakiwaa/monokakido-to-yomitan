@@ -87,6 +87,12 @@ class FileUtils:
                         rel_path = os.path.join('graphics', os.path.basename(file))
                     elif 'images' in path_parts:
                         rel_path = os.path.join('images', os.path.basename(file))
+                    elif 'images2' in path_parts:
+                        rel_path = os.path.join('images2', os.path.basename(file))
+                    elif 'images_column' in path_parts:
+                        rel_path = os.path.join('images_column', os.path.basename(file))  
+                    elif 'images_hitsujun' in path_parts:
+                        rel_path = os.path.join('images_hitsujun', os.path.basename(file))  
                     elif 'logos' in path_parts:
                         rel_path = os.path.join('logos', os.path.basename(file))
                     elif 'icons' in path_parts:
@@ -95,6 +101,8 @@ class FileUtils:
                         rel_path = os.path.join('formulas', os.path.basename(file))
                     elif 'tables' in path_parts:
                         rel_path = os.path.join('tables', os.path.basename(file))
+                    elif 'svg' in path_parts:
+                        rel_path = os.path.join('svg', os.path.basename(file))
                     elif str(file).endswith('.json') or str(file).endswith('.css'):
                         rel_path = os.path.basename(file)
                     elif '.DS_Store' in path_parts:

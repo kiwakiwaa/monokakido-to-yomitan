@@ -24,6 +24,16 @@ class KanjiUtils:
     
     
     @staticmethod
+    def is_hiragana(char: str) -> bool:
+        if len(char) != 1:
+            raise ValueError("This function checks a single character only")
+            
+        # ひらがな拡張Aから
+        pattern = r'[\p{Hiragana}\U0001B11F\U0001B120\U0001B121\U0001B122]'
+        return bool(re.fullmatch(pattern, char))
+    
+    
+    @staticmethod
     def is_only_katakana(text: str) -> bool:
         return bool(re.fullmatch(r'[ー\p{Katakana}\p{Block: Katakana_Phonetic_Extensions}]+', text))
     

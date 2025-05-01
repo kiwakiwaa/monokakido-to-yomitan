@@ -25,6 +25,8 @@ class DaijisenParser(Parser):
         self.ignored_elements = {"k-v", "header", "index"} # mimageg
         self.expression_element = "subitem"
         
+        self.initialize_html_converter()
+        
         
     def _handle_expression_entries(self, soup: bs4.BeautifulSoup):
         count = 0

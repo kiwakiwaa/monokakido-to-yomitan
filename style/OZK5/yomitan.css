@@ -1,7 +1,5 @@
 :root[data-theme="dark"] {
     .definition-item[data-dictionary='旺文社 全訳古語辞典'] {
-        --ozk5-black: #DDDDDD;
-        --ozk5-white: #000000;
         --ozk5-blue: #00AAFF;
         --ozk5-red: #FF6666;
         --ozk5-light-red: #B24747;
@@ -17,4 +15,63 @@
         --ozk5-appendix-title-background: #BF6666;
         --ozk5-gendai-mark: #CCCCCC;
     }
+}
+
+.definition-item[data-dictionary='旺文社 全訳古語辞典'] {
+    --ozk5-blue: #4a8ade;
+    --ozk5-red: #C00000;
+    --ozk5-light-red: #D96666;
+    --ozk5-gray: #888;
+    --ozk5-hinshi-mark: #444;
+    --ozk5-kakomi-border: #999;
+    --ozk5-metadata-background: #999;
+    --ozk5-example-katsuyou-mark: #666;
+    --ozk5-mark-border: #660;
+    --ozk5-gogi-panel-header: #F9E6E6;
+    --ozk5-ruigo-panel-background: #444;
+    --ozk5-ruigo-panel-border: #AAA;
+    --ozk5-appendix-title-background: #633;
+    --ozk5-gendai-mark: #888;
+}
+
+span[data-sc主見出],
+span[data-sc用例訳],
+div[data-sc用例メタデータ],
+span[data-sc巻頭カラーテキストタイトル],
+div[data-sc訳語-g],
+span[data-sc活用タイトル],
+div[data-sc活用型],
+div[data-scパネルタイトル],
+span[data-sc重点義タイトル],
+div[data-scガイド大語義項],
+td[data-scガイド項タイトル],
+div[data-sc発展タイトル],
+div[data-sc語の広がりタイトル],
+div[data-sc敬語ガイドタイトル],
+div[data-sc図解学習タイトル],
+div[data-sc慣用表現タイトル],
+span[data-sc発展-m],
+span[data-sc語の広がり-m],
+span[data-sc共通義タイトル],
+td[data-sc類語項][data-sc語句],
+div[data-sc識別ボードタイトル],
+div[data-sc文法要語解説小見出],
+span[data-sc-rect],
+span[data-sc-rectr],
+span[data-sc-circle],
+span[data-sc語義-m],
+span[data-sc小語義-m],
+span[data-sc-bold],
+span[data-sc-color],
+span[data-sc-strong],
+span[data-sc-gendai見出] {
+    font-family: "Hiragino Kaku Gothic ProN";
+}
+
+[data-sc-body],
+span[data-sc巻頭カラーテキストタイトル] span[data-sc割],
+span[data-sc-hyoki],
+div[data-sc活用インライン-g],
+span[data-sc参照矢印] {
+    font-family: "Yu Mincho Pr6N", "游明朝体 Pr6N", "YuMinPr6N", "YuMinPr6N-Medium";
 }

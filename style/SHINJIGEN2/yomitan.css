@@ -3,8 +3,6 @@
 /* ============================ */
 :root[data-theme="dark"] {
     .definition-item[data-dictionary='角川新字源 改訂新版'] {
-        --kadokawa-black: #DDDDDD;
-        --kadokawa-white: #000000;
         --kadokawa-blue: #00AAFF;
         --kadokawa-red: #FF6666;
         --kadokawa-pink: #AA6264;
@@ -31,23 +29,19 @@
 }
 
 .definition-item[data-dictionary='角川新字源 改訂新版'] {
-    span[data-sc-head],
-    span[data-sc-yomi][data-sc-w3],
-    span[data-sc-okuri],
-    span[data-sc-wari],
-    span[data-sc-jukugoyomi],
-    span[data-sc-jionrekishikana],
-    span[data-sc-kaeriten][data-sc-w3] {
-        font-family: "SHINJIMinchoW3", "SHINJIMinchoW3 W3";
-    }
+    --kadokawa-blue: #4a8ade;
+    --kadokawa-red: #CC0000;
+    --kadokawa-pink: #FF928E;
+    --kadokawa-light-pink: #FFDBDA;
+    --kadokawa-gogi-gray: #5C5C5C;
+    --kadokawa-light-gray: #AAAAAA;
+    --kadokawa-extra-light-gray: #EEEEEE;
+    --kadokawa-kodaimoji-branch-separator: #444444;
+    --kadokawa-kodaimoji-type-separator: #A0A0A0;
+    --kadokawa-jukugo-hyoki-color: #0A246A;
+}
 
-    span[data-sc-kanji],
-    span[data-sc-yomi],
-    span[data-sc-kaeriten],
-    span[data-sc-bimidashijic][data-sc-joyo] {
-        font-family: "SHINJIMinchoW7", "SHINJIMinchoW7 W7";
-    }
-
+.definition-item[data-dictionary='角川新字源 改訂新版'] {
     span[data-sc-rect],
     span[title="熟語義"],
     span[data-sc-rect_oval],

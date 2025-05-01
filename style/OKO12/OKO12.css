@@ -1,0 +1,583 @@
+
+
+body {
+	--red: #FF3333;
+	--light-red: #FFCCCC;
+	--dark-red: #FF3333;
+	--dark-light-red: #993333;
+	margin: 1em 44px 1em 1em;
+	line-height: 1.5em;
+	font-family: mincho;
+	font-size: 1.2em;
+	color: black;
+	writing-mode: vertical-rl;
+	/*text-combine-horizontal: digits 4;*/
+}
+
+body.ABC {
+	writing-mode: horizontal-tb;
+	vertical-align: baseline;
+}
+
+entry-index {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+bg {
+	font-family: gothic;
+	font-weight: bold;
+}
+
+bs {
+	margin-right: 0.25em;
+	padding: 0.1em;
+	font-family: gothic;
+	font-weight: bold;
+	font-size: 0.8em;
+	color: white;
+	background-color: black;
+	border-radius: 0.15em;
+}
+
+CR {
+	
+}
+
+POS {
+	margin-right: 0.25em;
+	padding: 0.1em;
+	font-family: gothic;
+	font-size: 0.8em;
+	color: black;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	word-break: keep-all;
+	border-radius: 0.2em;
+}
+
+SPELLOUT {
+	
+}
+
+arrow {
+	
+}
+
+b {
+	
+}
+
+br {
+	
+}
+
+caption {
+	display: block;
+	margin-top: 0.5em;
+}
+
+column {
+	display: block;
+	margin-top: 0.5em;
+}
+
+column.使い分け, column.ちがい {
+	padding: 0.5em;
+	border: solid 2px light-red;
+}
+
+column.使い分け meaning.コラム, column.ちがい meaning.コラム {
+	text-indent: 1em;
+}
+
+column meaning:first-child {
+	margin-top: 0;
+}
+
+cr {
+	
+}
+
+dic-item {
+	display: block;
+	margin-left: 1em;
+}
+
+div {
+	display: block;
+	margin-top: 0.5em;
+}
+
+em {
+	
+}
+
+em.傍線 {
+	text-decoration: underline;
+	text-decoration-color: red;
+}
+
+ex {
+	
+}
+
+gaiji {
+	
+}
+
+gi {
+	
+}
+
+gi.unicode {
+	/* color: red; */
+}
+
+glabel {
+	
+}
+
+head2 {
+	display: block;
+	margin-left: -1em;
+	padding-left: 1em;
+}
+
+head2-inner {
+	display: block;
+	text-indent: -1em;
+}
+
+headword {
+	
+}
+
+headword.かな, headword.慣用 {
+	font-weight: bold;
+}
+
+dic-item.漢字 headword.表記 {
+	font-size: 1.5em;
+}
+
+headword.許容体, headword.旧字 {
+	font-size: 1.2em;
+}
+
+headword.歴史かな, headword.現代かな {
+	display: warichu;
+	font-size: 0.5em;
+}
+
+headword.慣用 {
+	font-family: gothic;
+}
+
+headword.和歌 {
+	font-weight: bold;
+}
+
+headword.ABC {
+	font-family: gothic;
+	font-weight: bold;
+}
+
+hidden {
+	
+}
+
+hyphen {
+	
+}
+
+i {
+	glyph-form: ital;
+}
+
+img {
+	
+}
+
+img.gaiji {
+	display: gaiji;
+	height: 1em;
+	text-combine-horizontal: all;
+}
+
+図 {
+	display: block;
+	margin: 0.5em 1em 0 1em;
+}
+
+kaeri {
+	font-size: 0.5em;
+	vertical-align: -1em;
+}
+
+katsuyo {
+	margin: 0 0.25em;
+	display: warichu;
+	font-size: 0.5em;
+}
+
+key {
+	
+}
+
+kigo {
+	margin-right: 0.25em;
+	padding: 0.1em;
+	font-family: gothic;
+	font-size: 0.8em;
+	color: black;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	word-break: keep-all;
+	border-radius: 0.2em;
+}
+
+lang {
+	display: warichu;
+	font-size: 0.5em;
+}
+
+lang.plain {
+	display: inline;
+}
+
+logo {
+	margin-right: 0.25em;
+	padding: 0.1em;
+	font-family: gothic;
+	font-size: 0.8em;
+	color: red;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: red;
+	word-break: keep-all;
+	border-radius: 0.2em;
+	word-break: keep-all;
+}
+
+logo.fill {
+	color: white;
+	border-style: none;
+	background-color: red;
+}
+
+logo.round {
+	padding: 0.1em 0.5em;
+	border-radius: 0.625em;
+}
+
+logo.配当学年 {
+	padding: 0.1em;
+	font-family: gothic;
+	font-size: 0.667em;
+	color: black;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	word-break: keep-all;
+	border-radius: 0.5em;
+	text-combine-horizontal: all;
+}
+
+logo.読み {
+	font-family: gothic;
+	font-size: 0.667em;
+	color: black;
+	border-width: 0.06em;
+	border-color: black;
+}
+
+maru {
+	padding: 0.095em;
+	font-family: gothic;
+	font-weight: normal;
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	border-radius: 0.67em;
+}
+
+maru.small {
+	font-size: 0.5em;
+	vertical-align: 1em;
+}
+
+math {
+	display: math;
+}
+
+mathv {
+	display: math;
+	text-combine-horizontal: all;
+}
+
+meaning {
+	display: block;
+	margin-top: 0.5em;
+}
+
+meaning.no {
+	margin-left: 1.125em;
+	text-indent: -1.125em;
+}
+
+meaning.語源2 {
+	margin-left: -0.5em;
+	padding-left: 0.2em;
+	border-left: solid 0.3em light-red;
+}
+
+meaning.和歌作者 {
+	margin-right: 1em;
+	text-align: right;
+}
+
+meaning.中心義 {
+	font-weight: bold;
+}
+
+mlg {
+	display: warichu;
+	font-size: 0.5em;
+}
+
+ninoji2 {
+	font-family: "OT-Jo Kyoukasho ICA ProN";
+}
+
+nobr {
+	word-break: keep-all;
+}
+
+num {
+	font-family: gothic;
+	margin-right: 0.125em;
+}
+
+subnum {
+	font-family: gothic;
+	font-weight: bold;
+}
+
+pnum {
+	
+}
+
+pos {
+	
+}
+
+red {
+	color: red;
+}
+
+gred {
+	font-family: gothic;
+	color: red;
+}
+
+ref {
+	
+}
+
+slabel {
+	
+}
+
+sp {
+	
+}
+
+span {
+	
+}
+
+spellout {
+	font-weight: bold;
+}
+
+sub {
+	font-size: 0.5em;
+}
+
+sup {
+	font-size: 0.5em;
+}
+
+table {
+	margin: 0.5em 0;
+	border-top: solid 0.5px red;
+	border-left: solid 0.5px red;
+}
+
+td, th {
+	padding: 0.25em;
+	border-right: solid 0.5px red;
+	border-bottom: solid 0.5px red;
+	vertical-align: top;
+}
+
+td.middle {
+	vertical-align: middle;
+}
+
+td.縦中横 {
+	text-combine-horizontal: all;
+	text-align: center;
+	vertical-align: middle;
+	min-width: 1em;
+}
+
+th {
+	font-family: gothic;
+	text-align: center;
+	background-color: light-red;
+}
+
+title2 {
+	display: block;
+}
+
+title2 + meaning {
+	margin-top: 0;
+}
+
+column.使い分け title2, column.ちがい title2, column.下接語 title2 {
+	font-family: gothic;
+	font-weight: bold;
+}
+
+tr {
+	
+}
+
+td.表現と類語 {
+	padding-left: 1em;
+}
+
+u {
+	text-decoration: none;
+	border-bottom: solid 0.05em black;
+}
+
+warichu {
+	display: warichu;
+	font-size: 0.5em;
+}
+
+ws {
+	margin-right: 0.25em;
+	padding: 0.1em;
+	font-family: mincho;
+	font-size: 0.8em;
+	color: black;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	border-radius: 0.15em;
+}
+
+xref {
+	
+}
+
+ymd {
+	
+}
+
+yomi {
+	display: warichu;
+	font-size: 0.5em;
+}
+
+縦中回転 {
+	
+}
+
+縦中横 {
+	text-combine-horizontal: all;
+}
+
+.縦中横 {
+	text-combine-horizontal: all;
+}
+
+縦中回転 .縦中横 {
+	text-combine-horizontal: none;
+}
+
+warichu {
+	display: warichu;
+	font-size: 0.5em;
+}
+
+筆順 {
+	display: block;
+	margin-top: 0.5em;
+}
+
+筆順 table {
+	margin: 0;
+	border-top: solid 0.5px black;
+	border-left: solid 0.5px black;
+	overflow: scroll;
+}
+
+筆順 td {
+	padding: 0.25em;
+	border-right: solid 0.5px black;
+	border-bottom: solid 0.5px black;
+	min-width: 1em;
+	font-size: 1.5em;
+}
+
+.ICAR12 {
+	font-family: "OT-GHitujyun2Std-ICAR12", "GHitujyun2Std-ICAR12", "G-OTF 筆順2ICA Std";
+}
+
+.ICAR34 {
+	font-family: "OT-GHitujyun2Std-ICAR34", "GHitujyun2Std-ICAR34", "G-OTF 筆順2ICA Std";
+}
+
+.ICAR56 {
+	font-family: "OT-GHitujyun2Std-ICAR56", "GHitujyun2Std-ICAR56", "G-OTF 筆順2ICA Std";
+}
+
+.ICAR1 {
+	font-family: "OT-GHitu2jyoStdN-ICAR1", "GHitu2jyoStdN-ICAR1", "G-OTF 筆順2常用ICA StdN";
+}
+
+.ICAR2 {
+	font-family: "OT-GHitu2jyoStdN-ICAR2", "GHitu2jyoStdN-ICAR2", "G-OTF 筆順2常用ICA StdN";
+}
+
+.ICAR3 {
+	font-family: "OT-GHitu2jyoStdN-ICAR3", "GHitu2jyoStdN-ICAR3", "G-OTF 筆順2常用ICA StdN";
+}
+
+ital {
+	glyph-form: ital;
+}
+
+jp90 {
+	glyph-form: jp90;
+}
+
+簡体字 {
+	font-family: "Songti SC";
+}
+
+repeat + repeat {
+	margin-left: 0.25em;
+}

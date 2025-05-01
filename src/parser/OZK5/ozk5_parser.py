@@ -22,6 +22,7 @@ class OZK5Parser(Parser):
         )
         
         self.tag_mapping = TAG_MAPPING
+        self.initialize_html_converter()
         
         # List to store 和歌 entries (I add the head word manually for these 269 entries)
         self.waka_entries = {"entries": [], "reading_index": {}}

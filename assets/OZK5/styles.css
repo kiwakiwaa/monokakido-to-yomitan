@@ -13,7 +13,7 @@ span[data-sc主見出] {
 }
 
 span[data-sc主見出][data-sc重要語] {
-    color: var(--ozk5-red, #C00000);
+    color: var(--ozk5-red, var(--danger-color));
 }
 
 span[data-sc割] {
@@ -57,13 +57,13 @@ div[data-sc用例メタデータ] {
 	line-height: 1.4em;
 	padding-block: 0;
 	padding-inline: 0.3em;
-	color: var(--ozk5-white, white);
+	color: var(--background-color-light, var(--background-color));
 	background-color: var(--ozk5-metadata-background, #999) !important;
 }
 
 span[data-sc用例引用] {
 	font-weight: bold;
-	color: var(--ozk5-red, #C00000);
+	color: var(--ozk5-red, var(--danger-color));
 }
 
 div[data-sc小倉参照] {
@@ -120,14 +120,14 @@ table[data-sc活用テーブル] {
 td[data-sc活用タイトル項] {
 	display: table-cell;
 	text-align: center;
-	color: var(--ozk5-white, white);
-	background-color: var(--ozk5-red, #C00000) !important;
+	color: var(--background-color-light, var(--background-color));
+	background-color: var(--ozk5-red, var(--danger-color)) !important;
 }
 
 span[data-sc活用タイトル] {
 	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
 	font-size: 0.6em;
-	color: var(--ozk5-white, white);
+	color: var(--background-color-light, var(--background-color));
 	padding-inline-start: 0.2em;
 	padding-inline-end: 0.2em;
 	text-combine-horizontal: all;
@@ -135,10 +135,10 @@ span[data-sc活用タイトル] {
 
 td[data-sc活用型項] {
 	display: table-cell;
-	color: var(--ozk5-red, #C00000);
+	color: var(--ozk5-red, var(--danger-color));
 	text-align: center;
-	border-block-start: solid 0.05em var(--ozk5-red, #C00000);
-	border-inline-end: solid 0.05em var(--ozk5-red, #C00000);
+	border-block-start: solid 0.05em var(--ozk5-red, var(--danger-color));
+	border-inline-end: solid 0.05em var(--ozk5-red, var(--danger-color));
 }
 
 div[data-sc活用型] {
@@ -151,9 +151,9 @@ td[data-sc活用形項] {
 	display: table-cell;
 	padding-block: 0.2em;
 	padding-inline: 0.3em;
-	border-block-start: dashed 0.05em var(--ozk5-red, #C00000);
-	border-inline-end: solid 0.05em var(--ozk5-red, #C00000);
-	border-block-end: solid 0.05em var(--ozk5-red, #C00000);
+	border-block-start: dashed 0.05em var(--ozk5-red, var(--danger-color));
+	border-inline-end: solid 0.05em var(--ozk5-red, var(--danger-color));
+	border-block-end: solid 0.05em var(--ozk5-red, var(--danger-color));
 	min-width: 2em;
 }
 
@@ -182,44 +182,44 @@ div[data-scパネルタイトル] {
 	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
 	font-size: 0.8em;
 	line-height: 1.4em;
-	color: var(--ozk5-white, white);
-	background-color: var(--ozk5-red, #C00000) !important;
+	color: var(--background-color-light, var(--background-color));
+	background-color: var(--ozk5-red, var(--danger-color)) !important;
 	padding-inline-start: 0.5em;
 	padding-inline-end: 0.5em;
 }
 
 div[data-scパネルタイトル][data-sc類語パネル] {
-	background-color: var(--ozk5-ruigo-panel-background #444) !important;
+	background-color: var(--ozk5-ruigo-panel-background var(--button-default-border-color)) !important;
 }
 
 span[data-scパネルタイトルテキスト] {
-	color: var(--ozk5-white, white);
+	color: var(--background-color-light, var(--background-color));
 }
 
 div[data-scパネル-c] {
-	border-inline-start: solid 0.05em var(--ozk5-red, #C00000);
-	border-inline-end: solid 0.05em var(--ozk5-red, #C00000);
-	border-block-end: solid 0.05em var(--ozk5-red, #C00000);
+	border-inline-start: solid 0.05em var(--ozk5-red, var(--danger-color));
+	border-inline-end: solid 0.05em var(--ozk5-red, var(--danger-color));
+	border-block-end: solid 0.05em var(--ozk5-red, var(--danger-color));
 }
 
 div[data-scパネル-c][data-sc類語パネル-c] {
-	background-color: var(--ozk5-ruigo-panel-background #444) !important;
+	background-color: var(--ozk5-ruigo-panel-background var(--button-default-border-color)) !important;
 }
 
 div[data-sc語義パネル解説-g] {
 	padding-block: 0.2em;
 	padding-inline: 0.3em;
-	border-block-end: solid 0.05em var(--ozk5-red, #C00000);
+	border-block-end: solid 0.05em var(--ozk5-red, var(--danger-color));
 }
 
 span[data-sc重点義タイトル] {
 	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
 	font-weight: bold;
-	color: var(--ozk5-red, #C00000);
+	color: var(--ozk5-red, var(--danger-color));
 }
 
 span[data-sc重点義-m] {
-	color: var(--ozk5-light-red, #D96666);
+	color: var(--ozk5-light-red, var(--danger-color-light));
 }
 
 div[data-sc語義パネル語義-g] {
@@ -242,12 +242,12 @@ td[data-sc語義パネル語義-t-c] {
 }
 
 td[data-sc語義パネル語義-t-c][data-sc-header] {
-	border-inline-end: solid 0.05em var(--ozk5-red, #C00000);
-	background-color: var(--ozk5-gogi-panel-header, #F9E6E6) !important;
+	border-inline-end: solid 0.05em var(--ozk5-red, var(--danger-color));
+	background-color: var(--ozk5-gogi-panel-header, var(--danger-color-lightest)) !important;
 }
 
 td[data-sc語義パネル語義-t-c][data-sc-t-b] {
-	border-block-start: solid 0.05em var(--ozk5-red, #C00000);
+	border-block-start: solid 0.05em var(--ozk5-red, var(--danger-color));
     border-inline-end: none;
     border-inline-start: none;
     border-block-end: none;
@@ -312,7 +312,7 @@ div[data-sc接続項] {
 }
 
 div[data-sc囲み-g] {
-	border: solid 0.05em var(--ozk5-gray, #888);
+	border: solid 0.05em #888;
 	margin-block-start: 0.4em;
 	margin-block-end: 0.4em;
 	padding-block: 0;
@@ -322,7 +322,7 @@ div[data-sc囲み-g] {
 div[data-sc囲み-g][data-sc発展],
 div[data-sc囲み-g][data-sc語の広がり],
 div[data-sc囲み-g][data-sc識別ボード] {
-	border-color: var(--ozk5-red, #C00000);
+	border-color: var(--ozk5-red, var(--danger-color));
 }
 
 div[data-sc囲み2-g],
@@ -331,7 +331,7 @@ div[data-sc囲み-2-g] {
 	margin-block-end: 0.4em;
 	padding-block: 0;
 	padding-inline: 0.3em;
-	border-inline-start: solid 0.2em var(--ozk5-gray, #888);
+	border-inline-start: solid 0.2em #888;
     border-block-start: none;
     border-inline-end: none;
     border-block-end: none;
@@ -341,7 +341,7 @@ div[data-sc囲み2-g][data-sc敬語ガイド],
 div[data-sc囲み-2-g][data-sc敬語ガイド],
 div[data-sc囲み2-g][data-sc慣用表現],
 div[data-sc囲み-2-g][data-sc慣用表現] {
-    border-color: var(--ozk5-red, #C00000);
+    border-color: var(--ozk5-red, var(--danger-color));
 }
 
 div[data-sc発展タイトル],
@@ -357,11 +357,11 @@ span[data-sc発展-m],
 span[data-sc語の広がり-m] {
 	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
 	font-weight: bold;
-	color: var(--ozk5-red, #C00000);
+	color: var(--ozk5-red, var(--danger-color));
 }
 
 div[data-sc類語パネル共通義] {
-	border-block-end: solid 0.05em var(--ozk5-ruigo-panel-border, #AAA);
+	border-block-end: solid 0.05em var(--ozk5-ruigo-panel-border, var(--disabled-color-lighter));
     border-block-start: none;
     border-inline-end: none;
     border-inline-start: none;
@@ -375,7 +375,7 @@ span[data-sc共通義タイトル] {
 }
 
 span[data-sc共通義-m] {
-    color: var(--ozk5-gray, #888);
+    color: #888;
 }
 
 td[data-sc類語項] {
@@ -385,14 +385,14 @@ td[data-sc類語項] {
 }
 
 td[data-sc類語項][data-sc-t-b] {
-	border-block-start: solid 0.05em var(--ozk5-ruigo-panel-border, #AAA);
+	border-block-start: solid 0.05em var(--ozk5-ruigo-panel-border, var(--disabled-color-lighter));
     border-block-end: none;
     border-inline-end: none;
     border-inline-start: none;
 }
 
 td[data-sc類語項][data-sc語句] {
-	border-inline-end: solid 0.05em var(--ozk5-ruigo-panel-border, #AAA);
+	border-inline-end: solid 0.05em var(--ozk5-ruigo-panel-border, var(--disabled-color-lighter));
     border-block-start: none;
     border-block-end: none;
     border-inline-start: none;
@@ -405,11 +405,11 @@ td[data-sc類語項][data-sc語句] {
 div[data-sc識別ボードタイトル] {
 	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
 	font-weight: bold;
-	color: var(--ozk5-red, #C00000);
+	color: var(--ozk5-red, var(--danger-color));
 }
 
 div[data-sc識別ボードタイトルテキスト] {
-	color: var(--ozk5-red, #C00000);
+	color: var(--ozk5-red, var(--danger-color));
 }
 
 td[data-sc識別ガイド見出項] {
@@ -461,14 +461,14 @@ span[data-sc-rect] {
 	font-size: 0.8em;
 	border-width: 0.05em;
 	border-style: solid;
-	border-color: var(--ozk5-black, black);
+	border-color: var(--text-color);
 	word-break: keep-all;
 }
 
 span[data-sc-rect][data-sc-fill] {
-	color: var(--ozk5-white, white);
+	color: var(--background-color-light, var(--background-color));
 	border-style: none;
-	background-color: var(--ozk5-black, black) !important;
+	background-color: var(--text-color) !important;
 }
 
 span[data-sc-rectr] {
@@ -479,56 +479,56 @@ span[data-sc-rectr] {
 	font-size: 0.8em;
 	border-width: 0.05em;
 	border-style: solid;
-	border-color: var(--ozk5-black, black);
+	border-color: var(--text-color);
 	word-break: keep-all;
 	-webkit-border-radius: 0.15em;
 }
 
 span[data-sc-rectr][data-sc-fill] {
-	color: var(--ozk5-white, white);
+	color: var(--background-color-light, var(--background-color));
 	border-style: none;
-	background-color: var(--ozk5-black, black) !important;
+	background-color: var(--text-color) !important;
 }
 
 span[data-sc-rectr][data-sc品詞],
 span[data-sc-rectr][data-sc文法] {
-	background-color: var(--ozk5-hinshi-mark, #444) !important;
+	background-color: var(--ozk5-hinshi-mark, var(--button-default-icon-color)) !important;
 }
 
 span[data-sc-rectr][data-sc用例],
 span[data-sc-rectr][data-sc用例訳],
 span[data-sc-rectr][data-sc冒頭文] {
-	background-color: var(--ozk5-red, #C00000) !important;
+	background-color: var(--ozk5-red, var(--danger-color)) !important;
 }
 
 span[data-sc-rectr][data-sc分類],
 span[data-sc-rectr][data-sc季語] {
-	background-color: var(--ozk5-gray, #888) !important;
+	background-color: #888 !important;
 }
 
 span[data-sc-rectr][data-scメタデータ作品] {
 	font-size: 0.9em;
-	color: var(--ozk5-white, white);
-	border-color: var(--ozk5-white, white);
+	color: var(--background-color-light, var(--background-color));
+	border-color: var(--background-color-light, var(--background-color));
 }
 
 span[data-sc-rectr][data-sc現代] {
-	background-color: var(--ozk5-gendai-mark, #888) !important;
+	background-color: var(--ozk5-gendai-mark, var(--disabled-color-lighter)) !important;
 }
 
 span[data-sc-rectr][data-sc-mark] {
-	background-color: var(--ozk5-mark-border, #660) !important;
+	background-color: var(--ozk5-mark-border, var(--advanced-color-lighter)) !important;
 }
 
 span[data-sc-rectr][data-sc敬語ガイド],
 span[data-sc-rectr][data-sc図解学習],
 span[data-sc-rectr][data-sc慣用表現] {
-	background-color: var(--ozk5-red, #C00000) !important;
+	background-color: var(--ozk5-red, var(--danger-color)) !important;
 }
 
 span[data-sc-rectr][data-sc-button] {
-	color: var(--ozk5-white, white);
-	border-color: var(--ozk5-white, white);
+	color: var(--background-color-light, var(--background-color));
+	border-color: var(--background-color-light, var(--background-color));
 }
 
 span[data-sc-circle] {
@@ -538,13 +538,13 @@ span[data-sc-circle] {
 	font-size: 0.8em;
 	border-width: 0.05em;
 	border-style: solid;
-	border-color: var(--ozk5-black, black);
+	border-color: var(--text-color);
 	-webkit-border-radius: 0.67em;
 }
 
 span[data-sc-circle][data-sc用例活用] {
-	color: var(--ozk5-example-katsuyou-mark, #666);
-	border-color: var(--ozk5-example-katsuyou-mark, #666);
+	color: var(--ozk5-example-katsuyou-mark, var(--text-color-light2));
+	border-color: var(--ozk5-example-katsuyou-mark, var(--text-color-light2));
 	-webkit-user-select: nocopy;
 }
 
@@ -607,11 +607,11 @@ span[data-sc-bold] {
 span[data-sc-color] {
 	/* font-family: "Hiragino Kaku Gothic ProN", sans-serif; */
 	font-weight: bold;
-	color: var(--ozk5-red, #C00000);
+	color: var(--ozk5-red, var(--danger-color));
 }
 
 span[data-sc-red] {
-	color: var(--ozk5-red, #C00000);
+	color: var(--ozk5-red, var(--danger-color));
 }
 
 span[data-sc-strong] {
@@ -622,7 +622,7 @@ span[data-sc-strong] {
 span[data-sc文法要語underline],
 span[data-sc文法要語-underline] {
 	padding-block-start: 0.05em;
-	border-block-start: solid 0.05em var(--ozk5-black, black);
+	border-block-start: solid 0.05em var(--text-color);
     border-block-end: none;
     border-inline-end: none;
     border-inline-start: none;
@@ -631,7 +631,7 @@ span[data-sc文法要語-underline] {
 span[data-sc文法要語hasen],
 span[data-sc文法要語-hasen] {
 	padding-block-start: 0.05em;
-	border-block-start: solid 0.05em var(--ozk5-black, black);
+	border-block-start: solid 0.05em var(--text-color);
     border-block-end: none;
     border-inline-end: none;
     border-inline-start: none;
@@ -640,7 +640,7 @@ span[data-sc文法要語-hasen] {
 span[data-sc文法要語nijyusen],
 span[data-sc文法要語-nijyusen] {
 	padding-block-start: 0.024em;
-	border-block-start: solid 0.12em var(--ozk5-black, black);
+	border-block-start: solid 0.12em var(--text-color);
     border-block-end: none;
     border-inline-end: none;
     border-inline-start: none;
@@ -681,8 +681,8 @@ div[data-sc-gendai-ref-g] {
 }
 
 div[data-sc-gendai-ref] span[data-sc品詞-m] {
-	border-color: var(--ozk5-blue, rgb(49, 49, 226));
-	background-color: var(--ozk5-blue, rgb(49, 49, 226)) !important;
+	border-color: var(--ozk5-blue, var(--accent-color, var(--link-color)));
+	background-color: var(--ozk5-blue, var(--accent-color, var(--link-color))) !important;
 }
 
 span[data-sc-img][data-sc外字] {
@@ -739,6 +739,9 @@ div[data-sc画像-g] a {
 	}
 }
 
-a:hover, a:focus, a:active {
-	color: #e4671b;
+a:hover {
+    color: var(--text-color);
+    filter: brightness(1.3);
+    text-decoration: underline;
+    text-decoration-color: oklch(65% 0.2 260);
 }

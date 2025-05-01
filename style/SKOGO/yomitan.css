@@ -3,8 +3,6 @@
 /* ----------------------- */
 :root[data-theme="dark"] {
     .definition-item[data-dictionary='三省堂 全訳読解古語辞典'] {
-        --skogo-black: #DDDDDD;
-        --skogo-white: #000000;
         --skogo-blue: #00AAFF;
         --skogo-red: #FF6666;
         --skogo-light-red: #A54447;
@@ -13,6 +11,16 @@
         --skogo-shubetsu-mark: #CCCCCC;
         --skogo-gendai-mark: #CCCCCC;
     }
+}
+
+.definition-item[data-dictionary='三省堂 全訳読解古語辞典'] {
+    --skogo-blue: #4a8ade;
+    --skogo-red: #C00000;
+    --skogo-light-red: #DFA6A8;
+    --skogo-extra-light-red: #FFEEEE;
+    --skogo-hinshi-mark: #444;
+    --skogo-shubetsu-mark: #707070;
+    --skogo-gendai-mark: #888;
 }
 
 .definition-item[data-dictionary='三省堂 全訳読解古語辞典'] {

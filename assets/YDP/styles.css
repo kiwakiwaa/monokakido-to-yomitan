@@ -1,17 +1,41 @@
+/* Basic approach: define light mode colors as default */
+/* Consistently use your preferred variable names */
+
+:where(*) {
+	--ydp-blue: rgb(28, 28, 228);
+	--ydp-image-background: #eeeeee;
+}
+
+[data-sc-body] {
+	/* Apply the conditional colors */
+
+	color: var(--text-color, black);
+	line-height: 1.5em;
+}
+
+a {
+	color: var(--ydp-blue-active, var(--ydp-blue)) !important;
+	/* Fallback */
+}
+
+div[data-sc-image] {
+	background-color: var(--ydp-image-background-active, var(--ydp-image-background)) !important;
+}
+
 
 
 [data-sc-body] {
-	color: var(--ydp-black, black);
+	color: var(--text-color, black);
 	line-height: 1.5em;
 	vertical-align: baseline;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 span[data-sc-data] {
-    display: none;
+	display: none;
 }
 
 div[data-sc-data][data-sc筆者名] {
@@ -19,26 +43,26 @@ div[data-sc-data][data-sc筆者名] {
 }
 
 div[data-sc表] {
-    margin-block-start: 0.5em;
+	margin-block-start: 0.5em;
 	margin-block-end: 0.5em;
 	text-align: center;
 }
 
 span[data-sc-em] {
-    /* font-family: "Hiragino Kaku Gothic ProN"; */
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
 	font-weight: bold;
 	font-style: normal;
 }
 
 span[data-sc-i] {
-    /* font-family: "Times New Roman"; */
-	font-size: 1.1em;  
+	/* font-family: "Times New Roman"; */
+	font-size: 1.1em;
 }
 
 div[data-sc-image] {
-    margin-block-start: 0.5em;
+	margin-block-start: 0.5em;
 	padding: 0.5em;
-	background-color: var(--ydp-image-background, #EEEEEE);
+	background-color: var(--ydp-image-background);
 	border-radius: 0.333em;
 }
 
@@ -74,7 +98,7 @@ div[data-sc-image_img] div[data-sc-img] {
 }
 
 div[data-sc-entryrefs] {
-    margin-block-start: 0.5em;
+	margin-block-start: 0.5em;
 	/* font-family: "Hiragino Kaku Gothic ProN"; */
 }
 
@@ -87,16 +111,16 @@ span[data-sc-headword][data-sc見出] {
 span[data-sc-headword][data-sc英語],
 span[data-sc-headword][data-sc独語],
 span[data-sc-headword][data-sc仏語] {
-	font-family: "Times New Roman"
+	font-family: "Times New Roman";
 }
 
 span[data-sc-img][data-sc表] {
-    max-width: 80%;
+	max-width: 80%;
 	background-color: #fff;
 }
 
 span[data-sc-lang] {
-    font-family: "Helvetica Neue";
+	font-family: "Helvetica Neue";
 }
 
 [data-sc-meaning] {
@@ -121,7 +145,7 @@ span[data-sc-mlg] {
 }
 
 span[data-sc-ref][data-sc文献] {
-    vertical-align: 0.5em;
+	vertical-align: 0.5em;
 	font-size: 0.85em;
 }
 
@@ -132,11 +156,11 @@ rt {
 }
 
 [data-sc-body][data-sc-refs] {
-    margin: 0;
+	margin: 0;
 }
 
 span[data-sc-ref_group] {
-    /* font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN"; */
+	/* font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN"; */
 	line-height: 1.25em;
 }
 
@@ -166,29 +190,28 @@ span[data-sc-class="gaiji gaiji_arrow_thick"] {
 }
 
 span[data-sc-class="gaiji_dsm_5"] {
-	border: 1px solid var(--ydp-black, black);
+	border: 1px solid var(--text-color);
 	border-radius: 0.5em;
 	padding-block: 0.1em;
 	padding-inline: 0.5em;
 }
 
 span[data-sc-class="gaiji_maruko"] {
-	display: inline-block; 
-	border: 2px solid var(--ydp-black, black);
-	border-radius: 50%; 
-	width: 1.5em; 
-	height: 1.5em; 
-	text-align: center; 
+	display: inline-block;
+	border: 2px solid var(--text-color);
+	border-radius: 50%;
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
 	line-height: 1.5em;
 }
-
 
 span[data-sc-class="数式 math_letter"] span:first-child {
 	margin-inline-start: 0.1em;
 }
 
 span[data-sc-class="数式 math_letter"] {
-	font-family: 'Times New Roman';
+	font-family: "Times New Roman";
 	font-style: italic;
 	font-size: 1.25em;
 }
@@ -220,9 +243,11 @@ div[data-sc-image]:has([data-sc-href="graphics/2332.mp4"]) {
 [data-sc-img] a {
 	max-height: 100%;
 }
+
 [data-sc-img] a {
 	max-width: 100%;
 }
+
 [data-sc-img] .gloss-image-container {
 	max-width: 100%;
 	max-height: 100% !important;
@@ -234,17 +259,19 @@ span[data-sc-img] {
 }
 
 div[data-sc-img] {
-    margin-inline-start: 2em;
+	margin-inline-start: 2em;
 }
 
 [data-sc-img] .gloss-image-container {
 	background-color: transparent !important;
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
 	color: #e4671b;
 }
 
 a {
-	color: var(--ydp-blue, rgb(28, 28, 228));
+	color: var(--ydp-blue);
 }

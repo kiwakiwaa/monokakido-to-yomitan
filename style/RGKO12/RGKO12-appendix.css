@@ -1,0 +1,631 @@
+body {
+	margin: 1em 44px 1em 1em;
+	line-height: 2em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 1.25em;
+	writing-mode: vertical-rl;
+}
+
+body.romaji {
+	writing-mode: horizontal-tb;
+}
+
+POS {
+	
+}
+
+SUP {
+	
+}
+
+a {
+	
+}
+
+acc {
+	
+}
+
+b.large {
+	font-size: 1.333em;
+}
+
+big {
+	
+}
+
+blue {
+	
+}
+
+.blue {
+	color: blue;
+}
+
+.light-blue {
+	color: light-blue;
+}
+
+br {
+	
+}
+
+dd {
+	padding-left: 0.5em;
+}
+
+ddd {
+	word-break: keep-all;
+}
+
+dic-item {
+	margin-left: 1em;
+}
+
+.kyokasho {
+	font-family: "UDDigiKyokasho ProN", "Hiragino Mincho ProN";
+}
+
+.mincho {
+	font-family: "Hiragino Mincho ProN";
+}
+
+div {
+	
+}
+
+div.box {
+	margin: 1em 0;
+	padding: 0.25em 0.5em;
+	font-family: "UDDigiKyokasho ProN", "Hiragino Mincho ProN";
+	border: solid black 1px;
+}
+
+dl {
+}
+
+dt {
+	padding: 0.25em 0;
+}
+
+dl.inline dd {
+	display: inline;
+	word-break: keep-all;
+}
+
+em {
+	font-weight: bold;
+	font-style: normal;
+}
+
+#この辞典の使い方 em {
+	margin: 0;
+	padding: 0;
+	font-family: "Hiragino Sans";
+	font-weight: 900;
+	font-style: normal;
+	color: red;
+}
+
+#この辞典の使い方 b {
+	font-family: "Hiragino Sans";
+	font-weight: 900;
+	font-style: normal;
+}
+
+fbox {
+	
+}
+
+font {
+	
+}
+
+gaiji {
+	
+}
+
+h1 {
+	margin-left: -0.75em;
+	font-family: "Hiragino Sans";
+	font-size: 1.5em;
+	font-weight: 900;
+}
+
+h2 {
+	margin: 1em 0 0 0;
+	font-family: "Hiragino Sans";
+	font-size: 1.333em;
+	font-weight: 900;
+	color: light-blue;
+}
+
+h3 {
+	margin: 0.5em 0 0 0;
+	font-size: 1em;
+}
+
+image {
+	margin-left: 1em;
+}
+
+dt image {
+	display: inline;
+	margin-left: 0;
+	margin-right: 0.5em;
+}
+
+image.inline {
+	display: inline;
+}
+
+img {
+	zoom: 50%;
+}
+
+img + b {
+	margin-left: 0.5;
+}
+
+li {
+}
+
+num {
+	text-combine-horizontal: all;
+}
+
+okuri {
+	
+}
+
+p {
+	margin: 0.5em 0;
+}
+
+p.right {
+	text-align: right;
+}
+
+p.例 {
+	margin-left: 2em;
+}
+
+p.例2 {
+	margin-left: 3.5em;
+}
+
+p.例 > em:first-child {
+	margin-left: -0.5em;
+}
+
+p.note {
+	margin-left: 5em;
+	font-size: 0.8em;
+}
+
+pos {
+	
+}
+
+rb {
+	
+}
+
+rt {
+	
+}
+
+ruby {
+	
+}
+
+small {
+	
+}
+
+sp {
+	
+}
+
+sup {
+	
+}
+
+table {
+	line-height: 1.75em;
+}
+
+table.bordered {
+	border-bottom: solid 1px black;
+	border-right: solid 1px black;
+}
+
+table.bordered th, table.bordered td {
+	border-top: solid 1px black;
+	border-left: solid 1px black;
+}
+
+table.bordered td.leftdot {
+	border-left-style: dashed;
+}
+
+.ことばのはたらき {
+	overflow: scroll;
+}
+
+title {
+	display: none;
+}
+
+tr.cream {
+	background-color: cream;
+}
+
+th, td {
+	padding: 0.25em;
+}
+
+th.fixed {
+	word-break: keep-all;
+}
+
+td.dd {
+	padding: 0.25em 0.5em;
+}
+
+u {
+	
+}
+
+ul {
+	margin: 0 0 0 1em;
+}
+
+ul.no-ellipsis {
+	list-style-type: none;
+}
+
+句 {
+	display: block;
+	margin: 1em 0;
+	padding: 0.5em;
+	color: #000000;
+	font-family: "UDDigiKyokasho ProN", "Hiragino Mincho ProN";
+	border-radius: 0.2em;
+}
+
+句.春 {
+	background-color: spring;
+}
+
+句.夏 {
+	background-color: summer;
+}
+
+句.秋 {
+	background-color: autumn;
+}
+
+句.冬 {
+	background-color: winter;
+}
+
+句.旅 {
+	background-color: travel;
+}
+
+句.恋 {
+	background-color: romance;
+}
+
+句.その他 {
+	background-color: other;
+}
+
+span.春 {
+	color: #000000;
+	background-color: spring;
+}
+
+span.夏 {
+	color: #000000;
+	background-color: summer;
+}
+
+span.秋 {
+	color: #000000;
+	background-color: autumn;
+}
+
+span.冬 {
+	color: #000000;
+	background-color: winter;
+}
+
+span.旅 {
+	color: #000000;
+	background-color: travel;
+}
+
+span.恋 {
+	color: #000000;
+	background-color: romance;
+}
+
+span.その他 {
+	color: #000000;
+	background-color: other;
+}
+
+span rt {
+	color: black;
+}
+
+句ヘッダ {
+	display: block;
+}
+
+句番号 {
+	margin-right: 0.5em;
+	text-combine-horizontal: all;
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+季節 {
+	font-size: 0.75em;
+}
+
+上の句 {
+	display: block;
+	margin-top: 0.5em;
+	margin-left: 1.5em;
+}
+
+下の句 {
+	display: block;
+	margin-left: 1.5em;
+}
+
+読み人 {
+	display: block;
+	margin-left: 1.5em;
+	margin-right: 3em;
+	text-align: right;
+}
+
+意味 {
+	display: block;
+	margin-top: 0.5em;
+	margin-left: 1.5em;
+}
+
+意味 ws {
+	color: #000000;
+	border-color: #000000;
+}
+
+教体 {
+	font-family: "UDDigiKyokasho ProN", "Hiragino Mincho ProN";
+}
+
+table.敬語の使い方 tr.even td {
+	background-color: light-light-blue;
+}
+
+table.敬語の使い方 td:first-child {
+	width: 6em;
+}
+
+table.敬語の使い方 th {
+	text-align: center;
+	background-color: cream;
+}
+
+#ことばのはたらき red {
+	font-weight: bold;
+}
+
+#ことばのはたらき h3 {
+	color: green;
+}
+
+table.ことばのはたらき th:first-child {
+	font-weight: normal;
+	background-color: cream;
+}
+
+combi {
+	padding: 0.25em;
+	font-family: "Hiragino Sans";
+	font-weight: 900;
+	background-color: light-orange;
+}
+
+#ことばの組み合わせ h3 {
+	color: green;
+}
+
+#ことばの組み合わせ num {
+	color: green;
+}
+
+#ことばの組み合わせ u {
+	text-decoration-color: red;
+}
+
+p.s0-1 {
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+p.s1-2 {
+	padding-left: 2em;
+	text-indent: -1em;
+}
+
+.center {
+	text-align: center;
+}
+
+.horizontal {
+	text-align: center;
+	writing-mode: horizontal-tb;
+}
+
+table.アクセントと方言 {
+	border: solid 1px black;
+	border-right-style: none;
+}
+
+table.アクセントと方言 th  {
+	padding: 0 0.5em;
+	font-weight: normal;
+	text-align: center;
+	color: #000;
+	background-color: light-light-blue;
+	border-right: solid 1px black;
+}
+
+table.アクセントと方言 td {
+	padding: 0 0.5em;
+	border-right: solid 1px black;
+}
+
+table.アクセントと方言 tr:first-child th {
+	background-color: cream;
+	border-bottom: solid 1px black;
+}
+
+th.light-blue {
+	color: #000;
+	background-color: light-light-blue;
+}
+
+.center {
+	text-align: center;
+}
+
+.yellow-black {
+	background-color: cream;
+}
+
+.yellow-blue {
+	color: light-blue;
+	text-align: center;
+	background-color: cream;
+}
+
+.blue-black {
+	text-align: center;
+	background-color: light-light-blue;
+}
+
+.purple-black {
+	text-align: center;
+	background-color: light-light-purple;
+}
+
+.ローマ字 th, .ローマ字 td {
+	width: 3em;
+	line-height: 1.5em;
+	text-align: center;
+}
+
+td.small {
+	font-size: 0.8em;
+}
+
+#原こう用紙・手紙の書き方 green {
+	font-weight: bold;
+}
+
+縦中横 {
+	text-combine-horizontal: all;
+}
+
+.畿内 {
+	color: #000;
+	text-align: center;
+	background-color: #BBDDFF;
+}
+
+.東山道 {
+	color: #000;
+	text-align: center;
+	background-color: #FFFF99;
+}
+
+.北陸道 {
+	color: #000;
+	text-align: center;
+	background-color: #AA88BB;
+}
+
+.東海道 {
+	color: #000;
+	text-align: center;
+	background-color: #EEBBDD;
+}
+
+.山陰道 {
+	color: #000;
+	text-align: center;
+	background-color: #FFDD88;
+}
+
+.山陽道 {
+	color: #000;
+	text-align: center;
+	background-color: #FFFF77;
+}
+
+.南海道 {
+	color: #000;
+	text-align: center;
+	background-color: #EECC88;
+}
+
+.西海道 {
+	color: #000;
+	text-align: center;
+	background-color: #99CCBB;
+}
+
+td.符号 {
+	margin: 0.1em;
+	padding: 0.2em;
+	font-family: "Hiragino Mincho ProN";
+	font-size: 2em;
+	font-weight: bold;
+	color: #000;
+	text-align: center;
+	background-color: #FFBBDD;
+	border-radius: 0.1em;
+	word-break: keep-all;
+}
+
+td.符号解説 {
+	padding-left: 0.5em;
+}
+
+td.符号解説 p {
+	margin: 0;
+	line-height: 2em;
+}
+
+p.符号解説 {
+	color: green;
+}
+
+符号タイトル {
+	padding: 0.5em;
+	background-color: light-orange;
+}
+
+goma {
+	font-size: 0.5em;
+}
+
+underline {
+	border-top: solid 2px red;
+}
