@@ -32,7 +32,8 @@ class Rgko12LinkHandlingStrategy(LinkHandlingStrategy):
             "appendix/220_とくべつな読みのことば.html": "【例解】付録：とくべつな読みのことば",
             "appendix/230_印刷文字と手書き文字.html": "【例解】付録：印刷文字と手書き文字",
             "appendix/240_日本の旧国名.html": "【例解】付録：日本の旧国名",
-            "appendix/250_小倉百人一首.html": "【例解】付録：小倉百人一首"
+            "appendix/250_小倉百人一首.html": "【例解】付録：小倉百人一首",
+            "appendix/appendix_links.html": "【例解】付録"
         }
         
     

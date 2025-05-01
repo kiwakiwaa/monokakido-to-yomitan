@@ -21,7 +21,7 @@ a {
 div[data-sc-image] {
 	background-color: var(--ydp-image-background-active, var(--ydp-image-background)) !important;
 }
-
+	
 
 
 [data-sc-body] {

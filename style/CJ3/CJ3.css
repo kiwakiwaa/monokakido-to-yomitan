@@ -1,0 +1,450 @@
+@color red = #CC0000;
+@color image-background = #FFF; /* nightmodeでも色を変えない */
+
+body {
+	margin-top: 0.3em;
+	margin-bottom: 2em;
+	font-family: Georgia;
+	color: black;
+	line-height: 1.5em;
+	vertical-align: middle;
+}
+
+entry-index {
+	display: none;
+}
+
+HeadG {
+	display: block;
+	margin-bottom: 0.8em;
+}
+
+headword {
+	font-family: "PingFang SC";
+}
+
+headword.親字, headword.熟語, headword.表記, headword.小知識 {
+	display: block;
+	font-size: 1.7em;
+	line-height: 1.15em;
+}
+
+headword.ピンイン {
+	display: block;
+	margin-top: 0.1em;
+	font-weight: 500;
+	line-height: 1.333em;
+}
+
+headword.漢字表級 {
+	padding: 0.04em 0.06em 0.06em 0.07em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.85em;
+	font-weight: normal;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	color: black;
+	word-break: keep-all;
+	-webkit-border-radius: 0.1em;
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+headword.総画数 {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+}
+
+親字Main.一級 {
+	color: red;
+}
+
+親字Sub {
+	font-size: 0.8em;
+}
+
+親字語義区分 {
+	font-size: 0.6em;
+}
+
+親字語義区分ハイフン {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+audio {
+	margin-left: 1em;
+}
+
+audio a {
+	border-bottom: none;
+}
+
+img.audio {
+	height: 1em;
+}
+
+親字情報 {
+	display: block;
+	margin-top: 0.2em;
+}
+
+rank {
+	font-family: HMSymbol;
+	font-size: 0.8em;
+	margin-left: 0.1em;
+}
+
+rank.rank1, rank.rank2 {
+	color: red;
+}
+
+MeaningG {
+	display: block;
+}
+
+MeaningG.L1 {
+	margin-top: 0.5em;
+}
+
+MeaningG.L1+MeaningG.L1 {
+	margin-top: 1em;
+}
+
+MeaningG.L2+MeaningG.L2 {
+	margin-top: 0.5em;
+}
+
+MeaningG.L3+MeaningG.L3 {
+	margin-top: 0.3em;
+}
+
+MeaningG.L4+MeaningG.L4 {
+	margin-top: 0.3em;
+}
+
+meaning {
+	display: block;
+}
+
+meaning.小知識見出1 {
+	color: red;
+}
+
+meaning.小知識見出2 {
+	font-weight: bold;
+}
+
+example {
+	display: block;
+	margin-top: 0.2em;
+	margin-bottom: 0.5em;
+	margin-left: 0.8em;
+}
+
+用例 {
+	display: block;
+	color: dark-blue;
+}
+
+用例訳 {
+	display: block;
+	font-size: 0.95em;
+}
+
+column {
+	display: block;
+	margin-top: 0.6em;
+	margin-bottom: 0.6em;
+	-webkit-border-radius: 0.2em;
+	border: solid 0.05em red;
+}
+
+column-title {
+	display: block;
+	padding: 0 0.4em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: white;
+	background-color: red;
+	-webkit-border-top-left-radius: 0.2em;
+	-webkit-border-top-right-radius: 0.2em;
+}
+
+column-sub-title {
+	font-weight: bold;
+}
+
+column-content {
+	display: block;
+	padding: 0.3em 0.5em;
+}
+
+title {
+	display: block;
+	font-weight: bold;
+}
+
+コラム分類M {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+	color: red;
+}
+
+対義語M {
+	color: red;
+	vertical-align: middle;
+}
+
+異読G {
+	display: block;
+}
+
+WordIndexG {
+	display: block;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+}
+
+cn {
+	font-family: "PingFang SC";
+}
+
+tw {
+	font-family: "PingFang TC";
+}
+
+kr {
+	font-family: "PingFang TC";
+}
+
+jp {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+pinyin {
+	font-family: "PingFang SC";
+}
+
+glabel, slabel {
+}
+
+BS {
+	padding: 0.08em 0.246em 0.08em 0.303em;
+	font-family: Helvetica;
+	font-size: 1.08em;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	background-color: black;
+	word-break: keep-all;
+	vertical-align: middle;
+}
+
+BF {
+	padding: 0.1em 0.21em 0.1em 0.25em;
+	font-family: Helvetica;
+	font-size: 1em;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	background-color: black;
+	word-break: keep-all;
+	-webkit-border-radius: 0.2em;
+	vertical-align: middle;
+}
+
+BC, PR, WC {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+BS.small, BF.small, BC.small, WS.small {
+	font-size: 0.9em;
+}
+
+BS.red {
+	background-color: red;
+}
+
+a BS, a BF {
+	background-color: blue;
+}
+
+BC.red {
+	color: red;
+}
+
+WS {
+	padding: 0.05em 0.16em 0.05em 0.17em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+	font-weight: normal;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	color: black;
+	word-break: keep-all;
+	-webkit-border-radius: 0.1em;
+	vertical-align: middle;
+}
+
+WS.red {
+	color: red;
+	border-color: red;
+}
+
+a WS {
+	color: blue;
+	border-color: blue;
+}
+
+NoteM {
+	font-size: 0.8em;
+	color: red;
+	vertical-align: middle;
+}
+
+NoteM.black {
+	color: black;
+}
+
+pos, Logo {
+	padding: 0.04em 0.06em 0.06em 0.07em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+	font-weight: normal;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	color: black;
+	word-break: keep-all;
+	-webkit-border-radius: 0.1em;
+	vertical-align: middle;
+}
+
+Logo.red {
+	color: red;
+	border-color: red;
+}
+
+a pos, a Logo {
+	border-color: blue;
+	color: blue;
+}
+
+LBLogoG {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.85em;
+	font-weight: normal;
+	background-color: red;
+	-webkit-border-top-left-radius: 0.15em;
+	-webkit-border-bottom-left-radius: 0.15em;
+	padding: 0.08em 0.05em 0.12em 0.3em;
+	word-break: keep-all;
+	vertical-align: middle;
+}
+
+LBLogo {
+	background-color: white;
+	color: red;
+	padding: 0.03em 0.08em 0.07em 0.08em;
+}
+
+RALogoG {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.85em;
+	font-weight: normal;
+	background-color: black;
+	border-shape: arrow-box;
+	padding: 0.08em 0.64em 0.12em 0;
+	word-break: keep-all;
+	vertical-align: middle;
+}
+
+RALogo {
+	background-color: white;
+	color: black;
+	padding: 0.03em 0.15em 0.07em 0.15em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+}
+
+CLogo {
+	padding: 0.06em 0.3em 0.08em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.8em;
+	font-weight: bold;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	color: black;
+	word-break: keep-all;
+	-webkit-border-radius: 0.67em;
+	vertical-align: -0.1em;
+}
+
+CLogo.red {
+	color: red;
+	border-color: red;
+}
+
+liangci {
+}
+
+mlg {
+	font-size: 0.7em;
+	vertical-align: -0.35em;
+}
+
+sub {
+	font-size: 0.7em;
+	vertical-align: -0.4em;
+}
+
+sup {
+	font-size: 0.8em;
+	font-weight: normal;
+	vertical-align: 0.8em;
+}
+
+image {
+	display: block;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+	padding: 0.3em;
+	text-align: center;
+	background-color: image-background;
+}
+
+red {
+	color: red;
+}
+
+a {
+	padding-bottom: 0.1em;
+	text-decoration: none;
+	border-bottom: solid 0.05em blue;
+}
+
+DoubleDash {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+img.外字 {
+	display: gaiji;
+	height: 1em;
+}
+
+.FM {
+	margin-right: 0.25em;
+}
+
+.IM {
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+}

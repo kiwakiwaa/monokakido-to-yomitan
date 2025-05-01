@@ -1,0 +1,250 @@
+body {
+	margin-top: 0.73em;
+}
+
+headword.inline {
+	display: inline;
+}
+
+usage-段落G, APD-段落G {
+	display: block;
+	margin-bottom: 0.8em;
+}
+
+usage-段落, APD-段落 {
+	display: block;
+}
+
+usage-段落2 {
+	display: block;
+	margin-left: 1em;
+}
+
+usage-箇条 {
+	display: block;
+	margin-left: 1em;
+}
+
+usage-箇条番号 {
+	margin-left: -1em;
+	margin-right: 0.44em;
+	font-family: Helvetica;
+}
+
+usage-箇条番号2 {
+	margin-left: -1em;
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+usage-箇条M {
+	margin-left: -1.333em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.75em;
+	margin-right: 0.333em;
+}
+
+usage-まえがき-日付 {
+	display: block;
+	margin-left: 2em;
+}
+
+usage-まえがき-著者 {
+	display: block;
+	text-align: right;
+	margin-right: 1em;
+}
+
+usage-使い方-項目G {
+	display: block;
+	margin-bottom: 1.4em;
+}
+
+usage-使い方-番号 {
+	margin-right: 0.2em;
+	font-family: Helvetica;
+	font-size: 1.07em;
+}
+
+usage-使い方-一覧G {
+	display: block;
+	margin-left: 1em;
+}
+
+usage-使い方-一覧項目 {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+table.usage-例 {
+	margin-left: 1em;
+	vertical-align: top;
+}
+
+table.usage-使い方 {
+	vertical-align: top;
+}
+
+usage-使い方-記号項目2 {
+	display: block;
+	margin-left: 4em;
+}
+
+usage-使い方-記号2 {
+	margin-left: -4em;
+}
+
+td.usage-使い方-記号 {
+	width: 4em;
+}
+
+usage-例-用例 {
+	color: dark-blue;
+}
+
+usage-照合表タイトル {
+	display: block;
+	font-weight: bold;
+}
+
+td.usage-照合表Index {
+	width: 1.8em;
+}
+
+usage-照合表Index {
+	padding: 0.04em 0.19em 0.06em 0.2em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+	font-weight: normal;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: red;
+	color: red;
+	word-break: keep-all;
+	-webkit-border-radius: 0.1em;
+}
+
+usage-編者一覧-サブG {
+	display: block;
+	margin-bottom: 0.8em;
+}
+
+usage-編者一覧-サブタイトル, usage-編者一覧-版タイトル {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+usage-編者一覧-編者G {
+	display: block;
+}
+
+usage-編者一覧-編者 {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+usage-編者一覧-版G {
+	display: block;
+	margin-top: 2em;
+	margin-bottom: 0.4em;
+}
+
+usage-対照表 {
+	display: block;
+}
+
+usage-対照表 h2 {
+	display: block;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-top: 0.8em;
+}
+
+usage-対照表-画数 {
+	margin-left: 0.2em;
+	font-size: 0.6em;
+	vertical-align: 0.1em;
+}
+
+APD-年表G {
+	display: table;
+	vertical-align: top;
+}
+
+APD-年表項G {
+	display: table-row;
+}
+
+APD-年表項-年 {
+	display: table-cell;
+	width: 4em;
+}
+
+APD-年表項-月 {
+	display: table-cell;
+	width: 4em;
+}
+
+APD-年表項-記 {
+	display: table-cell;
+	margin: 0.2em 0;
+}
+
+APD-国際音声記号 {
+	font-family: "Doulos SIL";
+}
+
+APD-親族名称一覧 {
+	display: block;
+}
+
+APD-親族名称一覧 h2 {
+	display: block;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+APD-親族名称一覧 dt {
+	display: block;
+	font-weight: bold;
+}
+
+APD-文章記号の使い方 dt {
+	display: block;
+	margin-top: 0.8em;
+	font-size: 1.2em;
+	margin-bottom: 0.2em;
+}
+
+APD-量詞, APD-図案, APD-京劇, APD-料理, APD-中国将棋, APD-文章記号の使い方 {
+	display: block;
+}
+
+APD-量詞 dl {
+	display: block;
+}
+
+APD-量詞GタイトルG {
+	display: block;
+	font-weight: bold;
+	margin-top: 1.5em;
+}
+
+APD-量詞項目G {
+	display: block;
+	margin-bottom: 1.2em;
+}
+
+APD-量詞 dt {
+	display: block;
+	margin-bottom: 0.2em;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+APD-図案 h2, APD-京劇 h2, APD-料理 h2, APD-中国将棋 h2 {
+	display: block;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-top: 0.8em;
+}
