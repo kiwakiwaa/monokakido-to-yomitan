@@ -131,9 +131,7 @@ class HTMLToYomitanConverter:
 		
 		class_list, data_dict = self.get_class_list_and_data(html_glossary)
 		
-		# Add this right after you get class_list and data_dict in convert_element_to_yomitan method
 		if tag_name == "mlg":
-			# Remove word joiner characters (\u2060) from mlg tag content
 			html_glossary.string = html_glossary.string.replace('\u2060', '') if html_glossary.string else html_glossary.string
 			
 		# Recursively process children elements
