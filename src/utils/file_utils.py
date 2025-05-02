@@ -243,4 +243,21 @@ class FileUtils:
         except Exception as e:
             print(f"Error loading MDX JSON file: {e}")
             return {}
+        
+        
+    @staticmethod
+    def load_dictionary_mapping(file_path):
+        try:
+            with open(file_path, 'r', encoding='utf-8') as file:
+                data = json.load(file)
+            return data
+        except FileNotFoundError:
+            print(f"Error: File '{file_path}' not found.")
+            raise
+        except json.JSONDecodeError as e:
+            print(f"Error: Invalid JSON format in '{file_path}': {e}")
+            raise
+        except Exception as e:
+            print(f"Unexpected error while loading '{file_path}': {e}")
+            raise
     

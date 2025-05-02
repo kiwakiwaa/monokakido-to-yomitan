@@ -1,0 +1,748 @@
+
+
+[data-sc-body] {
+	/*
+	margin-block-start: 0.3em;
+	margin-block-end: 2em;
+	font-family: Georgia;
+	color: var(--text-color);
+	line-height: 1.5em;
+	vertical-align: middle;
+	*/
+}
+
+[data-sc-head-g] {
+	display: block;
+	margin-block-end: 0.8em;
+}
+
+[data-sc-headword] {
+	font-family: "PingFang SC";
+}
+
+[data-sc-headword][data-sc親字],
+[data-sc-headword][data-sc熟語],
+[data-sc-headword][data-sc表記],
+[data-sc-headword][data-sc小知識] {
+	display: block;
+	font-size: 1.7em;
+	line-height: 1.15em;
+}
+
+[data-sc-headword][data-scピンイン] {
+	display: block;
+	margin-block-start: 0.1em;
+	font-weight: 500;
+	line-height: 1.333em;
+}
+
+[data-sc-headword][data-sc漢字表級] {
+	padding-block-start: 0.04em;
+	padding-block-end: 0.06em;
+	padding-inline-start: 0.07em;
+	padding-inline-end: 0.06em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.85em;
+	font-weight: normal;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--text-color);
+	color: var(--text-color);
+	word-break: keep-all;
+	border-radius: 0.1em;
+	margin-inline-end: 0.4em;
+	vertical-align: middle;
+}
+
+[data-sc-headword][data-sc総画数] {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+}
+
+[data-sc親字-main][data-sc一級],
+[data-sc親字main][data-sc一級] {
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+}
+
+[data-sc親字sub],
+[data-sc親字-sub] {
+	font-size: 0.8em;
+}
+
+[data-sc親字語義区分] {
+	font-size: 0.6em;
+}
+
+[data-sc親字語義区分ハイフン] {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+[data-sc-audio] {
+	margin-inline-start: 1em;
+}
+
+[data-sc-audio] a {
+	border-block-end: none;
+}
+
+[data-sc親字情報] {
+	display: block;
+	margin-block-start: 0.2em;
+}
+
+[data-sc-rank] {
+	font-family: HMSymbol;
+	font-size: 0.8em;
+	margin-inline-start: 0.1em;
+}
+
+[data-sc-rank][data-sc-rank1],
+[data-sc-rank][data-sc-rank2] {
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+}
+
+[data-sc-rank1] {
+	display: none;
+}
+
+[data-sc-meaning-g] {
+	display: block;
+}
+
+[data-sc-meaning-g][data-sc-l1] {
+	margin-block-start: 0.5em;
+}
+
+[data-sc-meaning-g][data-sc-l1]+[data-sc-meaning-g][data-sc-l1] {
+	margin-block-start: 1em;
+}
+
+[data-sc-meaning-g][data-sc-l2]+[data-sc-meaning-g][data-sc-l2] {
+	margin-block-start: 0.5em;
+}
+
+[data-sc-meaning-g][data-sc-l3]+[data-sc-meaning-g][data-sc-l3] {
+	margin-block-start: 0.3em;
+}
+
+[data-sc-meaning-g][data-sc-l4]+[data-sc-meaning-g][data-sc-l4] {
+	margin-block-start: 0.3em;
+}
+
+[data-sc-meaning] {
+	display: block;
+}
+
+[data-sc-meaning][data-sc小知識見出1] {
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+}
+
+[data-sc-meaning][data-sc小知識見出2] {
+	font-weight: bold;
+}
+
+[data-sc-example] {
+	display: block;
+	margin-block-start: 0.2em;
+	margin-block-end: 0.5em;
+	margin-inline-start: 0.8em;
+}
+
+[data-sc用例] {
+	display: block;
+	color: var(--cj3-dark-blue, var(--accent-color, var(--shadow-focus, #26a8d3)))
+}
+
+[data-sc用例訳] {
+	display: block;
+	font-size: 0.95em;
+}
+
+[data-sc用例訳] {
+	display: block;
+	font-size: 0.95em;
+}
+
+[data-sc-column] {
+	display: block;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+	border-radius: 0.2em;
+	border: solid 0.05em var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+}
+
+[data-sc-column_title] {
+	font-weight: bold;
+}
+
+[data-sc-column_content] {
+	display: block;
+	padding-block: 0.3em;
+	padding-inline: 0.5em;
+}
+
+[data-sc-title] {
+	display: block;
+	font-weight: bold;
+}
+
+[data-scコラム分類-m] {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+}
+
+[data-sc対義語-m] {
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+	vertical-align: middle;
+}
+
+[data-sc異読-g] {
+	display: block;
+}
+
+[data-sc-word-index-g] {
+	display: block;
+	margin-block-start: 0.4em;
+	margin-block-end: 0.4em;
+}
+
+[data-sc-cn] {
+	font-family: "PingFang SC";
+}
+
+[data-sc-tw] {
+	font-family: "PingFang TC";
+}
+
+[data-sc-kr] {
+	font-family: "PingFang TC";
+}
+
+[data-sc-jp] {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+[data-sc-pinyin] {
+	font-family: "PingFang SC";
+}
+
+[data-sc-b-s] {
+	padding-block-start: 0.08em;
+	padding-block-end:  0.08em;
+	padding-inline-start: 0.303em;
+	padding-inline-end: 0.246em;
+	font-family: Helvetica;
+	font-size: 1.08em;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--background-color-light, var(--background-color));
+	background-color: var(--text-color);
+	word-break: keep-all;
+	vertical-align: middle;
+}
+
+[data-sc-b-f] {
+	padding: 0.1em 0.21em 0.1em 0.25em;
+	padding-block-start: 0.1em;
+	padding-block-end:  0.1em;
+	padding-inline-start: 0.25em;
+	padding-inline-end: 0.21em;
+	font-family: Helvetica;
+	font-size: 1em;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--background-color-light, var(--background-color));
+	background-color: var(--text-color);
+	word-break: keep-all;
+	border-radius: 0.2em;
+	vertical-align: middle;
+}
+
+[data-sc-b-c],
+[data-sc-p-r],
+[data-sc-w-c] {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+[data-sc-b-s][data-sc-small],
+[data-sc-b-f][data-sc-small],
+[data-sc-b-c][data-sc-small],
+[data-sc-w-s][data-sc-small] {
+	font-size: 0.9em;
+}
+
+[data-sc-b-s][data-sc-red] {
+	background-color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+}
+
+a [data-sc-b-s],
+a [data-sc-b-f] {
+	background-color: var(--cj3-blue, var(--accent-color-light, var(--flag-4, #4db8dc)));
+}
+
+[data-sc-b-c][data-sc-red] {
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+}
+
+[data-sc-w-s] {
+	padding-block-start: 0.05em;
+	padding-block-end:  0.17em;
+	padding-inline-start: 0.05em;
+	padding-inline-end: 0.16em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+	font-weight: normal;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--text-color);
+	color: var(--text-color);
+	word-break: keep-all;
+	border-radius: 0.1em;
+	vertical-align: middle;
+}
+
+[data-sc-w-s][data-sc-red] {
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+	border-color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+}
+
+a [data-sc-w-s] {
+	color: var(--cj3-blue, var(--accent-color-light, var(--flag-4, #4db8dc)));
+	border-color: var(--cj3-blue, var(--accent-color-light, var(--flag-4, #4db8dc)));
+}
+
+[data-sc-note-m] {
+	font-size: 0.8em;
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+	vertical-align: middle;
+}
+
+[data-sc-note-m][data-sc-black] {
+	color: var(--text-color);
+}
+
+[data-sc-pos],
+[data-sc-logo] {
+	padding-block-start: 0.04em;
+	padding-block-end:  0.06em;
+	padding-inline-start: 0.07em;
+	padding-inline-end: 0.06em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+	font-weight: normal;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--text-color);
+	color: var(--text-color);
+	word-break: keep-all;
+	border-radius: 0.1em;
+	vertical-align: middle;
+}
+
+[data-sc-logo][data-sc-red] {
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+	border-color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+}
+
+a [data-sc-pos],
+a [data-sc-logo]{
+	border-color: var(--cj3-blue, var(--accent-color-light, var(--flag-4, #4db8dc)));
+	color: var(--cj3-blue, var(--accent-color-light, var(--flag-4, #4db8dc)));
+}
+
+[data-sc-l-b-logo-g] {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.85em;
+	font-weight: normal;
+	background-color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+	border-start-start-radius: 0.15em;
+	border-end-start-radius: 0.15em;
+	padding-block-start: 0.08em;
+	padding-block-end:  0.12em;
+	padding-inline-start: 0.3em;
+	padding-inline-end: 0.05em;
+	word-break: keep-all;
+	vertical-align: middle;
+}
+
+[data-sc-l-b-logo] {
+	background-color: var(--background-color-light, var(--background-color));
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+	padding: 0.03em 0.08em 0.07em 0.08em;
+	padding-block-start: 0.03em;
+	padding-block-end:  0.07em;
+	padding-inline-start: 0.08em;
+	padding-inline-end: 0.08em;
+}
+
+[data-sc-r-a-logo-g] {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.85em;
+	font-weight: normal;
+	background-color: var(--text-color);
+	border-shape: arrow-box;
+	padding-block-start: 0.08em;
+	padding-block-end:  0.12em;
+	padding-inline-start: 0;
+	padding-inline-end: 0.64em;
+	word-break: keep-all;
+	vertical-align: middle;
+}
+
+[data-sc-r-a-logo] {
+	background-color: var(--background-color-light, var(--background-color));
+	color: var(--text-color);
+	padding-block-start: 0.03em;
+	padding-block-end:  0.07em;
+	padding-inline-start: 0.15em;
+	padding-inline-end: 0.15em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--text-color);
+}
+
+[data-sc-c-logo] {
+	padding-block-start: 0.06em;
+	padding-block-end:  0.08em;
+	padding-inline: 0.3em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.8em;
+	font-weight: bold;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--text-color);
+	color: var(--text-color);
+	word-break: keep-all;
+	border-radius: 0.67em;
+	vertical-align: -0.1em;
+}
+
+[data-sc-c-logo][data-sc-red] {
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+	border-color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+}
+
+[data-sc-mlg] {
+	font-size: 0.7em;
+	vertical-align: -0.35em;
+}
+
+[data-sc-sub] {
+	font-size: 0.7em;
+	vertical-align: -0.4em;
+}
+
+[data-sc-sup] {
+	font-size: 0.8em;
+	font-weight: normal;
+	vertical-align: 0.8em;
+}
+
+[data-sc-image] {
+	display: block;
+	margin-block-start: 0.3em;
+	margin-block-end: 0.3em;
+	margin-inline-start: 0.2em;
+	margin-inline-end: 0.2em;
+	padding: 0.3em;
+	text-align: center;
+	background-color: var(--cj3-image-background, #FFF);
+}
+
+[data-sc-red] {
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+}
+
+[data-sc-red][data-sc-f-m] {
+	color: var(--text-color);
+}
+
+a {
+	padding-block-end: 0.1em;
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--text-color);
+	filter: brightness(1.3);
+	text-decoration: underline;
+	text-decoration-color: oklch(65% 0.2 260);
+}
+
+[data-sc-double-dash] {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+[data-sc-f-m] {
+	margin-inline-end: 0.25em;
+}
+
+[data-sc-i-m] {
+	margin-inline-start: 0.2em;
+	margin-inline-end: 0.2em;
+}
+
+
+/* --- 付録 --- */
+[data-sc付録] [data-sc-headword][data-sc-inline] {
+	display: inline;
+}
+
+[data-sc付録] [data-sc-usage-段落-g],
+[data-sc付録] [data-sc-a-p-d-段落-g] {
+	display: block;
+	margin-block-end: 0.8em;
+}
+
+[data-sc付録] [data-sc-usage-段落],
+[data-sc付録] [data-sc-a-p-d-段落] {
+	display: block;
+}
+
+[data-sc付録] [data-sc-usage-段落2] {
+	display: block;
+	margin-inline-start: 1em;
+}
+
+[data-sc付録] [data-sc-usage-箇条] {
+	display: block;
+	margin-inline-start: 1em;
+}
+
+[data-sc付録] [data-sc-usage-箇条番号] {
+	margin-inline-start: -1em;
+	margin-inline-end: 0.44em;
+	font-family: Helvetica;
+}
+
+[data-sc付録] [data-sc-usage-箇条番号2] {
+	margin-inline-start: -1em;
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+[data-sc付録] [data-sc-usage-箇条-m] {
+	margin-inline-start: -1.333em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.75em;
+	margin-inline-end: 0.333em;
+}
+
+[data-sc付録] [data-sc-usage-まえがき-日付] {
+	display: block;
+	margin-inline-start: 2em;
+}
+
+[data-sc付録] [data-sc-usage-まえがき-著者] {
+	display: block;
+	text-align: right;
+	margin-inline-end: 1em;
+}
+
+[data-sc付録] [data-sc-usage-使い方-項目-g] {
+	display: block;
+	margin-block-end: 1.4em;
+}
+
+[data-sc付録] [data-sc-usage-使い方-番号] {
+	margin-inline-end: 0.2em;
+	font-family: Helvetica;
+	font-size: 1.07em;
+}
+
+[data-sc付録] [data-sc-usage-使い方-一覧-g] {
+	display: block;
+	margin-inline-start: 1em;
+}
+
+[data-sc付録] [data-sc-usage-使い方-一覧項目] {
+	display: inline-block;
+	margin-inline-end: 1em;
+}
+
+[data-sc付録] table[data-sc-usage-例] {
+	margin-inline-start: 1em;
+	vertical-align: top;
+}
+
+[data-sc付録] table[data-sc-usage-使い方] {
+	vertical-align: top;
+}
+
+[data-sc付録] [data-sc-usage-使い方-記号項目2] {
+	display: block;
+	margin-inline-start: 4em;
+}
+
+[data-sc付録] [data-sc-usage-使い方-記号2] {
+	margin-inline-start: -4em;
+}
+
+[data-sc付録] td[data-sc-usage-使い方-記号] {
+	width: 4em;
+}
+
+[data-sc付録] [data-sc-usage-例-用例] {
+	color: var(--cj3-dark-blue, var(--accent-color, var(--shadow-focus, #26a8d3)))
+}
+
+[data-sc付録] [data-sc-usage-照合表タイトル] {
+	display: block;
+	font-weight: bold;
+}
+
+[data-sc付録] td[data-sc-usage-照合表index] {
+	width: 1.8em;
+}
+
+[data-sc付録] [data-sc-usage-照合表index] {
+	padding-block-start: 0.04em;
+	padding-block-end: 0.06em;
+	padding-inline-start: 0.2em;
+	padding-inline-end: 0.19em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+	font-weight: normal;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+	word-break: keep-all;
+	border-radius: 0.1em;
+}
+
+[data-sc付録] [data-sc-usage-編者一覧-サブ-g] {
+	display: block;
+	margin-block-end: 0.8em;
+}
+
+[data-sc付録] [data-sc-usage-編者一覧-サブタイトル],
+[data-sc付録] [data-sc-usage-編者一覧-版タイトル] {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+[data-sc付録] [data-sc-usage-編者一覧-編者-g] {
+	display: block;
+}
+
+[data-sc付録] [data-sc-usage-編者一覧-編者] {
+	display: inline-block;
+	margin-inline-end: 1em;
+}
+
+[data-sc付録] [data-sc-usage-編者一覧-版-g] {
+	display: block;
+	margin-block-start: 2em;
+	margin-block-end: 0.4em;
+}
+
+[data-sc付録] [data-sc-usage-対照表] {
+	display: block;
+}
+
+[data-sc付録] [data-sc-usage-対照表] h2 {
+	display: block;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-block-start: 0.8em;
+}
+
+[data-sc付録] [data-sc-usage-対照表-画数] {
+	margin-inline-start: 0.2em;
+	font-size: 0.6em;
+	vertical-align: 0.1em;
+}
+
+[data-sc付録] [data-sc-a-p-d-年表-g] {
+	display: table;
+	vertical-align: top;
+}
+
+[data-sc付録] [data-sc-a-p-d-年表項-g] {
+	display: table-row;
+}
+
+[data-sc付録] [data-sc-a-p-d-年表項-年] {
+	display: table-cell;
+	width: 4em;
+}
+
+[data-sc付録] [data-sc-a-p-d-年表項-月] {
+	display: table-cell;
+	width: 4em;
+}
+
+[data-sc付録] [data-sc-a-p-d-年表項-記] {
+	display: table-cell;
+	margin-block: 0.2em;
+	margin-inline: 0;
+}
+
+[data-sc付録] [data-sc-a-p-d-国際音声記号] {
+	font-family: "Doulos SIL";
+}
+
+[data-sc付録] [data-sc-a-p-d-親族名称一覧] {
+	display: block;
+}
+
+[data-sc付録] [data-sc-a-p-d-親族名称一覧] h2 {
+	display: block;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+[data-sc付録] [data-sc-a-p-d-親族名称一覧] dt {
+	display: block;
+	font-weight: bold;
+}
+
+[data-sc付録] [data-sc-a-p-d-文章記号の使い方] dt {
+	display: block;
+	margin-block-start: 0.8em;
+	font-size: 1.2em;
+	margin-block-end: 0.2em;
+}
+
+[data-sc付録] [data-sc-a-p-d-量詞],
+[data-sc付録] [data-sc-a-p-d-図案],
+[data-sc付録] [data-sc-a-p-d-京劇],
+[data-sc付録] [data-sc-a-p-d-料理],
+[data-sc付録] [data-sc-a-p-d-中国将棋],
+[data-sc付録] [data-sc-a-p-d-文章記号の使い方] {
+	display: block;
+}
+
+[data-sc付録] [data-sc-a-p-d-量詞] dl {
+	display: block;
+}
+
+[data-sc付録] [data-sc-a-p-d-量詞gタイトル-g] {
+	display: block;
+	font-weight: bold;
+	margin-block-start: 1.5em;
+}
+
+[data-sc付録] [data-sc-a-p-d-量詞項目-g] {
+	display: block;
+	margin-block-end: 1.2em;
+}
+
+[data-sc付録] [data-sc-a-p-d-量詞] dt {
+	display: block;
+	margin-block-end: 0.2em;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+[data-sc付録] [data-sc-a-p-d-図案] h2,
+[data-sc付録] [data-sc-a-p-d-京劇] h2,
+[data-sc付録] [data-sc-a-p-d-料理] h2,
+[data-sc付録] [data-sc-a-p-d-中国将棋] h2 {
+	display: block;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-block-start: 0.8em;
+}

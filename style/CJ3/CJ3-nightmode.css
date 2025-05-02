@@ -1,5 +1,7 @@
 @color black = #CCCCCC;
 @color white = #000000;
-@color dark-blue = #33CCFF;
-@color blue = #33CCFF;
-@color red = #FF6666;
+@color dark-blue = #33CCFF; var(--cj3-dark-blue, var(--accent-color, var(--shadow-focus, #26a8d3)))
+@color blue = #33CCFF; var(--cj3-blue, var(--accent-color-light, var(--flag-4, #4db8dc)))
+@color red = #FF6666; var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #b34141)))
+
+					var(--cj3-image-background, #FFF)

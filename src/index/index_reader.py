@@ -30,7 +30,7 @@ class IndexReader:
                 parts = line.strip().split('\t')
                 if len(parts) < 2:
                     print(f"Found a malformed line: {parts}")
-                    continue  # Skip malformed lines
+                    continue
                 
                 key = parts[0]
                 filenames = parts[1:]

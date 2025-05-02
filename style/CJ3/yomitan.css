@@ -1,0 +1,37 @@
+/* ========================== */
+/* === 小学館 中日辞典 第3版 === */
+/* ========================== */
+:root[data-theme="dark"] .definition-item[data-dictionary='小学館 中日辞典 第3版'] {
+	--cj3-dark-blue: #26a8d3;
+	--cj3-blue: #4db8dc;
+	--cj3-red: #d14545;
+}
+
+.definition-item[data-dictionary='小学館 中日辞典 第3版'] {
+	--cj3-dark-blue: #195dc2;
+	--cj3-blue: #30b8e5;
+	--cj3-red: #d13737;
+	--cj3-image-background: #FFF;
+}
+
+html[data-glossary-layout-mode="compact"] {
+	.definition-item[data-dictionary="小学館 中日辞典 第3版"] {
+		/* Inline */
+	}
+}
+
+.definition-item[data-dictionary='小学館 中日辞典 第3版']:has(.gloss-image, .gloss-image-link) {
+	.expansion-button {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 1.4em;
+		align-items: center;
+		z-index: 10;
+	}
+	.definition-item-inner.collapsible .definition-item-content {
+		padding-right: 2em;
+		box-sizing: border-box;
+	}
+}

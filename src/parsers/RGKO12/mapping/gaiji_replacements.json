@@ -1,0 +1,98 @@
+{
+    "arrow-black-down-thick.svg": {
+        "text": "➡",
+        "class": "外字 矢印"
+    },
+    "arrow-black-up-thick.svg": {
+        "text": "⇨",
+        "class": "外字 矢印"
+    },
+    "arrow-white-down-thick.svg": {
+        "text": "⇨",
+        "class": "外字 矢印"
+    },
+    "dash.svg": {
+        "text": "-",
+        "class": "外字"
+    },
+    "equal.svg": {
+        "text": "＝",
+        "class": "外字"
+    },
+    "hyphen.svg": {
+        "text": "-",
+        "class": "外字"
+    },
+    "参照.svg": {
+        "text": "⇨",
+        "class": "外字 矢印"
+    },
+    "活用.svg": {
+        "text": "活用▶",
+        "class": "外字 全丸 fill"
+    },
+    "コラム.svg": {
+        "text": "コラム",
+        "class": "外字 全丸 fill orange"
+    },
+    "関連.svg": {
+        "text": "関連",
+        "class": "外字 左丸"
+    },
+    "敬語.svg": {
+        "text": "敬語",
+        "class": "外字 左丸"
+    },
+    "黒三角.svg": {
+        "text": "▶",
+        "class": "外字 三角"
+    },
+    "三角.svg": {
+        "text": "▷",
+        "class": "外字 三角"
+    },
+    "参考.svg": {
+        "text": "参考",
+        "class": "外字 左丸"
+    },
+    "熟語.svg": {
+        "text": "熟語▶",
+        "class": "外字 全丸 fill"
+    },
+    "図表-ミニ情報.svg": {
+        "text": "◆",
+        "class": "外字 ダイヤ blue"
+    },
+    "図表-使い分け.svg": {
+        "text": "使い分け",
+        "class": "外字 全丸 fill light-brown"
+    },
+    "図表-使い分け縦.svg": {
+        "text": "使い分け",
+        "class": "外字 全丸 fill light-brown"
+    },
+    "図表-使い方.svg": {
+        "text": "◆",
+        "class": "外字 ダイヤ orange"
+    },
+    "図表-組み合わせ.svg": {
+        "text": "◆",
+        "class": "外字 ダイヤ red"
+    },
+    "成句.svg": {
+        "text": "成句",
+        "class": "外字 左丸"
+    },
+    "別読み.svg": {
+        "text": "➡",
+        "class": "外字 矢印"
+    },
+    "int_down.svg": {
+        "text": "⤵",
+        "class": "外字 下印"
+    },
+    "ellipsis.svg": {
+        "text": "●",
+        "class": "外字"
+    }
+}
