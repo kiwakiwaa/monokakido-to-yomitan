@@ -41,7 +41,7 @@ class Parser(ABC):
         if config.tag_map_path:
             self.tag_mapping = FileUtils.load_dictionary_mapping(config.tag_map_path)
             
-        self.ignored_elements = set()
+        self.ignored_elements = {}
         self.expression_element = None
         
         self.html_converter = HTMLToYomitanConverter(

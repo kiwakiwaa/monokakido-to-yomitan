@@ -19,9 +19,7 @@ class CJ3LinkHandlingStrategy(LinkHandlingStrategy):
 		if href and not href.isdigit():
 			href = re.sub(r'\[', '', href)
 			href = re.sub(r'\]', '', href)
-			
-			href = re.sub(r'〖', '', href)
-			href = re.sub(r'〗', '', href)
+			href = re.sub(r"[\p{Block=CJK_Symbols_and_Punctuation}]", '', href)
 			return create_html_element("a", content=html_elements, href="?query="+href+"&wildcards=off")
 	
 		return create_html_element("span", content=html_elements, data=data_dict)

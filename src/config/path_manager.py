@@ -29,6 +29,6 @@ class PathManager:
             paths["jmdict_path"] = self.base_dir / "data/JMdict_english"
             
         if config.has_audio:
-            paths["audio_path"] = self.base_dir / f"data/{dict_type}/audio/audio_index.json"
+            paths["audio_path"] = self.base_dir / f"data/{dict_type}/audio/index.json"
         
         return paths

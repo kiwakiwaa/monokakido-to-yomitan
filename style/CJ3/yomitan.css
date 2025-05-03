@@ -1,26 +1,45 @@
 /* ========================== */
 /* === 小学館 中日辞典 第3版 === */
 /* ========================== */
-:root[data-theme="dark"] .definition-item[data-dictionary='小学館 中日辞典 第3版'] {
+:root[data-theme="dark"] .definition-item[data-dictionary='小学館中日辞典 第3版'] {
 	--cj3-dark-blue: #26a8d3;
 	--cj3-blue: #4db8dc;
 	--cj3-red: #d14545;
 }
 
-.definition-item[data-dictionary='小学館 中日辞典 第3版'] {
+.definition-item[data-dictionary='小学館中日辞典 第3版'] {
 	--cj3-dark-blue: #195dc2;
 	--cj3-blue: #30b8e5;
 	--cj3-red: #d13737;
 	--cj3-image-background: #FFF;
+	
+	/* Uncomment to hide the headword and pinyin at the top of the entry */
+	/*
+	[data-sc-headword][data-sc親字],
+	[data-sc-headword][data-sc熟語],
+	[data-sc-headword][data-sc表記],
+	[data-sc-headword][data-sc小知識] {
+		display: none;
+	}
+	*/
+	
+	/*
+	[data-sc-headword][data-scピンイン] {
+		display: none;
+	}
+	*/
 }
 
 html[data-glossary-layout-mode="compact"] {
-	.definition-item[data-dictionary="小学館 中日辞典 第3版"] {
-		/* Inline */
+	.definition-item[data-dictionary="小学館中日辞典 第3版"] {
+		[data-sc-head-g],
+		[data-sc-headword] {
+			display: inline;
+		}
 	}
 }
 
-.definition-item[data-dictionary='小学館 中日辞典 第3版']:has(.gloss-image, .gloss-image-link) {
+.definition-item[data-dictionary='小学館中日辞典 第3版']:has(.gloss-image, .gloss-image-link) {
 	.expansion-button {
 		position: absolute;
 		top: 0;

@@ -84,3 +84,9 @@ class CJ3Utils:
 						audio_links.append(href)
 						
 		return audio_links
+	
+	
+	@staticmethod
+	def filter_pinyin_readings(keys: List[str]) -> List[str]:
+		
+		pass

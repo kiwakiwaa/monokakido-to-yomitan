@@ -11,6 +11,54 @@
 	*/
 }
 
+details {
+	padding-left: 0 !important;
+	overflow: hidden;
+}
+
+summary::before {
+	content: "▶";
+	position: absolute;
+	user-select: none;
+	left: -1em;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 0.8em;
+	color: var(--background-color-light, var(--background-color));
+	transition: transform 0.2s ease;
+	padding-inline: 98%;
+}
+
+summary {
+	position: relative;
+	cursor: pointer;
+	list-style: none !important;
+	list-style-position: inherit !important;
+}
+
+details[open] summary::before {
+	transform: translateY(-50%) rotate(90deg);
+}	
+
+details[open] > *:not(summary) {
+	animation: details-show 0.2s ease-in-out;
+}
+
+@keyframes details-show {
+	from {
+		opacity: 0;
+		transform: translateY(-2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+[data-sc-id="index"] {
+	display: none;
+}
+
 [data-sc-head-g] {
 	display: block;
 	margin-block-end: 0.8em;
@@ -172,6 +220,20 @@
 }
 
 [data-sc-column_title] {
+	display: block;
+	padding-block: 0;
+	padding-inline: 0.4em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.9em;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: white;
+	background-color: red;
+	border-start-start-radius: 0.2em;
+	border-start-end-radius: 0.2em;
+}
+
+[data-sc-sub_title] {
 	font-weight: bold;
 }
 
@@ -281,6 +343,10 @@ a [data-sc-b-f] {
 	background-color: var(--cj3-blue, var(--accent-color-light, var(--flag-4, #4db8dc)));
 }
 
+.gloss-image-link {
+	filter: none !important;
+}
+
 [data-sc-b-c][data-sc-red] {
 	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
 }
@@ -341,7 +407,7 @@ a [data-sc-w-s] {
 }
 
 [data-sc-logo][data-sc-red] {
-	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
+	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a))) !important;
 	border-color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
 }
 

@@ -100,6 +100,39 @@ class CNUtils:
 		if not pinyin or not pinyin.strip():
 			return ""
 		
+		special_cases = {
+			"hsk": "hsk", # abbrev.
+			"ktv": "ktv",
+			"ńg": "ㄣ", # nasal sounds
+			"ǹg": "ㄣ",
+			"ňg": "ㄣ",
+			"ň": "ㄣ",
+			"ń": "ㄣ",
+			"ǹ": "ㄣ",
+			"lǒngàn": "ㄌㄨㄥˇ", # 拢岸
+			"fiào": "ㄠˋ", # 覅
+			"cèi": "ㄘㄜ", # 𤭢 
+			"ruá": "ㄖㄨㄚ", # 挼
+			"m̄": "ㄇ", # 姆
+			"wènān": "ㄨㄣˋㄢ", # 问安
+			"ế": "ㄞ", # 欸
+			"ề èi": "ㄞ",# 欸
+			"ê̌ ěi": "ㄞ",
+			"ḿshá": "ㄇˊㄕㄚˊ", # 呒啥
+			"dìngàn": "ㄉㄧㄥˋㄢ",
+			"m̄mā": "ㄇㄇㄚ", # 姆妈
+			"ḿ": "ㄇˊ", # 呣
+			"m̀": "ㄇˊ", # 呣
+			"ê̄": "ㄞ", # 欸,
+			"wènàn": "ㄨㄣˋ ㄢˋ", # 问案
+			"hng": "ㄏㄥ", # 哼
+			"hm": "˙ㄏㄇ", # 噷,
+		}
+		
+		# Check for direct special case match
+		if pinyin.lower() in special_cases:
+			return special_cases[pinyin.lower()]
+		
 		# Handle abbreviations followed by pinyin (e.g., "IP dìzhǐ", "SIM kǎ")
 		if ' ' in pinyin:
 			parts = pinyin.split()
@@ -109,36 +142,29 @@ class CNUtils:
 				# Keep abbreviations as-is
 				if part.isupper() or (part.isalnum() and not part.islower()):
 					result_parts.append(part)
+				elif part == "F-yāo":
+					result_parts.append("F－15")
 				else:
-					# Convert pinyin part to zhuyin
+					part = part.lower()
+					
 					try:
-						# Fix pinyin with ü replacements
-						fixed_part = part.replace('lv', 'lü').replace('nv', 'nü')
-						zhuyin = dt.to_zhuyin(fixed_part)
+						zhuyin = dt.to_zhuyin(part)
 						result_parts.append(zhuyin)
 					except Exception:
-						try:
-							part = part.lower()
-							zhuyin = dt.to_zhuyin(part)
-							result_parts.append(zhuyin)
-						except Exception:
-							result_parts.append(part)
-						
-			return " ".join(result_parts)
-		
-		# Special cases for proper names and single terms
-		elif any(c.isupper() for c in pinyin) and any(c.islower() for c in pinyin):
-			# Keep the pinyin format as-is for proper names, don't try to split
-			return pinyin
+						if part.lower() in special_cases:
+							result_parts.append(special_cases[part.lower()])
+						else:
+							return pinyin #丝绸之路：长安—天山廊道的路网 & 皖南古村落—西递，宏村 & 北京及沈阳的明清皇家宫殿
+							
+			return "".join(result_parts)
+
 		
 		# Regular pinyin conversion for standard pinyin terms
 		try:
-			# Fix ü representation
-			fixed_pinyin = pinyin.replace('lv', 'lü').replace('nv', 'nü')
-			# Convert standard pinyin
-			zhuyin = dt.to_zhuyin(fixed_pinyin)
+			fixed_pinyin = pinyin.lower()
+			zhuyin = dt.to_zhuyin(pinyin.lower())
 			return zhuyin
 		except Exception as e:
-			# If conversion fails, return original
+			print(f"\nFailed to convert to zhuyin: {fixed_pinyin}")
 			return pinyin
 			

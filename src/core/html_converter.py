@@ -14,7 +14,7 @@ class HTMLToYomitanConverter:
 		image_handling_strategy: Optional[ImageHandlingStrategy] = None):
 		
 		self.tag_mapping = tag_mapping or {}
-		self.ignored_elements = ignored_elements or set()
+		self.ignored_elements = ignored_elements or {}
 		self.expression_element = expression_element or None
 		self.link_handling_strategy = link_handling_strategy or DefaultLinkHandlingStrategy()
 		self.image_handling_strategy = image_handling_strategy or DefaultImageHandlingStrategy()
@@ -30,6 +30,9 @@ class HTMLToYomitanConverter:
 		class_list = html_glossary.get("class", [])
 		if isinstance(class_list, str):
 			class_list = class_list.split(" ")
+   
+		if not class_list and html_glossary.name not in self.__yomitan_supported_tags:
+			class_list.append(html_glossary.name)
 			
 		data_dict = {}
 		data_dict[html_glossary.name] = ""
