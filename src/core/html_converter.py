@@ -31,7 +31,7 @@ class HTMLToYomitanConverter:
 		if isinstance(class_list, str):
 			class_list = class_list.split(" ")
    
-		if not class_list and html_glossary.name not in self.__yomitan_supported_tags:
+		if html_glossary.name and not class_list and html_glossary.name not in self.__yomitan_supported_tags:
 			class_list.append(html_glossary.name)
 			
 		data_dict = {}
@@ -133,9 +133,6 @@ class HTMLToYomitanConverter:
 			return None
 		
 		class_list, data_dict = self.get_class_list_and_data(html_glossary)
-		
-		if tag_name == "mlg":
-			html_glossary.string = html_glossary.string.replace('\u2060', '') if html_glossary.string else html_glossary.string
 			
 		# Recursively process children elements
 		html_elements = self._process_html_children(html_glossary, data_dict, class_list, ignore_expressions=ignore_expressions)

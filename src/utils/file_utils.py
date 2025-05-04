@@ -246,7 +246,7 @@ class FileUtils:
         
         
     @staticmethod
-    def load_dictionary_mapping(file_path):
+    def load_json(file_path: str):
         try:
             with open(file_path, 'r', encoding='utf-8') as file:
                 data = json.load(file)

@@ -7,7 +7,7 @@ when an entry key with kanji hasn't been matched by a corresponding kana reading
 """
 class ManualMatchHandler:
     def __init__(self, mappings_file="manual_mappings.json"):
-        self.mappings_file = "src/parser/base/" + mappings_file
+        self.mappings_file = "src/handlers/" + mappings_file
         self.mappings = self._load_mappings()
         self.ignored_entries = self._load_ignored_entries()
     

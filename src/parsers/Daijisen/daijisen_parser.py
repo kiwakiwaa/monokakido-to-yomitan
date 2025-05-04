@@ -2,30 +2,19 @@ import os
 import bs4
 
 from utils import KanjiUtils
-from core.yomitan_dictionary import DicEntry
-
 from core import Parser
+from core.yomitan_dictionary import DicEntry
+from config import DictionaryConfig
 from handlers import process_unmatched_entries
-from parser.Daijisen.tag_map import TAG_MAPPING
-from parser.Daijisen.daijisen_utils import DaijisenUtils
-from parser.Daijisen.daijisen_strategies import DaijisenLinkHandlingStrategy, DaijisenImageHandlingStrategy
+from parsers.Daijisen.daijisen_utils import DaijisenUtils
 
 
 class DaijisenParser(Parser):
     
-    def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str):
-        
-        super().__init__(
-            dict_name, dict_path, index_path, jmdict_path,
-            link_handling_strategy=DaijisenLinkHandlingStrategy(), 
-            image_handling_strategy=DaijisenImageHandlingStrategy()
-        )
-        
-        self.tag_mapping = TAG_MAPPING
+    def __init__(self, config: DictionaryConfig):
+        super().__init__(config)
         self.ignored_elements = {"k-v", "header", "index"} # mimageg
         self.expression_element = "subitem"
-        
-        self.initialize_html_converter()
         
         
     def _handle_expression_entries(self, soup: bs4.BeautifulSoup):

@@ -1,6 +1,6 @@
 
 div[data-sc-busyuheadg] {
-    background-color: var(--kadokawa-pink, var(--danger-color-lighter));
+    background-color: var(--kadokawa-pink, var(--danger-color-lighter, #FF928E));
 }
 
 table[data-sc-busyuheadsubg] {
@@ -91,7 +91,7 @@ div[data-sc-busyuyomicontent] {
 }
 
 div[data-sc-bushukaisetsug] {
-    background-color: var(--kadokawa-extra-light-gray, var(--input-background-color));
+    background-color: var(--kadokawa-extra-light-gray, var(--input-background-color, #EEEEEE));
     padding-block-start: 0.2em;
     padding-block-end: 0.2em;
     padding-inline-start: 1em;
@@ -141,17 +141,17 @@ span[data-sc-bimidashijiitaijim] {
 }
 
 span[data-sc-bimidashijic][data-sc-joyo] {
-    color: var(--kadokawa-red, var(--danger-color));
+    color: var(--kadokawa-red, var(--danger-color, #CC0000));
 }
 
 
 span[data-sc-bimidashijic][data-sc-jinmei] {
-    color: var(--kadokawa-red, var(--danger-color));
+    color: var(--kadokawa-red, var(--danger-color, #CC0000));
 }
 
 div[data-sc-shinsetsumidashig] {
     margin-inline-start: 1em;
-    background-color: var(--kadokawa-light-pink, var(--danger-color-lightest));
+    background-color: var(--kadokawa-light-pink, var(--danger-color-lightest, #FFDBDA));
     border-inline-start: solid 0.3em var(--text-color);
 }
 
@@ -261,7 +261,7 @@ td[data-sc-kanjig][data-sc-oyaji] {
     border-inline-end: none;
     border-block-end: none;
     border-inline-start: none;
-    background-color: var(--kadokawa-extra-light-gray, var(--input-background-color));
+    background-color: var(--kadokawa-extra-light-gray, var(--input-background-color, #EEEEEE));
 }
 
 td[data-sc-kenjinumberg][data-sc-itaiji-kyuji],
@@ -272,17 +272,17 @@ td[data-sc-kanjig][data-sc-itaiji-kyuji] {
     border-inline-end: none;
     border-block-end: none;
     border-inline-start: none;
-    background-color: var(--kadokawa-extra-light-gray, var(--input-background-color));
+    background-color: var(--kadokawa-extra-light-gray, var(--input-background-color, #EEEEEE));
 }
 
 td[data-sc-kenjinumberg][data-sc-joyo],
 td[data-sc-kanjig][data-sc-joyo] {
-    background-color: var(--kadokawa-light-pink, var(--danger-color-lightest));
+    background-color: var(--kadokawa-light-pink, var(--danger-color-lightest, #FFDBDA));
 }
 
 td[data-sc-kenjinumberg][data-sc-jinmei],
 td[data-sc-kanjig][data-sc-jinmei] {
-    border-block-start-color: var(--kadokawa-red, var(--danger-color));
+    border-block-start-color: var(--kadokawa-red, var(--danger-color, #CC0000));
 }
 
 span[data-sc-kenjinumber] {
@@ -341,11 +341,11 @@ div[data-sc-onlistsubg][data-sc-sub] {
 
 span[data-sc-joyoon],
 span[data-sc-joyokun] {
-    color: var(--kadokawa-red, var(--danger-color));
+    color: var(--kadokawa-red, var(--danger-color, #CC0000));
 }
 
 span[data-sc-yomi][data-sc-bosen] {
-    border-block-end: solid 0.05em var(--kadokawa-red, var(--danger-color));
+    border-block-end: solid 0.05em var(--kadokawa-red, var(--danger-color, #CC0000));
     padding-block-start: 0.1em;
 }
 
@@ -374,7 +374,7 @@ span[data-sc-sankou][data-sc-inline] {
 }
 
 span[data-sc-yomiinfo] {
-    color: var(--kadokawa-red, var(--danger-color));
+    color: var(--kadokawa-red, var(--danger-color, #CC0000));
 }
 
 span[data-sc-kodaimojilistg] {
@@ -394,11 +394,11 @@ span[data-sc-kodaimojitypeg] {
     margin-inline-start: 0.05em;
     padding-inline-start: 0.059em;
     padding-inline-end: 0.059em;
-    border-inline-end: solid 0.029em var(--kadokawa-kodaimoji-type-separator, var(--text-color-light4));
+    border-inline-end: solid 0.029em var(--kadokawa-kodaimoji-type-separator, var(--text-color-light4, #A0A0A0));
 }
 
 span[data-sc-kodaimojitypeg][data-sc-change-branch] {
-    border-inline-end-color: var(--kadokawa-kodaimoji-branch-separator, var(--text-color-light1));
+    border-inline-end-color: var(--kadokawa-kodaimoji-branch-separator, var(--text-color-light1, #444444));
 }
 
 span[data-sc-kodaimojitype] {
@@ -447,7 +447,7 @@ span[data-sc-jukugohead] {
     display: block;
     font-size: 1.75em;
     font-weight: 900;
-    color: var(--kadokawa-jukugo-hyoki-color, var(--accent-color));
+    color: var(--kadokawa-jukugo-hyoki-color, var(--accent-color, #0A246A));
     margin: -0.1em 0 -0.2em 0;
 }
 
@@ -464,7 +464,7 @@ span[data-sc-jukugohyoki]+span[data-sc-jukugohyoki]:before {
 }
 
 span[title="熟語義"] {
-    color: var(--kadokawa-red, var(--danger-color));
+    color: var(--kadokawa-red, var(--danger-color, #CC0000));
 }
 
 span[data-sc-rect] {
@@ -485,15 +485,15 @@ span[data-sc-rect][data-sc-fill] {
 }
 
 span[data-sc-rect][data-sc-red] {
-    color: var(--kadokawa-red, var(--danger-color));
-    border-color: var(--kadokawa-red, var(--danger-color));
+    color: var(--kadokawa-red, var(--danger-color, #CC0000));
+    border-color: var(--kadokawa-red, var(--danger-color, #CC0000));
 }
 
 span[data-sc-rect][data-sc-red_fill] {
     padding: 0.1em;
     color: var(--background-color-light, var(--background-color));
     border-style: none;
-    background-color: var(--kadokawa-red, var(--danger-color));
+    background-color: var(--kadokawa-red, var(--danger-color, #CC0000));
 }
 
 span[data-sc-rect][data-sc-alphabet] {
@@ -516,7 +516,7 @@ span[data-sc-rect_oval] {
 }
 
 span[data-sc-rect_oval1] {
-    background-color: var(--kadokawa-red, var(--danger-color));
+    background-color: var(--kadokawa-red, var(--danger-color, #CC0000));
     border-start-start-radius: 0.15em;
     border-start-end-radius: 0.15em;
     padding: 0.07em 0 0.13em 0.18em;
@@ -528,10 +528,10 @@ span[data-sc-rect_oval1_inside] {
 
 span[data-sc-rect_oval2] {
     background-color: var(--background-color-light, var(--background-color));
-    color: var(--kadokawa-red, var(--danger-color));
-    border-block-start: solid 0.05em var(--kadokawa-red, var(--danger-color));
-    border-block-end: solid 0.05em var(--kadokawa-red, var(--danger-color));
-    border-inline-end: solid 0.05em var(--kadokawa-red, var(--danger-color));
+    color: var(--kadokawa-red, var(--danger-color, #CC0000));
+    border-block-start: solid 0.05em var(--kadokawa-red, var(--danger-color, #CC0000));
+    border-block-end: solid 0.05em var(--kadokawa-red, var(--danger-color, #CC0000));
+    border-inline-end: solid 0.05em var(--kadokawa-red, var(--danger-color, #CC0000));
     border-start-end-radius: 0.6em;
     border-end-end-radius: 0.6em;
     padding: 0.02em 0.2em 0.08em 0.02em;
@@ -554,12 +554,12 @@ span[data-sc-circle][data-sc-double] {
 }
 
 span[data-sc-circle][data-sc-red] {
-    color: var(--kadokawa-red, var(--danger-color));
-    border-color: var(--kadokawa-red, var(--danger-color));
+    color: var(--kadokawa-red, var(--danger-color, #CC0000));
+    border-color: var(--kadokawa-red, var(--danger-color, #CC0000));
 }
 
 span[data-sc-circlenumber][data-sc-fill] {
-    color: var(--kadokawa-gogi-gray, var(--button-default-icon-color));
+    color: var(--kadokawa-gogi-gray, var(--button-default-icon-color, #5C5C5C));
 }
 
 span[data-sc-circlenumber][data-sc-small],
@@ -667,27 +667,27 @@ a {
 }
 
 a[data-sc-blue] {
-    color: var(--kadokawa-blue, var(--accent-color, var(--link-color)));
+    color: var(--kadokawa-blue, var(--accent-color, var(--link-color, #4a8ade)));
 }
 
 a[data-sc-blue] span[data-sc-rect],
 a[data-sc-blue] span[data-sc-circle] {
-    border-color: var(--kadokawa-blue, var(--accent-color, var(--link-color)));
+    border-color: var(--kadokawa-blue, var(--accent-color, var(--link-color, #4a8ade)));
 }
 
 a[data-sc-blue] span[data-sc-rect][data-sc-fill],
 a[data-sc-blue] span[data-sc-rect][data-sc-red_fill] {
-    background-color: var(--kadokawa-blue, var(--accent-color, var(--link-color)));
+    background-color: var(--kadokawa-blue, var(--accent-color, var(--link-color, #4a8ade)));
 }
 
 a[data-sc-blue] span[data-sc-circle][data-sc-fill] {
-    color: var(--kadokawa-blue, var(--accent-color, var(--link-color)));
+    color: var(--kadokawa-blue, var(--accent-color, var(--link-color, #4a8ade)));
 }
 
 span[data-sc-joyoon] a[data-sc-blue],
 span[data-sc-joyokun] a[data-sc-blue],
 span[data-sc-yomiinfo] a[data-sc-blue] {
-    color: var(--kadokawa-red, var(--danger-color));
+    color: var(--kadokawa-red, var(--danger-color, #CC0000));
 }
 
 /*------- 画像の大きさ -------*/
@@ -718,7 +718,7 @@ div:has(table-container) {
 }
 
 span[title="熟語義"] {
-    border-color: var(--kadokawa-red, var(--danger-color)) !important;
+    border-color: var(--kadokawa-red, var(--danger-color, #CC0000)) !important;
 }
 
 span[data-sc-kodaimoji] span[data-sc-img] .gloss-image-container,

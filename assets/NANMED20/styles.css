@@ -5,7 +5,7 @@
 
 [data-sc-midashi] {
     position: relative;
-    border-block-end: 1px solid var(--nanmed-midashi-border, var(--scrollbar-thumb-color, var(--button-default-border-color)));
+    border-block-end: 1px solid var(--nanmed-midashi-border, var(--scrollbar-thumb-color, var(--button-default-border-color, #a9a9a9)));
     margin-block-end: 0.8rem;
     padding-block-end: 0.3rem;
 }
@@ -17,19 +17,19 @@
     left: 0;
     width: 80px;
     height: 2px;
-    background-color: var(--nanmed-red, var(--tag-archaism-background-color));
+    background-color: var(--nanmed-red, var(--tag-archaism-background-color, #ba3f3f));
 }
 
 [data-sc-midashi_hyoki] {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: var(--nanmed-red, var(--tag-archaism-background-color));
+    color: var(--nanmed-red, var(--tag-archaism-background-color, #ba3f3f));
     margin-block-end: 0.2rem;
 }
 
 [data-sc-midashi_yomi] {
-    font-size: 0.9rem;
-    color: var(--nanmed-light-text-color, var(--text-color-light4));
+    font-size: 1rem;
+    color: var(--nanmed-light-text-color, var(--text-color-light1, #555));
     margin-block-end: 0.4rem;
 }
 
@@ -41,7 +41,7 @@
     position: relative;
     padding: 0.5rem;
     margin-block-end: 0.8rem;
-    border-inline-start: 2px solid var(--nanmed-border-color, var(--medium-border-color));
+    border-inline-start: 2px solid var(--nanmed-border-color, var(--medium-border-color, #dddddd));
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -49,15 +49,15 @@
 
 [data-sc-gaikokugo_title] {
     font-weight: bold;
-    color: var(--nanmed-light-text-color, var(--text-color-light4));
+    color: var(--nanmed-light-text-color, var(--text-color-light1, #555));
     width: 100%;
     margin-block-end: 0.4rem;
 }
 
 [data-sc-image-mark1] {
     display: inline-block;
-    font-size: 0.9rem;
-    color: var(--nanmed-light-text-color, var(--text-color-light4));
+    font-size: 1.2rem;
+    color: var(--nanmed-light-text-color, var(--text-color-light1, #555));
     margin-inline-end: 0.2rem;
 }
 
@@ -71,7 +71,7 @@
 
 [data-sc-image-mark2] {
     display: inline-block;
-    color: var(--nanmed-red, var(--tag-archaism-background-color));
+    color: var(--nanmed-red, var(--tag-archaism-background-color, #ba3f3f));
     margin-inline-end: 0.5rem;
     min-width: 1.5rem;
     font-size: 1rem;
@@ -91,20 +91,20 @@
 [data-sc-dougigo_layer] {
     position: relative;
     padding: 0.5rem;
-    border-inline-start: 2px solid var(--nanmed-border-color, var(--medium-border-color));
+    border-inline-start: 2px solid var(--nanmed-border-color, var(--medium-border-color, #ddd));
     margin-block-end: 0.8rem;
 }
 
 [data-sc-dougigo_title] {
     font-weight: bold;
     margin-block-end: 0.4rem;
-    color: var(--nanmed-light-text-color, var(--text-color-light4));
+    color: var(--nanmed-light-text-color, var(--text-color-light1, #555));
 }
 
 [data-sc-image-mark5] {
     display: inline-block;
-    font-size: 0.9rem;
-    color: var(--nanmed-light-text-color, var(--text-color-light4));
+    font-size: 1.2rem;
+    color: var(--nanmed-light-text-color, var(--text-color-light1, #555));
     margin-inline-end: 0.3rem;
 }
 
@@ -116,7 +116,7 @@
     display: inline-block;
     font-family: serif;
     font-weight: bold;
-    color: var(--nanmed-red, var(--tag-archaism-background-color));
+    color: var(--nanmed-red, var(--tag-archaism-background-color, #ba3f3f));
     padding-block: 0;
     padding-inline: 0.05em;
     vertical-align: baseline;
@@ -150,7 +150,7 @@
 }
 
 .gloss-image-container {
-    border: 1px solid var(--nanmed-border-color, var(--medium-border-color));
+    border: 1px solid var(--nanmed-border-color, var(--medium-border-color, #dddddd));
     overflow: hidden;
     max-width: 100%;
     max-height: 100% !important;
@@ -163,7 +163,7 @@
 }
 
 a {
-    color: var(--nanmed-link-color, var(--accent-color, var(--link-color)));
+    color: var(--nanmed-link-color, var(--accent-color, var(--link-color, #647687)));
     text-decoration: none;
 }
 
@@ -174,9 +174,13 @@ a:hover {
     text-decoration-color: oklch(65% 0.2 260);
 }
 
+.gloss-image-link {
+    filter: none !important;
+}
+
 [data-sc-link-aster] {
     display: inline-block;
-    color: var(--nanmed-red, var(--tag-archaism-background-color));
+    color: var(--nanmed-red, var(--tag-archaism-background-color, #ba3f3f));
     font-size: 0.9em;
     margin-inline-start: 0.05em;
     margin-inline-end: 0.05em;

@@ -4,26 +4,16 @@ import jaconv
 from typing import List
 
 from utils import KanjiUtils
+from config import DictionaryConfig
 from core import Parser
-from handlers import process_unmatched_entries
-from parser.OKO12.tag_map import TAG_MAPPING
-from parser.OKO12.oko12_strategies import Oko12LinkHandlingStrategy, Oko12ImageHandlingStrategy
-from parser.OKO12.oko12_utils import Oko12Utils
+from handlers import AudioHandler, process_unmatched_entries
+from parsers.OKO12.oko12_utils import Oko12Utils
 
 class Oko12Parser(Parser):
 
-    def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str):
-        
-        super().__init__(
-            dict_name, dict_path, index_path, jmdict_path,
-            link_handling_strategy=Oko12LinkHandlingStrategy(),
-            image_handling_strategy=Oko12ImageHandlingStrategy()
-        )
-        
+    def __init__(self, config: DictionaryConfig):
+        super().__init__(config)
         self.ignored_elements = {"entry-index"}
-        self.tag_mapping = TAG_MAPPING
-        
-        self.initialize_html_converter()
         
         
     def normalize_keys(self, reading: str, entry_keys: List[str]) -> List[str]:

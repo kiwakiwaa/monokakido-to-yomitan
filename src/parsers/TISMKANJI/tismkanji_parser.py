@@ -3,34 +3,27 @@ import json
 import regex as re
 from typing import Dict, List, Optional
 
-from utils import KanjiUtils
+from utils import KanjiUtils, FileUtils
 
 from core import Parser
-from parser.TISMKANJI.tismkanji_utils import TismKanjiUtils
+from config import DictionaryConfig
+from parsers.TISMKANJI.tismkanji_utils import TismKanjiUtils
 from core.yomitan_dictionary import DicEntry, create_html_element
 
     
 class TismKanjiParser(Parser):
     
-    def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str):
+    def __init__(self, config: DictionaryConfig):
+        super().__init__(config)
         
-        super().__init__(dict_name)
-        
-        self.dict_data = {i: item for i, item in enumerate(TismKanjiUtils.load_json(dict_path))}
-        self.kanken_data = self.load_json(os.path.join(os.path.dirname(__file__), "kanken_data.json"))
+        self.dict_data = {i: item for i, item in enumerate(TismKanjiUtils.load_json(config.dict_path))}
+        self.kanken_data = FileUtils.load_json(os.path.join(os.path.dirname(__file__), "kanken_data.json"))
         
         self.kanken_level_map = {}
         for level in self.kanken_data.get('groups', []):
             level_name = level.get('name', '')
             for kanji in level.get('characters', []):
                 self.kanken_level_map[kanji] = level_name
-        
-
-    def load_json(self, path: str):
-        with open(path, encoding="utf-8") as file:
-            data = json.load(file)
-            
-        return data
     
     
     def clean_content(self, text: str) -> str:

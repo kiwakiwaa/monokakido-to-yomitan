@@ -232,7 +232,7 @@ class YDPImageHandlingStrategy(ImageHandlingStrategy):
             display_as_block = dimensions.pop("display_as_block", False)
             img_path = img_path[:-4] + '.png'
         
-        imgElement = {
+        image_element = {
             "tag": "img", 
             "path": img_path, 
             "collapsible": False, 
@@ -245,9 +245,9 @@ class YDPImageHandlingStrategy(ImageHandlingStrategy):
         
         # Apply the calculated dimensions
         if dimensions:
-            imgElement.update(dimensions)
+            image_element.update(dimensions)
         
-        html_elements.insert(0, imgElement)
+        html_elements.insert(0, image_element)
         
         # Use div for block elements, span for inline elements
         if display_as_block:

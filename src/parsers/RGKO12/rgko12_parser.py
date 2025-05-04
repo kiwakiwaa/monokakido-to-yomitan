@@ -11,12 +11,8 @@ from parsers.RGKO12.rgko12_utils import Rgko12Utils
 
 class Rgko12Parser(Parser):
 
-    def __init__(self, config: DictionaryConfig, dict_path: str, index_path: str, jmdict_path: str, audio_path: str):
-        
-        super().__init__(
-            config, dict_path, index_path, jmdict_path
-        )
-        
+    def __init__(self, config: DictionaryConfig):
+        super().__init__(config)
         self.ignored_elements = {"entry-index", "hidden", "ht"}
         
         

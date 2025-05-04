@@ -7,28 +7,19 @@ from typing import Dict, List, Optional
 from utils import KanjiUtils
 
 from core import Parser
-from handlers import process_unmatched_entries
-from parser.OZK5.tag_map import TAG_MAPPING
-from parser.OZK5.ozk5_utils import OZK5Utils
-from parser.OZK5.ozk5_strategies import OZK5LinkHandlingStrategy
+from config import DictionaryConfig
+from handlers import AudioHandler, process_unmatched_entries
+from parsers.OZK5.ozk5_utils import OZK5Utils
     
 class OZK5Parser(Parser):
     
-    def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str):
-        
-        super().__init__(
-            dict_name, dict_path, index_path, jmdict_path,
-            link_handling_strategy=OZK5LinkHandlingStrategy()
-        )
-        
-        self.tag_mapping = TAG_MAPPING
-        self.initialize_html_converter()
+    def __init__(self, config: DictionaryConfig):
+        super().__init__(config)
         
         # List to store 和歌 entries (I add the head word manually for these 269 entries)
         self.waka_entries = {"entries": [], "reading_index": {}}
-        self.waka_path =  Path(index_path).parent / "waka_entries.json"
-        self.audio_path =  Path(index_path).parent.parent / "audio/index.json"
-        self.audio_index = self._init_audio_index()
+        self.waka_path =  Path(config.index_path).parent / "waka_entries.json"
+        self.audio_handler = AudioHandler(config.dict_name, config.audio_path)
             
             
     def _process_file(self, filename: str, xml: str):
@@ -93,20 +84,9 @@ class OZK5Parser(Parser):
                     )
                 
                 if audio_filename:
-                    self._save_audio_entry(kanji_part, kana_part, audio_filename)
+                    self.audio_handler.save_audio_entry(kanji_part, kana_part, audio_filename)
                     
         return local_count
-        
-        
-    def export(self, output_path: Optional[str] = None, export_waka_entries: bool = False):
-        self.dictionary.export(output_path)
-        
-        if export_waka_entries:
-            with open(self.waka_path, 'w', encoding='utf-8') as f:
-                json.dump(self.waka_entries, f, ensure_ascii=False, indent=2) 
-                
-        with open(self.audio_path, "w", encoding="utf-8") as f:
-            json.dump(self.audio_index, f, ensure_ascii=False, indent=2)
         
         
     def _handle_waka_entry(self, soup: bs4.BeautifulSoup, reading: str,
@@ -126,26 +106,7 @@ class OZK5Parser(Parser):
             count += self.parse_entry(reading, reading, soup)
             
         if audio_filename:
-            entry_data = {
-                "kanji": head_word or "",  # Empty string if no kanji
-                "kana": reading,
-                "audio_file": audio_filename
-            }
-            
-            # Add to entries array and get index
-            entry_index = len(self.audio_index["entries"])
-            self.audio_index["entries"].append(entry_data)
-            
-            # Update kanji index if kanji exists
-            if head_word:
-                if head_word not in self.audio_index["kanji_index"]:
-                    self.audio_index["kanji_index"][head_word] = []
-                self.audio_index["kanji_index"][head_word].append(entry_index)
-            
-            # Update kana index
-            if reading not in self.audio_index["kana_index"]:
-                self.audio_index["kana_index"][reading] = []
-            self.audio_index["kana_index"][reading].append(entry_index)
+            self.audio_handler.save_audio_entry(head_word or "", reading, audio_filename)
                     
         return count
     
@@ -162,41 +123,14 @@ class OZK5Parser(Parser):
             self.waka_entries["reading_index"][reading] = ""
             
         self.waka_entries["reading_index"][reading] = entry_index
-    
-    
-    def _init_audio_index(self):
-        index = {
-            "meta": {
-                "name": "旺文社 全訳古語辞典",
-                "year": 2025,
-                "version": 1,
-                "media_dir": "media"
-            },
-            "entries": [],
-            "kanji_index": {},
-            "kana_index": {}
-        }
-        return index
-    
-    
-    def _save_audio_entry(self, kanji_part: str, kana_part: str, audio_filename: str):
-        entry_index = len(self.audio_index["entries"])
         
-        entry_data = {
-            "kanji": kanji_part or "",  # Empty string if no kanji
-            "kana": kana_part,
-            "audio_file": audio_filename
-        }
-        # Add to entries array and get index
-        self.audio_index["entries"].append(entry_data)
         
-        # Update kanji index if kanji exists
-        if kanji_part:
-            if kanji_part not in self.audio_index["kanji_index"]:
-                self.audio_index["kanji_index"][kanji_part] = []
-            self.audio_index["kanji_index"][kanji_part].append(entry_index)
+    def export(self, output_path: Optional[str] = None, export_waka_entries: bool = False):
+        self.dictionary.export(output_path)
         
-        # Update kana index
-        if kana_part not in self.audio_index["kana_index"]:
-            self.audio_index["kana_index"][kana_part] = []
-        self.audio_index["kana_index"][kana_part].append(entry_index)
+        if export_waka_entries:
+            with open(self.waka_path, 'w', encoding='utf-8') as f:
+                json.dump(self.waka_entries, f, ensure_ascii=False, indent=2) 
+                
+        self.audio_handler.export()
+    

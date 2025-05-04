@@ -6,24 +6,15 @@ from typing import Dict, List, Optional
 from utils import KanjiUtils
 
 from core import Parser
+from config import DictionaryConfig
 from handlers import process_unmatched_entries
-from parser.YDL.tag_map import TAG_MAPPING
-from parser.YDL.ydl_utils import YDLUtils
-from parser.YDL.ydl_strategies import YDLImageHandlingStrategy
+from parsers.YDL.ydl_utils import YDLUtils
     
 class YDLParser(Parser):
     
-    def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str):
-        
-        super().__init__(
-            dict_name, dict_path, index_path, jmdict_path,
-	    image_handling_strategy=YDLImageHandlingStrategy()
-        )
-        
+    def __init__(self, config: DictionaryConfig):
+        super().__init__(config)
         self.ignored_elements = {"index", "参照先ID", "管理データ", "項目読み"}
-        self.tag_mapping = TAG_MAPPING
-        
-        self.initialize_html_converter()
 
 
     def normalize_keys(self, reading: str, entry_keys: List[str]) -> List[str]:

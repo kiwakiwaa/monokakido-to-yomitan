@@ -3,7 +3,7 @@ body {
 }
 
 div[data-sc-header] {
-    color: var(--daijisen-header-text, var(--background-color, var(--background-color-light)));
+    color: var(--daijisen-header-text, var(--background-color, var(--background-color-light, #FFFFFF)));
 }
 
 div[data-sc-header][data-sc-d-j-s] {
@@ -11,7 +11,7 @@ div[data-sc-header][data-sc-d-j-s] {
 }
 
 div[data-sc-header][data-sc-d-j-s-p] {
-	background-color: var(--daijisen-header-djs, var(--tag-archaism-background-color, var(--disabled-color-lighter, var(--background-color))));
+	background-color: var(--daijisen-header-djs, var(--tag-archaism-background-color, var(--disabled-color-lighter, var(--background-color, #999999))));
 }
 
 div[data-sc-headertitle],
@@ -196,13 +196,13 @@ div[data-sc-m-accentaudio-g] {
 } */
 
 span[data-sc-m-accent-m] {
-	color: var(--daijisen-accent-mark, var(--danger-color, var(--sidebar-button-danger-background-color-hover)));
+	color: var(--daijisen-accent-mark, var(--danger-color, var(--sidebar-button-danger-background-color-hover, #CC0000)));
 }
 
 span[data-sc-m-accent-slash],
 span[data-sc-m-accentslash] {
 	font-size: 0.9em;
-	color: var(--daijisen-accent-slash, var(--text-color-light4));
+	color: var(--daijisen-accent-slash, var(--text-color-light4, #808080));
 /* 	margin-inline-start: 0.2em;
 	margin-inline-end: 0.2em; */
 }
@@ -237,7 +237,7 @@ span[data-sc-rect][data-sc-l3] {
 	padding-inline-end: 0.15em;
 	color: var(--background-color-light, var(--background-color));
 	border-style: none;
-	background-color: var(--daijisen-background-l3, var(--text-color-light2));
+	background-color: var(--daijisen-background-l3, var(--text-color-light2, #606060));
 }
 
 span[data-sc-rect][data-sc-small][data-sc-l3] {
@@ -265,7 +265,7 @@ span[data-sc-circle] {
 
 span[data-sc補足ロゴ-g] {
 	font-size: 0.8em;
-	background-color: var(--daijisen-logo-color, var(--text-color));
+	background-color: var(--daijisen-logo-color, var(--text-color, #000000));
 	-webkit-border-radius: 0.2em;
 	padding: 0.09em 0.25em 0.11em 0.25em;
 	word-break: keep-all;
@@ -275,8 +275,8 @@ span[data-sc補足ロゴ-g] {
 span[data-sc補足ロゴ] {
 	background-color: var(--background-color-light, var(--background-color));
 	color: var(--text-color);
-	border-block-start: solid 0.05em var(--daijisen-logo-color, var(--text-color));
-	border-block-end: solid 0.05em var(--daijisen-logo-color, var(--text-color));
+	border-block-start: solid 0.05em var(--daijisen-logo-color, var(--text-color, #000000));
+	border-block-end: solid 0.05em var(--daijisen-logo-color, var(--text-color, #000000));
 	border-inline-end: none;
 	border-inline-start: none;
 	padding-block-start: 0.04em;
@@ -465,21 +465,21 @@ a {
 }
 
 a:link {
-	color: var(--daijisen-blue, var(--accent-color, var(--link-color)));
+	color: var(--daijisen-blue, var(--accent-color, var(--link-color, #4a8ade)));
 }
 
 a[data-sc-blue] {
-	color: var(--daijisen-blue, var(--accent-color, var(--link-color)));
+	color: var(--daijisen-blue, var(--accent-color, var(--link-color, #4a8ade)));
 }
 
 a[data-sc-blue] span[data-sc-rect],
 a[data-sc-blue] span[data-sc-circle] {
-	border-color: var(--daijisen-blue, var(--accent-color, var(--link-color)));
+	border-color: var(--daijisen-blue, var(--accent-color, var(--link-color, #4a8ade)));
 }
 
 a[data-sc-blue] span[data-sc-rect][data-sc-fill],
 a[data-sc-blue] span[data-sc-rect][data-sc-l-3] {
-	background-color: var(--daijisen-blue, var(--accent-color, var(--link-color)));
+	background-color: var(--daijisen-blue, var(--accent-color, var(--link-color, #4a8ade)));
 }
 
 span[data-sc-f-m] {
@@ -530,4 +530,8 @@ a:hover {
     filter: brightness(1.3);
     text-decoration: underline;
     text-decoration-color: oklch(65% 0.2 260);
+}
+
+.gloss-image-link {
+    filter: none !important;
 }

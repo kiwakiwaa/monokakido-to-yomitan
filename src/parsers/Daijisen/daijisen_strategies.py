@@ -3,7 +3,6 @@ from typing import Dict, List, Optional, Tuple
 
 from utils import KanjiUtils
 from core.yomitan_dictionary import create_html_element
-
 from strategies import LinkHandlingStrategy, ImageHandlingStrategy
 
 class DaijisenLinkHandlingStrategy(LinkHandlingStrategy):

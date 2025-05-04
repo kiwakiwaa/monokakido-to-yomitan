@@ -61,11 +61,10 @@ details[open] > *:not(summary) {
 
 [data-sc-head-g] {
 	display: block;
-	margin-block-end: 0.8em;
 }
 
 [data-sc-headword] {
-	font-family: "PingFang SC";
+	font-family: "PingFang SC", "苹方-简", "PingFangSC", "Noto Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "Microsoft YaHei UI", "微软雅黑", "Hiragino Sans GB", "冬青黑体", "Heiti SC", "黑体-简", "SimHei", "STHeiti", "华文黑体", "WenQuanYi Micro Hei", "文泉驿微米黑", "Source Han Sans CN", "Source Han Sans SC", "思源黑体", "Droid Sans Fallback", "FZSongS", "方正宋体", sans-serif;
 }
 
 [data-sc-headword][data-sc親字],
@@ -89,7 +88,7 @@ details[open] > *:not(summary) {
 	padding-block-end: 0.06em;
 	padding-inline-start: 0.07em;
 	padding-inline-end: 0.06em;
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 	font-size: 0.85em;
 	font-weight: normal;
 	border-width: 0.05em;
@@ -103,7 +102,7 @@ details[open] > *:not(summary) {
 }
 
 [data-sc-headword][data-sc総画数] {
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 	font-size: 0.9em;
 }
 
@@ -122,7 +121,7 @@ details[open] > *:not(summary) {
 }
 
 [data-sc親字語義区分ハイフン] {
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 }
 
 [data-sc-audio] {
@@ -155,10 +154,6 @@ details[open] > *:not(summary) {
 
 [data-sc-meaning-g] {
 	display: block;
-}
-
-[data-sc-meaning-g][data-sc-l1] {
-	margin-block-start: 0.5em;
 }
 
 [data-sc-meaning-g][data-sc-l1]+[data-sc-meaning-g][data-sc-l1] {
@@ -223,7 +218,7 @@ details[open] > *:not(summary) {
 	display: block;
 	padding-block: 0;
 	padding-inline: 0.4em;
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 	font-size: 0.9em;
 	font-weight: normal;
 	line-height: 1.5em;
@@ -249,7 +244,7 @@ details[open] > *:not(summary) {
 }
 
 [data-scコラム分類-m] {
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 	font-size: 0.9em;
 	color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
 }
@@ -270,23 +265,23 @@ details[open] > *:not(summary) {
 }
 
 [data-sc-cn] {
-	font-family: "PingFang SC";
+	font-family: "PingFang SC", "苹方-简", "PingFangSC", "Noto Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "Microsoft YaHei UI", "微软雅黑", "Hiragino Sans GB", "冬青黑体", "Heiti SC", "黑体-简", "SimHei", "STHeiti", "华文黑体", "WenQuanYi Micro Hei", "文泉驿微米黑", "Source Han Sans CN", "Source Han Sans SC", "思源黑体", "Droid Sans Fallback", "FZSongS", "方正宋体", sans-serif;
 }
 
 [data-sc-tw] {
-	font-family: "PingFang TC";
+	font-family: "PingFang TC", "苹方-繁", "PingFangTC", "Noto Sans TC", "Noto Sans CJK TC", "Microsoft JhengHei", "Microsoft JhengHei UI", "微軟正黑體", "Hiragino Sans TC", "冬青黑體", "Heiti TC", "黑體-繁", "Apple LiGothic", "蘋果儷中黑", "Source Han Sans TW", "思源黑體", "WenQuanYi Zen Hei", "文泉驛正黑", "DFKai-SB", "標楷體", "STKaiti", "華文楷體", sans-serif;
 }
 
 [data-sc-kr] {
-	font-family: "PingFang TC";
+	font-family: "PingFang TC", "苹方-繁", "PingFangTC", "Noto Sans TC", "Noto Sans CJK TC", "Microsoft JhengHei", "Microsoft JhengHei UI", "微軟正黑體", "Hiragino Sans TC", "冬青黑體", "Heiti TC", "黑體-繁", "Apple LiGothic", "蘋果儷中黑", "Source Han Sans TW", "思源黑體", "WenQuanYi Zen Hei", "文泉驛正黑", "DFKai-SB", "標楷體", "STKaiti", "華文楷體", sans-serif;
 }
 
 [data-sc-jp] {
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 }
 
 [data-sc-pinyin] {
-	font-family: "PingFang SC";
+	font-family: "PingFang SC", "苹方-简", "PingFangSC", "Noto Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "Microsoft YaHei UI", "微软雅黑", "Hiragino Sans GB", "冬青黑体", "Heiti SC", "黑体-简", "SimHei", "STHeiti", "华文黑体", "WenQuanYi Micro Hei", "文泉驿微米黑", "Source Han Sans CN", "Source Han Sans SC", "思源黑体", "Droid Sans Fallback", "FZSongS", "方正宋体", sans-serif;
 }
 
 [data-sc-b-s] {
@@ -294,7 +289,7 @@ details[open] > *:not(summary) {
 	padding-block-end:  0.08em;
 	padding-inline-start: 0.303em;
 	padding-inline-end: 0.246em;
-	font-family: Helvetica;
+	font-family: Helvetica, "Helvetica Neue", "Noto Sans", "Noto Sans UI", "Arial", "Arial Unicode MS", "Roboto", "Segoe UI", "Segoe UI Symbol", "Open Sans", "Liberation Sans", "Nimbus Sans L", "FreeSans", "Fira Sans", "IBM Plex Sans", "Oxygen", "Ubuntu", "Cantarell", "DejaVu Sans", "Droid Sans", "-apple-system", "BlinkMacSystemFont", system-ui, sans-serif;
 	font-size: 1.08em;
 	font-weight: bold;
 	text-decoration: none;
@@ -310,7 +305,7 @@ details[open] > *:not(summary) {
 	padding-block-end:  0.1em;
 	padding-inline-start: 0.25em;
 	padding-inline-end: 0.21em;
-	font-family: Helvetica;
+	font-family: Helvetica, "Helvetica Neue", "Noto Sans", "Noto Sans UI", "Arial", "Arial Unicode MS", "Roboto", "Segoe UI", "Segoe UI Symbol", "Open Sans", "Liberation Sans", "Nimbus Sans L", "FreeSans", "Fira Sans", "IBM Plex Sans", "Oxygen", "Ubuntu", "Cantarell", "DejaVu Sans", "Droid Sans", "-apple-system", "BlinkMacSystemFont", system-ui, sans-serif;
 	font-size: 1em;
 	font-weight: bold;
 	text-decoration: none;
@@ -324,7 +319,7 @@ details[open] > *:not(summary) {
 [data-sc-b-c],
 [data-sc-p-r],
 [data-sc-w-c] {
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 }
 
 [data-sc-b-s][data-sc-small],
@@ -356,7 +351,7 @@ a [data-sc-b-f] {
 	padding-block-end:  0.17em;
 	padding-inline-start: 0.05em;
 	padding-inline-end: 0.16em;
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 	font-size: 0.9em;
 	font-weight: normal;
 	border-width: 0.05em;
@@ -394,7 +389,7 @@ a [data-sc-w-s] {
 	padding-block-end:  0.06em;
 	padding-inline-start: 0.07em;
 	padding-inline-end: 0.06em;
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 	font-size: 0.9em;
 	font-weight: normal;
 	border-width: 0.05em;
@@ -418,7 +413,7 @@ a [data-sc-logo]{
 }
 
 [data-sc-l-b-logo-g] {
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 	font-size: 0.85em;
 	font-weight: normal;
 	background-color: var(--cj3-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #ea3a3a)));
@@ -443,7 +438,7 @@ a [data-sc-logo]{
 }
 
 [data-sc-r-a-logo-g] {
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 	font-size: 0.85em;
 	font-weight: normal;
 	background-color: var(--text-color);
@@ -472,7 +467,7 @@ a [data-sc-logo]{
 	padding-block-start: 0.06em;
 	padding-block-end:  0.08em;
 	padding-inline: 0.3em;
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 	font-size: 0.8em;
 	font-weight: bold;
 	border-width: 0.05em;
@@ -537,7 +532,7 @@ a:hover {
 }
 
 [data-sc-double-dash] {
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 }
 
 [data-sc-f-m] {
@@ -579,17 +574,17 @@ a:hover {
 [data-sc付録] [data-sc-usage-箇条番号] {
 	margin-inline-start: -1em;
 	margin-inline-end: 0.44em;
-	font-family: Helvetica;
+	font-family: Helvetica, "Helvetica Neue", "Noto Sans", "Noto Sans UI", "Arial", "Arial Unicode MS", "Roboto", "Segoe UI", "Segoe UI Symbol", "Open Sans", "Liberation Sans", "Nimbus Sans L", "FreeSans", "Fira Sans", "IBM Plex Sans", "Oxygen", "Ubuntu", "Cantarell", "DejaVu Sans", "Droid Sans", "-apple-system", "BlinkMacSystemFont", system-ui, sans-serif;
 }
 
 [data-sc付録] [data-sc-usage-箇条番号2] {
 	margin-inline-start: -1em;
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 }
 
 [data-sc付録] [data-sc-usage-箇条-m] {
 	margin-inline-start: -1.333em;
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 	font-size: 0.75em;
 	margin-inline-end: 0.333em;
 }
@@ -612,7 +607,7 @@ a:hover {
 
 [data-sc付録] [data-sc-usage-使い方-番号] {
 	margin-inline-end: 0.2em;
-	font-family: Helvetica;
+	font-family: Helvetica, "Helvetica Neue", "Noto Sans", "Noto Sans UI", "Arial", "Arial Unicode MS", "Roboto", "Segoe UI", "Segoe UI Symbol", "Open Sans", "Liberation Sans", "Nimbus Sans L", "FreeSans", "Fira Sans", "IBM Plex Sans", "Oxygen", "Ubuntu", "Cantarell", "DejaVu Sans", "Droid Sans", "-apple-system", "BlinkMacSystemFont", system-ui, sans-serif;
 	font-size: 1.07em;
 }
 
@@ -666,7 +661,7 @@ a:hover {
 	padding-block-end: 0.06em;
 	padding-inline-start: 0.2em;
 	padding-inline-end: 0.19em;
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 	font-size: 0.9em;
 	font-weight: normal;
 	border-width: 0.05em;
@@ -685,7 +680,7 @@ a:hover {
 [data-sc付録] [data-sc-usage-編者一覧-サブタイトル],
 [data-sc付録] [data-sc-usage-編者一覧-版タイトル] {
 	display: block;
-	font-family: "Hiragino Kaku Gothic ProN";
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Yu Gothic Medium", "YuGothic", "Meiryo", "MS PGothic", "MS Pゴシック", "Osaka", "BIZ UDGothic", "UD Digi Kyokasho N-R", "Hiragino Sans", "Hiragino Sans GB", "Source Han Sans JP", "源ノ角ゴシック JP", "IBM Plex Sans JP", sans-serif;
 	font-weight: bold;
 }
 
@@ -747,7 +742,7 @@ a:hover {
 }
 
 [data-sc付録] [data-sc-a-p-d-国際音声記号] {
-	font-family: "Doulos SIL";
+	font-family: "Doulos SIL", "Doulos SIL Regular", "Noto Sans", "Noto Sans Display", "Gentium Plus", "Gentium Book Plus", "Gentium Basic", "Charis SIL", "Andika", "DejaVu Sans", "DejaVu Sans Book", "Cambria", "Arial Unicode MS", "Lucida Grande", "Lucida Sans Unicode", "TITUS Cyberbit Basic", "Junicode", "Brill", "Linux Libertine", "Libertinus Serif", "GNU FreeFont", "Code2000", "Everson Mono Unicode", "STIX", "XITS", system-ui, sans-serif;
 }
 
 [data-sc付録] [data-sc-a-p-d-親族名称一覧] {

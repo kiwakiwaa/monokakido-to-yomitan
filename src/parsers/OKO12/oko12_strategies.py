@@ -4,7 +4,6 @@ from typing import Dict, List, Optional, Tuple
 
 from utils import KanjiUtils
 from core.yomitan_dictionary import create_html_element
-
 from strategies import LinkHandlingStrategy, ImageHandlingStrategy
 
 class Oko12LinkHandlingStrategy(LinkHandlingStrategy):
@@ -77,7 +76,7 @@ class Oko12ImageHandlingStrategy(ImageHandlingStrategy):
                 data_dict[class_name] = ""
                 return create_html_element("span", content=text, data=data_dict)
             else:
-                imgElement = {
+                image_element = {
                     "tag": "img", 
                     "path": src_path, 
                     "collapsible": False, 
@@ -87,6 +86,6 @@ class Oko12ImageHandlingStrategy(ImageHandlingStrategy):
                     "imageRendering": "auto",
                     "data": data_dict
                 }
-                html_elements.insert(0, imgElement)
+                html_elements.insert(0, image_element)
 
         return create_html_element("span", content=html_elements, data=data_dict)

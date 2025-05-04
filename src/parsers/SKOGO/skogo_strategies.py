@@ -6,9 +6,8 @@ from typing import Dict, List, Tuple, Optional, Set, Callable, Any
 
 from utils import KanjiUtils
 from core.yomitan_dictionary import create_html_element
-
 from strategies import LinkHandlingStrategy, ImageHandlingStrategy
-from parser.SKOGO.mapping.image_map import IMAGE_FILE_MAP
+from parsers.SKOGO.mapping.image_map import IMAGE_FILE_MAP
 
 class SKOGOLinkHandlingStrategy(LinkHandlingStrategy):
     def handle_link_element(self, html_glossary: bs4.element.Tag, html_elements: List,

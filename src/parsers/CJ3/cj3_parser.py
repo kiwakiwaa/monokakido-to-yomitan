@@ -15,16 +15,13 @@ from parsers.CJ3.cj3_utils import CJ3Utils
 
 class CJ3Parser(Parser):
 
-    def __init__(self, config: DictionaryConfig, dict_path: str, index_path: str, jmdict_path: str, audio_path: str):
+    def __init__(self, config: DictionaryConfig):
         
-        super().__init__(
-            config, dict_path, index_path
-        )
+        super().__init__(config)
         
         self.ignored_elements = {"entry-index"}
         self.use_zhuyin = True
-        
-        self.audio_handler = CJ3AudioHandler(config.dict_name, audio_path)
+        self.audio_handler = CJ3AudioHandler(config.dict_name, config.audio_path)
             
         
     def _handle_missing_entry_keys(self, soup: bs4.BeautifulSoup, file: str) -> int:

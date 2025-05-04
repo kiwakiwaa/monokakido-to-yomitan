@@ -4,25 +4,16 @@ import jaconv
 from typing import List
 
 from utils import KanjiUtils
+from config import DictionaryConfig
 from core import Parser
 from handlers import process_unmatched_entries
-from parser.YDP.tag_map import TAG_MAPPING
-from parser.YDP.ydp_utils import YDPUtils
-from parser.YDP.ydp_strategies import YDPImageHandlingStrategy
+from parsers.YDP.ydp_utils import YDPUtils
 
 class YDPParser(Parser):
 
-    def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str):
-        
-        super().__init__(
-            dict_name, dict_path, index_path,
-            image_handling_strategy=YDPImageHandlingStrategy()
-        )
-        
+    def __init__(self, config: DictionaryConfig):
+        super().__init__(config)
         self.ignored_elements = {"entry-index", "key"}
-        self.tag_mapping = TAG_MAPPING
-        
-        self.initialize_html_converter()
         
         
     def normalize_keys(self, reading: str, entry_keys: List[str]) -> List[str]:

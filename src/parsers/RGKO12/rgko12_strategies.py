@@ -11,7 +11,7 @@ from parsers.RGKO12.image_file_map import IMAGE_FILE_MAP
 class Rgko12LinkHandlingStrategy(LinkHandlingStrategy):
     
     def __init__(self):
-        self.appendix_entries = FileUtils.load_dictionary_mapping(
+        self.appendix_entries = FileUtils.load_json(
             os.path.join(os.path.dirname(__file__), "mapping", "appendix_entries.json")
         )
     
@@ -60,7 +60,7 @@ class Rgko12ImageHandlingStrategy(ImageHandlingStrategy):
             "形動とたる.svg"
         }
         
-        self.gaiji_replacements = FileUtils.load_dictionary_mapping(
+        self.gaiji_replacements = FileUtils.load_json(
             os.path.join(os.path.dirname(__file__), "mapping", "gaiji_replacements.json")
         )
         

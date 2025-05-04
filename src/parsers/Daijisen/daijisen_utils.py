@@ -3,7 +3,6 @@ from utils import KanjiUtils
 
 class DaijisenUtils:
     
-    
     @staticmethod
     def extract_plus_headword(soup):
         head_word = ""

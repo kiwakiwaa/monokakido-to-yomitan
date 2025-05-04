@@ -94,9 +94,10 @@ class CNUtils:
 				
 		return mappings
 	
+	import dragonmapper.transcriptions as dt
 	
 	@staticmethod
-	def pinyin_to_zhuyin(pinyin):
+	def pinyin_to_zhuyin(pinyin: str) -> str:
 		if not pinyin or not pinyin.strip():
 			return ""
 		

@@ -1,0 +1,760 @@
+@color red = #CC0000;
+@color light-pink = #FFDBDA;
+@color table-border = #666;
+@color table-header = #FFDBDA;
+
+body {
+	margin: 1em 44px 1em 1.5em;
+	line-height: 1.5em;
+	font-family: IPAmjMincho;
+	font-size: 1.2em;
+	color: black;
+	writing-mode: vertical-rl;
+}
+
+entry-index {
+	display: none;
+}
+
+BusyuHeadG {
+	display: block;
+}
+
+table.部首 {
+	width: 100%;
+}
+
+td.部首画数 {
+	text-align: center;
+	border: solid 0.15em red;
+	padding: 0.1em;
+	margin-right: 0.1em;
+}
+
+td.部首画数1 {
+	width: 2em;
+}
+
+td.部首画数2 {
+	width: 2.8em;
+}
+
+td.部首 {
+	border: solid 0.05em black;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	padding-left: 0.3em;
+	padding-right: 0.15em;
+}
+
+BusyuHeadSubG {
+	display: block;
+}
+
+BusyuHeadSubG+BusyuHeadSubG {
+	margin-top: 0.2em;
+}
+
+td.部首字 {
+	vertical-align: middle;
+	margin-right: 0.3em;
+}
+
+td.部首読み {
+	vertical-align: middle;
+}
+
+OyajiHeadG {
+	display: block;
+}
+
+KyuujiItaijiG {
+	display: block;
+	margin-top: 0.2em;
+}
+
+OyajiHeadSubG {
+	display: block;
+}
+
+OyajiHeadSubG.旧字, OyajiHeadSubG.異体字 {
+	margin-left: 1em;
+}
+
+OyajiHeadSubG+OyajiHeadSubG {
+	margin-top: 0.2em;
+}
+
+td.親字字義番号, td.異体字M, td.親字異体字ラベル, td.親字画数, td.親字JIS, td.親字JIS16, td.親字Unicode {
+	writing-mode: horizontal-tb;
+	text-align: center;
+	line-height: 1em;
+}
+
+td.親字部首内画数 {
+	writing-mode: horizontal-tb;
+	text-align: right;
+	line-height: 1em;
+	padding-top: 0.1em;
+	padding-bottom: 0.1em;
+}
+
+td.親字部首 {
+	writing-mode: horizontal-tb;
+	text-align: left;
+	line-height: 1em;
+	padding-top: 0.1em;
+	padding-bottom: 0.1em;
+}
+
+td.Dummy {
+	width: 1em;
+}
+
+td.親字 {
+	vertical-align: middle;
+}
+
+td.親字種別 {
+	writing-mode: horizontal-tb;
+	text-align: center;
+	margin-left: 0.5em;
+}
+
+td.親字コードTM {
+	margin-left: 0.5em;
+}
+
+td.親字コードB {
+	width: 0.05em;
+	margin-top: 0.17em;
+	margin-bottom: 0.17em;
+	background-color: black;
+}
+
+td.旧字異体字コードB {
+	width: 0.05em;
+	background-color: black;
+}
+
+JigiNumber {
+	font-size: 0.9em;
+}
+
+OyajiYomiSubG {
+	display: block;
+}
+
+OyajiYomiSubG.LM1 {
+	margin-left: 1em;
+}
+
+OyajiYomiSubG.LM2 {
+	margin-left: 2em;
+}
+
+OyajiHead2G {
+	display: block;
+	margin-left: 1em;
+	margin-top: 0.3em;
+}
+
+SubItemHeadG {
+}
+
+SubItemHeadG.派生 {
+	margin-left: 0.5em;
+}
+
+HattenHeadG, ZinmeiSyomeiHeadG {
+	display: block;
+}
+
+headword.部首画数 {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.8em;
+	line-height: 1.15em;
+}
+
+headword.部首見出 {
+	font-size: 2em;
+	line-height: 1em;
+	margin-right: 0.1em;
+}
+
+headword.部首異体 {
+	font-size: 1.5em;
+	line-height: 1em;
+	margin-right: 0.1333em;
+}
+
+headword.部首異体TM {
+	margin-left: 0.333em;
+}
+
+headword.部首名 {
+	display: block;
+	font-size: 0.95em;
+	line-height: 1.15em;
+}
+
+headword.部首 {
+	font-size: 0.8em;
+}
+
+headword.部首内画数, headword.画数 {
+	font-family: "Hiragino Mincho ProN";
+	font-size: 0.8em;
+}
+
+headword.親字 {
+	font-size: 2.4em;
+	line-height: 1em;
+}
+
+headword.旧字, headword.異体字 {
+	font-size: 2em;
+	line-height: 1em;
+}
+
+headword.異体字ラベル {
+	font-size: 0.82em;
+}
+
+headword.種別 {
+	display: block;
+	line-height: 1.1em;
+}
+
+headword.字義番号 {
+	margin-right: 0.15em;
+}
+
+headword.字音字韻 {
+}
+
+JionJiinSP {
+	margin-right: 0.2em;
+}
+
+JionJiinSP2 {
+	margin-right: 0.4em;
+}
+
+headword.熟語, headword.人名, headword.書名 {
+}
+
+Code {
+	font-family: "Hiragino Mincho ProN";
+	font-size: 0.8em;
+}
+
+Code.Unicode {
+	font-style: italic;
+}
+
+Code.Wide {
+	font-size: 0.7em;
+}
+
+MainG {
+	display: block;
+	margin-top: 0.5em;
+	margin-left: 1em;
+}
+
+MainG.人名書名 {
+	margin-top: 0.3em;
+}
+
+SubItemG {
+	display: block;
+	margin-top: 0.5em;
+	padding-top: 0.5em;
+	border-top: solid 0.05em black;
+}
+
+SubItem {
+	display: block;
+}
+
+SubItemC {
+	display: block;
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+OyajiP, SubItemP {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+OyajiP.red, SubItemP.red {
+	color: red;
+}
+
+OyajiP.S {
+	margin-left: -0.18em;
+}
+
+OyajiP.E {
+	margin-right: -0.32em;
+}
+
+SubItemP.S {
+	margin-left: -0.1em;
+}
+
+SubItemP.E {
+	margin-right: -0.1em;
+}
+
+IndexG {
+	display: block;
+	margin-top: 0.5em;
+}
+
+IndexG.部首内 {
+	border-top: solid 0.05em red;
+	border-bottom: solid 0.05em red;
+	padding: 0.2em 0;
+}
+
+IndexC {
+	display: block;
+}
+
+IndexSubG {
+	display: table-row;
+}
+
+IndexSubNumC {
+	display: table-cell;
+	width: 1.05em;
+	vertical-align: top:
+}
+
+IndexSubNum {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+IndexSubC {
+	display: table-cell;
+}
+
+indexlist.部首内 {
+	display: inline-block;
+	font-size: 1.4em;
+	margin-left: 0.24em;
+}
+
+indexlist.他部首 {
+	display: inline-block;
+	font-size: 1.2em;
+	margin-right: 0.5em;
+}
+
+DivG {
+	display: block;
+}
+
+DivG.inline {
+	display: inline;
+}
+
+ColumnG {
+	display: block;
+	margin: 0.3em 0;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: red;
+	padding: 0.1em 0.2em;
+}
+
+ColumnG.故事2 {
+	margin: 0 0 0 1em;
+	border-style: none;
+	padding: 0;
+}
+
+ColumnG.同訓異義 {
+	margin: 0;
+	border-style: none;
+	padding: 0;
+}
+
+ColumnTitleG {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+ColumnTitleG.red {
+	color: red;
+}
+
+KojiSubTitle {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	font-size: 0.94em;
+}
+
+ColumnC {
+	display: block;
+	border-left: solid 0.2em red;
+	padding-left: 0.2em;
+}
+
+ColumnTableG {
+	display: block;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+SubItem ColumnTableG {
+	margin-left: 1em;
+}
+
+ColumnTableTitle {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+table.ColumnTable {
+	overflow: scroll;
+}
+
+td.ColumnTableHader {
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	font-size: 0.95em;
+	text-align: center;
+	background-color: table-header;
+}
+
+td.ColumnTable {
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+td.BT {
+	border-top: solid 0.05em table-border;
+}
+
+td.BB {
+	border-bottom: solid 0.05em table-border;
+}
+
+td.BL {
+	border-left: solid 0.05em table-border;
+}
+
+td.BL2 {
+	border-left: solid 0.15em table-border;
+}
+
+td.BR {
+	border-right: solid 0.05em table-border;
+}
+
+MG {
+	display: block;
+}
+
+MG.inline {
+	display: inline;
+}
+
+meaning {
+	display: block;
+}
+
+meaning.故事 {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+meaning.故事W1 {
+	line-height: 1.6em;
+}
+
+meaning.故事W2 {
+	line-height: 1.9em;
+}
+
+meaning.故事2 {
+	margin-left: 1em;
+}
+
+ExampleG {
+	display: block;
+	margin-left: 1em;
+}
+
+ExampleC {
+	display: block;
+	margin-left: 1.2em;
+	text-indent: -1.2em;
+}
+
+ImageG {
+	display: block;
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+
+SubItem ImageG {
+	margin-left: 1em;
+}
+
+KaijiG {
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+}
+
+KaijiTitle {
+	font-size: 0.85em;
+}
+
+rect {
+	padding: 0.04em 0.05em 0.058em 0.05em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	word-break: keep-all;
+	-webkit-border-radius: 0.2em;
+}
+
+rect.bold {
+	font-weight: bold;
+}
+
+rect.small {
+	font-size: 0.68em;
+}
+
+rect.red {
+	color: red;
+	border-color: red;
+}
+
+rect.異体字M {
+	font-size: 0.7em;
+	vertical-align: 0.1em;
+}
+
+circle {
+	padding: 0.06em 0.1em 0.08em;
+	font-size: 0.75em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: black;
+	-webkit-border-radius: 0.67em;
+}
+
+circle.種別 {
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+}
+
+a rect, a circle {
+	border-color: blue;
+}
+
+Pr {
+	font-family: "Hiragino Mincho ProN";
+}
+
+Bc, WcKanji, Wc {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+WcKanji.small, Wc.small {
+	font-size: 0.85em;
+}
+
+WcKana {
+	font-family: "Hiragino Mincho ProN";
+}
+
+mlg, yomi {
+	display: warichu;
+	font-size: 0.5em;
+}
+
+SubItemHeadG yomi, ZinmeiSyomeiHeadG yomi {
+	margin-left: 0.25em;
+}
+
+SubItemHeadG yomi+yomi, ZinmeiSyomeiHeadG yomi+yomi {
+	margin-left: 0;
+}
+
+YomiMDot {
+	font-size: 0.85em;
+}
+
+Bold {
+	font-family: "Hiragino Kaku Gothic ProN";
+	color: red;
+}
+
+a Bold {
+	color: blue;
+}
+
+Red {
+	color: red;
+}
+
+spellout {
+	color: red;
+}
+
+OnkunU {
+	border-top: solid 0.05em black;
+	padding-top: 0.1em;
+}
+
+Tc {
+	text-combine-horizontal: all;
+}
+
+Hyphen {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+FWHyphen {
+	font-family: "Hiragino Kaku Gothic ProN";
+	text-combine-horizontal: all;
+}
+
+FWComma {
+	margin-right: 0.15em;
+}
+
+BatsuM {
+	font-family: "Hiragino Kaku Gothic ProN";
+	vertical-align: 0.03em;
+}
+
+LogicalAndM {
+	font-family: "Hiragino Kaku Gothic ProN";
+	text-combine-horizontal: all;
+}
+
+RefM {
+	font-family: "Hiragino Kaku Gothic ProN";
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+}
+
+JyouyouGaiM {
+	vertical-align: 1.4em;
+	font-size: 0.4em;
+}
+
+KojiM {
+	font-size: 0.9em;
+}
+
+Year {
+	font-size: 0.85em;
+}
+
+Source {
+	font-size: 0.87em;
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+}
+
+rt {
+	font-size: 0.5em;
+}
+
+rt.Bouten {
+	font-size: 0.4em;
+	line-height: 1em;
+}
+
+kkaeri {
+	font-size: 0.5em;
+	vertical-align: -1.1em;
+}
+
+kokuri {
+	font-size: 0.5em;
+	vertical-align: 2.95em;
+}
+
+klokuri {
+	font-size: 0.5em;
+	vertical-align: -2.95em;
+}
+
+GyakuJyukugoM {
+	color: red;
+}
+
+a {
+	text-decoration: none;
+}
+
+.FM {
+	margin-right: 0.15em;
+}
+
+.BM {
+	margin-left: 0.15em;
+}
+
+.IM {
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+}
+
+.Logo-FM {
+	margin-right: 0.2em;
+}
+
+MG.inline .Logo-FM {
+	margin-right: 0.15em;
+}
+
+sp2 {
+	font-size: 0.35em;
+}
+
+img.字韻 {
+	display: gaiji;
+	height: 1.1em;
+	text-combine-horizontal: all;
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+}
+
+img.筆順 {
+	display: gaiji;
+	text-combine-horizontal: all;
+	max-width: 24em;
+}
+
+img.解字 {
+	display: gaiji;
+	height: 2.4em;
+	text-combine-horizontal: all;
+}
+
+img.gaiji {
+	display: gaiji;
+	height: 1em;
+	text-combine-horizontal: all;
+}

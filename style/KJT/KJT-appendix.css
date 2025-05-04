@@ -1,0 +1,289 @@
+AP-HeadG {
+	display: block;
+}
+
+AP-MainG {
+	display: block;
+	margin-top: 0.5em;
+}
+
+AP-Title {
+	display: block;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+AP-SubG {
+	display: block;
+}
+
+AP-SubG.LM1 {
+	margin-left: 1em;
+}
+
+AP-SubG.L1+AP-SubG.L1 {
+	margin-top: 1em;
+}
+
+AP-SubG.L2+AP-SubG.L2 {
+	margin-top: 0.8em;
+}
+
+AP-SubG.L3+AP-SubG.L3, AP-SubG.L4+AP-SubG.L4 {
+	margin-top: 0.3em;
+}
+
+AP-SubGTitle {
+	display: block;
+}
+
+AP-SubGTitle.L1 {
+	margin-top: 0.2em;
+	margin-bottom: 0.8em;
+}
+
+AP-SubGTitle.L2 {
+	line-height: 1.35em;
+	background-color: light-pink;
+	padding: 0 0.2em;
+	margin-bottom: 0.3em;
+}
+
+AP-SubGTitleB {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	padding: 0.35em 0.2em;
+	border-top: solid 0.15em light-pink;
+	border-bottom: solid 0.15em light-pink;
+}
+
+AP-SubGNum {
+	font-family: "Hiragino Mincho ProN";
+}
+
+AP-SubL34C {
+	display: block;
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+AP-P {
+	display: block;
+}
+
+AP-P.TM1 {
+	margin-top: 1em;
+}
+
+AP-P.L1 {
+	margin-left: 1em;
+}
+
+AP-P.L2 {
+	margin-left: 2em;
+}
+
+AP-P.L4 {
+	margin-left: 4em;
+}
+
+AP-P.L7 {
+	margin-left: 7em;
+}
+
+AP-P.R1 {
+	text-align: right;
+	margin-right: 1em;
+}
+
+AP-P.I1L1 {
+	text-indent: -1em;
+	margin-left: 1em;
+}
+
+AP-P.I2L2 {
+	text-indent: -2em;
+	margin-left: 2em;
+}
+
+AP-EditorG {
+	display: block;
+	margin-top: 1em;
+	margin-left: 4em;
+}
+
+AP-Editor {
+	display: inline-block; 
+}
+
+AP-EditorNote {
+	display: block;
+	font-size: 0.9em;
+	text-align: right;
+	margin-right: 2em;
+}
+
+AP-BoxG {
+	display: block;
+	margin: 0.3em 0;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: red;
+	padding: 0.3em;
+	-webkit-border-radius: 0.4em;
+	margin-top: 1em;
+}
+
+AP-ExampleG {
+	display: block;
+	margin-left: 2em;
+}
+
+td.AP-ExampleH {
+	vertical-align: top;
+	width: 1.5em;
+}
+
+td.AP-ExampleC {
+	
+}
+
+AP-Example {
+	display: block;
+}
+
+AP-Example.L05 {
+	margin-left: 0.5em;
+}
+
+AP-Example.IB {
+	display: inline-block;
+}
+
+td.AP-Symbol {
+	vertical-align: top;
+	width: 7em;
+}
+
+td.AP-SymbolDesc {
+}
+
+AP-Symbol2G {
+	display: block;
+	margin-top: 0.8em;
+	padding-top: 0.8em;
+	border-top: solid 0.05em table-border;
+}
+
+AP-Symbol2 {
+	display: inline-block;
+}
+
+AP-IndexCharNumC {
+	display: table-cell;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	padding-top: 0.125em;
+}
+
+AP-IndexChar {
+	display: inline-block;
+	font-size: 1.25em;
+	margin-left: 0.24em;
+	margin-right: 0.4em;
+	margin-top: 0.1em;
+	margin-bottom: 0.1em;
+	color: blue;
+}
+
+AP-IndexCharNoteM {
+	font-size: 0.4em;
+	vertical-align: 1.7em;
+	margin-right: -0.1em;
+}
+
+AP-IndexCharSubTitle {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	border-left: solid 0.4em light-pink;
+	border-right: solid 0.4em light-pink;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+AP-JionKanaSubG {
+	display: block;
+	text-indent: -1em;
+	margin-left: 1em;
+}
+
+AP-JionKanaSubTitle {
+	margin-right: 0.6em;
+}
+
+AP-JionKanaSubTitle.L2 {
+	margin-left: 1em;
+}
+
+AP-JionKanaChar {
+	font-size: 1.15em;
+	margin-left: 0.24em;
+	margin-right: 0.4em;
+	margin-top: 0.1em;
+	margin-bottom: 0.1em;
+	color: blue;
+}
+
+AP-JionKanaChar.NoRef {
+	color: black;
+}
+
+AP-Bold {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+}
+
+AP-BoldRed {
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-weight: bold;
+	color: red;
+}
+
+AP-Red {
+	color: red;
+}
+
+AP-Gothic {
+	font-family: "Hiragino Kaku Gothic ProN";
+}
+
+AP-GothicRed {
+	font-family: "Hiragino Kaku Gothic ProN";
+	color: red;
+}
+
+AP-Logo {
+	padding: 0.1em;
+	font-family: "Hiragino Kaku Gothic ProN";
+	font-size: 0.8em;
+	color: white;
+	background-color: red;
+	word-break: keep-all;
+	border-radius: 0.2em;
+	vertical-align: -0.03em;
+}
+
+AP-ImageG {
+	display: block;
+	margin-top: 0.6em;
+	margin-bottom: 0.6em;
+	margin-left: 1em;
+}
+
+AP-ImageSubG {
+	display: block;
+}
+
+img.AP-Image {
+	max-width: 20em;
+}

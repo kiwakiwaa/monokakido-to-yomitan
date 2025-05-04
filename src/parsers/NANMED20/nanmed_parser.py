@@ -5,24 +5,21 @@ from typing import List
 
 from utils import FileUtils, KanjiUtils
 from core import Parser
-from parser.NANMED20.nanmed_strategies import NanmedImageHandlingStrategy
+from config import DictionaryConfig
 
 class NanmedParser(Parser):
 
-    def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str):
+    def __init__(self, config: DictionaryConfig):
+        super().__init__(config)
         
-        super().__init__(dict_name, image_handling_strategy=NanmedImageHandlingStrategy())
-        
-        self.dict_data = FileUtils.load_mdx_json(dict_path)
-        self.parantheses = {'(', ')', '（', '）'}
-        self.parantheses_ignored = {
+        self.dict_data = FileUtils.load_mdx_json(config.dict_path)
+        self.parentheses = {'(', ')', '（', '）'}
+        self.parentheses_ignored = {
             "細菌", "関節", "角膜", "器具", "歯科インプラント", "硫酸", "塩素", "塩酸", "ニコチン酸", "リン酸",
             "臭化", "糖尿病", "フッ化", "'卵巣癌", "放射線", "嚥下", "腫瘍", "腸管", "トシル酸", "視床下部",
             "体温", "5q", "プロピオン酸", "マレイン酸", "遺伝子組換え", "メシル酸", "フマル酸", "次硝酸",
             "酢酸"
         }
-        
-        self.initialize_html_converter()
         
         
     def extract_entry_keys(self, entry: str) -> List[str]:
@@ -36,7 +33,7 @@ class NanmedParser(Parser):
         entry_keys = self.extract_entry_keys(filename)
         soup = bs4.BeautifulSoup(xml, "lxml")
         
-        if any(any(p in key for p in self.parantheses) for key in entry_keys):   
+        if any(any(p in key for p in self.parentheses) for key in entry_keys):   
             if len(entry_keys) == 1:
                 headword = entry_keys[0]
                 
@@ -74,7 +71,7 @@ class NanmedParser(Parser):
                     if KanjiUtils.is_only_kana(before_paren):
                         # Extract the content inside parentheses
                         inside_paren_match = re.search(r'（([^）]+)）', headword)
-                        if inside_paren_match and any(KanjiUtils.is_kanji(c) for c in inside_paren_match.group(1)) and inside_paren_match.group(1) not in self.parantheses_ignored:
+                        if inside_paren_match and any(KanjiUtils.is_kanji(c) for c in inside_paren_match.group(1)) and inside_paren_match.group(1) not in self.parentheses_ignored:
                             kanji_form = inside_paren_match.group(1)
                             # Add entry with kanji as headword and kana as reading
                             if all(KanjiUtils.is_kanji(c) for c in kanji_form):

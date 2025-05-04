@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 from typing import Dict, List, Tuple, Optional, Set, Iterator
-
 import bs4
 import jaconv
 from tqdm import tqdm
@@ -10,13 +9,7 @@ from core.yomitan_dictionary import DicEntry, create_html_element
 
 
 class Parser(ABC):
-    def __init__(self, 
-                 config,
-                 dict_path: Optional[str] = None, 
-                 index_path: Optional[str] = None, 
-                 jmdict_path: Optional[str] = None,
-                 audio_path: Optional[str] = None,
-                 batch_size: int = 250):
+    def __init__(self, config, batch_size: int = 250):
         
         from core import Dictionary, HTMLToYomitanConverter
         from index import IndexReader
@@ -24,22 +17,15 @@ class Parser(ABC):
         
         self.config = config
         self.dictionary = Dictionary(config.dict_name)
-        self.index_reader = IndexReader(index_path) if index_path else None
+        self.index_reader = IndexReader(config.index_path) if config.index_path else None
+        self.dict_data = FileUtils.read_xml_files(config.dict_path) if config.dict_path else None
+        self.jmdict_data = FileUtils.load_term_banks(config.jmdict_path) if config.jmdict_path else {}
+        self.tag_mapping = FileUtils.load_json(config.tag_map_path) if config.tag_map_path else {}
+        self.manual_handler = ManualMatchHandler() if config.index_path else None
         
         self.batch_size = batch_size
-        
-        # Set up index and JMdict data if provided
-        self.dict_data = FileUtils.read_xml_files(dict_path) if dict_path else None
-        self.jmdict_data = FileUtils.load_term_banks(jmdict_path) if jmdict_path else {}
-        
-        self.manual_handler = ManualMatchHandler() if index_path else None
-        
         self.link_handling_strategy = config.create_link_strategy()
         self.image_handling_strategy = config.create_image_strategy()
-        
-        self.tag_mapping = {}
-        if config.tag_map_path:
-            self.tag_mapping = FileUtils.load_dictionary_mapping(config.tag_map_path)
             
         self.ignored_elements = {}
         self.expression_element = None

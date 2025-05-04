@@ -5,26 +5,17 @@ from utils import KanjiUtils
 from yomitandic import DicEntry
 
 from core import Parser
+from config import DictionaryConfig
 from handlers import process_unmatched_entries
-from parser.MK3.meikyo_utils import MeikyoUtils
-from parser.MK3.meikyo_strategies import MeikyoLinkHandlingStrategy
-from parser.MK3.tag_map import TAG_MAPPING
+from parsers.MK3.meikyo_utils import MeikyoUtils
 
 class MeikyoParser(Parser):
     
-    def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str):
+    def __init__(self, config: DictionaryConfig):
+        super().__init__(config)
         
-        super().__init__(
-            dict_name, dict_path, index_path, jmdict_path,
-            link_handling_strategy=MeikyoLinkHandlingStrategy()
-        )
-        
-        self.tag_mapping = {}
         self.ignored_elements = {"link", "meta", "entry-index", "index", "key"}
         self.expression_element = "child-items"
-        self.tag_mapping = TAG_MAPPING
-        
-        self.initialize_html_converter()
         
         
     def _handle_expression_entries(self, soup: bs4.BeautifulSoup):

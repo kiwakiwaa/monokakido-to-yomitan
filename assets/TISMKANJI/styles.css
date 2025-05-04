@@ -1,6 +1,6 @@
 /* TISMKANJI Dictionary Styling */
 [data-sc-entry] {
-    font-family: "SHINJIMinchoW3", "SHINJIMinchoW3 W3";
+    font-family: "SHINJIMinchoW3", "SHINJIMinchoW3 W3", sans-serif;
 }
 
 /* Kanken Level Tag */

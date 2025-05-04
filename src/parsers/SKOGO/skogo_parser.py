@@ -3,26 +3,16 @@ import bs4
 
 from utils import KanjiUtils
 from core import Parser
+from config import DictionaryConfig
 from handlers import process_unmatched_entries
-from parser.SKOGO.mapping.tag_map import TAG_MAPPING
-from parser.SKOGO.skogo_utils import SKOGOUtils
-from parser.SKOGO.skogo_strategies import SKOGOLinkHandlingStrategy, SKOGOImageHandlingStrategy
+from parsers.SKOGO.skogo_utils import SKOGOUtils
 
 
 class SKOGOParser(Parser):
     
-    def __init__(self, dict_name: str, dict_path: str, index_path: str, jmdict_path: str):
-        
-        super().__init__(
-            dict_name, dict_path, index_path, jmdict_path,
-            link_handling_strategy=SKOGOLinkHandlingStrategy(),
-            image_handling_strategy=SKOGOImageHandlingStrategy()
-        )
-        
+    def __init__(self, config: DictionaryConfig):
+        super().__init__(config)
         self.ignored_elements = {"entry-index"}
-        self.tag_mapping = TAG_MAPPING
-        
-        self.initialize_html_converter()
         
         
     def _process_file(self, filename: str, xml: str):
