@@ -14,7 +14,7 @@ dictionaries:
     tag_map_path: "src/parsers/DAIJISEN/tag_map.json"
   
   kogo: 
-    dict_name: "旺文社 全訳古語辞典"
+    dict_name: "旺文社全訳古語辞典"
     rev_name: "oubunsha_kogo5"
     dict_type: "OZK5"
     parser_module: "parsers.OZK5"
@@ -25,7 +25,7 @@ dictionaries:
     has_audio: True
   
   skogo: 
-    dict_name: "三省堂 全訳読解古語辞典"
+    dict_name: "三省堂全訳読解古語辞典"
     rev_name: "skogo5"
     dict_type: "SKOGO"
     parser_module: "parsers.SKOGO"
@@ -112,7 +112,7 @@ dictionaries:
     tag_map_path: "src/parsers/OKO12/tag_map.json"
   
   rgko12: 
-    dict_name: "例解学習国語 第十二版"
+    dict_name: "小学館例解学習国語 第十二版"
     rev_name: "rgko12"
     dict_type: "RGKO12"
     parser_module: "parsers.RGKO12.rgko12_parser"
@@ -124,9 +124,10 @@ dictionaries:
     tag_map_path: "src/parsers/RGKO12/mapping/tag_map.json"
     appendix_entries_path: "src/parsers/RGKO12/mapping/appendix_entries.json"
     has_appendix: True
+    ignored_elements: {"entry-index", "hidden", "ht"}
   
   cj3: 
-    dict_name: "小学館 中日辞典 第3版"
+    dict_name: "小学館中日辞典 第3版"
     rev_name: "cj3"
     dict_type: "CJ3"
     parser_module: "parsers.CJ3.cj3_parser"

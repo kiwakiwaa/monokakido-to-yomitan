@@ -2,7 +2,7 @@ import yaml
 import importlib
 from pathlib import Path
 from dataclasses import dataclass
-from typing import Optional, Type, Callable
+from typing import Optional, Type, Callable, Dict
 
 
 @dataclass
@@ -27,6 +27,7 @@ class DictionaryConfig:
     tag_map_path: Optional[str] = None
     
     # Optional features
+    ignored_elements: Optional[Dict] = None
     has_appendix: bool = False
     appendix_handler_module: Optional[str] = None
     appendix_handler_class: Optional[str] = None

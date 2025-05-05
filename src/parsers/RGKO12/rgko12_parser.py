@@ -13,7 +13,6 @@ class Rgko12Parser(Parser):
 
     def __init__(self, config: DictionaryConfig):
         super().__init__(config)
-        self.ignored_elements = {"entry-index", "hidden", "ht"}
         
         
     def normalize_keys(self, reading: str, entry_keys: List[str]) -> List[str]:
@@ -56,30 +55,38 @@ class Rgko12Parser(Parser):
         has_kanji = any(kanji_part for kanji_part, _ in matched_key_pairs)
         search_rank = 1 if not has_kanji else 0 
         
-        # Process each key pair
+        is_tsukaiwake_entry, index = Rgko12Utils.is_tsukaiwake_entry(soup)
         info_tag, pos_tag = "", ""
-        for kanji_part, kana_part in matched_key_pairs:
-            if kanji_part:
-                info_tag, pos_tag = self.get_pos_tags(kanji_part)
-                local_count += self.parse_entry(
-                    kanji_part, kana_part, soup, pos_tag=pos_tag, search_rank=search_rank, ignore_expressions=True
-                )
-            elif kana_part:
-                local_count += self.parse_entry(
-                    kana_part, "", soup, pos_tag=pos_tag, search_rank=search_rank, ignore_expressions=True
-                )
-            
-            
-        # Add any kana only entries if theres a "uk" tag (usually written using kana alone)
-        info_tags = info_tag.split()
-        if "uk" in info_tags:
-            # Find unique kana parts that haven't been parsed yet
-            unique_kana_parts = set()
-            for _, kana_part in matched_key_pairs:
-                # Check if the kana part hasn't been added before
-                if kana_part not in unique_kana_parts and not any(kanji is None and kana_part == kana for kanji, kana in matched_key_pairs):
-                    unique_kana_parts.add(kana_part)
-                    local_count += self.parse_entry(kana_part, "", soup, pos_tag=pos_tag, search_rank=1, ignore_expressions=True)
+        
+        if not is_tsukaiwake_entry:
+            for kanji_part, kana_part in matched_key_pairs:
+                if kanji_part:
+                    info_tag, pos_tag = self.get_pos_tags(kanji_part)
+                    local_count += self.parse_entry(
+                        kanji_part, kana_part, soup, pos_tag=pos_tag, search_rank=search_rank, ignore_expressions=True
+                    )
+                elif kana_part:
+                    local_count += self.parse_entry(
+                        kana_part, "", soup, pos_tag=pos_tag, search_rank=search_rank, ignore_expressions=True
+                    )
+                
+                
+            # Add any kana only entries if theres a "uk" tag (usually written using kana alone)
+            info_tags = info_tag.split()
+            if "uk" in info_tags:
+                # Find unique kana parts that haven't been parsed yet
+                unique_kana_parts = set()
+                for _, kana_part in matched_key_pairs:
+                    # Check if the kana part hasn't been added before
+                    if kana_part not in unique_kana_parts and not any(kanji is None and kana_part == kana for kanji, kana in matched_key_pairs):
+                        unique_kana_parts.add(kana_part)
+                        local_count += self.parse_entry(kana_part, "", soup, pos_tag=pos_tag, search_rank=1, ignore_expressions=True)
+                        
+        else:
+            tsukaiwake_entries = Rgko12Utils.get_tsukaiwake_entries(index)
+            for kanji, kana in tsukaiwake_entries:
+                info_tag, pos_tag = self.get_pos_tags(kanji)
+                local_count += self.parse_entry(kanji, kana, soup, pos_tag=pos_tag, ignore_expressions=True)
                 
         if local_count == 0:
             print(f"No entry was parsed for file {filename_without_ext}") 

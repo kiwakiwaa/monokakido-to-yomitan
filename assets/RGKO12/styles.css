@@ -391,7 +391,7 @@ table[data-sc使い分け] {
 /* Style all cells */
 table[data-sc使い分け] td {
 	padding: 0.5em;
-	background-color: var(--rgko12-light-light-brown, var(--tag-text-color, var(--canvas-elevated, #FFEEDD)));
+	background-color: var(--rgko12-light-light-brown, var(--tag-default-background-color, var(--canvas-elevated)));
 	border: 2px solid var(--background-color-light, var(--background-color));
 	text-align: center;
 }
@@ -407,7 +407,7 @@ table[data-sc使い分け]:before {
 	content: "";
 	grid-column: 1;
 	grid-row: 1;
-	background-color: var(--rgko12-light-light-brown, var(--tag-text-color, var(--canvas-elevated, #FFEEDD)));
+	background-color: var(--rgko12-light-light-brown, var(--tag-default-background-color, var(--canvas-elevated)));
 	border: 2px solid var(--background-color-light, var(--background-color));
 }
 
@@ -509,7 +509,7 @@ table[data-scヘッダあり] tr:first-child td {
 }
 
 table[data-scヘッダあり] tr:first-child td:first-child {
-	background-color: var(--rgko12-light-light-brown, var(--tag-text-color, var(--canvas-elevated, #FFEEDD)));
+	background-color: var(--rgko12-light-light-brown, var(--tag-default-background-color, var(--canvas-elevated)));
 }
 
 table[data-scヘッダあり] td:first-child {

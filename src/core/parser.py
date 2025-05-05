@@ -27,7 +27,7 @@ class Parser(ABC):
         self.link_handling_strategy = config.create_link_strategy()
         self.image_handling_strategy = config.create_image_strategy()
             
-        self.ignored_elements = {}
+        self.ignored_elements = config.ignored_elements
         self.expression_element = None
         
         self.html_converter = HTMLToYomitanConverter(
@@ -149,7 +149,7 @@ class Parser(ABC):
             for batch in self._get_batches():
                 batch_count = self._process_batch(batch)
                 count += batch_count
-                pbar.update(len(batch))
+                #pbar.update(len(batch))
         
         return count
     
