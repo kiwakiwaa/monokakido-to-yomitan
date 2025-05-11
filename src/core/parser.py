@@ -28,14 +28,16 @@ class Parser(ABC):
         self.image_handling_strategy = config.create_image_strategy()
             
         self.ignored_elements = config.ignored_elements
-        self.expression_element = None
+        self.expression_element = config.expression_element
+        self.parse_all_links = config.parse_all_links
         
         self.html_converter = HTMLToYomitanConverter(
             tag_mapping=self.tag_mapping,
             ignored_elements=self.ignored_elements,
             expression_element=self.expression_element,
             link_handling_strategy=self.link_handling_strategy,
-            image_handling_strategy=self.image_handling_strategy
+            image_handling_strategy=self.image_handling_strategy,
+            parse_all_links=self.parse_all_links
         )
         
         self.bar_format = "「{desc}: {bar:30}」{percentage:3.0f}% | {n_fmt}/{total_fmt} {unit} [経過: {elapsed} | 残り: {remaining}]{postfix}"
@@ -92,9 +94,15 @@ class Parser(ABC):
         )
     
     
-    def parse_entry(self, entry_key: str, reading: str, soup: bs4.BeautifulSoup,
-                    info_tag: str = "", pos_tag: str = "", search_rank: int = 0,
-                    ignore_expressions: bool = False) -> int:
+    def parse_entry(self, 
+                    entry_key: str, 
+                    reading: str, 
+                    soup: bs4.BeautifulSoup,
+                    info_tag: Optional[str] = "", 
+                    pos_tag: Optional[str] = "", 
+                    search_rank: Optional[int] = 0,
+                    seq_num: Optional[int] = 0, 
+                    ignore_expressions: Optional[bool] = False) -> int:
         """Parse an entry and add it to the dictionary"""
         if not reading or reading is None:
             reading = ""
@@ -103,7 +111,14 @@ class Parser(ABC):
             entry_key = reading
             reading = ""
         
-        entry = DicEntry(entry_key, reading, info_tag=info_tag, pos_tag=pos_tag, search_rank=search_rank)
+        entry = DicEntry(
+            entry_key, 
+            reading, 
+            info_tag=info_tag, 
+            pos_tag=pos_tag, 
+            search_rank=search_rank, 
+            seq_num=seq_num
+        )
         
         for tag in soup.find_all(recursive=False):
             yomitan_element = self.convert_element_to_yomitan(tag, ignore_expressions=ignore_expressions)
@@ -149,7 +164,7 @@ class Parser(ABC):
             for batch in self._get_batches():
                 batch_count = self._process_batch(batch)
                 count += batch_count
-                #pbar.update(len(batch))
+                pbar.update(len(batch))
         
         return count
     

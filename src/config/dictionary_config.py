@@ -28,12 +28,14 @@ class DictionaryConfig:
     
     # Optional features
     ignored_elements: Optional[Dict] = None
+    expression_element: Optional[str] = None
     has_appendix: bool = False
     appendix_handler_module: Optional[str] = None
     appendix_handler_class: Optional[str] = None
     use_index: bool = True
     use_jmdict: bool = True
     has_audio: bool = False
+    parse_all_links: bool = False
     
     
     @classmethod
@@ -90,7 +92,7 @@ class DictionaryConfig:
     def create_image_strategy(self):
         module = importlib.import_module(self.image_strategy_module)
         strategy_class = getattr(module, self.image_strategy_class)
-        return strategy_class()
+        return strategy_class() 
     
     def create_appendix_handler(self, dictionary, directory_path):
         from handlers.appendix_handler import AppendixHandler
@@ -112,5 +114,6 @@ class DictionaryConfig:
             tag_mapping=tag_mapping,
             appendix_entries=appendix_entries,
             link_strategy=self.create_link_strategy(),
-            image_strategy=self.create_image_strategy()
+            image_strategy=self.create_image_strategy(),
+            ignored_elements=self.ignored_elements
         )

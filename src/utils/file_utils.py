@@ -92,7 +92,9 @@ class FileUtils:
                     elif 'images_column' in path_parts:
                         rel_path = os.path.join('images_column', os.path.basename(file))  
                     elif 'images_hitsujun' in path_parts:
-                        rel_path = os.path.join('images_hitsujun', os.path.basename(file))  
+                        rel_path = os.path.join('images_hitsujun', os.path.basename(file))
+                    elif 'img' in path_parts:
+                        rel_path = os.path.join('img', os.path.basename(file))
                     elif 'logos' in path_parts:
                         rel_path = os.path.join('logos', os.path.basename(file))
                     elif 'icons' in path_parts:

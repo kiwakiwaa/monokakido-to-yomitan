@@ -13,7 +13,8 @@ class AppendixHandler:
 				tag_mapping: Dict = None,
 				appendix_entries: Dict = None,
 				link_strategy=None,
-				image_strategy=None):
+				image_strategy=None,
+				ignored_elements: Optional[Dict] = None):
 				
 		from core.html_converter import HTMLToYomitanConverter
 
@@ -23,10 +24,11 @@ class AppendixHandler:
 		self.appendix_entries = appendix_entries or {}
 		self.link_handling_strategy = link_strategy
 		self.image_handling_strategy = image_strategy
+		self.ignored_elements = ignored_elements
 		
 		self.html_converter = HTMLToYomitanConverter(
 			tag_mapping=self.tag_mapping,
-			link_handling_strategy=self.link_handling_strategy,
+			ignored_elements=self.ignored_elements,
 			image_handling_strategy=self.image_handling_strategy
 		)
 			

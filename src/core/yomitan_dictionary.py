@@ -87,12 +87,13 @@ class Dictionary:
 
 
 class DicEntry:
-    def __init__(self, word, reading, info_tag="", pos_tag="", search_rank=0, definition=None):
+    def __init__(self, word, reading, info_tag="", pos_tag="", search_rank=0, seq_num=0, definition=None):
         self.word = word
         self.reading = reading
         self.info_tag = info_tag
         self.pos_tag = pos_tag
         self.search_rank = search_rank
+        self.seq_num = seq_num
         self.content = []
         self.structured_content = False
         if definition:
@@ -110,7 +111,7 @@ class DicEntry:
             self.pos_tag,
             self.search_rank,
             content,
-            0,
+            self.seq_num,
             ""
         ]
         
@@ -177,7 +178,7 @@ class DicEntry:
                 raise ValueError(f"Element '{element['tag']}' has invalid content: expected string or list of elements, got {type(content).__name__} - Value: {repr(content)}")
 
 
-def create_html_element(tag, content=None, id=None, title=None, href=None, style=None, data=None, name=None):
+def create_html_element(tag, content=None, id=None, title=None, href=None, style=None, data=None):
     element = {"tag": tag}
     if tag != "br":
         if isinstance(content, str):
@@ -194,8 +195,6 @@ def create_html_element(tag, content=None, id=None, title=None, href=None, style
         element["style"] = style
     if data:
         element["data"] = data
-    if name:
-        element["name"] = name
     return element
 """
 if __name__ == "__main__":

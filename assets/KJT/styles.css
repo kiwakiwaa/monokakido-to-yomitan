@@ -1,0 +1,1274 @@
+
+
+[data-sc-body] {
+	/* font-family: "IPAmj明朝", "IPAmjMincho", "IPAmjMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro"; */
+}
+
+/* 画像 */
+.gloss-image-link {
+	max-width: 55%;
+	filter: none !important;
+}
+
+.gloss-image-container {
+	max-height: 100% !important;
+}
+
+[data-sc-img][data-sc-gaiji] .gloss-image-link {
+	max-width: 1em;
+}
+
+[data-sc-img][data-sc解字] .gloss-image-link {
+	max-width: 2em;
+	vertical-align: middle;
+}
+
+[data-sc-img][data-sc字韻] .gloss-image-link {
+	max-width: 1.2em;
+	margin-inline: 0.2em;
+	vertical-align: bottom;
+}
+
+[data-sc-image-g] .gloss-image-link {
+	max-width: 75%;
+}
+
+[data-sc-image-g] .gloss-image-container {
+	max-height: 100% !important; 
+}
+
+[data-path="img/41e215ebd9.svg"] .gloss-image {
+	filter: invert(14%) sepia(85%) saturate(3740%) hue-rotate(355deg) brightness(92%) contrast(126%);
+}
+
+span:has(a.gloss-link) + span:has(a.gloss-link)::before {
+	content: "";
+}
+
+/* 折りたたみ要素 */
+details {
+	padding-inline-start: 0 !important;
+	overflow: hidden;
+}
+
+summary::before {
+	content: "▶";
+	position: absolute;
+	user-select: none;
+	left: -1em;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 0.8em;
+	color: var(--text-color);
+	transition: transform 0.2s ease;
+	padding-inline: 85%;
+}
+
+summary {
+	position: relative;
+	cursor: pointer;
+	list-style: none !important;
+	list-style-position: inherit !important;
+	font-size: 0.8em;
+	width: fit-content;
+	padding-inline-start: 0.25em;
+	padding-inline-end: 2em;
+	border-style: solid;
+	border-color: var(--text-color);
+	border-radius: 0.2em;
+	border-width: 0.05em;
+}
+
+summary:hover {
+	color: var(--text-color);
+	filter: brightness(1.3);
+	text-decoration: underline;
+	text-decoration-color: oklch(65% 0.2 260);
+}
+
+details[open] summary::before {
+	transform: translateY(-50%) rotate(90deg);
+}	
+
+details[open] > *:not(summary) {
+	animation: details-show 0.2s ease-in-out;
+}
+
+@keyframes details-show {
+	from {
+		opacity: 0;
+		transform: translateY(-2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+[data-sc-rect][data-sc-bold][data-sc-f-m],
+[data-sc-rect][data-sc-bold][data-sc-i-m] {
+	color: var(--text-color);
+}
+
+[data-sc-oyaji-head-g] table:first-of-type:has(td[data-sc親字]) {
+	td[data-sc親字部首内画数],
+	td[data-sc親字部首] {
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		padding: 0.3em;
+	}
+
+	tr:first-child td[data-sc親字部首内画数] {
+		position: relative;
+	}
+
+	tr:nth-child(2) td[data-sc親字部首] {
+		position: absolute;
+		top: 3em;
+		left: 0em;
+	}
+
+	tr:nth-child(2) {
+		height: 0;
+		overflow: visible;
+	}
+
+	td[data-sc親字] {
+		vertical-align: middle;
+		padding-inline-start: 0.5em;
+	}
+
+	td[data-sc親字部首内画数] span {
+		display: block;
+		margin-block-end: 0.3em;
+	}
+}
+
+
+[data-sc-busyu-head-g] {
+	display: block;
+}
+
+table {
+	display: table;
+}
+
+tr {
+	display: table-row;
+}
+
+td {
+	display: table-cell;
+}
+
+table[data-sc部首] {
+	width: 100%;
+}
+
+td[data-sc部首画数] {
+	text-align: center;
+	vertical-align: middle;
+	border: solid 0.15em var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+	padding: 0.1em;
+	margin-inline-end: 0.1em;
+}
+
+td[data-sc部首画数1] {
+	width: 2em;
+}
+
+td[data-sc部首画数2] {
+	width: 2.8em;
+}
+
+td[data-sc部首] {
+	border: solid 0.05em var(--text-color);
+	padding-block-start: 0.3em;
+	padding-block-end: 0.3em;
+	padding-inline-start: 0.3em;
+	padding-inline-end: 0.15em;
+}
+
+[data-sc-busyu-head-sub-g] {
+	display: block;
+}
+
+[data-sc-busyu-head-sub-g] + [data-sc-busyu-head-sub-g] {
+	margin-block-start: 0.2em;
+}
+
+td[data-sc部首字] {
+	border: none;
+	vertical-align: middle;
+	margin-inline-end: 0.3em;
+}
+
+td[data-sc部首読み] {
+	border: none;
+	vertical-align: middle;
+}
+
+[data-sc-oyaji-head-g] {
+	display: block;
+}
+
+[data-sc-kyuuji-itaiji-head-g] {
+	display: block;
+	margin-block-start: 0.2em;
+}
+
+[data-sc-oyaji-head-sub-g] {
+	display: block;
+}
+
+[data-sc-oyaji-head-sub-g][data-sc旧字],
+[data-sc-oyaji-head-sub-g][data-sc異体字] {
+	margin-inline-start: 1em;
+}
+
+[data-sc-oyaji-head-sub-g] + [data-sc-oyaji-head-sub-g] {
+	margin-block-start: 0.2em;
+}
+
+td[data-sc親字字義番号],
+td[data-sc異体字-m],
+td[data-sc親字異体字ラベル],
+td[data-sc親字画数],
+td[data-sc親字-j-i-s],
+td[data-sc親字-j-i-s16],
+td[data-sc親字-unicode] {
+	border: none;
+	text-align: center;
+	line-height: 1em;
+}
+
+td[data-sc親字部首内画数] {
+	border: none;
+	text-align: right;
+	line-height: 1em;
+	padding-block-start: 0.1em;
+	padding-block-end: 0.1em;
+}
+
+td[data-sc親字部首] {
+	border: none;
+	text-align: left;
+	line-height: 1em;
+	padding-block-start: 0.1em;
+	padding-block-end: 0.1em;
+}
+
+td[data-sc-dummy] {
+	border: none;
+	width: 1em;
+}
+
+td[data-sc親字] {
+	border: none;
+	vertical-align: middle;
+}
+
+td[data-sc親字種別] {
+	border: none;
+	text-align: center;
+	margin-inline-start: 0.5em;
+}
+
+td[data-sc親字コード-t-m] {
+	border: none;
+	margin-inline-start: 0.5em;
+}
+
+td[data-sc親字コード-b] {
+	border: none;
+	width: 0.05em;
+	margin-block-start: 0.17em;
+	margin-block-end: 0.17em;
+	background-color: var(--text-color);
+}
+
+td[data-sc旧字異体字コード-b] {
+	border: none;
+	width: 0.05em;
+	background-color: var(--text-color);
+}
+
+[data-sc-jigi-number] {
+	font-size: 0.9em;
+}
+
+[data-sc-oyaji-yomi-sub-g] {
+	display: block;
+}
+
+[data-sc-oyaji-yomi-sub-g][data-sc-l-m1] {
+	margin-inline-start: 1em;
+}
+
+[data-sc-oyaji-yomi-sub-g][data-sc-l-m2] {
+	margin-inline-start: 2em;
+}
+
+[data-sc-oyaji-yomi-head-2g] {
+	display: block;
+	margin-inline-start: 1em;
+	margin-block-start: 0.3em;
+}
+
+[data-sc-sub-item-head-g] {
+	display: block;
+}
+
+[data-sc-sub-item-head-g][data-sc派生] {
+	margin-inline-start: 0.5em;
+}
+
+[data-sc-hatten-head-g],
+[data-sc-zinmei-syomei-head-g] {
+	display: block;
+}
+
+[data-sc-headword][data-sc部首画数] {
+	display: block;
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-size: 0.8em;
+	line-height: 1.15em;
+}
+
+[data-sc-headword][data-sc部首見出] {
+	font-size: 2em;
+	line-height: 1em;
+	margin-inline-end: 0.1em;
+}
+
+[data-sc-headword][data-sc部首異体] {
+	font-size: 1.5em;
+	line-height: 1em;
+	margin-inline-end: 0.1333em;
+}
+
+[data-sc-headword][data-sc部首異体-t-m] {
+	margin-inline-start: 0.333em;
+}
+
+[data-sc-headword][data-sc部首名] {
+	display: block;
+	font-size: 0.95em;
+	line-height: 1.15em;
+}
+
+[data-sc-headword][data-sc部首] {
+	font-size: 0.8em;
+}
+
+[data-sc-headword][data-sc部首内画数],
+[data-sc-headword][data-sc画数] {
+	/* font-family: "Hiragino Mincho ProN"; */
+	font-size: 0.8em;
+}
+
+[data-sc-headword][data-sc親字] {
+	font-size: 2.4em;
+	line-height: 1em;
+}
+
+[data-sc-headword][data-sc旧字],
+[data-sc-headword][data-sc異体字] {
+	font-size: 2em;
+	line-height: 1em;
+}
+
+[data-sc-headword][data-sc異体字ラベル] {
+	font-size: 0.82em;
+}
+
+[data-sc-headword][data-sc種別] {
+	display: block;
+	line-height: 1.1em;
+}
+
+[data-sc-headword][data-sc字義番号] {
+	margin-inline-end: 0.15em;
+}
+
+[data-sc-headword][data-sc-jion-jiin-s-p] {
+	margin-inline-end: 0.15em;
+}
+
+[data-sc-headword][data-sc-jion-jiin-s-p2] {
+	margin-inline-end: 0.4em;
+}
+
+[data-sc-code] {
+	/* font-family: "Hiragino Mincho ProN"; */
+	font-size: 0.8em;
+}
+
+[data-sc-code][data-sc-unicode] {
+	font-style: italic;
+}
+
+[data-sc-code][data-sc-wide] {
+	font-size: 0.7em;
+}
+
+[data-sc-main-g] {
+	display: block;
+	margin-block-start: 0.5em;
+}
+
+[data-sc-main-g][data-sc人名書名] {
+	margin-block-start: 0.3em;
+}
+
+[data-sc-sub-item-g] {
+	display: block;
+	margin-block-start: 0.5em;
+	padding-block-start: 0.5em;
+	border-block-start: solid 0.05em var(--text-color);
+}
+
+[data-sc-sub-item] {
+	display: block;
+}
+
+[data-sc-sub-item-c] {
+	display: block;
+}
+
+[data-sc-oyaji-p],
+[data-sc-sub-item-p] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+}
+
+[data-sc-oyaji-p][data-sc-red],
+[data-sc-sub-item-p][data-sc-red] {
+	color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+}
+
+[data-sc-index-g] {
+	display: block;
+	margin-block-start: 0.5em;
+}
+
+[data-sc-index-g][data-sc部首内] {
+	border-block-start: solid 0.05em var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+	border-block-end: solid 0.05em var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+	padding-block: 0.2em;
+	padding-inline: 0;
+}
+
+[data-sc-index-c] {
+	display: block;
+}
+
+[data-sc-index-sub-g] {
+	display: table-row;
+}
+
+[data-sc-index-sub-num-c] {
+	display: table-cell;
+	width: 1.05em;
+	vertical-align: top;
+}
+
+[data-sc-index-sub-num] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-weight: bold;
+}
+
+[data-sc-index-sub-c] {
+	display: table-cell;
+}
+
+[data-sc-indexlist][data-sc部首内] {
+	display: inline-block;
+	font-size: 1.4em;
+	margin-inline-start: 0.24em;
+}
+
+[data-sc-indexlist][data-sc他部首] {
+	display: inline-block;
+	font-size: 1.2em;
+	margin-inline-end: 0.5em;
+}
+
+[data-sc-div-g] {
+	display: block;
+}
+
+[data-sc-div-g][data-sc-inline] {
+	display: block;
+}
+
+[data-sc-column-g] {
+	display: block;
+	margin-block: 0.3em;
+	margin-inline: 0;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+	padding-block: 0.1em;
+	padding-inline: 0.2em;
+}
+
+[data-sc-column-g][data-sc故事2] {
+	margin-inline-start: 1em;
+	margin-inline-end: 0;
+	margin-block: 0;
+	border-style: none;
+	padding: 0;
+}
+
+[data-sc-column-g][data-sc同訓異義] {
+	margin: 0;
+	border-style: none;
+	padding: 0;
+}
+
+[data-sc-column-title-g] {
+	display: block;
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+}
+
+[data-sc-column-title-g][data-sc-red] {
+	color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+}
+
+[data-sc-koji-sub-title] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-weight: bold;
+	font-size: 0.94em;
+}
+
+[data-sc-column-c] {
+	display: block;
+	border-inline-start: solid 0.2em var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+	padding-inline-start: 0.2em;
+}
+
+[data-sc-column-table-g] {
+	display: block;
+	margin-block-start: 0.3em;
+	margin-block-end: 0.3em;
+	margin-inline-start: 0.5em;
+	margin-inline-end: 0.5em;
+}
+
+[data-sc-sub-item] [data-sc-column-table-g] {
+	margin-inline-start: 1em;
+}
+
+[data-sc-column-table-title] {
+	display: block;
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-weight: bold;
+}
+
+table[data-sc-column-table] {
+	overflow: scroll;
+}
+
+td[data-sc-column-table-header] {
+	border: none;
+	padding-inline-start: 0.2em;
+	padding-inline-end: 0.2em;
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-weight: bold;
+	font-size: 0.95em;
+	text-align: center;
+	background-color: var(--kjt-table-header, var(--danger-color-lighter, var(--canvas-overlay, #FFDBDA)));
+}
+
+td[data-sc-column-table] {
+	border: none;
+	padding-inline-start: 0.2em;
+	padding-inline-end: 0.2em;
+}
+
+td[data-sc-b-t] {
+	border-block-start: solid 0.05em var(--kjt-table-border, var(--medium-border-color, var(--border, #666)));
+	border-inline-end: none;
+	border-inline-start: none;
+	border-block-end: none;
+}
+
+td[data-sc-b-b] {
+	border-block-end: solid 0.05em var(--kjt-table-border, var(--medium-border-color, var(--border, #666)));
+	border-inline-end: none;
+	border-inline-start: none;
+	border-block-start: none;
+}
+
+td[data-sc-b-l] {
+	border-inline-end: none;
+	border-block-start: none;
+	border-block-end: none;
+	border-inline-start: solid 0.05em var(--kjt-table-border, var(--medium-border-color, var(--border, #666)));
+}
+
+td[data-sc-b-l2] {
+	border-inline-end: none;
+	border-block-start: none;
+	border-block-end: none;
+	border-inline-start: solid 0.15em var(--kjt-table-border, var(--medium-border-color, var(--border, #666)));
+}
+
+td[data-sc-b-r] {
+	border-block-start: none;
+	border-inline-start: none;
+	border-block-end: none;
+	border-inline-end: solid 0.05em var(--kjt-table-border, var(--medium-border-color, var(--border, #666)));
+}
+
+[data-sc-m-g] {
+	display: block;
+}
+
+[data-sc-m-g][data-sc-inline] {
+	display: inline;
+}
+
+[data-sc-sub-item-c] [data-sc-m-g][data-sc-inline] {
+	display: block;
+}
+
+[data-sc-meaning][data-sc故事] {
+	margin-inline-start: 1em;
+	text-indent: -1em;
+}
+
+[data-sc-meaning][data-sc故事-w1] {
+	line-height: 1.6em;
+}
+
+[data-sc-meaning][data-sc故事-w2] {
+	line-height: 1.9em;
+}
+
+[data-sc-meaning][data-sc故事2] {
+	margin-inline-start: 1em;
+}
+
+[data-sc-example-g] {
+	display: block;
+	margin-inline-start: 1em;
+}
+
+[data-sc-example-c] {
+	display: block;
+	margin-inline-start: 1.2em;
+	text-indent: -1.2em;
+}
+
+[data-sc-image-g] {
+	display: block;
+	margin-block-start: 0.2em;
+	margin-block-end: 0.2em;
+}
+
+[data-sc-sub-item] [data-sc-image-g] {
+	margin-inline-start: 1em;
+}
+
+[data-sc-kanji-g] {
+	margin-inline-start: 0.2em;
+	margin-inline-end: 0.2em;
+}
+
+[data-sc-kanji-title] {
+	font-size: 0.85em;
+}
+
+[data-sc-rect] {
+	padding-block-start: 0.04em;
+	padding-block-end: 0.058em;
+	padding-inline-start: 0.05em;
+	padding-inline-end: 0.05em;
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-size: 0.8em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--text-color);
+	word-break: keep-all;
+	border-radius: 0.2em;
+}
+
+[data-sc-rect][data-sc-bold] {
+	font-weight: bold;
+}
+
+[data-sc-rect][data-sc-small] {
+	font-size: 0.68em;
+}
+
+[data-sc-rect][data-sc-red] {
+	color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+	border-color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+}
+
+[data-sc-rect][data-sc異体字-m] {
+	font-size: 0.7em;
+	vertical-align: 0.1em;
+}
+
+[data-sc-circle] {
+	padding-block-start: 0.06em;
+	padding-block-end: 0.08em;
+	padding-inline: 0.1em;
+	font-size: 0.75em;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--text-color);
+	border-radius: 0.67em;
+}
+
+[data-sc-circle][data-sc種別] {
+	margin-inline-start: 0.1em;
+	margin-inline-end: 0.1em;
+}
+
+a [data-sc-rect],
+a [data-sc-circle] {
+	border-color: var(--kjt-blue, var(--accent-color, var(--link-color, #4a8ade)));
+}
+
+a {
+	color: inherit;
+}
+
+div[data-sc-meaning]>a,
+div[data-sc-m-g]>a {
+	color: var(--kjt-blue, var(--accent-color, var(--link-color, #4a8ade)));
+}
+
+div[data-sc-meaning]>a:hover,
+div[data-sc-m-g]>a:hover {
+	color: var(--text-color);
+	filter: brightness(1.3);
+	text-decoration: underline;
+	text-decoration-color: oklch(65% 0.2 260);
+}
+
+
+[data-sc-pr] {
+	/* font-family: "Hiragino Mincho ProN"; */
+}
+
+[data-sc-bc],
+[data-sc-wc-kanji],
+[data-sc-wc] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-weight: bold;
+}
+
+[data-sc-wc-kanji][data-sc-small],
+[data-sc-wc][data-sc-small] {
+	font-size: 0.85em;
+}
+
+[data-sc-wc-kanji] {
+	/* font-family: "Hiragino Mincho ProN"; */
+}
+
+[data-sc-mlg],
+[data-sc-yomi] {
+	font-size: 0.75em;
+}
+
+[data-sc-sub-item-head-g] [data-sc-yomi],
+[data-sc-zinmei-syomei-head-g] [data-sc-yomi] {
+	margin-inline-start: 0.25em;
+}
+
+[data-sc-sub-item-head-g] [data-sc-yomi]+[data-sc-yomi],
+[data-sc-zinmei-syomei-head-g] [data-sc-yomi]+[data-sc-yomi] {
+	margin-inline-start: 0;
+}
+
+[data-sc-yomi-m-dot] {
+	font-size: 0.85em;
+}
+
+[data-sc-bold] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+}
+
+a [data-sc-bold] {
+	color: var(--kjt-blue, var(--accent-color, var(--link-color, #4a8ade)));
+}
+
+[data-sc-red] {
+	color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+}
+
+[data-sc-spellout] {
+	color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+}
+
+[data-sc-onkun-u] {
+	border-block-start: solid 0.05em var(--text-color);
+	padding-block-start: 0.1em;
+}
+
+[data-sc-tc] {
+	text-combine-horizontal: all;
+}
+
+[data-sc-hyphen] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+}
+
+[data-sc-f-w-hyphen] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	text-combine-horizontal: all;
+}
+
+[data-sc-f-w-comma] {
+	margin-inline-end: 0.15em;
+}
+
+[data-sc-batsu-m] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	vertical-align: 0.03em;
+}
+
+[data-sc-logical-and-m] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	text-combine-horizontal: all;
+}
+
+[data-sc-ref-m] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	margin-inline-start: 0.1em;
+	margin-inline-end: 0.1em;
+}
+
+[data-sc-jyouyou-gai-m] {
+	vertical-align: 1.4em;
+	font-size: 0.4em;
+}
+
+[data-sc-koji-m] {
+	font-size: 0.9em;
+}
+
+[data-sc-year] {
+	font-size: 0.85em;
+}
+
+[data-sc-source] {
+	font-size: 0.87em;
+	margin-inline-start: 0.15em;
+	margin-inline-end: 0.15em;
+}
+
+rt {
+	font-size: 0.5em;
+}
+
+ruby rt {
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+rt[data-sc-bouten] {
+	font-size: 0.4em;
+	line-height: 1em;
+}
+
+[data-sc-kkaeri] {
+	font-size: 0.5em;
+	vertical-align: -1.1em;
+}
+
+[data-sc-kokuri] {
+	font-size: 0.5em;
+	vertical-align: 2.95em;
+}
+
+[data-sc-klokuri] {
+	font-size: 0.5em;
+	vertical-align: -2.95em;
+}
+
+[data-sc-gyaku-jyukugo-m] {
+	color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+}
+
+a {
+	text-decoration: none;
+}
+
+[data-sc-f-m] {
+	margin-inline-end: 0.15em;
+}
+
+[data-sc-b-m] {
+	margin-inline-start: 0.15em;
+}
+
+[data-sc-i-m] {
+	margin-inline-start: 0.15em;
+	margin-inline-end: 0.15em;
+}
+
+[data-sc-logo_-f-m] {
+	margin-inline-end: 0.2em;
+}
+
+[data-sc-m-g][data-sc-inline] [data-sc-logo_-f-m] {
+	margin-inline-end: 0.15em;
+}
+
+[data-sc-sp2] {
+	font-size: 0.35em;
+}
+
+
+/* 付録 */
+
+[data-sc付録] [data-sc-a-p--head-g] {
+	display: block;
+}
+
+[data-sc付録] [data-sc-a-p--main-g] {
+	display: block;
+	margin-block-start: 0.5em;
+}
+
+[data-sc付録] [data-sc-a-p--title] {
+	display: block;
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-weight: bold;
+}
+
+[data-sc付録] [data-sc-a-p--sub-g] {
+	display: block;
+}
+
+[data-sc付録] [data-sc-a-p--sub-g][data-sc-l-m1] {
+	margin-inline-start: 1em;
+}
+
+[data-sc付録] [data-sc-a-p--sub-g][data-sc-l1]+[data-sc-a-p--sub-g][data-sc-l1] {
+	margin-block-start: 1em;
+}
+
+[data-sc付録] [data-sc-a-p--sub-g][data-sc-l2]+[data-sc-a-p--sub-g][data-sc-l2] {
+	margin-block-start: 0.8em;
+}
+
+[data-sc付録] [data-sc-a-p--sub-g][data-sc-l3]+[data-sc-a-p--sub-g][data-sc-l3],
+[data-sc付録] [data-sc-a-p--sub-g][data-sc-l4]+[data-sc-a-p--sub-g][data-sc-l4] {
+	margin-block-start: 0.3em;
+}
+
+[data-sc付録] [data-sc-a-p--sub-g-title] {
+	display: block;
+}
+
+[data-sc付録] [data-sc-a-p--sub-g-title][data-sc-l1] {
+	margin-block-start: 0.2em;
+	margin-block-end: 0.8em;
+}
+
+[data-sc付録] [data-sc-a-p--sub-g-title][data-sc-l2] {
+	line-height: 1.35em;
+	background-color: var(--kjt-light-pink, var(--danger-color-lighter, var(--canvas-overlay, #FFDBDA)));
+	padding-block: 0;
+	padding-inline: 0.2em;
+	margin-block-end: 0.3em;
+}
+
+[data-sc付録] [data-sc-a-p--sub-g-title-b] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-weight: bold;
+	padding-block: 0.35em;
+	padding-inline: 0.2em;
+	border-block-start: solid 0.15em var(--kjt-light-pink, var(--danger-color-lighter, var(--canvas-overlay, #FFDBDA)));
+	border-block-end: solid 0.15em var(--kjt-light-pink, var(--danger-color-lighter, var(--canvas-overlay, #FFDBDA)));
+}
+
+[data-sc付録] [data-sc-a-p--sub-g-num] {
+	/* font-family: "Hiragino Mincho ProN"; */
+}
+
+[data-sc付録] [data-sc-a-p--sub-l34-c] {
+	display: block;
+	margin-inline-start: 1em;
+	text-indent: -1em;
+}
+
+[data-sc付録] [data-sc-a-p--p] {
+	/* font-family: "Hiragino Mincho ProN"; */
+}
+
+[data-sc付録] [data-sc-a-p--p][data-sc-t-m1] {
+	margin-block-start: 1em;
+}
+
+[data-sc付録] [data-sc-a-p--p][data-sc-l1] {
+	margin-inline-start: 1em;
+}
+
+[data-sc付録] [data-sc-a-p--p][data-sc-l2] {
+	margin-inline-start: 2em;
+}
+
+[data-sc付録] [data-sc-a-p--p][data-sc-l4] {
+	margin-inline-start: 4em;
+}
+
+[data-sc付録] [data-sc-a-p--p][data-sc-l7] {
+	margin-inline-start: 7em;
+}
+
+[data-sc付録] [data-sc-a-p--p][data-sc-r1] {
+	text-align: right;
+	margin-inline-end: 1em;
+}
+
+[data-sc付録] [data-sc-a-p--p][data-sc-i1-l1] {
+	text-indent: -1em;
+	margin-inline-start: 1em;
+}
+
+[data-sc付録] [data-sc-a-p--p][data-sc-i2-l2] {
+	text-indent: -2em;
+	margin-inline-start: 2em;
+}
+
+[data-sc付録] [data-sc-a-p--editor-g] {
+	display: block;
+	margin-block-start: 1em;
+	margin-inline-start: 4em;
+}
+
+[data-sc付録] [data-sc-a-p--editor] {
+	display: inline-block; 
+}
+
+[data-sc付録] [data-sc-a-p--editor-note] {
+	display: block;
+	font-size: 0.9em;
+	text-align: right;
+	margin-inline-end: 2em;
+}
+
+[data-sc付録] [data-sc-a-p--box-g] {
+	display: block;
+	margin-block: 0.3em;
+	margin-inline: 0;
+	border-width: 0.05em;
+	border-style: solid;
+	border-color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+	padding: 0.3em;
+	border-radius: 0.4em;
+	margin-block-start: 1em;
+}
+
+[data-sc付録] [data-sc-a-p--example-g] {
+	display: block;
+	margin-inline-start: 2em;
+}
+
+[data-sc付録] td[data-sc-a-p--example-h] {
+	border: none;
+	vertical-align: top;
+	width: 1.5em;
+}
+
+[data-sc付録] [data-sc-a-p--example] {
+	display: block;
+}
+
+[data-sc付録] [data-sc-a-p--example][data-sc-l05] {
+	margin-inline-start: 0.5em;
+}
+
+[data-sc付録] [data-sc-a-p--example][data-sc-i-b] {
+	display: inline-block;
+}
+
+[data-sc付録] td[data-sc-a-p--symbol] {
+	border: none;
+	vertical-align: top;
+	width: 7em;
+}
+
+[data-sc付録] [data-sc-a-p--symbol2-g] {
+	display: block;
+	margin-block-start: 0.8em;
+	padding-block-start: 0.8em;
+	border-block-start: solid 0.05em var(--kjt-table-border, var(--medium-border-color, var(--border, #666)));
+}
+
+[data-sc付録] [data-sc-a-p--symbol2] {
+	display: inline-block;
+}
+
+[data-sc付録] [data-sc-a-p--index-char-num-c] {
+	display: table-cell;
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-weight: bold;
+	padding-block-start: 0.125em;
+}
+
+[data-sc付録] [data-sc-a-p--index-char] {
+	display: inline-block;
+	font-size: 1.25em;
+	margin-inline-start: 0.24em;
+	margin-inline-end: 0.4em;
+	margin-block-start: 0.1em;
+	margin-block-end: 0.1em;
+	color: var(--kjt-blue, var(--accent-color, var(--link-color, #4a8ade)));
+}
+
+[data-sc付録] [data-sc-a-p--index-char-note-m] {
+	font-size: 0.4em;
+	vertical-align: 1.7em;
+}
+
+[data-sc付録] [data-sc-a-p--index-char-sub-title] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-weight: bold;
+	border-inline-start: solid 0.4em var(--kjt-light-pink, var(--danger-color-lighter, var(--canvas-overlay, #FFDBDA)));
+	border-inline-end: solid 0.4em var(--kjt-light-pink, var(--danger-color-lighter, var(--canvas-overlay, #FFDBDA)));
+	padding-inline-start: 0.2em;
+	padding-inline-end: 0.2em;
+}
+
+[data-sc付録] [data-sc-a-p--jion-kana-sub-g] {
+	display: block;
+	text-indent: -1em;
+	margin-inline-start: 1em;
+}
+
+[data-sc付録] [data-sc-a-p--jion-kana-sub-title] {
+	margin-inline-end: 0.6em;
+}
+
+[data-sc付録] [data-sc-a-p--jion-kana-sub-title][data-sc-l2] {
+	margin-inline-start: 1em;
+}
+
+[data-sc付録] [data-sc-a-p--jion-kana-char] {
+	font-size: 1.15em;
+	margin-inline-start: 0.24em;
+	margin-inline-end: 0.4em;
+	margin-block-start: 0.1em;
+	margin-block-end: 0.1em;
+	color: var(--kjt-blue, var(--accent-color, var(--link-color, #4a8ade)));
+}
+
+[data-sc付録] [data-sc-a-p--jion-kana-char][data-sc-no-ref] {
+	color: var(--text-color);
+}
+
+[data-sc付録] [data-sc-a-p--bold] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-weight: bold;
+}
+
+[data-sc付録] [data-sc-a-p--bold-red] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-weight: bold;
+	color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+}
+
+[data-sc付録] [data-sc-a-p--red] {
+	color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+}
+
+[data-sc付録] [data-sc-a-p--gothic] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+}
+
+[data-sc付録] [data-sc-a-p--gothic-red] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+}
+
+[data-sc付録] [data-sc-a-p--logo] {
+	padding: 0.1em;
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-size: 0.8em;
+	color: var(--background-color-light, var(--background-color));
+	background-color: var(--kjt-red, var(--sidebar-button-danger-background-color-hover, var(--accent-danger, #CC0000)));
+	word-break: keep-all;
+	border-radius: 0.2em;
+	vertical-align: -0.03em;
+}
+
+[data-sc付録] [data-sc-a-p--image-g] {
+	display: block;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+[data-sc付録] [data-sc-a-p--image-sub-g] {
+	display: block;
+}
+
+[data-sc付録] [data-sc-img][data-sc-a-p--image] {
+	max-width: 20em;
+}
+
+[data-sc付録] [data-sc-a-p_リンク-g] {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+[data-sc付録] [data-sc-a-p_リンク] {
+	/* font-family: "Hiragino Kaku Gothic ProN"; */
+	font-size: 0.85em;
+	white-space: nowrap;
+	margin-inline-start: auto;
+	padding-inline-start: 1em;
+}
+
+
+[data-sc付録] [data-sc-appendix_list] {
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	padding-inline-start: 0;
+}
+
+[data-sc付録] [data-sc-appendix_item] {
+	list-style-type: none;
+	margin-block-end: 0.75em;
+	padding-block-end: 0.75em;
+	border-block-end: 1px solid var(--text-color);
+}
+
+[data-sc付録] [data-sc-appendix_item] a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+[data-sc付録] [data-sc-appendix_item]>a:hover,
+[data-sc付録] [data-sc-style="font-size: 0.5em; font-weight: normal; vertical-align: middle;"]>a:hover {
+	color: var(--text-color);
+	filter: brightness(1.3);
+	text-decoration: underline;
+	text-decoration-color: oklch(65% 0.2 260);
+}
+
+[data-sc付録] [data-sc-style="font-size: 0.5em; font-weight: normal; vertical-align: middle;"] {
+	font-size: 0.8em; 
+	font-weight: normal; 
+}
+
+[data-sc付録] [data-sc-a-p--sub-g-title] [data-sc-rect][data-sc-red] {
+	color: var(--text-color);
+	border-color: var(--text-color);
+}
+
+[data-sc付録] [data-sc-a-p--image-g] .gloss-image-link {
+	max-width: 100%;
+}

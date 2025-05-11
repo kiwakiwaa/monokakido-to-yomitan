@@ -6,7 +6,7 @@ from core import Parser
 from core.yomitan_dictionary import DicEntry
 from config import DictionaryConfig
 from handlers import process_unmatched_entries
-from parsers.Daijisen.daijisen_utils import DaijisenUtils
+from parsers.DAIJISEN.daijisen_utils import DaijisenUtils
 
 
 class DaijisenParser(Parser):
@@ -42,7 +42,7 @@ class DaijisenParser(Parser):
                     entry.add_element(yomitan_element)
                     
                 self.dictionary.add_entry(entry)
-                count += 1    
+                count += 1
                     
         return count
     

@@ -36,8 +36,34 @@ class KJTUtils:
 					oyaji.append(alt)
 					
 		return oyaji
+	
+	
+	@staticmethod
+	def extract_busyu(soup: bs4.BeautifulSoup):
+		busyu = []
+		readings = []
+		
+		busyu_head_element = soup.find("BusyuHeadG")
 				
-				
+		headwords = busyu_head_element.find_all("headword", class_="部首見出")
+		for headword in headwords:
+			busyu_text = headword.get_text(strip=True).strip()
+			if busyu_text:
+				busyu.append(busyu_text)
+		
+		
+		variants = busyu_head_element.find_all("headword", class_="部首異体")
+		for itaiji in variants:
+			itaiji_text = itaiji.get_text(strip=True).strip()
+			if itaiji_text:
+				busyu.append(itaiji_text)
+			
+		for reading in busyu_head_element.find_all("headword", class_="部首名"):
+			readings.append(reading.get_text(strip=True).strip())
+	
+		return busyu, readings
+			
+			
 	@staticmethod
 	def get_all_jukugo(soup: bs4.BeautifulSoup, sub_element: str):
 		def clean_headword(headword: str):
@@ -60,13 +86,16 @@ class KJTUtils:
 			reading = ""
 			has_missing_gaiji = False
 			missing_in_parentheses = False
+			is_kanbun_element = jukugo_element.find("kanbun")
 			
 			collected_text = []
 			current_parentheses_level = 0
 			
 			for child in headword_element.contents:
-				if child.name == "JyouyouGaiM":
-					continue
+				if child.name and child.name == "kkaeri":
+					continue # remove 返点
+				elif child.name and child.name == "JyouyouGaiM": 
+					continue # remove triangles 
 				elif isinstance(child, str):
 					# Track parentheses nesting level
 					for char in child:
@@ -98,17 +127,19 @@ class KJTUtils:
 			if reading_element:
 				reading = reading_element.get_text(strip=True)
 				
-			jukugo_data.append({
-				'element': jukugo_element,
-				'raw': {
-					'headword': headword,
-					'reading': reading
-				},
-				'processed': {
-					'headwords': KJTUtils.process_jukugo_headword(clean_headword(headword)),
-					'readings': KJTUtils.process_jukugo_reading(reading)
-				}
-			})
+			
+			if not is_kanbun_element:	
+				jukugo_data.append({
+					'element': jukugo_element,
+					'raw': {
+						'headword': headword,
+						'reading': reading
+					},
+					'processed': {
+						'headwords': KJTUtils.process_jukugo_headword(clean_headword(headword)),
+						'readings': KJTUtils.process_jukugo_reading(reading)
+					}
+				})
 			
 		return jukugo_data
 		
@@ -148,15 +179,18 @@ class KJTUtils:
 				if start == 0:
 					continue
 				
-				base_char = current[start-1]
 				variants = current[start+1:end]
+				num_variants = len(variants)
+				
+				# Get the same number of base characters
+				base_chars = current[start-num_variants:start]
 				
 				# Create two versions:
-				# 1. Original version
-				original = current[:start-1] + base_char + current[end+1:]
+				# 1. Original version (keep base chars)
+				original = current[:start-num_variants] + base_chars + current[end+1:]
 				
-				# 2. Variant version
-				variant = current[:start-1] + variants + current[end+1:]
+				# 2. Variant version (use variant chars)
+				variant = current[:start-num_variants] + variants + current[end+1:]
 				
 				stack.append((original, True))
 				stack.append((variant, True))
@@ -187,4 +221,30 @@ class KJTUtils:
 		modern_reading = re.sub(r'（[^）]*）', '', reading)
 		modern_reading = modern_reading.replace(' ', '')
 		return modern_reading.split('・')
+	
+	
+	@staticmethod
+	def get_item_id(full_id: str) -> str:
+		parts = full_id.split('-')
+		if len(parts) != 2:
+			print(f"Invalid ID format: {full_id}")
+			return None
+		
+		# Get the last part which contains the item number
+		item_part = parts[1]
+		
+		# Always take the last 3 characters (works for both hex and decimal)
+		last_three = item_part[-3:]
+
+		try:
+			# Convert just the last 3 hex digits to decimal
+			decimal_value = int(last_three, 16)
+			
+			# Convert to 3-digit string
+			item_id = f"{decimal_value:03d}"
+		except ValueError:
+			print(f"Failed to convert hex ID: {last_three}")
+			return None
+			
+		return item_id
 		

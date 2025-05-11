@@ -143,12 +143,19 @@ dictionaries:
     use_jmdict: False
   
   kjt:
-    dict_name: "旺文社漢字典 第四第"
+    dict_name: "旺文社漢字典 第四版"
     rev_name: "kjt"
     dict_type: "KJT"
     parser_module: "parsers.KJT.kjt_parser"
     parser_class_name: "KJTParser"
+    link_strategy_module: "parsers.KJT.kjt_strategies"
+    parse_all_links: True
+    image_strategy_module: "parsers.KJT.kjt_strategies"
+    link_strategy_class: "KJTLinkHandlingStrategy"
+    image_strategy_class: "KJTImageHandlingStrategy"
     tag_map_path: "src/parsers/KJT/mapping/tag_map.json"
     appendix_entries_path: "src/parsers/KJT/mapping/appendix_entries.json"
     has_appendix: True
     use_jmdict: False
+    ignored_elements: {"entry-index"}
+    expression_element: "subitem"

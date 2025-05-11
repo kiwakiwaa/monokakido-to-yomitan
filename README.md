@@ -8,7 +8,6 @@ This project provides tools to convert dictionaries from the Monokakido format t
 
 - 大辞泉
 - 旺文社 全訳古語辞典
-- 研究社 新和英大辞典 (Index files are corrupted as of now :/)
 - 三省堂 全訳読解古語辞典
 - 現代心理学辞典
 - 角川新字源 改訂新版
@@ -16,7 +15,9 @@ This project provides tools to convert dictionaries from the Monokakido format t
 - 明鏡国語辞典 第三版
 - 旺文社国語辞典 第十二版
 - 漢字林
-- 例解学習国語 第十二版
+- 小学館例解学習国語 第十二版
+- 小学館中日辞典 第3版
+- 旺文社漢字典 第四版
 
 ## Prerequisites
 
@@ -58,17 +59,18 @@ This project provides tools to convert dictionaries from the Monokakido format t
 
 | Dictionary | Type | Status |
 |------------|------|--------|
-| 大辞泉 | Daijisen | ✅ Supported |
-| 旺文社 全訳古語辞典 | OZK5 | ✅ Supported |
-| 研究社 新和英大辞典 | KNJE | WIP |
-| 三省堂 全訳読解古語辞典 | SKOGO | ✅ Supported |
-| 現代心理学辞典 | YDP | ✅ Supported |
-| 角川新字源 改訂新版 | SHINJIGEN2 | ✅ Supported (MDX) |
-| 南山堂医学大辞典 第20版 | NANMED20 | ✅ Supported (SQL) |
-| 明鏡国語辞典 第三版 | MK3 | ✅ Supported |
-| 旺文社国語辞典 第十二版 | OKO12 | ✅ Supported |
-| 漢字林 | TISMKANJI | ✅ Supported |
-| 例解学習国語 第十二版 | RGKO12 | ✅ Supported |
+| 大辞泉 | DAIJISEN | ✅ |
+| 旺文社 全訳古語辞典 | OZK5 | ✅ |
+| 三省堂 全訳読解古語辞典 | SKOGO | ✅ |
+| 現代心理学辞典 | YDP | ✅ |
+| 角川新字源 改訂新版 | SHINJIGEN2 | ✅ (MDX) |
+| 南山堂医学大辞典 第20版 | NANMED20 | ✅ (SQL) |
+| 明鏡国語辞典 第三版 | MK3 | ✅ |
+| 旺文社国語辞典 第十二版 | OKO12 | ✅ |
+| 漢字林 | TISMKANJI | ✅ |
+| 小学館例解学習国語 第十二版 | RGKO12 | ✅ |
+| 小学館中日辞典 第3版 | CJ3 | ✅ |
+| 旺文社漢字典 第四版 | KJT | ✅ |
 
 ## Directory Structure
 

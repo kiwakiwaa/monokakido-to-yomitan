@@ -392,7 +392,7 @@ table[data-sc使い分け] {
 table[data-sc使い分け] td {
 	padding: 0.5em;
 	background-color: var(--rgko12-light-light-brown, var(--tag-default-background-color, var(--canvas-elevated)));
-	border: 2px solid var(--background-color-light, var(--background-color));
+	border: 2px solid var(--background-color);
 	text-align: center;
 }
 
@@ -403,12 +403,13 @@ table[data-sc使い分け] td:first-child {
 }
 
 /* Create first empty cell in header */
-table[data-sc使い分け]:before {
+table[data-sc使い分け]:first-child tr:first-child::before {
+	display: table-cell;
 	content: "";
 	grid-column: 1;
 	grid-row: 1;
 	background-color: var(--rgko12-light-light-brown, var(--tag-default-background-color, var(--canvas-elevated)));
-	border: 2px solid var(--background-color-light, var(--background-color));
+	border: 2px solid var(--background-color);
 }
 
 /* Position headers in first row */
@@ -516,7 +517,6 @@ table[data-scヘッダあり] td:first-child {
 	color: var(--text-color);
 	text-align: left;
 	background-color: var(--rgko12-light-brown, var(--light-border-color, var(---button-bg, #DDCCBB)));
-	border-inline-start-width: 0;
 }
 
 [data-sc-ud] rt {

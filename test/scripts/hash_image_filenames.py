@@ -21,7 +21,7 @@ def process_image_files(input_folder, output_folder=None):
     
     # Get all PNG and SVG files in the input directory
     image_files = [f for f in os.listdir(input_folder) 
-                  if f.lower().endswith(('.png', '.svg'))]
+                  if f.lower().endswith(('.avif', '.svg'))]
     
     for original_filename in image_files:
         base_name = os.path.splitext(original_filename)[0]

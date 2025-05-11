@@ -11,13 +11,15 @@ class HTMLToYomitanConverter:
 		ignored_elements: Optional[Dict] = None,
 		expression_element: Optional[str] = None,
 		link_handling_strategy: Optional[LinkHandlingStrategy] = None,
-		image_handling_strategy: Optional[ImageHandlingStrategy] = None):
+		image_handling_strategy: Optional[ImageHandlingStrategy] = None,
+		parse_all_links: Optional[bool] = False):
 		
 		self.tag_mapping = tag_mapping or {}
 		self.ignored_elements = ignored_elements or {}
 		self.expression_element = expression_element or None
 		self.link_handling_strategy = link_handling_strategy or DefaultLinkHandlingStrategy()
 		self.image_handling_strategy = image_handling_strategy or DefaultImageHandlingStrategy()
+		self.parse_all_links = parse_all_links
 		
 		self.__yomitan_supported_tags = {
 			"br", "ruby", "rt", "rp", "table", "thead", "tbody", "tfoot",
@@ -164,9 +166,15 @@ class HTMLToYomitanConverter:
 				return element
 			
 		# Hanle link elements
-		if tag_name == "a":
-			element = self.handle_link_element(html_glossary, html_elements, data_dict, class_list) 
-			if element:
-				return element
+		if self.parse_all_links:
+			if tag_name == "a" or html_glossary.get("href", ""):
+				element = self.handle_link_element(html_glossary, html_elements, data_dict, class_list)
+				if element:
+					return element
+		else:
+			if tag_name == "a" or html_glossary.get("href", ""):
+				element = self.handle_link_element(html_glossary, html_elements, data_dict, class_list)
+				if element:
+					return element
 			
 		return create_html_element(target_tag, content=html_elements, data=data_dict)

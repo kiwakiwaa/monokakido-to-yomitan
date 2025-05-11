@@ -4,13 +4,36 @@ from typing import List, Tuple, Optional
 
 
 class KanjiUtils:
-    CJK_RE = re.compile("CJK (UNIFIED|COMPATIBILITY) IDEOGRAPH")
+    CJK_IDEOGRAPH_PATTERN = re.compile(r'[\p{Han}'
+                                     r'\p{InCJK_Compatibility_Ideographs}'
+                                     r'\p{InCJK_Compatibility_Ideographs_Supplement}'
+                                     r'\p{InCJK_Unified_Ideographs_Extension_A}'
+                                     r'\p{InCJK_Unified_Ideographs_Extension_B}'
+                                     r'\p{InCJK_Unified_Ideographs_Extension_C}'
+                                     r'\p{InCJK_Unified_Ideographs_Extension_D}'
+                                     r'\p{InCJK_Unified_Ideographs_Extension_E}'
+                                     r'\p{InCJK_Unified_Ideographs_Extension_F}'
+                                     r'\p{InCJK_Unified_Ideographs_Extension_G}'
+                                     r'\p{InCJK_Unified_Ideographs_Extension_H}'
+                                     r'\p{InCJK_Unified_Ideographs_Extension_I}'
+                                     r'\p{InCJK_Radicals_Supplement}'
+                                     r'\p{InKangxi_Radicals}'
+                                     r'\p{InIdeographic_Description_Characters}'
+                                     r'々〇〻]') 
     IS_NOT_JAPANESE_PATTERN = re.compile(r'[^\p{N}○◯々-〇〻ぁ-ゖゝ-ゞァ-ヺー０-９Ａ-Ｚｦ-ﾝ\p{Radical}\p{Unified_Ideograph}]+')
     JAPANESE_PATTERN = re.compile(r"[\p{Hiragana}\p{Katakana}\p{Unified_Ideograph}]+", re.UNICODE)
+    
+    onyomi = {
+        "ア", "アイ", "アク", "アツ", "アン", "イ", "イキ", "イク", "イチ", "イツ", "イン", "ウ", "ウツ", "ウン", "エ", "エイ", "エキ", "エツ", "エン", "オ", "オウ", "オク", "オツ", "オン", "カ", "ガ", "カイ", "ガイ", "カク", "ガク", "カツ", "ガツ", "カッ", "ガッ", "カン", "ガン", "キ", "ギ", "キク", "キチ", "キツ", "キャ", "キャク", "ギャク", "キュウ", "ギュウ", "キョ", "ギョ", "キョウ", "ギョウ", "キョク", "ギョク", "ギン", "キン", "ク", "グ", "クウ", "グウ", "クツ", "クン", "グン", "ゲ", "ケ", "ケイ", "ゲイ", "ゲキ", "ケツ", "ゲツ", "ケン", "ゲン", "コ", "ゴ", "コウ", "ゴウ", "ゴク", "コク", "コツ", "ゴン", "コン", "サ", "ザ", "サイ", "ザイ", "サク", "サツ", "ザツ", "サッ", "サン", "ザン", "シ", "ジ", "シキ", "ジキ", "ジク", "シチ", "シツ", "ジツ", "ジッ", "シャ", "ジャ", "シャク", "ジャク", "シュ", "ジュ", "シュウ", "ジュウ", "シュク", "ジュク", "シュツ", "ジュツ", "シュン", "ジュン", "ショ", "ジョ", "ショウ", "ジョウ", "ショク", "ジョク", "シン", "ジン", "ズ", "ス", "スイ", "ズイ", "スウ", "スン", "セ", "ゼ", "セイ", "ゼイ", "セキ", "セチ", "セツ", "ゼツ", "セン", "ゼン", "ソ", "ゾ", "ソウ", "ゾウ", "ソク", "ゾク", "ソツ", "ゾン", "ソン", "タ", "ダ", "タイ", "ダイ", "タク", "ダク", "タツ", "ダツ", "タン", "ダン", "チ", "チク", "チツ", "チャ", "チャク", "チュウ", "チョ", "チョウ", "チョク", "チン", "ツ", "ツイ", "ツウ", "デ", "テイ", "デイ", "テキ", "デキ", "テツ", "テン", "デン", "ト", "ド", "トウ", "ドウ", "トク", "ドク", "トツ", "トン", "ドン", "ナ", "ナイ", "ナッ", "ナン", "ニ", "ニク", "ニチ", "ニャク", "ニュウ", "ニョ", "ニョウ", "ニン", "ネイ", "ネツ", "ネン", "ノウ", "ハ", "バ", "ハイ", "バイ", "ハク", "バク", "ハチ", "バチ", "ハツ", "バツ", "ハッ", "ハン", "バン", "ヒ", "ビ", "ヒツ", "ビャク", "ヒャク", "ヒョウ", "ビョウ", "ヒン", "ビン", "フ", "ブ", "フウ", "フク", "フツ", "ブツ", "フン", "ブン", "ヘイ", "ベイ", "ヘキ", "ベツ", "ヘン", "ベン", "ホ", "ボ", "ホウ", "ボウ", "ホク", "ボク", "ホツ", "ホッ", "ボッ", "ボツ", "ホン", "ボン", "マ", "マイ", "マク", "マツ", "マン", "ミ", "ミツ", "ミャク", "ミョウ", "ミン", "ム", "メイ", "メツ", "メン", "モ", "モウ", "モク", "モツ", "モン", "ヤ", "ヤク", "ユ", "ユイ", "ユウ", "ヨ", "ヨウ", "ヨク", "ラ", "ライ", "ラク", "ラツ", "ラン", "リ", "リキ", "リク", "リチ", "リツ", "リャク", "リュウ", "リョ", "リョウ", "リョク", "リン", "ル", "ルイ", "レイ", "レキ", "レツ", "レン", "ロ", "ロウ", "ロク", "ロン", "ワ", "ワイ", "ワク", "ワン"
+    }
+    
+    @staticmethod
+    def is_onyomi(reading: str) -> bool:
+        return reading in KanjiUtils.onyomi
       
     @staticmethod
     def is_kanji(unichar: str) -> bool:
-        return bool(KanjiUtils.CJK_RE.match(unicodedata.name(unichar, "")))
+        return bool(KanjiUtils.CJK_IDEOGRAPH_PATTERN.fullmatch(unichar))
     
     
     @staticmethod
@@ -303,6 +326,8 @@ def main():
 
     for pair in result:
         print(pair)
+        
+    print(f"Is byan a kanji: {KanjiUtils.is_kanji('𰻞')}")
         
 
 if __name__ == "__main__":

@@ -519,6 +519,10 @@ a [data-sc-logo]{
 	color: var(--text-color);
 }
 
+[data-sc-red][data-sc-i-m] {
+	color: var(--text-color);
+}
+
 a {
 	padding-block-end: 0.1em;
 	text-decoration: none;
